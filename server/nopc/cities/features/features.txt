@@ -1,0 +1,293 @@
+function	script	HouseFeature	{
+	if(getarg(0, 0) != 0) set .@UserID,getarg(0);
+	if(getarg(1, 0) != 0) set .@HouseID,getarg(1);
+	if(.@UserID == 0 || .@HouseID == 0) close;
+
+
+	query_sql("SELECT * FROM `houses` WHERE `ID` LIKE '"+.@HouseID+"'", .@ID, .@title$, .@owner, .@owner$,.@owner_type, .@feat, .@price, .@fee, .@admittance, .@warp$, .@x, .@y);
+	if(.@owner == 0) {
+		dispbottom "Welcome to "+.@title$+"!";
+		close;
+	}
+	if(!callfunc("isAllowed", .@feat, .@owner, .@UserID)) {
+		dispbottom "Welcome to "+.@owner$+"'s "+.@title$+"!";
+		close;
+	}
+	if(.@owner == .@UserID) {
+		set .@first$,"Administration";
+	} else {
+		set .@first$,"Building Settings";
+	}
+	if(.@price > 20000000 && getcharid(2) != 0) {
+		set .@menu$,""+.@first$+":Player Commands:Party Recall:Guild Commands";
+	} else if(.@price > 10000000 && getcharid(1) != 0) {
+		set .@menu$,""+.@first$+":Player Commands:Party Recall";
+	} else {
+		set .@menu$,""+.@first$+":Player Commands";	
+	}
+
+	switch(select(.@menu$)) {
+		case 1:
+			callfunc("HouseBoard", .@HouseID);
+			close;
+		case 2:
+			switch(select(
+				"General Commands",
+				"Appearance Commands",
+				"Item Commands",
+				"Storage Commands",
+				"Player Commands"
+			)) {
+				case 1:
+					set .@pmenu$,"Heal";
+					if(.@price > 500000) set .@pmenu$,"Heal:Set Savepoint";
+					if(.@price > 1000000) set .@pmenu$,"Heal:Set Savepoint:Mail";
+					if(.@price > 2000000) set .@pmenu$,"Heal:Set Savepoint:Mail:Time";
+					if(.@price > 4000000) set .@pmenu$,"Heal:Set Savepoint:Mail:Time:No Ask";
+					if(.@price > 8000000) set .@pmenu$,"Heal:Set Savepoint:Mail:Time:No Ask:Load";
+					switch(select(.@pmenu$)) {
+						case 1:
+							percentheal 100,100;
+						close;
+						case 2:
+							getmapxy(@mapname$,@mapx,@mapy,0);
+							savepoint @mapname$,@mapx,@mapy;
+							message strcharinfo(0), "Savepoint changed.";
+						close;
+						case 3:
+							openmail;
+						close;
+						case 4:
+							atcommand "@time";
+						close;
+						case 5:
+							atcommand "@noask";
+						close;
+						case 6:
+							pcblockmove getcharid(3),1;
+							specialeffect2 35;
+							sleep2 800;
+							specialeffect2 6;
+							sleep2 800;
+							pcblockmove getcharid(3),0;
+							atcommand "@load";
+						close;
+					}
+				close;
+				case 2:
+					set .@pmenu$,"Change Gender";
+					switch(select(.@pmenu$)) {
+						case 1:
+							changesex;
+						close;
+					}
+				close;
+				case 3:
+					set .@pmenu$,"Drop All";
+					if(.@price > 200000) set .@pmenu$,"Drop All:Clean Area";
+					if(.@price > 1000000) set .@pmenu$,"Drop All:Clean Area:Item Reset";
+					if(.@price > 2000000) set .@pmenu$,"Drop All:Clean Area:Item Reset:Clear Cart";
+					switch(select(.@pmenu$)) {
+						case 1:
+							atcommand "@dropall";
+						close;
+						case 2:
+							atcommand "@cleanarea";
+						close;
+						case 3:
+							atcommand "@itemreset";
+						close;
+						case 4:
+							atcommand "@clearcart";
+						close;
+					}
+				close;
+				case 4:
+					set .@pmenu$,"Storagelist";
+					if(.@price > 4000000) set .@pmenu$,"Storagelist:Storage";
+					if(.@price > 8000000) set .@pmenu$,"Storagelist:Storage:Store All";
+					if(.@price > 10000000) set .@pmenu$,"Storagelist:Storage:Store All:Clear Storage";
+					switch(select(.@pmenu$)) {
+						case 1:
+							atcommand "@storagelist";
+						close;
+						case 2:
+							openstorage;
+						close;
+						case 3:
+							atcommand "@storeall";
+						close;
+						case 4:
+							atcommand "@clearstorage";
+						close;
+					}
+				close;
+				case 5:
+					set .@pmenu$,"Find Friend";
+					if(.@price > 10000000) set .@pmenu$,"Find Friend:Recall Friend";
+					switch(select(.@pmenu$)) {
+						case 1:
+							input .@friend$;
+							set .@nb, query_sql("SELECT * FROM `friends` WHERE char_id LIKE '"+.@UserID+"' AND friend_id LIKE '"+getcharid(0, .@friend$)+"'");
+							if(.@nb == 0) set .@nb, query_sql("SELECT * FROM `friends` WHERE friend_id LIKE '"+getcharid(0, .@friend$)+"' AND char_id LIKE '"+.@UserID+"'");
+							if(.@nb > 0) {
+								atcommand "@where "+.@friend$+"";
+								close;
+							} else {
+								message strcharinfo(0), "Could not find "+.@friend$+" in your friendlist.";
+								message strcharinfo(0), "@where "+.@friend$+" failed.";
+								close;
+							}
+						close;
+						case 2:
+							input .@friend$;
+							set .@nb, query_sql("SELECT * FROM `friends` WHERE char_id LIKE '"+.@UserID+"' AND friend_id LIKE '"+getcharid(0, .@friend$)+"'");
+							if(.@nb == 0) set .@nb, query_sql("SELECT * FROM `friends` WHERE friend_id LIKE '"+getcharid(0, .@friend$)+"' AND char_id LIKE '"+.@UserID+"'");
+							if(.@nb > 0) {
+								if(.norecall > gettimetick(2)-(60*60)) {
+									message strcharinfo(0), "You already recalled someone in the last hour.";
+									message strcharinfo(0), "Please wait "+((gettimetick(2)-.norecall)/60)+" minutes.";
+									message strcharinfo(0), "@recall "+.@friend$+" failed.";
+									close;
+								} else {
+									if(getmapxy(@mapname$,@mapx,@mapy,0,""+getcharid(0, .@friend$)+"") == 0) {
+										set .@rows,query_sql("SELECT `warp` FROM `houses` WHERE `warp` LIKE '"+strcharinfo(3)+"'", .@warp$);
+										if(!getmapflag(@mapname$, mf_town) && .@rows == 0) {
+											message strcharinfo(0), "Could not recall "+.@friend$+". User is not in a town.";
+										} else {
+											set .norecall,gettimetick(2);
+											atcommand "@recall "+.@friend$+"";
+										}
+										close;
+									}
+								}
+							} else {
+								message strcharinfo(0), "Could not find "+.@friend$+" in your friendlist.";
+								message strcharinfo(0), "@recall "+.@friend$+" failed.";
+								close;
+							}
+						close;
+					}
+				close;
+			}
+		close;
+		case 3:
+			if(getcharid(1) != 0) {
+				getpartymember getcharid(1),0;
+				getpartymember getcharid(1),1;
+				for(.@i = 0; .@i < $@partymembercount; .@i++) {
+					if(.@i >= $@partymembercount) break;
+					if($@partymembercid[.@i] != getcharid(0) && $@partymembercid[.@i] != 0) {
+						if(getmapxy(@mapname$,@mapx,@mapy,0,""+$@partymembername$[.@i]+"") == 0) {
+							set .@rows,query_sql("SELECT `warp` FROM `houses` WHERE `warp` LIKE '"+strcharinfo(3)+"'", .@warp$);
+							if(!getmapflag(@mapname$, mf_town) && .@rows == 0) {
+								message strcharinfo(0), "Could not recall "+$@partymembername$[.@i]+". User is not in a town.";
+							} else {
+								atcommand "@recall "+$@partymembername$[.@i]+"";
+							}
+						}
+					}
+				}
+			} else {
+				message strcharinfo(0), "You are not in a Party.";
+				message strcharinfo(0), "@partyrecall failed.";
+				close;
+			}
+		close;
+		case 4:
+			set .@pmenu$,"Bossnia Warp";
+			if(.@price > 30000000) set .@pmenu$,"Bossnia Warp:Guild Recall";
+			if(.@price > 40000000) set .@pmenu$,"Bossnia Warp:Guild Recall:WoE Warp";
+			if(.@price > 50000000) set .@pmenu$,"Bossnia Warp:Guild Recall:WoE Warp:Monster Search";
+			if(.@price > 60000000) set .@pmenu$,"Bossnia Warp:Guild Recall:WoE Warp:Monster Search:Guild Storage";
+			if(.@price > 60000000 && getguildmaster(getcharid(2)) == strcharinfo(0)) {
+				set .@pmenu$,"Bossnia Warp:Guild Recall:WoE Warp:Monster Search:Guild Storage:Clear Guild Storage";
+			}
+			switch(select(.@pmenu$)) {
+				case 1:
+					switch(select(
+						"Bossnia level 1",
+						"Bossnia level 2",
+						"Bossnia level 3",
+						"Bossnia level 4"
+					)) {
+						case 1:
+							pcblockmove getcharid(3),1;
+							specialeffect2 35;
+							sleep2 800;
+							specialeffect2 6;
+							sleep2 800;
+							pcblockmove getcharid(3),0;
+							warp "bossnia_01",121,106;
+						close;
+						case 2:
+							pcblockmove getcharid(3),1;
+							specialeffect2 35;
+							sleep2 800;
+							specialeffect2 6;
+							sleep2 800;
+							pcblockmove getcharid(3),0;
+							warp "bossnia_02",121,106;
+						close;
+						case 3:
+							pcblockmove getcharid(3),1;
+							specialeffect2 35;
+							sleep2 800;
+							specialeffect2 6;
+							sleep2 800;
+							pcblockmove getcharid(3),0;
+							warp "bossnia_03",121,106;
+						close;
+						case 4:
+							pcblockmove getcharid(3),1;
+							specialeffect2 35;
+							sleep2 800;
+							specialeffect2 6;
+							sleep2 800;
+							pcblockmove getcharid(3),0;
+							warp "bossnia_04",121,106;
+						close;
+					}
+				close;
+				case 2:
+					set .@nb, query_sql("SELECT `char_id`,`name` FROM `char` WHERE `guild_id` LIKE '"+getcharid(2)+"' AND `online` LIKE '1'", .@guildmember, .@guildmembername$);
+					if(.@nb > 0) {
+						for(.@i = 0; @i < .@nb; .@i++) {
+							if(.@i >= .@nb) break;
+							if(.@guildmember[.@i] != getcharid(0) && .@guildmember[.@i] != 0) {
+								if(getmapxy(@mapname$,@mapx,@mapy,0, .@guildmembername$[.@i]) == 0) {
+									set .@rows,query_sql("SELECT `warp` FROM `houses` WHERE `warp` LIKE '"+strcharinfo(3)+"'", .@warp$);
+									if(!getmapflag(@mapname$, mf_town) && .@rows == 0) {
+										message strcharinfo(0), "Could not recall "+.@guildmembername$[.@i]+". User is not in a town.";
+									} else {
+										atcommand "@recall "+.@guildmembername$[.@i]+"";
+									}
+								}
+							}
+						}
+						close;
+					} else {
+						message strcharinfo(0), "No guildmember found.";
+						message strcharinfo(0), "@guildrecall failed.";
+					}
+				close;
+				case 3:
+					dispbottom "soon (tm)...";
+				close;
+				case 4:
+					input .@monster$;
+					atcommand "@whereis "+.@monster$+"";
+				close;
+				case 5:
+					if(guildopenstorage() != 0) {
+						message strcharinfo(0), "Someone already opened the Guild Storage";
+						message strcharinfo(0), "@gstorage failed.";
+					}
+				close;
+				case 6:
+					atcommand "@cleargstorage";
+				close;
+			}
+		close;
+	}
+}

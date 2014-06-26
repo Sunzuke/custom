@@ -1,0 +1,6 @@
+userid: s123x12
+passwd: p132x21
+char_ip: host-z.no-ip.org
+char_port: 27121
+map_ip: host-z.no-ip.org
+map_port: 29121

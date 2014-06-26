@@ -1,0 +1,355 @@
+//==========================================================================================================
+-	script	Houses	-1,{
+	OnHomeCommand:
+		for(.@i = 0; .@i < getarraysize(.@atcmd_parameters$); .@i++) {
+			if(.@i == 0) {
+				set @home$,.@atcmd_parameters$[0];
+			} else {
+				set @home$,""+@home$+" "+.@atcmd_parameters$[.@i]+"";
+			}
+		}
+		if(getstrlen(@home$) > 15 || getstrlen(@home$) < 4) {
+			message strcharinfo(0), "Homename is invalid. Please use 4-15 characters.";
+			message strcharinfo(0), "@home failed.";
+			end;
+		}
+		if(!Hp) {
+			message strcharinfo(0), "You need to be alive to use @home";
+			message strcharinfo(0), "@home failed.";
+			end;
+		}
+		set .@rows,query_sql("SELECT `warp` FROM `houses` WHERE `warp` LIKE '"+strcharinfo(3)+"'", .@warp$);
+		if(!getmapflag(strcharinfo(3), mf_town) && .@rows == 0) {
+			message strcharinfo(0), "You need to be in a town to use @home";
+			message strcharinfo(0), "@home failed.";
+			end;
+		}
+		if(@home$ == "") {
+			message strcharinfo(0), "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
+			message strcharinfo(0), "@home will teleport you to any building you own!";
+			message strcharinfo(0), "Please use this format:";
+			message strcharinfo(0), "@home <Building Name>";
+			set .@nb,query_sql("SELECT `title` FROM `houses` WHERE `owner` LIKE '"+getcharid(0)+"'", .@title$);
+			if(.@nb == 0) {
+				message strcharinfo(0), "You need to buy a building before you can use @home";
+			} else {
+				message strcharinfo(0), "Your Buildinglist:";
+				for(.@i = 0; .@i < .@nb; .@i++) {
+					message strcharinfo(0), " - "+.@title$[.@i]+"";
+				}
+			}
+			if(getcharid(2) != 0 && getguildmasterid(getcharid(2)) != getcharid(0)) {
+				set .@q$,"SELECT `title`,`admittance` FROM `houses` WHERE `owner` LIKE '"+getguildmasterid(getcharid(2))+"'";
+				set .@nb,query_sql(.@q$, .@title$, .@admittance);
+				if(.@nb > 0) {
+					message strcharinfo(0), "You can warp to "+getguildmaster(getcharid(2))+"'s Buildings:";
+					for(.@i = 0; .@i < .@nb; .@i++) {
+						if(isAllowed(.@admittance[.@i], getguildmasterid(getcharid(2)), getcharid(0))) {
+							message strcharinfo(0), " - "+.@title$[.@i]+"";
+						}
+					}
+				}
+			}
+			message strcharinfo(0), "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
+			message strcharinfo(0), "@home failed.";
+			end;
+		} else {
+			set .@s$,"`owner`, `admittance`, `warp`, `warpx`, `warpy`";
+			set .@q$,"SELECT "+.@s$+" FROM `houses` WHERE `owner` LIKE '"+getcharid(0)+"' AND `title` LIKE '"+@home$+"'";
+			set .@nb,query_sql(.@q$, .@owner, .@admittance, .@map$, .@x, .@y);
+
+			if(.@nb == 0) {
+				set .@q$,"SELECT "+.@s$+" FROM `houses` WHERE `owner` LIKE '"+getcharid(0)+"' AND `title` LIKE '%"+@home$+"%'";
+				set .@nb,query_sql(.@q$, .@owner, .@admittance, .@map$, .@x, .@y);
+			}
+
+			if(.@nb == 0 && getcharid(2) != 0 && getguildmasterid(getcharid(2)) != getcharid(0)) {
+				set .@q$,"SELECT "+.@s$+" FROM `houses` WHERE `owner` LIKE '"+getguildmasterid(getcharid(2))+"' AND `title` LIKE '"+@home$+"'";
+				set .@nb,query_sql(.@q$, .@owner, .@admittance, .@map$, .@x, .@y);
+			}
+
+			if(.@nb == 0 && getcharid(2) != 0 && getguildmasterid(getcharid(2)) != getcharid(0)) {
+				set .@q$,"SELECT "+.@s$+" FROM `houses` WHERE `owner` LIKE '"+getguildmasterid(getcharid(2))+"' AND `title` LIKE '%"+@home$+"%'";
+				set .@nb,query_sql(.@q$, .@owner, .@admittance, .@map$, .@x, .@y);
+			}
+
+			if(.@nb == 0) {
+				message strcharinfo(0), "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
+				set .@nb,query_sql("SELECT `title` FROM `houses` WHERE `owner` LIKE '"+getcharid(0)+"'", .@title$);
+				message strcharinfo(0), "Could not find your home.";
+				if(.@nb > 0) {
+					message strcharinfo(0), "Your Buildinglist:";
+					for(.@i = 0; .@i < .@nb; .@i++) {
+						message strcharinfo(0), " - "+.@title$[.@i]+"";
+					}
+				}
+				if(getcharid(2) != 0 && getguildmasterid(getcharid(2)) != getcharid(0)) {
+					set .@q$,"SELECT `title`,`admittance` FROM `houses` WHERE `owner` LIKE '"+getguildmasterid(getcharid(2))+"'";
+					set .@nb,query_sql(.@q$, .@title$, .@admittance);
+					if(.@nb > 0) {
+						message strcharinfo(0), "You can warp to "+getguildmaster(getcharid(2))+"'s Buildings:";
+						for(.@i = 0; .@i < .@nb; .@i++) {
+							if(isAllowed(.@admittance[.@i], getguildmasterid(getcharid(2)), getcharid(0))) {
+								message strcharinfo(0), " - "+.@title$[.@i]+"";
+							}
+						}
+					}
+				}
+				message strcharinfo(0), "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
+				message strcharinfo(0), "@home failed.";
+			} else if(.@nb > 1) {
+				message strcharinfo(0), "Your homename is not unique! Warping to first match.";
+				for(.@i = 0; .@i < .@nb; .@i++) {
+					if(isAllowed(.@admittance[.@i], .@owner[.@i], getcharid(0))) {
+						percentheal 100,100;
+						warp .@map$, .@x, .@y;
+						end;
+					}
+				}
+			} else {
+				if(isAllowed(.@admittance, .@owner, getcharid(0))) {
+					percentheal 100,100;
+					message strcharinfo(0), "Warped.";
+					warp .@map$, .@x, .@y;
+					end;
+				}
+			}
+		}
+	end;
+	OnNewMonth:
+		query_sql("TRUNCATE TABLE `houses`");
+		query_sql("INSERT INTO `houses` VALUES (1,	'Weapon Shop',			 0, '', 0, 8, 500000,	0, 0, 'alberta_in', 180, 30)"); 
+		query_sql("INSERT INTO `houses` VALUES (2,	'Mansion',			 0, '', 0, 8, 1500000,	0, 0, 'alberta_in', 70, 141)"); 
+		query_sql("INSERT INTO `houses` VALUES (3,	'Merchant House',		 0, '', 0, 8, 10000000,	0, 0, 'alberta_in', 74, 44)"); 
+		query_sql("INSERT INTO `houses` VALUES (4,	'Mansion',			 0, '', 0, 8, 1500000,	0, 0, 'alberta_in', 18, 141)"); 
+		query_sql("INSERT INTO `houses` VALUES (5,	'Villa Part 1',			 0, '', 0, 8, 2000000,	0, 0, 'alberta_in', 114, 134)"); 
+		query_sql("INSERT INTO `houses` VALUES (6,	'Shop',				 0, '', 0, 8, 400000,	0, 0, 'alberta_in', 185, 89)"); 
+		query_sql("INSERT INTO `houses` VALUES (7,	'Villa Part 2',			 0, '', 0, 8, 2000000,	0, 0, 'alberta_in', 122, 161)"); 
+		query_sql("INSERT INTO `houses` VALUES (8,	'Mansion',			 0, '', 0, 8, 1500000,	0, 0, 'aldeba_in', 211, 117)"); 
+		query_sql("INSERT INTO `houses` VALUES (9,	'House',			 0, '', 0, 8, 200000,	0, 0, 'aldeba_in', 94, 41)"); 
+		query_sql("INSERT INTO `houses` VALUES (10,	'Restaurant',			 0, '', 0, 8, 300000,	0, 0, 'aldeba_in', 157, 190)"); 
+		query_sql("INSERT INTO `houses` VALUES (11,	'Kafra Headquarters Part 1/2',	 0, '', 0, 8, 10000000,	0, 0, 'aldeba_in', 24, 227)"); 
+		query_sql("INSERT INTO `houses` VALUES (12,	'Kafra Headquarters Part 2/2',	 0, '', 0, 8, 10000000,	0, 0, 'aldeba_in', 148, 227)"); 
+		query_sql("INSERT INTO `houses` VALUES (13,	'House',			 0, '', 0, 8, 200000,	0, 0, 'aldeba_in', 27, 37)"); 
+		query_sql("INSERT INTO `houses` VALUES (14,	'House',			 0, '', 0, 8, 200000,	0, 0, 'aldeba_in', 242, 237)"); 
+		query_sql("INSERT INTO `houses` VALUES (15,	'House',			 0, '', 0, 8, 200000,	0, 0, 'ama_in01', 28, 176)"); 
+		query_sql("INSERT INTO `houses` VALUES (16,	'House',			 0, '', 0, 8, 200000,	0, 0, 'ama_in01', 79, 178)"); 
+		query_sql("INSERT INTO `houses` VALUES (17,	'House',			 0, '', 0, 8, 200000,	0, 0, 'ama_in01', 34, 99)"); 
+		query_sql("INSERT INTO `houses` VALUES (18,	'Mansion',			 0, '', 0, 8, 1500000,	0, 0, 'ama_in01', 88, 97)"); 
+		query_sql("INSERT INTO `houses` VALUES (19,	'Warehouse',			 0, '', 0, 8, 1000000,	0, 0, 'ama_in01', 30, 24)"); 
+		query_sql("INSERT INTO `houses` VALUES (20,	'Weapon Shop',			 0, '', 0, 8, 500000,	0, 0, 'ama_in01', 89, 23)"); 
+		query_sql("INSERT INTO `houses` VALUES (21,	'Villa',			 0, '', 0, 8, 2000000,	0, 0, 'ama_in01', 162, 25)"); 
+		query_sql("INSERT INTO `houses` VALUES (22,	'Castle',			 0, '', 0, 8, 1000000,	0, 0, 'ama_in02', 223, 45)"); 
+		query_sql("INSERT INTO `houses` VALUES (23,	'Port House Part 1/3',		 0, '', 0, 8, 250000,	0, 0, 'ayo_in01', 43, 183)"); 
+		query_sql("INSERT INTO `houses` VALUES (24,	'Port House Part 2/3',		 0, '', 0, 8, 250000,	0, 0, 'ayo_in01', 21, 178)"); 
+		query_sql("INSERT INTO `houses` VALUES (25,	'Port House Part 3/3',		 0, '', 0, 8, 250000,	0, 0, 'ayo_in01', 17, 156)"); 
+		query_sql("INSERT INTO `houses` VALUES (26,	'Port Shop Part 1/3',		 0, '', 0, 8, 500000,	0, 0, 'ayo_in01', 77, 174)"); 
+		query_sql("INSERT INTO `houses` VALUES (27,	'Port Shop Part 2/3',		 0, '', 0, 8, 500000,	0, 0, 'ayo_in01', 95, 175)"); 
+		query_sql("INSERT INTO `houses` VALUES (28,	'Port Shop Part 3/3',		 0, '', 0, 8, 500000,	0, 0, 'ayo_in01', 85, 152)"); 
+		query_sql("INSERT INTO `houses` VALUES (29,	'Port Mansion',			 0, '', 0, 8, 2000000,	0, 0, 'ayo_in01', 137, 192)"); 
+		query_sql("INSERT INTO `houses` VALUES (30,	'Villa Part 1/4',		 0, '', 0, 8, 2000000,	0, 0, 'ayo_in01', 31, 108)"); 
+		query_sql("INSERT INTO `houses` VALUES (31,	'Villa Part 2/4',		 0, '', 0, 8, 2000000,	0, 0, 'ayo_in01', 47, 94)"); 
+		query_sql("INSERT INTO `houses` VALUES (32,	'Villa Part 3/4',		 0, '', 0, 8, 2000000,	0, 0, 'ayo_in01', 31, 81)"); 
+		query_sql("INSERT INTO `houses` VALUES (33,	'Villa Part 4/4',		 0, '', 0, 8, 2000000,	0, 0, 'ayo_in01', 13, 94)"); 
+		query_sql("INSERT INTO `houses` VALUES (34,	'Port House',			 0, '', 0, 8, 250000,	0, 0, 'ayo_in01', 180, 129)"); 
+		query_sql("INSERT INTO `houses` VALUES (35,	'Port House',			 0, '', 0, 8, 250000,	0, 0, 'ayo_in01', 191, 183)"); 
+		query_sql("INSERT INTO `houses` VALUES (36,	'Castle',			 0, '', 0, 8, 10000000,	0, 0, 'ayo_in02', 100, 152)"); 
+		query_sql("INSERT INTO `houses` VALUES (37,	'Exhibition Hall',		 0, '', 0, 8, 10000000,	0, 0, 'bra_in01', 17, 137)"); 
+		query_sql("INSERT INTO `houses` VALUES (38,	'Castle',			 0, '', 0, 8, 10000000,	0, 0, 'bra_in01', 38, 9)"); 
+		query_sql("INSERT INTO `houses` VALUES (39,	'Shop',				 0, '', 0, 8, 500000,	0, 0, 'cmd_in01', 85, 174)"); 
+		query_sql("INSERT INTO `houses` VALUES (40,	'Weapon Shop',			 0, '', 0, 8, 700000,	0, 0, 'cmd_in01', 123, 180)"); 
+		query_sql("INSERT INTO `houses` VALUES (41,	'House',			 0, '', 0, 8, 200000,	0, 0, 'cmd_in01', 113, 125)"); 
+		query_sql("INSERT INTO `houses` VALUES (42,	'Apartment',			 0, '', 0, 8, 100000,	0, 0, 'cmd_in01', 177, 123)"); 
+		query_sql("INSERT INTO `houses` VALUES (43,	'Apartment',			 0, '', 0, 8, 100000,	0, 0, 'cmd_in01', 120, 71)"); 
+		query_sql("INSERT INTO `houses` VALUES (44,	'Apartment',			 0, '', 0, 8, 100000,	0, 0, 'cmd_in01', 179, 81)"); 
+		query_sql("INSERT INTO `houses` VALUES (45,	'Western Kafra Headquarters',	 0, '', 0, 8, 10000000,	0, 0, 'cmd_in02', 143, 173)"); 
+		query_sql("INSERT INTO `houses` VALUES (46,	'House',			 0, '', 0, 8, 200000,	0, 0, 'cmd_in02', 67, 132)"); 
+		query_sql("INSERT INTO `houses` VALUES (47,	'Casino Part 1/4',		 0, '', 0, 8, 5000000,	0, 0, 'cmd_in02', 178, 132)"); 
+		query_sql("INSERT INTO `houses` VALUES (48,	'Casino Part 2/4',		 0, '', 0, 8, 5000000,	0, 0, 'cmd_in02', 212, 97)"); 
+		query_sql("INSERT INTO `houses` VALUES (49,	'Casino Part 3/4',		 0, '', 0, 8, 5000000,	0, 0, 'cmd_in02', 144, 97)"); 
+		query_sql("INSERT INTO `houses` VALUES (50,	'Casino Part 4/4',		 0, '', 0, 8, 5000000,	0, 0, 'cmd_in02', 74, 25)"); 
+		query_sql("INSERT INTO `houses` VALUES (51,	'Castle',			 0, '', 0, 8, 10000000,	0, 0, 'ecl_in01', 47, 11)"); 
+		query_sql("INSERT INTO `houses` VALUES (52,	'Warehouse',			 0, '', 0, 8, 1000000,	0, 0, 'ein_in01', 190, 35)"); 
+		query_sql("INSERT INTO `houses` VALUES (53,	'Mansion Part 1/2',		 0, '', 0, 8, 1500000,	0, 0, 'ein_in01', 190, 99)"); 
+		query_sql("INSERT INTO `houses` VALUES (54,	'Mansion Part 2/2',		 0, '', 0, 8, 1500000,	0, 0, 'ein_in01', 205, 86)"); 
+		query_sql("INSERT INTO `houses` VALUES (55,	'Restaurant Part 1/2',		 0, '', 0, 8, 300000,	0, 0, 'ein_in01', 285, 89)"); 
+		query_sql("INSERT INTO `houses` VALUES (56,	'Restaurant Part 2/2',		 0, '', 0, 8, 300000,	0, 0, 'ein_in01', 268, 104)"); 
+		query_sql("INSERT INTO `houses` VALUES (57,	'Academy',			 0, '', 0, 8, 10000000,	0, 0, 'ein_in01', 148, 153)"); 
+		query_sql("INSERT INTO `houses` VALUES (58,	'Factory Part 1/2',		 0, '', 0, 8, 100000,	0, 0, 'ein_in01', 17, 213)"); 
+		query_sql("INSERT INTO `houses` VALUES (59,	'Factory Part 2/2',		 0, '', 0, 8, 100000,	0, 0, 'ein_in01', 81, 203)"); 
+		query_sql("INSERT INTO `houses` VALUES (60,	'Weapon Shop',			 0, '', 0, 8, 700000,	0, 0, 'ein_in01', 108, 17)"); 
+		query_sql("INSERT INTO `houses` VALUES (61,	'Hotel',			 0, '', 0, 8, 2000000,	0, 0, 'ein_in01', 198, 224)"); 
+		query_sql("INSERT INTO `houses` VALUES (62,	'Luxus Warehouse Part 1/2',	 0, '', 0, 8, 1000000,	0, 0, 'ein_in01', 107, 95)"); 
+		query_sql("INSERT INTO `houses` VALUES (63,	'Luxus Warehouse Part 2/2',	 0, '', 0, 8, 1000000,	0, 0, 'ein_in01', 121, 80)"); 
+		query_sql("INSERT INTO `houses` VALUES (64,	'House',			 0, '', 0, 8, 200000,	0, 0, 'ein_in01', 14, 147)"); 
+		query_sql("INSERT INTO `houses` VALUES (65,	'Black Smith',			 0, '', 0, 8, 10000000,	0, 0, 'ein_in01', 14, 17)"); 
+		query_sql("INSERT INTO `houses` VALUES (66,	'Tavern',			 0, '', 0, 8, 200000,	0, 0, 'geffen_in', 28, 110)"); 
+		query_sql("INSERT INTO `houses` VALUES (67,	'Hotel',			 0, '', 0, 8, 2000000,	0, 0, 'geffen_in', 70, 52)"); 
+		query_sql("INSERT INTO `houses` VALUES (68,	'Black Smith House',		 0, '', 0, 8, 10000000,	0, 0, 'geffen_in', 106, 177)"); 
+		query_sql("INSERT INTO `houses` VALUES (69,	'Warehouse',			 0, '', 0, 8, 1000000,	0, 0, 'geffen_in', 70, 138)"); 
+		query_sql("INSERT INTO `houses` VALUES (70,	'Academy',			 0, '', 0, 8, 10000000,	0, 0, 'geffen_in', 162, 97)"); 
+		query_sql("INSERT INTO `houses` VALUES (71,	'Shop',				 0, '', 0, 8, 500000,	0, 0, 'geffen_in', 28, 160)"); 
+		query_sql("INSERT INTO `houses` VALUES (72,	'House',			 0, '', 0, 8, 200000,	0, 0, 'gon_in', 112, 98)"); 
+		query_sql("INSERT INTO `houses` VALUES (73,	'House',			 0, '', 0, 8, 200000,	0, 0, 'gon_in', 95, 23)"); 
+		query_sql("INSERT INTO `houses` VALUES (74,	'House',			 0, '', 0, 8, 200000,	0, 0, 'gon_in', 72, 70)"); 
+		query_sql("INSERT INTO `houses` VALUES (75,	'Mansion',			 0, '', 0, 8, 2000000,	0, 0, 'gon_in', 152, 24)"); 
+		query_sql("INSERT INTO `houses` VALUES (76,	'Mansion',			 0, '', 0, 8, 2000000,	0, 0, 'gon_in', 44, 24)"); 
+		query_sql("INSERT INTO `houses` VALUES (77,	'Church',			 0, '', 0, 8, 10000000,	0, 0, 'hu_in01', 211, 177)"); 
+		query_sql("INSERT INTO `houses` VALUES (78,	'Mansion',			 0, '', 0, 8, 2000000,	0, 0, 'hu_in01', 287, 231)"); 
+		query_sql("INSERT INTO `houses` VALUES (79,	'Grocery',			 0, '', 0, 8, 500000,	0, 0, 'hu_in01', 246, 363)"); 
+		query_sql("INSERT INTO `houses` VALUES (80,	'Mansion',			 0, '', 0, 8, 2000000,	0, 0, 'hu_in01', 231, 303)"); 
+		query_sql("INSERT INTO `houses` VALUES (81,	'Luxus Shop',			 0, '', 0, 8, 700000,	0, 0, 'hu_in01', 110, 373)"); 
+		query_sql("INSERT INTO `houses` VALUES (82,	'Party Shop',			 0, '', 0, 8, 700000,	0, 0, 'hu_in01', 30, 304)"); 
+		query_sql("INSERT INTO `houses` VALUES (83,	'Guild House',			 0, '', 0, 8, 5000000,	0, 0, 'hu_in01', 235, 107)"); 
+		query_sql("INSERT INTO `houses` VALUES (84,	'Hunter Academy',		 0, '', 0, 8, 10000000,	0, 0, 'hu_in01', 381, 368)"); 
+		query_sql("INSERT INTO `houses` VALUES (85,	'Villa',			 0, '', 0, 8, 2500000,	0, 0, 'hu_in01', 350, 107)"); 
+		query_sql("INSERT INTO `houses` VALUES (86,	'Mansion',			 0, '', 0, 8, 2000000,	0, 0, 'hu_in01', 305, 379)"); 
+		query_sql("INSERT INTO `houses` VALUES (87,	'Luxus Warehouse',		 0, '', 0, 8, 1000000,	0, 0, 'hu_in01', 24, 363)"); 
+		query_sql("INSERT INTO `houses` VALUES (88,	'Weapon Shop',			 0, '', 0, 8, 800000,	0, 0, 'izlude_in', 65, 87)"); 
+		query_sql("INSERT INTO `houses` VALUES (89,	'Arena Room',			 0, '', 0, 8, 10000000,	0, 0, 'izlude_in', 151, 127)"); 
+		query_sql("INSERT INTO `houses` VALUES (90,	'Swordman Academy',		 0, '', 0, 8, 10000000,	0, 0, 'izlude_in', 74, 161)"); 
+		query_sql("INSERT INTO `houses` VALUES (91,	'Castle Part 1/2',		 0, '', 0, 8, 10000000,	0, 0, 'lhz_in01', 111, 126)"); 
+		query_sql("INSERT INTO `houses` VALUES (92,	'Castle Part 2/2',		 0, '', 0, 8, 10000000,	0, 0, 'lhz_in01', 116, 126)"); 
+		query_sql("INSERT INTO `houses` VALUES (93,	'Zenit Bank',			 0, '', 0, 8, 10000000,	0, 0, 'lhz_in02', 39, 28)"); 
+		query_sql("INSERT INTO `houses` VALUES (94,	'Police Station',		 0, '', 0, 8, 10000000,	0, 0, 'lhz_in02', 133, 199)"); 
+		query_sql("INSERT INTO `houses` VALUES (95,	'Trade Company Warehouse',	 0, '', 0, 8, 1000000,	0, 0, 'lhz_in02', 28, 270)"); 
+		query_sql("INSERT INTO `houses` VALUES (96,	'Jewelry Shop',			 0, '', 0, 8, 500000,	0, 0, 'lhz_in02', 104, 26)"); 
+		query_sql("INSERT INTO `houses` VALUES (97,	'Weapon Shop Part 1/2',		 0, '', 0, 8, 700000,	0, 0, 'lhz_in02', 284, 30)"); 
+		query_sql("INSERT INTO `houses` VALUES (98,	'Weapon Shop Part 2/2',		 0, '', 0, 8, 700000,	0, 0, 'lhz_in02', 282, 83)"); 
+		query_sql("INSERT INTO `houses` VALUES (99,	'Hotel',			 0, '', 0, 8, 1000000,	0, 0, 'lhz_in02', 232, 265)"); 
+		query_sql("INSERT INTO `houses` VALUES (100,	'Lighthalzen Store',		 0, '', 0, 8, 700000,	0, 0, 'lhz_in02', 21, 195)"); 
+		query_sql("INSERT INTO `houses` VALUES (101,	'Store',			 0, '', 0, 8, 500000,	0, 0, 'lhz_in03', 241, 100)"); 
+		query_sql("INSERT INTO `houses` VALUES (102,	'House',			 0, '', 0, 8, 200000,	0, 0, 'lhz_in03', 14, 218)"); 
+		query_sql("INSERT INTO `houses` VALUES (103,	'Bar',				 0, '', 0, 8, 100000,	0, 0, 'lhz_in03', 188, 15)"); 
+		query_sql("INSERT INTO `houses` VALUES (104,	'Mansion',			 0, '', 0, 8, 2000000,	0, 0, 'lhz_in03', 45, 31)"); 
+		query_sql("INSERT INTO `houses` VALUES (105,	'Guild House',			 0, '', 0, 8, 5000000,	0, 0, 'lhz_in03', 97, 21)"); 
+		query_sql("INSERT INTO `houses` VALUES (106,	'Castle',			 0, '', 0, 8, 10000000,	0, 0, 'lou_in01', 101, 122)"); 
+		query_sql("INSERT INTO `houses` VALUES (107,	'Hotel',			 0, '', 0, 8, 2000000,	0, 0, 'lou_in02', 58, 173)"); 
+		query_sql("INSERT INTO `houses` VALUES (108,	'Weapon Shop',			 0, '', 0, 8, 900000,	0, 0, 'lou_in02', 126, 168)"); 
+		query_sql("INSERT INTO `houses` VALUES (109,	'Warehouse',			 0, '', 0, 8, 500000,	0, 0, 'lou_in02', 247, 171)"); 
+		query_sql("INSERT INTO `houses` VALUES (110,	'Mansion',			 0, '', 0, 8, 2000000,	0, 0, 'lou_in02', 245, 59)"); 
+		query_sql("INSERT INTO `houses` VALUES (111,	'Mansion',			 0, '', 0, 8, 2000000,	0, 0, 'lou_in02', 189, 77)"); 
+		query_sql("INSERT INTO `houses` VALUES (112,	'House',			 0, '', 0, 8, 200000,	0, 0, 'lou_in02', 72, 31)"); 
+		query_sql("INSERT INTO `houses` VALUES (113,	'Wall Guardians House',		 0, '', 0, 8, 100000,	0, 0, 'lou_in02', 121, 31)"); 
+		query_sql("INSERT INTO `houses` VALUES (114,	'Room',				 0, '', 0, 8, 100000,	0, 0, 'lou_in01', 25, 19)"); 
+		query_sql("INSERT INTO `houses` VALUES (115,	'Cat House',			 0, '', 0, 8, 100000,	0, 0, 'mal_in01', 11, 17)"); 
+		query_sql("INSERT INTO `houses` VALUES (116,	'Warehouse',			 0, '', 0, 8, 500000,	0, 0, 'mal_in01', 17, 163)"); 
+		query_sql("INSERT INTO `houses` VALUES (117,	'Cat House',			 0, '', 0, 8, 100000,	0, 0, 'mal_in01', 28, 118)"); 
+		query_sql("INSERT INTO `houses` VALUES (118,	'Restaurant',			 0, '', 0, 8, 100000,	0, 0, 'mal_in01', 36, 216)"); 
+		query_sql("INSERT INTO `houses` VALUES (119,	'Cat House',			 0, '', 0, 8, 100000,	0, 0, 'mal_in01', 19, 76)"); 
+		query_sql("INSERT INTO `houses` VALUES (120,	'Cat Food Room',		 0, '', 0, 8, 100000,	0, 0, 'mal_in01', 164, 15)"); 
+		query_sql("INSERT INTO `houses` VALUES (121,	'Grounded Ship',		 0, '', 0, 8, 5000000,	0, 0, 'mal_in02', 58, 61)"); 
+		query_sql("INSERT INTO `houses` VALUES (122,	'Ship',				 0, '', 0, 8, 10000000,	0, 0, 'ma_in01', 108, 92)"); 
+		query_sql("INSERT INTO `houses` VALUES (123,	'Black Smith',			 0, '', 0, 8, 10000000,	0, 0, 'man_in01', 277, 41)"); 
+		query_sql("INSERT INTO `houses` VALUES (124,	'Factory',			 0, '', 0, 8, 100000,	0, 0, 'man_in01', 358, 121)"); 
+		query_sql("INSERT INTO `houses` VALUES (125,	'Wall House',			 0, '', 0, 8, 100000,	0, 0, 'man_in01', 7, 61)"); 
+		query_sql("INSERT INTO `houses` VALUES (126,	'Diamond Factory Room',		 0, '', 0, 8, 100000,	0, 0, 'man_in01', 130, 267)"); 
+		query_sql("INSERT INTO `houses` VALUES (127,	'Diamond Factory Room',		 0, '', 0, 8, 100000,	0, 0, 'man_in01', 180, 267)"); 
+		query_sql("INSERT INTO `houses` VALUES (128,	'Diamond Factory Room',		 0, '', 0, 8, 100000,	0, 0, 'man_in01', 230, 267)"); 
+		query_sql("INSERT INTO `houses` VALUES (129,	'Diamond Factory Room',		 0, '', 0, 8, 100000,	0, 0, 'man_in01', 280, 267)"); 
+		query_sql("INSERT INTO `houses` VALUES (130,	'Diamond Factory Room',		 0, '', 0, 8, 100000,	0, 0, 'man_in01', 330, 267)"); 
+		query_sql("INSERT INTO `houses` VALUES (131,	'Diamond Factory Room',		 0, '', 0, 8, 100000,	0, 0, 'man_in01', 380, 267)"); 
+		query_sql("INSERT INTO `houses` VALUES (132,	'Guild House',			 0, '', 0, 8, 5000000,	0, 0, 'man_in01', 24, 284)"); 
+		query_sql("INSERT INTO `houses` VALUES (133,	'Guild House',			 0, '', 0, 8, 5000000,	0, 0, 'man_in01', 70, 171)"); 
+		query_sql("INSERT INTO `houses` VALUES (134,	'House',			 0, '', 0, 8, 200000,	0, 0, 'man_in01', 123, 224)"); 
+		query_sql("INSERT INTO `houses` VALUES (135,	'Villa',			 0, '', 0, 8, 3000000,	0, 0, 'mosk_in', 96, 61)"); 
+		query_sql("INSERT INTO `houses` VALUES (136,	'Weapon Shop',			 0, '', 0, 8, 800000,	0, 0, 'mosk_in', 15, 179)"); 
+		query_sql("INSERT INTO `houses` VALUES (137,	'Weapon Shop',			 0, '', 0, 8, 800000,	0, 0, 'mosk_in', 86, 180)"); 
+		query_sql("INSERT INTO `houses` VALUES (138,	'Shop',				 0, '', 0, 8, 500000,	0, 0, 'mosk_in', 14, 246)"); 
+		query_sql("INSERT INTO `houses` VALUES (139,	'Inn',				 0, '', 0, 8, 300000,	0, 0, 'mosk_in', 142, 178)"); 
+		query_sql("INSERT INTO `houses` VALUES (140,	'House',			 0, '', 0, 8, 200000,	0, 0, 'mosk_in', 211, 114)"); 
+		query_sql("INSERT INTO `houses` VALUES (141,	'Outskirts House',		 0, '', 0, 8, 150000,	0, 0, 'mosk_in', 214, 255)"); 
+		query_sql("INSERT INTO `houses` VALUES (142,	'Shop',				 0, '', 0, 8, 500000,	0, 0, 'nif_in', 14, 88)"); 
+		query_sql("INSERT INTO `houses` VALUES (143,	'House',			 0, '', 0, 8, 200000,	0, 0, 'nif_in', 136, 14)"); 
+		query_sql("INSERT INTO `houses` VALUES (144,	'Mansion',			 0, '', 0, 8, 2000000,	0, 0, 'nif_in', 81, 77)"); 
+		query_sql("INSERT INTO `houses` VALUES (145,	'Inn',				 0, '', 0, 8, 300000,	0, 0, 'nif_in', 20, 14)"); 
+		query_sql("INSERT INTO `houses` VALUES (146,	'Villa',			 0, '', 0, 8, 3000000,	0, 0, 'nif_in', 20, 156)"); 
+		query_sql("INSERT INTO `houses` VALUES (147,	'House',			 0, '', 0, 8, 200000,	0, 0, 'nif_in', 156, 80)"); 
+		query_sql("INSERT INTO `houses` VALUES (148,	'Guild House',			 0, '', 0, 8, 5000000,	0, 0, 'payon_in01', 175, 11)"); 
+		query_sql("INSERT INTO `houses` VALUES (149,	'Rice Shop',			 0, '', 0, 8, 500000,	0, 0, 'payon_in01', 14, 51)"); 
+		query_sql("INSERT INTO `houses` VALUES (150,	'Weapon Shop Part 1/2',		 0, '', 0, 8, 800000,	0, 0, 'payon_in01', 20, 129)"); 
+		query_sql("INSERT INTO `houses` VALUES (151,	'Weapon Shop Part 2/2',		 0, '', 0, 8, 800000,	0, 0, 'payon_in01', 13, 136)"); 
+		query_sql("INSERT INTO `houses` VALUES (152,	'House',			 0, '', 0, 8, 200000,	0, 0, 'payon_in01', 56, 53)"); 
+		query_sql("INSERT INTO `houses` VALUES (153,	'Castle',			 0, '', 0, 8, 10000000,	0, 0, 'payon_in03', 98, 117)"); 
+		query_sql("INSERT INTO `houses` VALUES (154,	'Warehouse',			 0, '', 0, 8, 700000,	0, 0, 'payon_in03', 149, 39)"); 
+		query_sql("INSERT INTO `houses` VALUES (155,	'House',			 0, '', 0, 8, 200000,	0, 0, 'payon_in01', 45, 11)"); 
+		query_sql("INSERT INTO `houses` VALUES (156,	'Mansion',			 0, '', 0, 8, 2500000,	0, 0, 'payon_in03', 81, 19)"); 
+		query_sql("INSERT INTO `houses` VALUES (157,	'Shop',				 0, '', 0, 8, 200000,	0, 0, 'payon_in03', 165, 143)"); 
+		query_sql("INSERT INTO `houses` VALUES (158,	'Villa',			 0, '', 0, 8, 3000000,	0, 0, 'payon_in03', 19, 64)"); 
+		query_sql("INSERT INTO `houses` VALUES (159,	'Mansion',			 0, '', 0, 8, 2000000,	0, 0, 'payon_in01', 90, 9)"); 
+		query_sql("INSERT INTO `houses` VALUES (160,	'House',			 0, '', 0, 8, 200000,	0, 0, 'prt_in', 240, 139)"); 
+		query_sql("INSERT INTO `houses` VALUES (161,	'South Western Library',	 0, '', 0, 8, 5000000,	0, 0, 'prt_in', 180, 97)"); 
+		query_sql("INSERT INTO `houses` VALUES (162,	'Shop',				 0, '', 0, 8, 500000,	0, 0, 'prt_in', 50, 105)"); 
+		query_sql("INSERT INTO `houses` VALUES (163,	'Shop',				 0, '', 0, 8, 500000,	0, 0, 'prt_in', 131, 71)"); 
+		query_sql("INSERT INTO `houses` VALUES (164,	'Weapon Shop',			 0, '', 0, 8, 900000,	0, 0, 'prt_in', 168, 128)"); 
+		query_sql("INSERT INTO `houses` VALUES (165,	'Study Room',			 0, '', 0, 8, 700000,	0, 0, 'prt_in', 60, 73)"); 
+		query_sql("INSERT INTO `houses` VALUES (166,	'South Eastern Library',	 0, '', 0, 8, 5000000,	0, 0, 'prt_in', 178, 55)"); 
+		query_sql("INSERT INTO `houses` VALUES (167,	'Inn',				 0, '', 0, 8, 200000,	0, 0, 'prt_in', 68, 134)"); 
+		query_sql("INSERT INTO `houses` VALUES (168,	'Tavern',			 0, '', 0, 8, 200000,	0, 0, 'prt_in', 172, 29)"); 
+		query_sql("INSERT INTO `houses` VALUES (169,	'Tavern',			 0, '', 0, 8, 200000,	0, 0, 'prt_in', 44, 29)"); 
+		query_sql("INSERT INTO `houses` VALUES (170,	'Knight Academy',		 0, '', 0, 8, 10000000,	0, 0, 'prt_in', 80, 110)"); 
+		query_sql("INSERT INTO `houses` VALUES (171,	'Villa Part 1/3',		 0, '', 0, 8, 2000000,	0, 0, 'prt_in', 208, 176)"); 
+		query_sql("INSERT INTO `houses` VALUES (172,	'Villa Part 2/3',		 0, '', 0, 8, 2000000,	0, 0, 'prt_in', 248, 170)"); 
+		query_sql("INSERT INTO `houses` VALUES (173,	'Villa Part 3/3',		 0, '', 0, 8, 2000000,	0, 0, 'prt_in', 282, 176)"); 
+		query_sql("INSERT INTO `houses` VALUES (174,	'House',			 0, '', 0, 8, 200000,	0, 0, 'prt_in', 227, 18)"); 
+		query_sql("INSERT INTO `houses` VALUES (175,	'Mansion Part 1/2',		 0, '', 0, 8, 2000000,	0, 0, 'ra_in01', 237, 198)"); 
+		query_sql("INSERT INTO `houses` VALUES (176,	'Mansion Part 2/2',		 0, '', 0, 8, 2000000,	0, 0, 'ra_in01', 181, 198)"); 
+		query_sql("INSERT INTO `houses` VALUES (177,	'House',			 0, '', 0, 8, 200000,	0, 0, 'ra_in01', 250, 34)"); 
+		query_sql("INSERT INTO `houses` VALUES (178,	'Guild House',			 0, '', 0, 8, 5000000,	0, 0, 'ra_in01', 295, 352)"); 
+		query_sql("INSERT INTO `houses` VALUES (179,	'Guild House',			 0, '', 0, 8, 5000000,	0, 0, 'ra_in01', 343, 193)"); 
+		query_sql("INSERT INTO `houses` VALUES (180,	'House',			 0, '', 0, 8, 200000,	0, 0, 'ra_in01', 135, 282)"); 
+		query_sql("INSERT INTO `houses` VALUES (181,	'Weapon Shop Part 1/2',		 0, '', 0, 8, 900000,	0, 0, 'ra_in01', 171, 359)"); 
+		query_sql("INSERT INTO `houses` VALUES (182,	'Weapon Shop Part 2/2',		 0, '', 0, 8, 900000,	0, 0, 'ra_in01', 171, 388)"); 
+		query_sql("INSERT INTO `houses` VALUES (183,	'Shop',				 0, '', 0, 8, 500000,	0, 0, 'ra_in01', 249, 266)"); 
+		query_sql("INSERT INTO `houses` VALUES (184,	'Guild House Part 1/4',		 0, '', 0, 8, 1500000,	0, 0, 'ra_in01', 386, 43)"); 
+		query_sql("INSERT INTO `houses` VALUES (185,	'House',			 0, '', 0, 8, 200000,	0, 0, 'ra_in01', 192, 148)"); 
+		query_sql("INSERT INTO `houses` VALUES (186,	'Guild House Part 2/4',		 0, '', 0, 8, 1500000,	0, 0, 'ra_in01', 213, 83)"); 
+		query_sql("INSERT INTO `houses` VALUES (187,	'Guild House Part 3/4',		 0, '', 0, 8, 1500000,	0, 0, 'ra_in01', 309, 65)"); 
+		query_sql("INSERT INTO `houses` VALUES (188,	'Guild House Part 4/4',		 0, '', 0, 8, 1500000,	0, 0, 'ra_in01', 375, 114)"); 
+		query_sql("INSERT INTO `houses` VALUES (189,	'Room',				 0, '', 0, 8, 100000,	0, 0, 'spl_in02', 224, 232)"); 
+		query_sql("INSERT INTO `houses` VALUES (190,	'Room',				 0, '', 0, 8, 100000,	0, 0, 'spl_in02', 207, 195)"); 
+		query_sql("INSERT INTO `houses` VALUES (191,	'Room',			 	 0, '', 0, 8, 100000,	0, 0, 'spl_in02', 180, 223)"); 
+		query_sql("INSERT INTO `houses` VALUES (192,	'Room',				 0, '', 0, 8, 100000,	0, 0, 'spl_in02', 108, 213)"); 
+		query_sql("INSERT INTO `houses` VALUES (193,	'Room',				 0, '', 0, 8, 100000,	0, 0, 'spl_in02', 61, 229)"); 
+		query_sql("INSERT INTO `houses` VALUES (194,	'Room',				 0, '', 0, 8, 100000,	0, 0, 'spl_in02', 236, 63)"); 
+		query_sql("INSERT INTO `houses` VALUES (195,	'Room',				 0, '', 0, 8, 100000,	0, 0, 'spl_in02', 189, 41)"); 
+		query_sql("INSERT INTO `houses` VALUES (196,	'Room',				 0, '', 0, 8, 100000,	0, 0, 'spl_in02', 137, 66)"); 
+		query_sql("INSERT INTO `houses` VALUES (197,	'Room',				 0, '', 0, 8, 100000,	0, 0, 'spl_in02', 140, 93)"); 
+		query_sql("INSERT INTO `houses` VALUES (198,	'Room',				 0, '', 0, 8, 100000,	0, 0, 'spl_in02', 45, 52)"); 
+		query_sql("INSERT INTO `houses` VALUES (199,	'Castle',			 0, '', 0, 8, 10000000,	0, 0, 'spl_in01', 110, 19)"); 
+		query_sql("INSERT INTO `houses` VALUES (200,	'Building',			 0, '', 0, 8, 100000,	0, 0, 'spl_in01', 190, 301)"); 
+		query_sql("INSERT INTO `houses` VALUES (201,	'Tavern',			 0, '', 0, 8, 200000,	0, 0, 'spl_in01', 171, 189)"); 
+		query_sql("INSERT INTO `houses` VALUES (202,	'Weapon Shop',			 0, '', 0, 8, 900000,	0, 0, 'spl_in01', 110, 301)"); 
+		query_sql("INSERT INTO `houses` VALUES (203,	'Magic Room',			 0, '', 0, 8, 700000,	0, 0, 'spl_in01', 30, 215)"); 
+		query_sql("INSERT INTO `houses` VALUES (204,	'Magic Room',			 0, '', 0, 8, 700000,	0, 0, 'spl_in01', 30, 301)"); 
+		query_sql("INSERT INTO `houses` VALUES (205,	'House',			 0, '', 0, 8, 200000,	0, 0, 'um_in', 38, 113)"); 
+		query_sql("INSERT INTO `houses` VALUES (206,	'Shop',				 0, '', 0, 8, 500000,	0, 0, 'um_in', 99, 114)"); 
+		query_sql("INSERT INTO `houses` VALUES (207,	'Weapon Shop',			 0, '', 0, 8, 800000,	0, 0, 'um_in', 155, 114)"); 
+		query_sql("INSERT INTO `houses` VALUES (208,	'Inn Part 1/2',			 0, '', 0, 8, 200000,	0, 0, 'um_in', 141, 42)"); 
+		query_sql("INSERT INTO `houses` VALUES (209,	'Inn Part 2/2',			 0, '', 0, 8, 200000,	0, 0, 'um_in', 163, 69)"); 
+		query_sql("INSERT INTO `houses` VALUES (210,	'House',			 0, '', 0, 8, 200000,	0, 0, 'um_in', 99, 66)"); 
+		query_sql("INSERT INTO `houses` VALUES (211,	'Shop',				 0, '', 0, 8, 500000,	0, 0, 've_in', 251, 287)"); 
+		query_sql("INSERT INTO `houses` VALUES (212,	'Luxus Weapon Shop',		 0, '', 0, 8, 1000000,	0, 0, 've_in', 349, 223)"); 
+		query_sql("INSERT INTO `houses` VALUES (213,	'Lounge Part 1/2',		 0, '', 0, 8, 200000,	0, 0, 've_in', 183, 207)"); 
+		query_sql("INSERT INTO `houses` VALUES (214,	'Lounge Part 2/2',		 0, '', 0, 8, 200000,	0, 0, 've_in', 201, 211)"); 
+		query_sql("INSERT INTO `houses` VALUES (215,	'Guild House',			 0, '', 0, 8, 5000000,	0, 0, 've_in', 99, 219)"); 
+		query_sql("INSERT INTO `houses` VALUES (216,	'House',			 0, '', 0, 8, 200000,	0, 0, 've_in', 252, 127)"); 
+		query_sql("INSERT INTO `houses` VALUES (217,	'Church',			 0, '', 0, 8, 10000000,	0, 0, 've_in', 351, 321)"); 
+		query_sql("INSERT INTO `houses` VALUES (218,	'Police Station',		 0, '', 0, 8, 10000000,	0, 0, 've_in', 77, 295)"); 
+		query_sql("INSERT INTO `houses` VALUES (219,	'Mansion',			 0, '', 0, 8, 2000000,	0, 0, 've_in', 194, 374)"); 
+		query_sql("INSERT INTO `houses` VALUES (220,	'Factory',			 0, '', 0, 8, 200000,	0, 0, 've_in02', 17, 19)"); 
+		query_sql("INSERT INTO `houses` VALUES (221,	'Weapon Shop',			 0, '', 0, 8, 800000,	0, 0, 'yuno_in01', 116, 37)"); 
+		query_sql("INSERT INTO `houses` VALUES (222,	'Hotel',			 0, '', 0, 8, 2000000,	0, 0, 'yuno_in01', 37, 176)"); 
+		query_sql("INSERT INTO `houses` VALUES (223,	'House',			 0, '', 0, 8, 200000,	0, 0, 'yuno_in01', 30, 100)"); 
+		query_sql("INSERT INTO `houses` VALUES (224,	'Black Books',			 0, '', 0, 8, 200000,	0, 0, 'yuno_in04', 33, 127)"); 
+		query_sql("INSERT INTO `houses` VALUES (225,	'Shop',				 0, '', 0, 8, 500000,	0, 0, 'yuno_in01', 32, 33)"); 
+		query_sql("INSERT INTO `houses` VALUES (226,	'Black Books',			 0, '', 0, 8, 200000,	0, 0, 'yuno_in01', 168, 101)"); 
+		query_sql("INSERT INTO `houses` VALUES (227,	'Library',			 0, '', 0, 8, 500000,	0, 0, 'yuno_in04', 32, 58)"); 
+		query_sql("INSERT INTO `houses` VALUES (228,	'Professor Guild',		 0, '', 0, 8, 10000000,	0, 0, 'yuno_in03', 167, 22)"); 
+		query_sql("INSERT INTO `houses` VALUES (229,	'Sage Guild',			 0, '', 0, 8, 10000000,	0, 0, 'yuno_in03', 25, 15)"); 
+		query_sql("INSERT INTO `houses` VALUES (230,	'Sorcerer Guild',		 0, '', 0, 8, 10000000,	0, 0, 'yuno_in03', 224, 23)"); 
+		query_sql("INSERT INTO `houses` VALUES (231,	'Castle',			 0, '', 0, 8, 10000000,	0, 0, 'yuno_in02', 168, 61)"); 
+		query_sql("INSERT INTO `houses` VALUES (232,	'House',			 0, '', 0, 8, 200000,	0, 0, 'yuno_in01', 101, 88)");  
+	end;
+}
+//==========================================================================================================

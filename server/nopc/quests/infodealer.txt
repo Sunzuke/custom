@@ -1,0 +1,592 @@
+-	shop	Info Shop	-,501:2000000000
+izlude,109,140,3	script	Cool Event	874,{
+	if (getmapxy(@mapname$,@mapx,@mapy,0) == 0) save @mapname$,@mapx,@mapy;
+	mes "[^0000FFCool Event^000000]";
+	mes "Hey, "+strcharinfo(0)+".";
+	mes "  ";
+	mes "I am a member of the ^0000FFCool Event Staff^000000. I help user on lower levels to have a good time.";
+	set .@menu$,"Card Info by Monster";
+	if(BaseLevel < 999) set .@menu$,"Leveling Suggestion";
+	next;
+	switch(select(
+		""+.@menu$+"",
+		"Accessory Cards",
+		"Zeny Information",
+		"Monster Location Info",
+		"Blank Card Boosts",
+		"Player vs. Player",
+		"Guild vs. Guild",
+		"What does Round-Based Game mean?"
+	)) {
+		//Which Monster will level me up?
+		case 1:
+			L_CardSearch:
+			if(BaseLevel == 999) {
+				mes "[^0000FFCool Event^000000]";
+				mes "Which Monster are you looking for?";
+				next;
+				input .@m$;
+				set .@q$,"(`ID` LIKE '"+.@m$+"' OR `Sprite` LIKE '"+.@m$+"' OR `kName` LIKE '"+.@m$+"' OR `iName` LIKE '"+.@m$+"')";
+				set .@nb, query_sql("SELECT kName, ID, DropCardid FROM `mob_db` WHERE "+.@q$+" AND `DropCardid` NOT LIKE '0'", .@mob$, .@mob, .@card);
+				if(.@nb == 0) {
+					set .@q$,"(`ID` LIKE '%"+.@m$+"%' OR `Sprite` LIKE '%"+.@m$+"%' OR `kName` LIKE '%"+.@m$+"%' OR `iName` LIKE '%"+.@m$+"%')";
+					set .@nb, query_sql("SELECT kName, ID, DropCardid FROM `mob_db` WHERE "+.@q$+" AND `DropCardid` NOT LIKE '0'", .@mob$, .@mob, .@card);
+				}
+				set .@i,0;
+				if(.@nb == 0) {
+					mes "[^0000FFCool Event^000000]";
+					mes "Sorry, I couldn't find any monster in my database.";
+					if(select("I try again", "Nevermind then") == 2) close;
+					next;
+					goto L_CardSearch;
+				}
+				if(.@nb > 1) {
+					set .@menu$,"";
+					set .@ii,0;
+					for(.@i = 0; .@i < .@nb; .@i++) {
+						set .@query2$,"SELECT map FROM mob_spawn WHERE mob_id LIKE '"+.@mob[.@i]+"'";
+						set .@nbb, query_sql(.@query2$, .@mapname$);
+						set .@query2$,"SELECT DropCardid FROM `mob_db` WHERE DropCardid NOT LIKE '0' AND `ID` LIKE '"+.@mob[.@i]+"'";
+						set .@nbbb, query_sql(.@query2$, .@drop);
+						if(.@nbb > 0 && .@nbbb > 0) {
+							if(.@ii == 0) {
+								set .@menu$,""+.@mob$[.@i]+" ["+.@mob[.@i]+"]";
+								set .@monster$[.@ii],.@mob$[.@i];
+								set .@monster[.@ii],.@mob[.@i];
+								set .@cards[.@ii],.@card[.@i];
+								set .@ii,.@ii+1;
+							} else {
+								set .@menu$,""+.@menu$+":"+.@mob$[.@i]+" ["+.@mob[.@i]+"]";
+								set .@monster$[.@ii],.@mob$[.@i];
+								set .@monster[.@ii],.@mob[.@i];
+								set .@cards[.@ii],.@card[.@i];
+								set .@ii,.@ii+1;
+							}
+						}
+						if(.@i == 50) set .@i,.@nb;
+					}
+					if(.@ii == 0) {
+						mes "[^0000FFCool Event^000000]";
+						mes "Sorry, I couldn't find any monster in my database.";
+						if(select("I try again", "Nevermind then") == 2) close;
+						next;
+						goto L_CardSearch;
+					} if(.@ii == 1) {
+						set .@mob$[0],.@monster$[0];
+						set .@mob[0],.@monster[0];
+						set .@i,0;
+					} else {
+						mes "[^0000FFCool Event^000000]";
+						mes "Which monster where you talking about?";
+						next;
+						set .@i,select(.@menu$)-1;
+						set .@mob$[0],.@monster$[.@i];
+						set .@mob[0],.@monster[.@i];
+						set .@card[0],.@cards[.@i];
+						set .@i,0;
+					}
+				}
+				set .@card,.@card[.@i];
+				close2;
+				pcblockmove getcharid(3),1;
+				npcshopitem "Info Shop",.@card,50;
+				npcshopattach "Info Shop";
+				callshop "Info Shop",1;
+				end;
+			}
+			mes "[^0000FFCool Event^000000]";
+			mes "The following Monster are good for you to kill";
+			set .@search,BaseLevel+10;
+			if(BaseLevel > 140) set .@search,rand(100,140);
+			set .@range,2;
+			set .@query$,"SELECT ID, kName FROM mob_db WHERE LV > '"+.@search+"' AND LV < '"+(.@search+.@range)+"'";
+			set .@nb, query_sql(.@query$, .@mob_id, .@name$);
+			while(.@nb < 10) {
+				set .@range,.@range+4;
+				set .@query$,"SELECT ID, kName FROM mob_db WHERE LV > '"+.@search+"' AND LV < '"+(.@search+.@range)+"'";
+				set .@nb, query_sql(.@query$, .@mob_id, .@name$);
+			}
+			set .@ii,1;
+			set .@menu$,"";
+			for(.@i = 0; .@i < .@nb; .@i++) {
+				set .@query2$,"SELECT map FROM mob_spawn WHERE mob_id LIKE '"+.@mob_id[.@i]+"'";
+				set .@nbb,0;
+				set .@nbb, query_sql(.@query2$, .@mapname$);
+				if(.@nbb > 0) {
+					if(.@menu$ == "") {
+						set .@mobid[.@ii],.@mob_id[.@i];
+						set .@mobname$[.@ii],.@name$[.@i];
+						set .@menu$,""+.@name$+"";
+					} else {
+						set .@mobid[.@ii],.@mob_id[.@i];
+						set .@mobname$[.@ii],.@name$[.@i];
+						set .@menu$,""+.@menu$+":"+.@name$[.@i]+"";
+					}
+					set .@ii,.@ii+1;
+				}
+			}
+			set .@select,select(.@menu$);
+			next;
+			set .@mobname$,.@mobname$[.@select];
+			set .@prize,BaseLevel*9;
+			set .@mobid,.@mobid[.@select];
+			goto L_MonsterInfo;
+		//Good accessory cards
+		case 2:
+			mes "[^0000FFCool Event^000000]";
+			mes "I show you some accessory cards...";
+			close2;
+			pcblockmove getcharid(3),1;
+			npcshopitem "Info Shop",4001,50;
+			npcshopadditem "Info Shop",4002,50;
+			npcshopadditem "Info Shop",4004,50;
+			npcshopadditem "Info Shop",4006,50;
+			npcshopadditem "Info Shop",4009,50;
+			npcshopadditem "Info Shop",4010,50;
+			npcshopadditem "Info Shop",4012,50;
+			npcshopadditem "Info Shop",4014,50;
+			npcshopadditem "Info Shop",4016,50;
+			npcshopadditem "Info Shop",4017,50;
+			npcshopadditem "Info Shop",4019,50;
+			npcshopadditem "Info Shop",4020,50;
+			npcshopadditem "Info Shop",4022,50;
+			npcshopadditem "Info Shop",4023,50;
+			npcshopadditem "Info Shop",4031,50;
+			npcshopadditem "Info Shop",4032,50;
+			npcshopadditem "Info Shop",4033,50;
+			npcshopadditem "Info Shop",4034,50;
+			npcshopadditem "Info Shop",4035,50;
+			npcshopadditem "Info Shop",4036,50;
+			npcshopadditem "Info Shop",4037,50;
+			npcshopadditem "Info Shop",4039,50;
+			npcshopadditem "Info Shop",4040,50;
+			npcshopadditem "Info Shop",4041,50;
+			npcshopadditem "Info Shop",4042,50;
+			npcshopadditem "Info Shop",4043,50;
+			npcshopadditem "Info Shop",4045,50;
+			npcshopadditem "Info Shop",4048,50;
+			npcshopadditem "Info Shop",4051,50;
+			npcshopadditem "Info Shop",4056,50;
+			npcshopadditem "Info Shop",4060,50;
+			npcshopadditem "Info Shop",4063,50;
+			npcshopadditem "Info Shop",4066,50;
+			npcshopadditem "Info Shop",4068,50;
+			npcshopadditem "Info Shop",4069,50;
+			npcshopadditem "Info Shop",4074,50;
+			npcshopadditem "Info Shop",4075,50;
+			npcshopadditem "Info Shop",4078,50;
+			npcshopadditem "Info Shop",4079,50;
+			npcshopadditem "Info Shop",4080,50;
+			npcshopadditem "Info Shop",4081,50;
+			npcshopadditem "Info Shop",4083,50;
+			npcshopadditem "Info Shop",4091,50;
+			npcshopadditem "Info Shop",4101,50;
+			npcshopadditem "Info Shop",4110,50;
+			npcshopadditem "Info Shop",4114,50;
+			npcshopadditem "Info Shop",4117,50;
+			npcshopadditem "Info Shop",4133,50;
+			npcshopadditem "Info Shop",4149,50;
+			npcshopadditem "Info Shop",4150,50;
+			npcshopadditem "Info Shop",4161,50;
+			npcshopadditem "Info Shop",4180,50;
+			npcshopadditem "Info Shop",4185,50;
+			npcshopadditem "Info Shop",4205,50;
+			npcshopadditem "Info Shop",4228,50;
+			npcshopadditem "Info Shop",4237,50;
+			npcshopadditem "Info Shop",4255,50;
+			npcshopadditem "Info Shop",4280,50;
+			npcshopadditem "Info Shop",4307,50;
+			npcshopadditem "Info Shop",4316,50;
+			npcshopadditem "Info Shop",4325,50;
+			npcshopadditem "Info Shop",4333,50;
+			npcshopadditem "Info Shop",4334,50;
+			npcshopadditem "Info Shop",4337,50;
+			npcshopadditem "Info Shop",4340,50;
+			npcshopadditem "Info Shop",4341,50;
+			npcshopadditem "Info Shop",4344,50;
+			npcshopadditem "Info Shop",4345,50;
+			npcshopadditem "Info Shop",4369,50;
+			npcshopadditem "Info Shop",4370,50;
+			npcshopadditem "Info Shop",4382,50;
+			npcshopadditem "Info Shop",4383,50;
+			npcshopadditem "Info Shop",4387,50;
+			npcshopadditem "Info Shop",4388,50;
+			npcshopadditem "Info Shop",4389,50;
+			npcshopadditem "Info Shop",4390,50;
+			npcshopadditem "Info Shop",4420,50;
+			npcshopadditem "Info Shop",4421,50;
+			npcshopadditem "Info Shop",4422,50;
+			npcshopadditem "Info Shop",4435,50;
+			npcshopadditem "Info Shop",4505,50;
+			npcshopadditem "Info Shop",4508,50;
+			npcshopattach "Info Shop";
+			callshop "Info Shop",1;
+			end;
+		close;
+		//Where can I get Zeny?
+		case 3:
+			mes "[^0000FFCool Event^000000]";
+			mes "PKs give you their Zeny.";
+			mes "Monster give you 10 Zeny,";
+			mes "+30z when you are ^230000not in a Party^000000";
+			mes "+10z when you are ^230000not in a Guild^000000";
+			mes "  ";
+			mes "Monster Bosses give you more Zeny";
+			next;
+			select("Monster Bosses?");
+			mes "[^0000FFCool Event^000000]";
+			mes "These monsters are Bosses:";
+			mes "There are more Bosses but I don't have information about them.";
+			set .@query$,"SELECT ID,kName,MEXP FROM mob_db WHERE MEXP NOT LIKE '0' ORDER BY MEXP ASC";
+			set .@nb, query_sql(.@query$, .@mobid, .@mobname$, .@MEXP);
+			set .@menu$,"";
+			set .@ii,2;
+			for(.@i = 0; .@i < .@nb; .@i++) {
+				if(.@MEXP[.@i]/50 < 150) {
+					set .@MobZeny,150;
+				} else {
+					set .@MobZeny,.@MEXP[.@i]/50;
+				}
+				set .@query2$,"SELECT amount FROM mob_spawn WHERE mob_id LIKE '"+.@mobid[.@i]+"'";
+				set .@nb2, query_sql(.@query2$, .@amt);
+				if(.@nb2 > 0) {
+					set .@mob_name$[.@ii],.@mobname$[.@i];
+					set .@mob_id[.@ii],.@mobid[.@i];
+					set .@mob_zeny[.@ii],.@MobZeny;
+					if(.@i == 0) {
+						set .@menu$,""+.@mob_name$[.@ii]+" ["+.@mob_zeny[.@ii]+" Zeny]";
+					} else {
+						set .@menu$,""+.@menu$+":"+.@mob_name$[.@ii]+" ["+.@mob_zeny[.@ii]+" Zeny]";
+					}
+					set .@ii,.@ii+1;
+				}
+			}
+			next;
+			set .@mobnum,select(.@menu$);
+			mes "[^0000FFCool Event^000000]";
+			mes "Killing "+.@mob_name$[.@mobnum]+" is worth "+.@mob_zeny[.@mobnum]+" Zeny";
+			next;
+			set .@mobname$,.@mob_name$[.@mobnum];
+			set .@prize,0;
+			set .@mobid,.@mob_id[.@mobnum];
+			goto L_MonsterInfo;
+		close;
+		//Monster Location Info
+		case 4:
+		L_MonserSearch:
+			mes "[^0000FFCool Event^000000]";
+			mes "Which Monster are you looking for?";
+			next;
+			input .@m$;
+			set .@q$,"`ID` LIKE '"+.@m$+"' OR `Sprite` LIKE '"+.@m$+"' OR `kName` LIKE '"+.@m$+"' OR `iName` LIKE '"+.@m$+"'";
+			set .@nb, query_sql("SELECT kName, ID FROM `mob_db` WHERE "+.@q$+"", .@mob$, .@mob);
+			if(.@nb == 0) {
+				set .@q$,"`ID` LIKE '%"+.@m$+"%' OR `Sprite` LIKE '%"+.@m$+"%' OR `kName` LIKE '%"+.@m$+"%' OR `iName` LIKE '%"+.@m$+"%'";
+				set .@nb, query_sql("SELECT kName, ID FROM `mob_db` WHERE "+.@q$+"", .@mob$, .@mob);
+			}
+			set .@i,0;
+			if(.@nb == 0) {
+				mes "[^0000FFCool Event^000000]";
+				mes "Sorry, I couldn't find any monster in my database.";
+				if(select("I try again", "Nevermind then") == 2) close;
+				next;
+				goto L_MonserSearch;
+			}
+			if(.@nb > 1) {
+				mes "[^0000FFCool Event^000000]";
+				mes "Which monster where you talking about?";
+				mes "^808080Monster without a spawn map are grey^000000";
+				set .@menu$,"";
+				for(.@i = 0; .@i < .@nb; .@i++) {
+					set .@query2$,"SELECT map FROM mob_spawn WHERE mob_id LIKE '"+.@mob[.@i]+"'";
+					set .@nbb, query_sql(.@query2$, .@mapname$);
+					if(.@i == 0) {
+						if(.@nbb > 0) {
+							set .@menu$,""+.@mob$[.@i]+" ["+.@mob[.@i]+"]";
+						} else {
+							set .@menu$,"^808080"+.@mob$[.@i]+" ["+.@mob[.@i]+"]^000000";
+						}
+					} else {
+						if(.@nbb > 0) {
+							set .@menu$,""+.@menu$+":"+.@mob$[.@i]+" ["+.@mob[.@i]+"]";
+						} else {
+							set .@menu$,""+.@menu$+":^808080"+.@mob$[.@i]+" ["+.@mob[.@i]+"]^000000";
+						}
+					}
+					if(.@i == 50) set .@i,.@nb;
+				}
+				next;
+				set .@i,select(.@menu$)-1;
+			}
+			set .@mobname$,.@mob$[.@i];
+			set .@prize,0;
+			set .@mobid,.@mob[.@i];
+			goto L_MonsterInfo;
+		close;
+		//What can I do with Blank Cards?
+		case 5:
+			mes "[^0000FFCool Event^000000]";
+			mes "Blank Cards are the Item version of Cash Points.";
+			mes "You can exchange 1 Cashpoint for Blank Card at the Top right Corner.";
+			next;
+			mes "[^0000FFCool Event^000000]";
+			mes "I sell you the following services for Blank Cards";
+			if(#AllowPartyLeech) {	set .@menu1$,"^00FF00Allow Party Leech^000000";	}
+			else {					set .@menu1$,"^FF0000Allow Party Leech^000000";	}
+			next;
+			switch(select(
+				""+.@menu1$+""
+			)) {
+				case 1:
+					mes "[^0000FFCool Event^000000]";
+					if(#AllowPartyLeech) {
+						mes "You already activated 'Allow Party Leech'.";
+						mes "You will get level whenever a Party Member kills monster above your level or above level 100.";
+						mes "There is no place restriction. Your level will increase even when you're in a town.";
+					} else {
+						mes "When you activate 'Allow Party Leech'";
+						mes "you will get level whenever a Party Member kills monster above your level or above level 100.";
+						mes "There is no place restriction. Your level will increase even when you're in a town.";
+						next;
+						select("Activate 'Allow Party Leech'");
+						mes "[^0000FFCool Event^000000]";
+						if(countitem($event) < 1) {
+							mes "I will actiavate 'Allow Party Leech' for ^FF00001x Blank Card^000000";
+							close;
+						} else {
+							delitem $event,1;
+							set #AllowPartyLeech,1;
+							mes "Congratulations "+strcharinfo(0)+"!";
+							mes "Have fun leveling while sitting around!";
+							close2;
+							message strcharinfo(0),"Activated Party Leech.";
+							end;
+						}
+					}
+				close;
+			}
+		close;
+		//Player vs. Player
+		case 6:
+			mes "[^0000FFCool Event^000000]";
+			mes "Interesting that you ask me that...";
+			mes "PvP is enabled on every map exept for Cities and houses. You can start to ^232323PvP at level 500^000000";
+			next;
+			switch(select(
+				"What happens when I die?",
+				"What happens when I kill someone?"
+			)) {
+				case 1:
+					mes "[^0000FFCool Event^000000]";
+					mes "When you die you loose all your Zeny to your opponent.";
+					mes "If you Baselevel is above your opponents level you won't be able to cast Skills for 1 minute.";
+					mes "If you die while still beeing unable to cast skills, you get warped to Jail for the remaining time.";
+					next;
+					switch(select(
+						"How can someone die in a town?"
+					)) {
+						case 1:
+							mes "[^0000FFCool Event^000000]";
+							mes "You can attack Guild antagonist even in Towns!";
+							mes "If their Guildmaster didn't set your Guild as antagonist they won't even be able to attack you!";
+							close;
+					}
+				case 2:
+					mes "[^0000FFCool Event^000000]";
+					mes "When you kill someone you get all the Zeny your opponent had.";
+					mes "If your Baselevel is above your opponents level you won't be able to cast Skills for 2 minutes (5 minutes in Towns).";
+					mes "If you killsomeone who can't use skills your opponent will be warped to jail.";
+					next;
+					switch(select(
+						"How can someone die in a town?"
+					)) {
+						case 1:
+							mes "[^0000FFCool Event^000000]";
+							mes "You can attack Guild antagonist even in Towns!";
+							mes "If their Guildmaster didn't set your Guild as antagonist they won't even be able to attack you!";
+							close;
+					}
+			}
+		close;
+		//Guild vs. Guild
+		case 8:
+			mes "[^0000FFCool Event^000000]";
+			mes "Guilds can fight other Guilds in castles during War of Emperium.";
+			mes "Guildmember can attack Guild antagonists wherever and whenever they want.";
+			next;
+			switch(select(
+				"How does WoE work?",
+				"Where is WoE right now?"
+			)) {
+				case 1:
+					mes "[^0000FFCool Event^000000]";
+					mes "Each castle is active for one day.";
+					mes "The guild that occupies the Castle for the longest time at this day will win the castle.";
+					mes "Even if you are the last one to Break the emperium the Guild that longer defended the Emperium will win the castle.";
+					close;
+				case 2:
+					mes "[^0000FFCool Event^000000]";
+					mes "I dunno man";
+					close;
+			}
+		close;
+		//What does Round-Based Game mean?
+		case 9:
+			mes "[^0000FFCool Event^000000]";
+			mes "On every 1st of the Month a soft reset happens";
+			mes "The following things will be gone:";
+			mes " - Zeny";
+			mes " - Items";
+			mes " - Buildings";
+			mes " - Quests";
+		close;
+	}
+
+
+OnBuyItem:
+	pcblockmove getcharid(3),0;
+	set @nb, query_sql("SELECT ID,kName FROM `mob_db` WHERE `DropCardid` LIKE '"+@bought_nameid[0]+"'", .@mobid, .@mobname$);
+	if(@nb == 1) {
+		mes "[^0000FFCool Event^000000]";
+		mes ""+getitemname(@bought_nameid[0])+" is dropped by "+.@mobname$+"";
+		next;
+		set .@prize,BaseLevel*15+300;
+		if(BaseLevel == 999) set .@prize,0;
+		goto L_MonsterInfo;
+	} else if(@nb) {
+		mes "[^0000FFCool Event^000000]";
+		mes ""+getitemname(@bought_nameid[0])+" is dropped by the following monsters";
+		for(.@i = 0; .@i < @nb; .@i++) {
+			set .@query2$,"SELECT map FROM mob_spawn WHERE mob_id LIKE '"+.@mobid[.@i]+"'";
+			set .@nbb, query_sql(.@query2$, .@mapname$);
+			if(.@i == 0) {
+				if(.@nbb > 0) {
+					set .@menu$,""+.@mobname$[.@i]+" ["+.@mobid[.@i]+"]";
+				} else {
+					set .@menu$,"^808080"+.@mobname$[.@i]+" ["+.@mobid[.@i]+"]^000000";
+				}
+			} else {
+				if(.@nbb > 0) {
+					set .@menu$,""+.@menu$+":"+.@mobname$[.@i]+" ["+.@mobid[.@i]+"]";
+				} else {
+					set .@menu$,""+.@menu$+":^808080"+.@mobname$[.@i]+" ["+.@mobid[.@i]+"]^000000";
+				}
+			}
+			if(.@i == 50) set .@i,.@nb;
+		}
+		next;
+		set .@i,select(.@menu$)-1;
+		set .@prize,BaseLevel*15+300;
+		if(BaseLevel == 999) set .@prize,0;
+		set .@mobid,.@mobid[.@i];
+		set .@mobname$,.@mobname$[.@i];
+		goto L_MonsterInfo;
+	} else {
+		mes "[^0000FFCool Event^000000]";
+		mes "This item is not dropped by monsters";
+		close;
+	}
+close;
+
+
+L_MonsterInfo:
+	set .@mobname$,.@mobname$;
+	set .@prize,.@prize;
+	set .@mobid,.@mobid;
+	set .@menu$,"";
+	set .@query2$,"SELECT map,map_name,amount FROM mob_spawn WHERE mob_id LIKE '"+.@mobid+"' ORDER BY amount DESC";
+	set .@nb, query_sql(.@query2$, .@mapname$, .@maptitle$, .@amt);
+	set .@ii,1;
+	for(.@i = 0; .@i < .@nb; .@i++) {
+		if(.@menu$ == "") {
+			set .@map$[.@ii],.@mapname$[.@i];
+			if(.@maptitle$[.@i] != "") {
+				set @maptitle$,""+.@maptitle$[.@i]+" ("+.@map$[.@ii]+")";
+			} else {
+				set @maptitle$,.@map$[.@ii];
+			}
+			set .@menu$,""+@maptitle$+" ["+.@amt[.@i]+"]";
+		} else {
+			if(.@mapname$[.@i] != "") {
+				set .@map$[.@ii],""+.@mapname$[.@i]+"";
+				if(.@maptitle$[.@i] != "") {
+					set @maptitle$,""+.@maptitle$[.@i]+" ("+.@map$[.@ii]+")";
+				} else {
+					set @maptitle$,.@map$[.@ii];
+				}
+				set .@menu$,""+.@menu$+":"+@maptitle$+" ["+.@amt[.@i]+"]";
+			}
+		}
+		set .@ii,.@ii+1;
+		if(.@ii == 50) set .@i,.@nb;
+	}
+	if(.@menu$ == "") {
+		mes "[^0000FFCool Event^000000]";
+		mes "I can't find "+.@mobname$+" on any map in my database.";
+		close;
+	}
+	mes "[^0000FFCool Event^000000]";
+	mes "I can warp you to "+.@mobname$+"'s spawn map.";
+	if(.@prize != 0) {
+		mes "It only costs you ^777777"+.@prize+" Zeny^000000!";
+	} else {
+		mes "It only costs you ^7777771x Blank Card^000000!";//6187
+	}
+	next;
+	set .@select,select(.@menu$);
+	if(.@prize == 0 && countitem($event) < 1) {
+		mes "[^0000FFCool Event^000000]";
+		mes "You don't have a Blank Card.";
+		close;
+	}
+	if(Zeny < .@prize) {
+		mes "[^0000FFCool Event^000000]";
+		mes "You don't have enough Zeny.";
+		close;
+	} else {
+		mes "[^0000FFCool Event^000000]";
+		if(.@prize != 0) {
+			mes "Are you sure you want to pay "+.@prize+" Zeny to warp to "+.@map$[.@select]+"?";
+		} else {
+			mes "Are you sure you want to pay 1x Blank Card to warp to "+.@map$[.@select]+"?";
+		}
+		switch(select(
+			"Yes!",
+			"Actually, No.."
+		)) {
+			case 1:
+				if(.@prize == 0) {
+					delitem $event,1;
+				} else {
+					set Zeny,Zeny-.@prize;
+				}
+				getitem 602,1;
+				close2;
+				pcblockmove getcharid(3),1;
+				specialeffect2 35;
+				sleep2 800;
+				specialeffect2 6;
+				sleep2 800;
+				pcblockmove getcharid(3),0;
+				set .@map$,.@map$[.@select];
+				warp .@map$,0,0;
+			end;
+			case 2:
+			close;
+		}
+	}
+close;
+}
+
+mid_camp,202,236,3	duplicate(Cool Event)	Cool Event#2	874
+manuk,302,199,3	duplicate(Cool Event)	Cool Event#3	874
+splendide,177,167,5	duplicate(Cool Event)	Cool Event#4	874
+comodo,296,125,3	duplicate(Cool Event)	Cool Event#5	874
+morocc,168,106,3	duplicate(Cool Event)	Cool Event#6	874
+prontera,147,174,5	duplicate(Cool Event)	Cool Event#7	874
+aldebaran,183,171,3	duplicate(Cool Event)	Cool Event#8	874
+geffen,129,67,3	duplicate(Cool Event)	Cool Event#9	874
+payon,189,105,3	duplicate(Cool Event)	Cool Event#10	874
+rachel,103,140,5	duplicate(Cool Event)	Cool Event#11	874
+veins,205,132,5	duplicate(Cool Event)	Cool Event#12	874
+

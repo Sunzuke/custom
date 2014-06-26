@@ -1,0 +1,2388 @@
+//==========================================================================================================
+//alberta
+alberta,117,38,0	script	warp#1	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",1);
+
+}
+alberta,117,38,4	script	Note#1	111,{
+	callfunc("HouseBoard",1);
+	close;
+}
+//------------------------------------------------------------
+alberta,134,38,0	script	warp#2	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",2);
+	end;
+}
+alberta,134,38,4	script	Note#2	111,{
+	callfunc("HouseBoard",2);
+	close;
+}
+//------------------------------------------------------------
+alberta,33,42,0	script	warp#3	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",3);
+	end;
+}
+alberta,33,42,4	script	Note#3	111,{
+	callfunc("HouseBoard",3);
+	close;
+}
+//------------------------------------------------------------
+alberta,65,233,0	script	warp#4	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",4);
+	end;
+}
+alberta,65,233,4	script	Note#4	111,{
+	callfunc("HouseBoard",4);
+	close;
+}
+//------------------------------------------------------------
+alberta,93,205,0	script	warp#5	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",5);
+	end;
+}
+alberta,93,205,4	script	Note#5	111,{
+	callfunc("HouseBoard",5);
+	close;
+}
+//------------------------------------------------------------
+alberta,98,153,0	script	warp#6	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",6);
+	end;
+}
+alberta,98,153,4	script	Note#6	111,{
+	callfunc("HouseBoard",6);
+	close;
+}
+//------------------------------------------------------------
+alberta,99,221,0	script	warp#7	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",7);
+	end;
+}
+alberta,99,221,4	script	Note#7	111,{
+	callfunc("HouseBoard",7);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//aldebaran
+aldebaran,118,63,0	script	warp#8	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",8);
+	end;
+}
+aldebaran,118,63,4	script	Note#8	111,{
+	callfunc("HouseBoard",8);
+	close;
+}
+//------------------------------------------------------------
+aldebaran,197,70,0	script	warp#9	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",9);
+	end;
+}
+aldebaran,197,70,4	script	Note#9	111,{
+	callfunc("HouseBoard",9);
+	close;
+}
+//------------------------------------------------------------
+aldebaran,233,105,0	script	warp#10	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",10);
+	end;
+}
+aldebaran,233,105,4	script	Note#10	111,{
+	callfunc("HouseBoard",10);
+	close;
+}
+//------------------------------------------------------------
+aldebaran,51,218,0	script	warp#11	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",11);
+	end;
+}
+aldebaran,51,218,4	script	Note#11	111,{
+	callfunc("HouseBoard",11);
+	close;
+}
+//------------------------------------------------------------
+aldebaran,61,229,0	script	warp#12	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",12);
+	end;
+}
+aldebaran,61,229,4	script	Note#12	111,{
+	callfunc("HouseBoard",12);
+	close;
+}
+//------------------------------------------------------------
+aldebaran,72,197,0	script	warp#13	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",13);
+	end;
+}
+aldebaran,72,197,4	script	Note#13	111,{
+	callfunc("HouseBoard",13);
+	close;
+}
+//------------------------------------------------------------
+aldebaran,89,234,0	script	warp#14	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",14);
+	end;
+}
+aldebaran,89,234,4	script	Note#14	111,{
+	callfunc("HouseBoard",14);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//amatsu
+amatsu,177,138,0	script	warp#15	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",15);
+	end;
+}
+amatsu,177,138,4	script	Note#15	111,{
+	callfunc("HouseBoard",15);
+	close;
+}
+//------------------------------------------------------------
+amatsu,248,160,0	script	warp#16	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",16);
+	end;
+}
+amatsu,248,160,4	script	Note#16	111,{
+	callfunc("HouseBoard",16);
+	close;
+}
+//------------------------------------------------------------
+amatsu,168,182,0	script	warp#17	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",17);
+	end;
+}
+amatsu,168,182,4	script	Note#17	111,{
+	callfunc("HouseBoard",17);
+	close;
+}
+//------------------------------------------------------------
+amatsu,52,148,0	script	warp#18	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",18);
+	end;
+}
+amatsu,52,148,4	script	Note#18	111,{
+	callfunc("HouseBoard",18);
+	close;
+}
+//------------------------------------------------------------
+amatsu,94,117,0	script	warp#19	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",19);
+	end;
+}
+amatsu,94,117,4	script	Note#19	111,{
+	callfunc("HouseBoard",19);
+	close;
+}
+//------------------------------------------------------------
+amatsu,132,117,0	script	warp#20	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",20);
+	end;
+}
+amatsu,132,117,4	script	Note#20	111,{
+	callfunc("HouseBoard",20);
+	close;
+}
+//------------------------------------------------------------
+amatsu,217,116,0	script	warp#21	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",21);
+	end;
+}
+amatsu,217,116,4	script	Note#21	111,{
+	callfunc("HouseBoard",21);
+	close;
+}
+//------------------------------------------------------------
+amatsu,85,235,0	script	warp#22	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",22);
+	end;
+}
+amatsu,85,235,4	script	Note#22	111,{
+	callfunc("HouseBoard",22);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//ayothaya
+ayothaya,130,97,0	script	warp#23	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",23);
+	end;
+}
+ayothaya,130,97,4	script	Note#23	111,{
+	callfunc("HouseBoard",23);
+	close;
+}
+//------------------------------------------------------------
+ayothaya,129,86,0	script	warp#24	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",24);
+	end;
+}
+ayothaya,129,86,4	script	Note#24	111,{
+	callfunc("HouseBoard",24);
+	close;
+}
+//------------------------------------------------------------
+ayothaya,130,75,0	script	warp#25	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",25);
+	end;
+}
+ayothaya,130,75,4	script	Note#25	111,{
+	callfunc("HouseBoard",25);
+	close;
+}
+//------------------------------------------------------------
+ayothaya,165,90,0	script	warp#26	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",26);
+	end;
+}
+ayothaya,165,90,4	script	Note#26	111,{
+	callfunc("HouseBoard",26);
+	close;
+}
+//------------------------------------------------------------
+ayothaya,177,90,0	script	warp#27	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",27);
+	end;
+}
+ayothaya,177,90,4	script	Note#27	111,{
+	callfunc("HouseBoard",27);
+	close;
+}
+//------------------------------------------------------------
+ayothaya,173,77,0	script	warp#28	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",28);
+	end;
+}
+ayothaya,173,77,4	script	Note#28	111,{
+	callfunc("HouseBoard",28);
+	close;
+}
+//------------------------------------------------------------
+ayothaya,229,69,0	script	warp#29	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",29);
+	end;
+}
+ayothaya,229,69,4	script	Note#29	111,{
+	callfunc("HouseBoard",29);
+	close;
+}
+//------------------------------------------------------------
+ayothaya,202,161,0	script	warp#30	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",30);
+	end;
+}
+ayothaya,202,161,4	script	Note#30	111,{
+	callfunc("HouseBoard",30);
+	close;
+}
+//------------------------------------------------------------
+ayothaya,211,150,0	script	warp#31	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",31);
+	end;
+}
+ayothaya,211,150,4	script	Note#31	111,{
+	callfunc("HouseBoard",31);
+	close;
+}
+//------------------------------------------------------------
+ayothaya,202,140,0	script	warp#32	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",32);
+	end;
+}
+ayothaya,202,140,4	script	Note#32	111,{
+	callfunc("HouseBoard",32);
+	close;
+}
+//------------------------------------------------------------
+ayothaya,192,150,0	script	warp#33	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",33);
+	end;
+}
+ayothaya,192,150,4	script	Note#33	111,{
+	callfunc("HouseBoard",33);
+	close;
+}
+//------------------------------------------------------------
+ayothaya,111,109,0	script	warp#34	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",34);
+	end;
+}
+ayothaya,111,109,4	script	Note#34	111,{
+	callfunc("HouseBoard",34);
+	close;
+}
+//------------------------------------------------------------
+ayothaya,62,104,0	script	warp#35	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",35);
+	end;
+}
+ayothaya,62,104,4	script	Note#35	111,{
+	callfunc("HouseBoard",35);
+	close;
+}
+//------------------------------------------------------------
+ayothaya,208,283,0	script	warp#36	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",36);
+	end;
+}
+ayothaya,208,283,4	script	Note#36	111,{
+	callfunc("HouseBoard",36);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//brasilis
+brasilis,146,162,0	script	warp#37	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",37);
+	end;
+}
+brasilis,146,162,4	script	Note#37	111,{
+	callfunc("HouseBoard",37);
+	close;
+}
+//------------------------------------------------------------
+brasilis,274,153,0	script	warp#38	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",38);
+	end;
+}
+brasilis,274,153,4	script	Note#38	111,{
+	callfunc("HouseBoard",38);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//comodo
+comodo,92,128,0	script	warp#39	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",39);
+	end;
+}
+comodo,92,128,4	script	Note#39	111,{
+	callfunc("HouseBoard",39);
+	close;
+}
+//------------------------------------------------------------
+comodo,265,74,0	script	warp#40	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",40);
+	end;
+}
+comodo,265,74,4	script	Note#40	111,{
+	callfunc("HouseBoard",40);
+	close;
+}
+//------------------------------------------------------------
+comodo,271,271,0	script	warp#41	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",41);
+	end;
+}
+comodo,271,271,4	script	Note#41	111,{
+	callfunc("HouseBoard",41);
+	close;
+}
+//------------------------------------------------------------
+comodo,192,294,0	script	warp#42	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",42);
+	end;
+}
+comodo,192,294,4	script	Note#42	111,{
+	callfunc("HouseBoard",42);
+	close;
+}
+//------------------------------------------------------------
+comodo,145,328,0	script	warp#43	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",43);
+	end;
+}
+comodo,145,328,4	script	Note#43	111,{
+	callfunc("HouseBoard",43);
+	close;
+}
+//------------------------------------------------------------
+comodo,236,298,0	script	warp#44	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",44);
+	end;
+}
+comodo,236,298,4	script	Note#44	111,{
+	callfunc("HouseBoard",44);
+	close;
+}
+//------------------------------------------------------------
+comodo,130,195,0	script	warp#45	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",45);
+	end;
+}
+comodo,130,195,4	script	Note#45	111,{
+	callfunc("HouseBoard",45);
+	close;
+}
+//------------------------------------------------------------
+comodo,115,291,0	script	warp#46	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",46);
+	end;
+}
+comodo,115,291,4	script	Note#46	111,{
+	callfunc("HouseBoard",46);
+	close;
+}
+//------------------------------------------------------------
+comodo,140,111,0	script	warp#47	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",47);
+	end;
+}
+comodo,140,111,4	script	Note#47	111,{
+	callfunc("HouseBoard",47);
+	close;
+}
+//------------------------------------------------------------
+comodo,153,97,0	script	warp#48	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",48);
+	end;
+}
+comodo,153,97,4	script	Note#48	111,{
+	callfunc("HouseBoard",48);
+	close;
+}
+//------------------------------------------------------------
+comodo,126,98,0	script	warp#49	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",49);
+	end;
+}
+comodo,126,98,4	script	Note#49	111,{
+	callfunc("HouseBoard",49);
+	close;
+}
+//------------------------------------------------------------
+comodo,140,90,0	script	warp#50	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",50);
+	end;
+}
+comodo,140,90,4	script	Note#50	111,{
+	callfunc("HouseBoard",50);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//dewata
+//==========================================================================================================
+//dicastes
+//==========================================================================================================
+//eclage
+eclage,299,309,0	script	warp#51	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",51);
+	end;
+}
+eclage,299,309,4	script	Note#51	111,{
+	callfunc("HouseBoard",51);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//einbech
+einbech,177,136,0	script	warp#52	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",52);
+	end;
+}
+einbech,177,136,4	script	Note#52	111,{
+	callfunc("HouseBoard",52);
+	close;
+}
+//------------------------------------------------------------
+einbech,207,135,0	script	warp#53	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",53);
+	end;
+}
+einbech,207,135,4	script	Note#53	111,{
+	callfunc("HouseBoard",53);
+	close;
+}
+//------------------------------------------------------------
+einbech,214,121,0	script	warp#54	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",54);
+	end;
+}
+einbech,214,121,4	script	Note#54	111,{
+	callfunc("HouseBoard",54);
+	close;
+}
+//------------------------------------------------------------
+einbech,154,106,0	script	warp#55	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",55);
+	end;
+}
+einbech,154,106,4	script	Note#55	111,{
+	callfunc("HouseBoard",55);
+	close;
+}
+//------------------------------------------------------------
+einbech,145,112,0	script	warp#56	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",56);
+	end;
+}
+einbech,145,112,4	script	Note#56	111,{
+	callfunc("HouseBoard",56);
+	close;
+}
+//------------------------------------------------------------
+einbech,256,109,0	script	warp#57	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",57);
+	end;
+}
+einbech,256,109,4	script	Note#57	111,{
+	callfunc("HouseBoard",57);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//einbroch
+einbroch,132,79,0	script	warp#58	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",58);
+	end;
+}
+einbroch,132,79,4	script	Note#58	111,{
+	callfunc("HouseBoard",58);
+	close;
+}
+//------------------------------------------------------------
+einbroch,179,73,0	script	warp#59	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",59);
+	end;
+}
+einbroch,179,73,4	script	Note#59	111,{
+	callfunc("HouseBoard",59);
+	close;
+}
+//------------------------------------------------------------
+einbroch,216,214,0	script	warp#60	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",60);
+	end;
+}
+einbroch,216,214,4	script	Note#60	111,{
+	callfunc("HouseBoard",60);
+	close;
+}
+//------------------------------------------------------------
+einbroch,257,199,0	script	warp#61	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",61);
+	end;
+}
+einbroch,257,199,4	script	Note#61	111,{
+	callfunc("HouseBoard",61);
+	close;
+}
+//------------------------------------------------------------
+einbroch,278,233,0	script	warp#62	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",62);
+	end;
+}
+einbroch,278,233,4	script	Note#62	111,{
+	callfunc("HouseBoard",62);
+	close;
+}
+//------------------------------------------------------------
+einbroch,290,222,0	script	warp#63	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",63);
+	end;
+}
+einbroch,290,222,4	script	Note#63	111,{
+	callfunc("HouseBoard",63);
+	close;
+}
+//------------------------------------------------------------
+einbroch,129,229,0	script	warp#64	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",64);
+	end;
+}
+einbroch,129,229,4	script	Note#64	111,{
+	callfunc("HouseBoard",64);
+	close;
+}
+//------------------------------------------------------------
+einbroch,255,107,0	script	warp#65	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",65);
+	end;
+}
+einbroch,255,107,4	script	Note#65	111,{
+	callfunc("HouseBoard",65);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//geffen
+geffen,138,138,0	script	warp#66	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",66);
+	end;
+}
+geffen,138,138,4	script	Note#66	111,{
+	callfunc("HouseBoard",66);
+	close;
+}
+//------------------------------------------------------------
+geffen,172,174,0	script	warp#67	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",67);
+	end;
+}
+geffen,172,174,4	script	Note#67	111,{
+	callfunc("HouseBoard",67);
+	close;
+}
+//------------------------------------------------------------
+geffen,182,59,0	script	warp#68	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",68);
+	end;
+}
+geffen,182,59,4	script	Note#68	111,{
+	callfunc("HouseBoard",68);
+	close;
+}
+//------------------------------------------------------------
+geffen,43,85,0	script	warp#69	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",69);
+	end;
+}
+geffen,43,85,4	script	Note#69	111,{
+	callfunc("HouseBoard",69);
+	close;
+}
+//------------------------------------------------------------
+geffen,61,180,0	script	warp#70	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",70);
+	end;
+}
+geffen,61,180,4	script	Note#70	111,{
+	callfunc("HouseBoard",70);
+	close;
+}
+//------------------------------------------------------------
+geffen,98,141,0	script	warp#71	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",71);
+	end;
+}
+geffen,98,141,4	script	Note#71	111,{
+	callfunc("HouseBoard",71);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//gonryun
+gonryun,221,162,0	script	warp#72	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",72);
+	end;
+}
+gonryun,221,162,4	script	Note#72	111,{
+	callfunc("HouseBoard",72);
+	close;
+}
+//------------------------------------------------------------
+gonryun,195,93,0	script	warp#73	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",73);
+	end;
+}
+gonryun,195,93,4	script	Note#73	111,{
+	callfunc("HouseBoard",73);
+	close;
+}
+//------------------------------------------------------------
+gonryun,107,184,0	script	warp#74	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",74);
+	end;
+}
+gonryun,107,184,4	script	Note#74	111,{
+	callfunc("HouseBoard",74);
+	close;
+}
+//------------------------------------------------------------
+gonryun,215,114,0	script	warp#75	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",75);
+	end;
+}
+gonryun,215,114,4	script	Note#75	111,{
+	callfunc("HouseBoard",75);
+	close;
+}
+//------------------------------------------------------------
+gonryun,109,131,0	script	warp#76	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",76);
+	end;
+}
+gonryun,109,131,4	script	Note#76	111,{
+	callfunc("HouseBoard",76);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//hugel
+hugel,155,114,0	script	warp#77	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",77);
+	end;
+}
+hugel,155,114,4	script	Note#77	111,{
+	callfunc("HouseBoard",77);
+	close;
+}
+//------------------------------------------------------------
+hugel,153,153,0	script	warp#78	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",78);
+	end;
+}
+hugel,153,153,4	script	Note#78	111,{
+	callfunc("HouseBoard",78);
+	close;
+}
+//------------------------------------------------------------
+hugel,92,167,0	script	warp#79	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",79);
+	end;
+}
+hugel,92,167,4	script	Note#79	111,{
+	callfunc("HouseBoard",79);
+	close;
+}
+//------------------------------------------------------------
+hugel,85,181,0	script	warp#80	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",80);
+	end;
+}
+hugel,85,181,4	script	Note#80	111,{
+	callfunc("HouseBoard",80);
+	close;
+}
+//------------------------------------------------------------
+hugel,70,157,0	script	warp#81	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",81);
+	end;
+}
+hugel,70,157,4	script	Note#81	111,{
+	callfunc("HouseBoard",81);
+	close;
+}
+//------------------------------------------------------------
+hugel,91,104,0	script	warp#82	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",82);
+	end;
+}
+hugel,91,104,4	script	Note#82	111,{
+	callfunc("HouseBoard",82);
+	close;
+}
+//------------------------------------------------------------
+hugel,104,79,0	script	warp#83	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",83);
+	end;
+}
+hugel,104,79,4	script	Note#83	111,{
+	callfunc("HouseBoard",83);
+	close;
+}
+//------------------------------------------------------------
+hugel,206,228,0	script	warp#84	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",84);
+	end;
+}
+hugel,206,228,4	script	Note#84	111,{
+	callfunc("HouseBoard",84);
+	close;
+}
+//------------------------------------------------------------
+hugel,129,66,0	script	warp#85	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",85);
+	end;
+}
+hugel,129,66,4	script	Note#85	111,{
+	callfunc("HouseBoard",85);
+	close;
+}
+//------------------------------------------------------------
+hugel,153,216,0	script	warp#86	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",86);
+	end;
+}
+hugel,153,216,4	script	Note#86	111,{
+	callfunc("HouseBoard",86);
+	close;
+}
+//------------------------------------------------------------
+hugel,80,230,0	script	warp#87	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",87);
+	end;
+}
+hugel,80,230,4	script	Note#87	111,{
+	callfunc("HouseBoard",87);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//izlude
+izlude,109,182,0	script	warp#88	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",88);
+	end;
+}
+izlude,109,182,4	script	Note#88	111,{
+	callfunc("HouseBoard",88);
+	close;
+}
+//------------------------------------------------------------
+izlude,216,162,0	script	warp#89	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",89);
+	end;
+}
+izlude,216,162,4	script	Note#89	111,{
+	callfunc("HouseBoard",89);
+	close;
+}
+//------------------------------------------------------------
+izlude,52,172,0	script	warp#90	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",90);
+	end;
+}
+izlude,52,172,4	script	Note#90	111,{
+	callfunc("HouseBoard",90);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//lighthalzen
+lighthalzen,101,248,0	script	warp#91	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",91);
+	end;
+}
+lighthalzen,101,248,4	script	Note#91	111,{
+	callfunc("HouseBoard",91);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,106,248,0	script	warp#92	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",92);
+	end;
+}
+lighthalzen,106,248,4	script	Note#92	111,{
+	callfunc("HouseBoard",92);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,198,257,0	script	warp#93	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",93);
+	end;
+}
+lighthalzen,198,257,4	script	Note#93	111,{
+	callfunc("HouseBoard",93);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,236,276,0	script	warp#94	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",94);
+	end;
+}
+lighthalzen,236,276,4	script	Note#94	111,{
+	callfunc("HouseBoard",94);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,238,220,0	script	warp#95	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",95);
+	end;
+}
+lighthalzen,238,220,4	script	Note#95	111,{
+	callfunc("HouseBoard",95);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,93,110,0	script	warp#96	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",96);
+	end;
+}
+lighthalzen,93,110,4	script	Note#96	111,{
+	callfunc("HouseBoard",96);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,197,36,0	script	warp#97	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",97);
+	end;
+}
+lighthalzen,197,36,4	script	Note#97	111,{
+	callfunc("HouseBoard",97);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,196,46,0	script	warp#98	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",98);
+	end;
+}
+lighthalzen,196,46,4	script	Note#98	111,{
+	callfunc("HouseBoard",98);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,159,133,0	script	warp#99	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",99);
+	end;
+}
+lighthalzen,159,133,4	script	Note#99	111,{
+	callfunc("HouseBoard",99);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,198,163,0	script	warp#100	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",100);
+	end;
+}
+lighthalzen,198,163,4	script	Note#100	111,{
+	callfunc("HouseBoard",100);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,324,301,0	script	warp#101	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",101);
+	end;
+}
+lighthalzen,324,301,4	script	Note#101	111,{
+	callfunc("HouseBoard",101);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,347,261,0	script	warp#102	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",102);
+	end;
+}
+lighthalzen,347,261,4	script	Note#102	111,{
+	callfunc("HouseBoard",102);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,345,231,0	script	warp#103	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",103);
+	end;
+}
+lighthalzen,345,231,4	script	Note#103	111,{
+	callfunc("HouseBoard",103);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,50,86,0	script	warp#104	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",104);
+	end;
+}
+lighthalzen,50,86,4	script	Note#104	111,{
+	callfunc("HouseBoard",104);
+	close;
+}
+//------------------------------------------------------------
+lighthalzen,251,299,0	script	warp#105	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",105);
+	end;
+}
+lighthalzen,251,299,4	script	Note#105	111,{
+	callfunc("HouseBoard",105);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//louyang
+louyang,218,255,0	script	warp#106	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",106);
+	end;
+}
+louyang,218,255,4	script	Note#106	111,{
+	callfunc("HouseBoard",106);
+	close;
+}
+//------------------------------------------------------------
+louyang,280,167,0	script	warp#107	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",107);
+	end;
+}
+louyang,280,167,4	script	Note#107	111,{
+	callfunc("HouseBoard",107);
+	close;
+}
+//------------------------------------------------------------
+louyang,145,174,0	script	warp#108	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",108);
+	end;
+}
+louyang,145,174,4	script	Note#108	111,{
+	callfunc("HouseBoard",108);
+	close;
+}
+//------------------------------------------------------------
+louyang,136,97,0	script	warp#109	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",109);
+	end;
+}
+louyang,136,97,4	script	Note#109	111,{
+	callfunc("HouseBoard",109);
+	close;
+}
+//------------------------------------------------------------
+louyang,263,93,0	script	warp#110	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",110);
+	end;
+}
+louyang,263,93,4	script	Note#110	111,{
+	callfunc("HouseBoard",110);
+	close;
+}
+//------------------------------------------------------------
+louyang,309,80,0	script	warp#111	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",111);
+	end;
+}
+louyang,309,80,4	script	Note#111	111,{
+	callfunc("HouseBoard",111);
+	close;
+}
+//------------------------------------------------------------
+louyang,130,63,0	script	warp#112	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",112);
+	end;
+}
+louyang,130,63,4	script	Note#112	111,{
+	callfunc("HouseBoard",112);
+	close;
+}
+//------------------------------------------------------------
+louyang,317,176,0	script	warp#113	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",113);
+	end;
+}
+louyang,317,176,4	script	Note#113	111,{
+	callfunc("HouseBoard",113);
+	close;
+}
+//------------------------------------------------------------
+louyang,133,245,0	script	warp#114	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",114);
+	end;
+}
+louyang,133,245,4	script	Note#114	111,{
+	callfunc("HouseBoard",114);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//lutie
+//==========================================================================================================
+//malangdo
+malangdo,240,150,0	script	warp#115	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",115);
+	end;
+}
+malangdo,240,150,4	script	Note#115	111,{
+	callfunc("HouseBoard",115);
+	close;
+}
+//------------------------------------------------------------
+malangdo,112,167,0	script	warp#116	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",116);
+	end;
+}
+malangdo,112,167,4	script	Note#116	111,{
+	callfunc("HouseBoard",116);
+	close;
+}
+//------------------------------------------------------------
+malangdo,113,151,0	script	warp#117	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",117);
+	end;
+}
+malangdo,113,151,4	script	Note#117	111,{
+	callfunc("HouseBoard",117);
+	close;
+}
+//------------------------------------------------------------
+malangdo,119,137,0	script	warp#118	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",118);
+	end;
+}
+malangdo,119,137,4	script	Note#118	111,{
+	callfunc("HouseBoard",118);
+	close;
+}
+//------------------------------------------------------------
+malangdo,135,109,0	script	warp#119	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",119);
+	end;
+}
+malangdo,135,109,4	script	Note#119	111,{
+	callfunc("HouseBoard",119);
+	close;
+}
+//------------------------------------------------------------
+malangdo,135,276,0	script	warp#120	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",120);
+	end;
+}
+malangdo,135,276,4	script	Note#120	111,{
+	callfunc("HouseBoard",120);
+	close;
+}
+//------------------------------------------------------------
+malangdo,162,163,0	script	warp#121	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",121);
+	end;
+}
+malangdo,162,163,4	script	Note#121	111,{
+	callfunc("HouseBoard",121);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//malaya
+malaya,309,70,0	script	warp#122	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",122);
+	end;
+}
+malaya,309,70,4	script	Note#122	111,{
+	callfunc("HouseBoard",122);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//manuk
+manuk,311,142,0	script	warp#123	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",123);
+	end;
+}
+manuk,311,142,4	script	Note#123	111,{
+	callfunc("HouseBoard",123);
+	close;
+}
+//------------------------------------------------------------
+manuk,310,201,0	script	warp#124	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",124);
+	end;
+}
+manuk,310,201,4	script	Note#124	111,{
+	callfunc("HouseBoard",124);
+	close;
+}
+//------------------------------------------------------------
+manuk,255,110,0	script	warp#125	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",125);
+	end;
+}
+manuk,255,110,4	script	Note#125	111,{
+	callfunc("HouseBoard",125);
+	close;
+}
+//------------------------------------------------------------
+manuk,257,228,0	script	warp#126	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",126);
+	end;
+}
+manuk,257,228,4	script	Note#126	111,{
+	callfunc("HouseBoard",126);
+	close;
+}
+//------------------------------------------------------------
+manuk,265,237,0	script	warp#127	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",127);
+	end;
+}
+manuk,265,237,4	script	Note#127	111,{
+	callfunc("HouseBoard",127);
+	close;
+}
+//------------------------------------------------------------
+manuk,276,247,0	script	warp#128	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",128);
+	end;
+}
+manuk,276,247,4	script	Note#128	111,{
+	callfunc("HouseBoard",128);
+	close;
+}
+//------------------------------------------------------------
+manuk,288,249,0	script	warp#129	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",129);
+	end;
+}
+manuk,288,249,4	script	Note#129	111,{
+	callfunc("HouseBoard",129);
+	close;
+}
+//------------------------------------------------------------
+manuk,302,243,0	script	warp#130	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",130);
+	end;
+}
+manuk,302,243,4	script	Note#130	111,{
+	callfunc("HouseBoard",130);
+	close;
+}
+//------------------------------------------------------------
+manuk,311,234,0	script	warp#131	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",131);
+	end;
+}
+manuk,311,234,4	script	Note#131	111,{
+	callfunc("HouseBoard",131);
+	close;
+}
+//------------------------------------------------------------
+manuk,253,195,0	script	warp#132	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",132);
+	end;
+}
+manuk,253,195,4	script	Note#132	111,{
+	callfunc("HouseBoard",132);
+	close;
+}
+//------------------------------------------------------------
+manuk,235,124,0	script	warp#133	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",133);
+	end;
+}
+manuk,235,124,4	script	Note#133	111,{
+	callfunc("HouseBoard",133);
+	close;
+}
+//------------------------------------------------------------
+manuk,279,115,0	script	warp#134	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",134);
+	end;
+}
+manuk,279,115,4	script	Note#134	111,{
+	callfunc("HouseBoard",134);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//mid_camp
+//==========================================================================================================
+//morroc
+//==========================================================================================================
+//moscovia
+moscovia,256,138,0	script	warp#135	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",135);
+	end;
+}
+moscovia,256,138,4	script	Note#135	111,{
+	callfunc("HouseBoard",135);
+	close;
+}
+//------------------------------------------------------------
+moscovia,185,188,0	script	warp#136	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",136);
+	end;
+}
+moscovia,185,188,4	script	Note#136	111,{
+	callfunc("HouseBoard",136);
+	close;
+}
+//------------------------------------------------------------
+moscovia,203,171,0	script	warp#137	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",137);
+	end;
+}
+moscovia,203,171,4	script	Note#137	111,{
+	callfunc("HouseBoard",137);
+	close;
+}
+//------------------------------------------------------------
+moscovia,223,174,0	script	warp#138	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",138);
+	end;
+}
+moscovia,223,174,4	script	Note#138	111,{
+	callfunc("HouseBoard",138);
+	close;
+}
+//------------------------------------------------------------
+moscovia,229,208,0	script	warp#139	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",139);
+	end;
+}
+moscovia,229,208,4	script	Note#139	111,{
+	callfunc("HouseBoard",139);
+	close;
+}
+//------------------------------------------------------------
+moscovia,256,179,0	script	warp#140	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",140);
+	end;
+}
+moscovia,256,179,4	script	Note#140	111,{
+	callfunc("HouseBoard",140);
+	close;
+}
+//------------------------------------------------------------
+moscovia,205,98,0	script	warp#141	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",141);
+	end;
+}
+moscovia,205,98,4	script	Note#141	111,{
+	callfunc("HouseBoard",141);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//nameless
+//==========================================================================================================
+//niflheim
+niflheim,220,169,0	script	warp#142	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",142);
+	end;
+}
+niflheim,220,169,4	script	Note#142	111,{
+	callfunc("HouseBoard",142);
+	close;
+}
+//------------------------------------------------------------
+niflheim,219,199,0	script	warp#143	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",143);
+	end;
+}
+niflheim,219,199,4	script	Note#143	111,{
+	callfunc("HouseBoard",143);
+	close;
+}
+//------------------------------------------------------------
+niflheim,190,241,0	script	warp#144	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",144);
+	end;
+}
+niflheim,190,241,4	script	Note#144	111,{
+	callfunc("HouseBoard",144);
+	close;
+}
+//------------------------------------------------------------
+niflheim,189,211,0	script	warp#145	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",145);
+	end;
+}
+niflheim,189,211,4	script	Note#145	111,{
+	callfunc("HouseBoard",145);
+	close;
+}
+//------------------------------------------------------------
+niflheim,255,194,0	script	warp#146	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",146);
+	end;
+}
+niflheim,255,194,4	script	Note#146	111,{
+	callfunc("HouseBoard",146);
+	close;
+}
+//------------------------------------------------------------
+niflheim,165,162,0	script	warp#147	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",147);
+	end;
+}
+niflheim,165,162,4	script	Note#147	111,{
+	callfunc("HouseBoard",147);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//payon
+payon,223,117,0	script	warp#148	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",148);
+	end;
+}
+payon,223,117,4	script	Note#148	111,{
+	callfunc("HouseBoard",148);
+	close;
+}
+//------------------------------------------------------------
+payon,140,85,0	script	warp#149	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",149);
+	end;
+}
+payon,140,85,4	script	Note#149	111,{
+	callfunc("HouseBoard",149);
+	close;
+}
+//------------------------------------------------------------
+payon,135,158,0	script	warp#150	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",150);
+	end;
+}
+payon,135,158,4	script	Note#150	111,{
+	callfunc("HouseBoard",150);
+	close;
+}
+//------------------------------------------------------------
+payon,130,169,0	script	warp#151	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",151);
+	end;
+}
+payon,130,169,4	script	Note#151	111,{
+	callfunc("HouseBoard",151);
+	close;
+}
+//------------------------------------------------------------
+payon,151,127,0	script	warp#152	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",152);
+	end;
+}
+payon,151,127,4	script	Note#152	111,{
+	callfunc("HouseBoard",152);
+	close;
+}
+//------------------------------------------------------------
+payon,155,248,0	script	warp#153	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",153);
+	end;
+}
+payon,155,248,4	script	Note#153	111,{
+	callfunc("HouseBoard",153);
+	close;
+}
+//------------------------------------------------------------
+payon,189,233,0	script	warp#154	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",154);
+	end;
+}
+payon,189,233,4	script	Note#154	111,{
+	callfunc("HouseBoard",154);
+	close;
+}
+//------------------------------------------------------------
+payon,256,285,0	script	warp#155	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",155);
+	end;
+}
+payon,256,285,4	script	Note#155	111,{
+	callfunc("HouseBoard",155);
+	close;
+}
+//------------------------------------------------------------
+payon,127,204,0	script	warp#156	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",156);
+	end;
+}
+payon,127,204,4	script	Note#156	111,{
+	callfunc("HouseBoard",156);
+	close;
+}
+//------------------------------------------------------------
+payon,155,327,0	script	warp#157	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",157);
+	end;
+}
+payon,155,327,4	script	Note#157	111,{
+	callfunc("HouseBoard",157);
+	close;
+}
+//------------------------------------------------------------
+payon,107,327,0	script	warp#158	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",158);
+	end;
+}
+payon,107,327,4	script	Note#158	111,{
+	callfunc("HouseBoard",158);
+	close;
+}
+//------------------------------------------------------------
+payon,270,152,0	script	warp#159	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",159);
+	end;
+}
+payon,270,152,4	script	Note#159	111,{
+	callfunc("HouseBoard",159);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//prontera
+prontera,107,215,0	script	warp#160	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",160);
+	end;
+}
+prontera,107,215,4	script	Note#160	111,{
+	callfunc("HouseBoard",160);
+	close;
+}
+//------------------------------------------------------------
+prontera,120,267,0	script	warp#161	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",161);
+	end;
+}
+prontera,120,267,4	script	Note#161	111,{
+	callfunc("HouseBoard",161);
+	close;
+}
+//------------------------------------------------------------
+prontera,133,183,0	script	warp#162	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",162);
+	end;
+}
+prontera,133,183,4	script	Note#162	111,{
+	callfunc("HouseBoard",162);
+	close;
+}
+//------------------------------------------------------------
+prontera,134,221,0	script	warp#163	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",163);
+	end;
+}
+prontera,134,221,4	script	Note#163	111,{
+	callfunc("HouseBoard",163);
+	close;
+}
+//------------------------------------------------------------
+prontera,177,221,0	script	warp#164	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",164);
+	end;
+}
+prontera,177,221,4	script	Note#164	111,{
+	callfunc("HouseBoard",164);
+	close;
+}
+//------------------------------------------------------------
+prontera,179,184,0	script	warp#165	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",165);
+	end;
+}
+prontera,179,184,4	script	Note#165	111,{
+	callfunc("HouseBoard",165);
+	close;
+}
+//------------------------------------------------------------
+prontera,192,267,0	script	warp#166	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",166);
+	end;
+}
+prontera,192,267,4	script	Note#166	111,{
+	callfunc("HouseBoard",166);
+	close;
+}
+//------------------------------------------------------------
+prontera,204,192,0	script	warp#167	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",167);
+	end;
+}
+prontera,204,192,4	script	Note#167	111,{
+	callfunc("HouseBoard",167);
+	close;
+}
+//------------------------------------------------------------
+prontera,208,154,0	script	warp#168	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",168);
+	end;
+}
+prontera,208,154,4	script	Note#168	111,{
+	callfunc("HouseBoard",168);
+	close;
+}
+//------------------------------------------------------------
+prontera,42,67,0	script	warp#169	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",169);
+	end;
+}
+prontera,42,67,4	script	Note#169	111,{
+	callfunc("HouseBoard",169);
+	close;
+}
+//------------------------------------------------------------
+prontera,45,346,0	script	warp#170	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",170);
+	end;
+}
+prontera,45,346,4	script	Note#170	111,{
+	callfunc("HouseBoard",170);
+	close;
+}
+//------------------------------------------------------------
+prontera,73,100,0	script	warp#171	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",171);
+	end;
+}
+prontera,73,100,4	script	Note#171	111,{
+	callfunc("HouseBoard",171);
+	close;
+}
+//------------------------------------------------------------
+prontera,74,90,0	script	warp#172	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",172);
+	end;
+}
+prontera,74,90,4	script	Note#172	111,{
+	callfunc("HouseBoard",172);
+	close;
+}
+//------------------------------------------------------------
+prontera,84,89,0	script	warp#173	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",173);
+	end;
+}
+prontera,84,89,4	script	Note#173	111,{
+	callfunc("HouseBoard",173);
+	close;
+}
+//------------------------------------------------------------
+prontera,263,279,0	script	warp#174	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",174);
+	end;
+}
+prontera,263,279,4	script	Note#174	111,{
+	callfunc("HouseBoard",174);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//rachel
+rachel,81,33,0	script	warp#175	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",175);
+	end;
+}
+rachel,81,33,4	script	Note#175	111,{
+	callfunc("HouseBoard",175);
+	close;
+}
+//------------------------------------------------------------
+rachel,61,33,0	script	warp#176	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",176);
+	end;
+}
+rachel,61,33,4	script	Note#176	111,{
+	callfunc("HouseBoard",176);
+	close;
+}
+//------------------------------------------------------------
+rachel,217,55,0	script	warp#177	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",177);
+	end;
+}
+rachel,217,55,4	script	Note#177	111,{
+	callfunc("HouseBoard",177);
+	close;
+}
+//------------------------------------------------------------
+rachel,179,220,0	script	warp#178	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",178);
+	end;
+}
+rachel,179,220,4	script	Note#178	111,{
+	callfunc("HouseBoard",178);
+	close;
+}
+//------------------------------------------------------------
+rachel,103,240,0	script	warp#179	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",179);
+	end;
+}
+rachel,103,240,4	script	Note#179	111,{
+	callfunc("HouseBoard",179);
+	close;
+}
+//------------------------------------------------------------
+rachel,216,160,0	script	warp#180	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",180);
+	end;
+}
+rachel,216,160,4	script	Note#180	111,{
+	callfunc("HouseBoard",180);
+	close;
+}
+//------------------------------------------------------------
+rachel,42,87,0	script	warp#181	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",181);
+	end;
+}
+rachel,42,87,4	script	Note#181	111,{
+	callfunc("HouseBoard",181);
+	close;
+}
+//------------------------------------------------------------
+rachel,42,109,0	script	warp#182	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",182);
+	end;
+}
+rachel,42,109,4	script	Note#182	111,{
+	callfunc("HouseBoard",182);
+	close;
+}
+//------------------------------------------------------------
+rachel,83,78,0	script	warp#183	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",183);
+	end;
+}
+rachel,83,78,4	script	Note#183	111,{
+	callfunc("HouseBoard",183);
+	close;
+}
+//------------------------------------------------------------
+rachel,115,149,0	script	warp#184	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",184);
+	end;
+}
+rachel,115,149,4	script	Note#184	111,{
+	callfunc("HouseBoard",184);
+	close;
+}
+//------------------------------------------------------------
+rachel,90,189,0	script	warp#185	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",185);
+	end;
+}
+rachel,90,189,4	script	Note#185	111,{
+	callfunc("HouseBoard",185);
+	close;
+}
+//------------------------------------------------------------
+rachel,108,200,0	script	warp#186	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",186);
+	end;
+}
+rachel,108,200,4	script	Note#186	111,{
+	callfunc("HouseBoard",186);
+	close;
+}
+//------------------------------------------------------------
+rachel,105,171,0	script	warp#187	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",187);
+	end;
+}
+rachel,105,171,4	script	Note#187	111,{
+	callfunc("HouseBoard",187);
+	close;
+}
+//------------------------------------------------------------
+rachel,116,158,0	script	warp#188	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",188);
+	end;
+}
+rachel,116,158,4	script	Note#188	111,{
+	callfunc("HouseBoard",188);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//splendide
+splendide,240,317,0	script	warp#189	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",189);
+	end;
+}
+splendide,240,317,4	script	Note#189	111,{
+	callfunc("HouseBoard",189);
+	close;
+}
+//------------------------------------------------------------
+splendide,230,299,0	script	warp#190	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",190);
+	end;
+}
+splendide,230,299,4	script	Note#190	111,{
+	callfunc("HouseBoard",190);
+	close;
+}
+//------------------------------------------------------------
+splendide,214,310,0	script	warp#191	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",191);
+	end;
+}
+splendide,214,310,4	script	Note#191	111,{
+	callfunc("HouseBoard",191);
+	close;
+}
+//------------------------------------------------------------
+splendide,157,316,0	script	warp#192	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",192);
+	end;
+}
+splendide,157,316,4	script	Note#192	111,{
+	callfunc("HouseBoard",192);
+	close;
+}
+//------------------------------------------------------------
+splendide,119,324,0	script	warp#193	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",193);
+	end;
+}
+splendide,119,324,4	script	Note#193	111,{
+	callfunc("HouseBoard",193);
+	close;
+}
+//------------------------------------------------------------
+splendide,286,128,0	script	warp#194	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",194);
+	end;
+}
+splendide,286,128,4	script	Note#194	111,{
+	callfunc("HouseBoard",194);
+	close;
+}
+//------------------------------------------------------------
+splendide,259,112,0	script	warp#195	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",195);
+	end;
+}
+splendide,259,112,4	script	Note#195	111,{
+	callfunc("HouseBoard",195);
+	close;
+}
+//------------------------------------------------------------
+splendide,286,229,0	script	warp#196	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",196);
+	end;
+}
+splendide,286,229,4	script	Note#196	111,{
+	callfunc("HouseBoard",196);
+	close;
+}
+//------------------------------------------------------------
+splendide,299,251,0	script	warp#197	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",197);
+	end;
+}
+splendide,299,251,4	script	Note#197	111,{
+	callfunc("HouseBoard",197);
+	close;
+}
+//------------------------------------------------------------
+splendide,132,68,0	script	warp#198	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",198);
+	end;
+}
+splendide,132,68,4	script	Note#198	111,{
+	callfunc("HouseBoard",198);
+	close;
+}
+//------------------------------------------------------------
+splendide,197,193,0	script	warp#199	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",199);
+	end;
+}
+splendide,197,193,4	script	Note#199	111,{
+	callfunc("HouseBoard",199);
+	close;
+}
+//------------------------------------------------------------
+splendide,170,168,0	script	warp#200	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",200);
+	end;
+}
+splendide,170,168,4	script	Note#200	111,{
+	callfunc("HouseBoard",200);
+	close;
+}
+//------------------------------------------------------------
+splendide,156,210,0	script	warp#201	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",201);
+	end;
+}
+splendide,156,210,4	script	Note#201	111,{
+	callfunc("HouseBoard",201);
+	close;
+}
+//------------------------------------------------------------
+splendide,198,240,0	script	warp#202	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",202);
+	end;
+}
+splendide,198,240,4	script	Note#202	111,{
+	callfunc("HouseBoard",202);
+	close;
+}
+//------------------------------------------------------------
+splendide,238,212,0	script	warp#203	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",203);
+	end;
+}
+splendide,238,212,4	script	Note#203	111,{
+	callfunc("HouseBoard",203);
+	close;
+}
+//------------------------------------------------------------
+splendide,228,164,0	script	warp#204	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",204);
+	end;
+}
+splendide,228,164,4	script	Note#204	111,{
+	callfunc("HouseBoard",204);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//umbala
+umbala,68,253,0	script	warp#205	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",205);
+	end;
+}
+umbala,68,253,4	script	Note#205	111,{
+	callfunc("HouseBoard",205);
+	close;
+}
+//------------------------------------------------------------
+umbala,138,129,0	script	warp#206	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",206);
+	end;
+}
+umbala,138,129,4	script	Note#206	111,{
+	callfunc("HouseBoard",206);
+	close;
+}
+//------------------------------------------------------------
+umbala,125,157,0	script	warp#207	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",207);
+	end;
+}
+umbala,125,157,4	script	Note#207	111,{
+	callfunc("HouseBoard",207);
+	close;
+}
+//------------------------------------------------------------
+umbala,94,186,0	script	warp#208	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",208);
+	end;
+}
+umbala,94,186,4	script	Note#208	111,{
+	callfunc("HouseBoard",208);
+	close;
+}
+//------------------------------------------------------------
+umbala,100,203,0	script	warp#209	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",209);
+	end;
+}
+umbala,100,203,4	script	Note#209	111,{
+	callfunc("HouseBoard",209);
+	close;
+}
+//------------------------------------------------------------
+umbala,107,130,0	script	warp#210	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",210);
+	end;
+}
+umbala,107,130,4	script	Note#210	111,{
+	callfunc("HouseBoard",210);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//veins
+veins,230,166,0	script	warp#211	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",211);
+	end;
+}
+veins,230,166,4	script	Note#211	111,{
+	callfunc("HouseBoard",211);
+	close;
+}
+//------------------------------------------------------------
+veins,150,179,0	script	warp#212	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",212);
+	end;
+}
+veins,150,179,4	script	Note#212	111,{
+	callfunc("HouseBoard",212);
+	close;
+}
+//------------------------------------------------------------
+veins,114,278,0	script	warp#213	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",213);
+	end;
+}
+veins,114,278,4	script	Note#213	111,{
+	callfunc("HouseBoard",213);
+	close;
+}
+//------------------------------------------------------------
+veins,128,270,0	script	warp#214	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",214);
+	end;
+}
+veins,128,270,4	script	Note#214	111,{
+	callfunc("HouseBoard",214);
+	close;
+}
+//------------------------------------------------------------
+veins,130,238,0	script	warp#215	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",215);
+	end;
+}
+veins,130,238,4	script	Note#215	111,{
+	callfunc("HouseBoard",215);
+	close;
+}
+//------------------------------------------------------------
+veins,148,220,0	script	warp#216	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",216);
+	end;
+}
+veins,148,220,4	script	Note#216	111,{
+	callfunc("HouseBoard",216);
+	close;
+}
+//------------------------------------------------------------
+veins,197,260,0	script	warp#217	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",217);
+	end;
+}
+veins,197,260,4	script	Note#217	111,{
+	callfunc("HouseBoard",217);
+	close;
+}
+//------------------------------------------------------------
+veins,88,173,0	script	warp#218	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",218);
+	end;
+}
+veins,88,173,4	script	Note#218	111,{
+	callfunc("HouseBoard",218);
+	close;
+}
+//------------------------------------------------------------
+veins,337,231,0	script	warp#219	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",219);
+	end;
+}
+veins,337,231,4	script	Note#219	111,{
+	callfunc("HouseBoard",219);
+	close;
+}
+//------------------------------------------------------------
+veins,267,230,0	script	warp#220	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",220);
+	end;
+}
+veins,267,230,4	script	Note#220	111,{
+	callfunc("HouseBoard",220);
+	close;
+}
+//------------------------------------------------------------
+//==========================================================================================================
+//yggdrasil
+//==========================================================================================================
+//yuno
+yuno,117,135,0	script	warp#221	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",221);
+	end;
+}
+yuno,117,135,4	script	Note#221	111,{
+	callfunc("HouseBoard",221);
+	close;
+}
+//------------------------------------------------------------
+yuno,48,105,0	script	warp#222	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",222);
+	end;
+}
+yuno,48,105,4	script	Note#222	111,{
+	callfunc("HouseBoard",222);
+	close;
+}
+//------------------------------------------------------------
+yuno,48,151,0	script	warp#223	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",223);
+	end;
+}
+yuno,48,151,4	script	Note#223	111,{
+	callfunc("HouseBoard",223);
+	close;
+}
+//------------------------------------------------------------
+yuno,93,180,0	script	warp#224	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",224);
+	end;
+}
+yuno,93,180,4	script	Note#224	111,{
+	callfunc("HouseBoard",224);
+	close;
+}
+//------------------------------------------------------------
+yuno,196,138,0	script	warp#225	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",225);
+	end;
+}
+yuno,196,138,4	script	Note#225	111,{
+	callfunc("HouseBoard",225);
+	close;
+}
+//------------------------------------------------------------
+yuno,264,87,0	script	warp#226	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",226);
+	end;
+}
+yuno,264,87,4	script	Note#226	111,{
+	callfunc("HouseBoard",226);
+	close;
+}
+//------------------------------------------------------------
+yuno,341,203,0	script	warp#227	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",227);
+	end;
+}
+yuno,341,203,4	script	Note#227	111,{
+	callfunc("HouseBoard",227);
+	close;
+}
+//------------------------------------------------------------
+yuno,323,284,0	script	warp#228	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",228);
+	end;
+}
+yuno,323,284,4	script	Note#228	111,{
+	callfunc("HouseBoard",228);
+	close;
+}
+//------------------------------------------------------------
+yuno,278,293,0	script	warp#229	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",229);
+	end;
+}
+yuno,278,293,4	script	Note#229	111,{
+	callfunc("HouseBoard",229);
+	close;
+}
+//------------------------------------------------------------
+yuno,284,366,0	script	warp#230	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",230);
+	end;
+}
+yuno,284,366,4	script	Note#230	111,{
+	callfunc("HouseBoard",230);
+	close;
+}
+//------------------------------------------------------------
+yuno,87,321,0	script	warp#231	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",231);
+	end;
+}
+yuno,87,321,4	script	Note#231	111,{
+	callfunc("HouseBoard",231);
+	close;
+}
+//------------------------------------------------------------
+yuno,245,147,0	script	warp#232	45,1,1,{
+	OnTouch:
+	callfunc("HouseWarp",232);
+	end;
+}
+yuno,245,147,4	script	Note#232	111,{
+	callfunc("HouseBoard",232);
+	close;
+}
+//------------------------------------------------------------

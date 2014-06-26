@@ -1,0 +1,99 @@
+//====================================================
+//=       _   _                     _           
+//=      | | | |                   | |          
+//=      | |_| | ___ _ __ ___ _   _| | ___  ___ 
+//=      |  _  |/ _ \ '__/ __| | | | |/ _ \/ __|
+//=      | | | |  __/ | | (__| |_| | |  __/\__ \
+//=      \_| |_/\___|_|  \___|\__,_|_|\___||___/
+//=                                                  
+//=            http://hercules.ws/board/                        
+//====================================================
+// run when any character logs in, attached to them.
+-	script	HerculesMOTD	-1,{
+	if(getmapflag(strcharinfo(3), mf_town)) {
+		if (getmapxy(@mapname$,@mapx,@mapy,0) == 0) save @mapname$,@mapx,@mapy;
+		percentheal 100,100;
+	}
+	//if(getgmlevel() > 0) atcommand "@speed 0";
+	if(MainQuest == 0) {
+		setlook 1,rand(0,20);
+		setlook 6,rand(0,263);
+		setlook 7,rand(0,553);
+	}
+	if(Class == 0 || Class == 4023) {
+		if(MainQuest > 1) set MainQuest,1;
+	} else if(MainQuest < 3) {
+		set MainQuest,3;
+	}
+	if(MainQuest == 0) {
+		if (getmapxy(@mapname$,@mapx,@mapy,0) == 0) {
+			if(@mapname$ == "izlude" && @mapx == 146 && @mapy == 131){
+				unitwalk getcharid(3),158,125;
+				pcblockmove getcharid(3),1;
+				sleep2 3000;
+			}
+		}
+		message strcharinfo(0),"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
+		message strcharinfo(0),"Welcome to Final-StrikeRo!";
+		message strcharinfo(0),"Final-StrikeRo is a round based High Rate Ragnarok Server";
+		message strcharinfo(0),"Common and usable Items has been reduced to a minimum";
+		message strcharinfo(0),"All characters are wiped on each 1st day of the month!";
+		message strcharinfo(0),"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
+		getitem 11502,5;
+		getitem 501,20;
+		if(#FirstChar == 0) {
+			getitem $event,1;
+			set #FirstChar,getcharid(0);
+		}
+		message strcharinfo(0), "Success! You joined Final-StrikeRo!";
+		message strcharinfo(0),"Please talk to your Dad to start your journey!";
+		set MainQuest,1;
+		save "izlude",128,146;
+		if(#FirstChar == getcharid(0)) {
+			query_sql("select last_ip from `login` WHERE `account_id` LIKE '"+getcharid(3)+"'", @ip$);
+			set #accnum,query_sql("select last_ip from `login` WHERE `last_ip` LIKE '%"+substr(@ip$, 0, -4)+"%'", @ip$);
+			if(#accnum > 1) {
+				sleep2 3000;
+				dispbottom "Recognized multiple account on IP "+@ip$+" (Account Number: "+#accnum+")";
+			} else {
+				set #accnum,1;
+			}
+		}
+	} else if($DailyQuest != 0) {
+		if($DailyQuest == 1) message strcharinfo(0),"Quest of the Day: Level Up as fast as you can!";
+		if($DailyQuest == 2) message strcharinfo(0),"Quest of the Day: Kill as many monster as you can!";
+		if($DailyQuest == 3) message strcharinfo(0),"Quest of the Day: Carry as much Zeny as you can!";
+		if($DailyQuest == 4) message strcharinfo(0),"Quest of the Day: Kill as many player as you can!";
+		if($DailyQuest == 5) message strcharinfo(0),"Quest of the Day: Get the longest Killing-Streak!";
+		if($DailyQuest == 6) message strcharinfo(0),"Quest of the Day: Kill as many Boss Monster as you can!";
+		if($DailyQuest == 7) message strcharinfo(0),"Quest of the Day: Buy as many Buildings as you can!";
+		if($DailyQuest == 8) message strcharinfo(0),"Quest of the Day: Create the biggest Guild!";
+		if($DailyQuest == 9) message strcharinfo(0),"Quest of the Day: Be a Member of the biggest Guild!";
+		if($DailyQuest == 10) message strcharinfo(0),"Quest of the Day: Kill as many Test Emperiums as you can!";
+		if($DailyQuest == 11) message strcharinfo(0),"War of Emperium: Active in Pronteras Kriemhild!";
+		if($DailyQuest == 12) message strcharinfo(0),"War of Emperium: Active in Pronteras Swanhild!";
+		if($DailyQuest == 13) message strcharinfo(0),"War of Emperium: Active in Pronteras Skoegul!";
+		if($DailyQuest == 14) message strcharinfo(0),"War of Emperium: Active in Pronteras Gondul!";
+		if($DailyQuest == 15) message strcharinfo(0),"War of Emperium: Active in Pronteras Fadhgridh!";
+		if($DailyQuest == 16) message strcharinfo(0),"War of Emperium: Active in Payons Myung-Jung!";
+		if($DailyQuest == 17) message strcharinfo(0),"War of Emperium: Active in Payons Chun-Dan!";
+		if($DailyQuest == 18) message strcharinfo(0),"War of Emperium: Active in Payons Bool-Young!";
+		if($DailyQuest == 19) message strcharinfo(0),"War of Emperium: Active in Payons Hong-Roo!";
+		if($DailyQuest == 20) message strcharinfo(0),"War of Emperium: Active in Payons Jukk-Rim-Hyun Hill!";
+		if($DailyQuest == 21) message strcharinfo(0),"War of Emperium: Active in Aldebarans Neuchwanstein!";
+		if($DailyQuest == 22) message strcharinfo(0),"War of Emperium: Active in Aldebarans Hohenschwangau!";
+		if($DailyQuest == 23) message strcharinfo(0),"War of Emperium: Active in Aldebarans Nuernberg!";
+		if($DailyQuest == 24) message strcharinfo(0),"War of Emperium: Active in Aldebarans Nuernberg!";
+		if($DailyQuest == 25) message strcharinfo(0),"War of Emperium: Active in Aldebarans Wuerzburg!";
+		if($DailyQuest == 26) message strcharinfo(0),"War of Emperium: Active in Aldebarans Rothenburg!";
+		if($DailyQuest == 27) message strcharinfo(0),"Quest of the Day: Kill as many player with your guild as you can!";
+		if($DailyQuest == 28) message strcharinfo(0),"Quest of the Day: Kill as many player as you can!";
+		if($DailyQuest == 29) message strcharinfo(0),"Quest of the Day: Get the longest Killing-Streak!";
+		if($DailyQuest == 30) message strcharinfo(0),"Quest of the Day: Get the best Kill / Death average and over 200 Kills!";
+		if($DailyQuest == 31) message strcharinfo(0),"Quest of the Day: Stay Online as long as you can!";
+		if($DailyQuest == 32) message strcharinfo(0),"Quest of the Day: Win as many Daily Quests as you can!";
+	}
+	callfunc("UpdateRanking",getcharid(0),1);
+	end;
+}
+

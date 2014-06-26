@@ -1,0 +1,88 @@
+attack_direction_change: 31
+attack_attr_none: 31
+equip_natural_break_rate: 1
+equip_self_break_rate: 1
+equip_skill_break_rate: 1
+delay_battle_damage: yes
+arrow_decrement: 1
+autospell_check_range: no
+
+bg_flee_penalty: 0
+
+min_hair_style: 0
+max_hair_style: 20
+min_hair_color: 0
+max_hair_color: 263
+min_cloth_color: 0 
+max_cloth_color: 553
+
+hide_woe_damage: no
+
+area_size: 32
+max_walk_path: 32
+
+max_lv: 0
+aura_lv: 0
+
+wedding_modifydisplay: yes
+xmas_ignorepalette: yes
+summer_ignorepalette: yes
+hanbok_ignorepalette: yes
+
+flooritem_lifetime: 5000
+
+base_exp_rate: 0
+job_exp_rate: 0
+
+atcommand_spawn_quantity_limit: 50
+
+guild_emperium_check: no
+guild_exp_limit: 99
+guild_max_castles: 0
+guild_skill_relog_delay: yes
+require_glory_guild: no
+
+pk_mode: 0
+manner_system: 2
+pk_min_level: 500
+pk_level_range: 200
+
+night_at_start: no
+day_duration: 7200000
+night_duration: 1800000
+
+show_mob_info: 0
+mvp_hp_rate: 100
+monster_hp_rate: 100
+monster_max_aspd: 100
+mob_skill_delay: 1000
+mobs_level_up: yes
+mobs_level_up_exp_rate: 10000
+mob_remove_delay: 150000
+
+max_aspd: 180
+max_third_aspd: 180
+restart_hp_rate: 100
+natural_healhp_interval: 1000
+natural_healsp_interval: 1000
+natural_heal_skill_interval: 14000
+max_aspd: 180
+hp_rate: 100
+sp_rate: 100
+max_hp: 20000000
+max_sp: 1000000
+max_parameter: 999
+max_baby_parameter: 999
+max_third_parameter: 999
+max_baby_third_parameter: 999
+max_def: 600
+over_def_bonus: 10
+show_hp_sp_drain: yes
+show_hp_sp_gain: yes
+friend_auto_add: yes
+
+default_walk_delay: 0
+castrate_dex_scale: 999
+vcast_stat_scale: 999
+
+max_heal: 9999

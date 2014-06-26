@@ -1,0 +1,17 @@
+hugel,178,150,0	script	Air Ship#hugel	45,3,3,{
+OnTouch:
+	mes "[^0000FFCaptain^000000]";
+	mes "Do you want to come with us to Izlude?";
+	next;
+	switch(select(
+		"Pass.",
+		"Sure!"
+	)) {
+		case 1:
+			close;
+		case 2:
+			break;
+	}
+	warp "izlude",189,73;
+	end;
+}

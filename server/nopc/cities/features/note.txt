@@ -1,0 +1,87 @@
+books / weapons
+armors
+
+Player
+	heal
+	savepoint
+	mail
+	time
+	noask
+	load
+
+	changesex
+	hairstyle <default: 0-27>
+	haircolor <default: 0-8>
+	dye <default: 0-4>
+
+	dropall
+	cleanarea
+	itemreset
+	clearstorage
+	clearcart
+
+	storage
+	storeall
+	storagelist
+
+	zeny safe
+
+	where
+	recall (friend check)
+
+Party
+	partyrecall
+
+Guild
+	bossnia warp
+	guildrecall
+	woe warp
+	whereis
+	gstorage
+	cleargstorage
+
+
+
+
+Black Smith
+	repairall
+
+Police Station
+	jailfor
+
+Zenit Bank
+	zeny bank
+
+Kafra Headquarters
+	kafra service
+
+Comodo Casino
+	casino
+
+Shop
+	autotrade
+	auction
+
+Arena
+	duel (accept, reject)
+		1v1
+			Bet Items
+			PvP Test Room
+		GvG
+			Bet Guild Destroy
+				Emperium Destroy
+				Last Man
+		1vX PvP Test Room
+
+Church
+	marry
+		divorce
+
+Other
+	Support
+		request
+	Resetter
+		streset
+		skreset
+		reset
+

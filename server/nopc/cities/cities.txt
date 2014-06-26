@@ -1,0 +1,2326 @@
+//===== rAthena Script =======================================
+//= Alberta Warp Script
+//===== By: ==================================================
+//= Athena (1.0)
+//= Nana (1.1)
+//===== Current Version: =====================================
+//= 1.1
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Warp Points for Alberta, Treasure Island & Turtle Island
+//===== Additional Comments: =================================
+//= No comment!
+//============================================================
+
+//Alberta City
+alberta,15,234,0	warp	alb001	2,5,pay_fild03,388,63
+//alberta,117,38,0	warp	alb01	2,2,alberta_in,180,30
+//alberta,134,38,0	warp	alb02	1,1,alberta_in,70,141
+alberta,170,170,0	warp	alb03	1,1,alb_ship,26,168
+alberta,178,165,0	warp	alb04	1,2,alb_ship,39,163
+alberta,209,173,0	warp	alb05	1,2,alb_ship,162,171
+//alberta,33,42,0	warp	alb06	2,2,alberta_in,74,44
+//alberta,65,233,0	warp	alb07	2,2,alberta_in,18,141
+//alberta,93,205,0	warp	alb08	2,2,alberta_in,114,134
+//alberta,98,153,0	warp	alb09	2,2,alberta_in,185,89
+//alberta,99,221,0	warp	alb10	2,2,alberta_in,122,161
+alb_ship,26,166,0	warp	alb03-1	4,1,alberta,170,168
+alb_ship,41,163,0	warp	alb04-1	1,3,alberta,180,165
+alb_ship,160,171,0	warp	alb05-1	1,3,alberta,207,173
+alb_ship,37,174,0	warp	alb20	1,2,alb_ship,70,99
+alb_ship,68,99,0	warp	alb20-1	1,3,alb_ship,35,173
+alberta_in,189,89,0	warp	alb09-1	2,2,alberta,102,153
+alberta_in,114,130,0	warp	alb08-1	2,2,alberta,93,201
+alberta_in,14,141,0	warp	alb07-1	2,3,alberta,61,233
+alberta_in,180,34,0	warp	alb01-1	2,2,alberta,117,42
+alberta_in,73,141,0	warp	alb02-1	2,3,alberta,137,37
+alberta_in,78,44,0	warp	alb06-1	2,5,alberta,37,41
+alberta_in,125,161,0	warp	alb10-1	2,2,alberta,102,222
+alberta_in,114,183,0	warp	alb11	1,1,alberta_in,148,186
+alberta_in,152,186,0	warp	alb11-1	1,1,alberta_in,118,183
+alberta_in,114,49,0	warp	alb12	2,2,alberta_in,155,153
+alberta_in,159,153,0	warp	alb12-1	2,2,alberta_in,117,49
+alberta_in,114,97,0	warp	alb13	2,2,alberta_in,155,175
+alberta_in,159,175,0	warp	alb13-1	2,2,alberta_in,117,97
+alberta_in,22,113,0	warp	alb14	3,2,alberta_in,22,134
+alberta_in,22,130,0	warp	alb14-1	3,2,alberta_in,22,109
+alberta_in,22,153,0	warp	alb15	3,2,alberta_in,22,174
+alberta_in,22,170,0	warp	alb15-1	3,2,alberta_in,22,149
+alberta_in,24,33,0	warp	alb16	3,2,alberta_in,64,35
+alberta_in,64,31,0	warp	alb16-1	3,2,alberta_in,24,29
+alberta_in,24,54,0	warp	alb17	3,2,alberta_in,64,53
+alberta_in,64,57,0	warp	alb17-1	3,2,alberta_in,24,58
+alberta_in,66,113,0	warp	alb18	3,1,alberta_in,66,132
+alberta_in,66,130,0	warp	alb18-1	3,1,alberta_in,66,111
+alberta_in,66,153,0	warp	alb19	3,2,alberta_in,66,173
+alberta_in,66,170,0	warp	alb19-1	3,2,alberta_in,66,149
+alb2trea,88,111,0	warp	alb002	1,1,treasure01,69,24
+//===== Hercules Script ======================================
+//= Al de Baran Warp Script
+//===== By: ==================================================
+//= Athena (1.0)
+//= Nana (1.1)
+//===== Current Version: =====================================
+//= 1.3
+//===== Description: =========================================
+//= Warp Points for Al de Baran
+//===== Additional Comments: =================================
+//= 1.2 Added Turbo Room Warps [Justin84]
+//= 1.3 Removed Turbo Track entrance. Scripted warp. [L0ne_W0lf]
+//= 1.4 Added missing warps. [L0ne_W0lf]
+//============================================================
+
+//===== Al De Baran Warps =====================================
+//aldebaran,118,63,0	warp	ald01	1,1,aldeba_in,211,117
+aldebaran,139,34,0	warp	ald001	3,2,mjolnir_12,199,375
+//aldebaran,197,70,0	warp	ald02	1,1,aldeba_in,94,41
+//aldebaran,233,105,0	warp	ald04	1,1,aldeba_in,157,190
+//aldebaran,51,218,0	warp	ald05	1,1,aldeba_in,24,227
+//aldebaran,61,229,0	warp	ald06	1,1,aldeba_in,148,227
+//aldebaran,72,197,0	warp	ald07	1,1,aldeba_in,27,37
+//aldebaran,89,234,0	warp	ald08	1,1,aldeba_in,242,237
+aldeba_in,103,157,0	warp	ald09	2,2,aldeba_in,137,237
+aldeba_in,103,61,0	warp	ald10	2,2,aldeba_in,97,105
+aldeba_in,134,237,0	warp	ald09-1	2,2,aldeba_in,100,157
+aldeba_in,144,92,0	warp	ald11	2,2,aldeba_in,149,52
+aldeba_in,148,224,0	warp	ald06-1	2,2,aldebaran,63,227
+aldeba_in,149,55,0	warp	ald11-1	2,2,aldeba_in,144,95
+aldeba_in,157,193,0	warp	ald04-1	3,2,aldebaran,231,107
+aldeba_in,208,117,0	warp	ald01-1	2,2,aldebaran,116,63
+aldeba_in,217,131,0	warp	ald12	2,2,aldeba_in,217,163
+aldeba_in,217,160,0	warp	ald12-1	2,2,aldeba_in,217,128
+aldeba_in,217,71,0	warp	ald13-1	2,2,aldeba_in,218,107
+aldeba_in,218,104,0	warp	ald13	2,2,aldeba_in,218,68
+aldeba_in,24,224,0	warp	ald05-1	2,2,aldebaran,53,216
+aldeba_in,245,237,0	warp	ald08-1	2,2,aldebaran,91,234
+aldeba_in,27,102,0	warp	ald14-1	2,2,aldeba_in,27,68
+aldeba_in,27,34,0	warp	ald07-1	2,2,aldebaran,72,195
+aldeba_in,27,71,0	warp	ald14	2,2,aldeba_in,27,105
+aldeba_in,37,238,0	warp	ald15	2,2,aldeba_in,67,157
+aldeba_in,64,157,0	warp	ald15-1	2,2,aldeba_in,34,238
+aldeba_in,83,191,0	warp	ald16	2,2,aldeba_in,83,227
+aldeba_in,83,224,0	warp	ald16-1	2,2,aldeba_in,83,188
+aldeba_in,94,38,0	warp	ald02-1	3,2,aldebaran,197,68
+aldeba_in,97,102,0	warp	ald10-1	2,2,aldeba_in,103,58
+
+aldebaran,225,54	warp	aldeb_sign1-1	1,1,aldeba_in,149,120
+aldeba_in,149,123	warp	aldeb_sign1-2	3,2,aldebaran,223,56
+
+
+//Turbo Track Room
+turbo_room,100,62,0	warp	exit_turbo	1,1,alde_gld,183,198
+
+//===== Hercules Script =======================================
+//= Amatsu Warps Script
+//===== By: ==================================================
+//= Athena (1.0)
+//= Nana (1.1)
+//===== Current Version: =====================================
+//= 1.7
+//===== Description: =========================================
+//= [Aegis COnversion]
+//= Warp Points for Amatsu
+//===== Additional Comments: =================================
+//= 1.7 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
+//=	Renamed warps for ease-of-reading.
+//============================================================
+
+//amatsu,177,138,0	warp	ama_house1-1	1,1,ama_in01,28,176
+ama_in01,31,176,0	warp	ama_house1-2	1,1,amatsu,180,138
+//amatsu,248,160,0	warp	ama_house2-1	1,1,ama_in01,79,178
+ama_in01,76,178,0	warp	ama_house2-2	1,1,amatsu,245,160
+//amatsu,168,182,0	warp	ama_warrior1-1	1,1,ama_in01,34,99
+ama_in01,34,96,0	warp	ama_warrior1-2	1,1,amatsu,168,179
+//amatsu,52,148,0	warp	ama_deluxe1-1	1,1,ama_in01,88,97
+ama_in01,88,94,0	warp	ama_deluxe1-2	1,1,amatsu,52,145
+//amatsu,94,117,0	warp	ama_tools1-1	1,1,ama_in01,30,24
+ama_in01,33,24,0	warp	ama_tools1-2	1,1,amatsu,97,117
+//amatsu,132,117,0	warp	ama_weapon1-1	1,1,ama_in01,89,23
+ama_in01,86,23,0	warp	ama_weapon1-2	1,1,amatsu,129,117
+//amatsu,217,116,0	warp	ama_tavern1-1	1,1,ama_in01,162,25
+ama_in01,157,25,0	warp	ama_tavern1-2	1,1,amatsu,214,116
+ama_in01,166,73,0	warp	ama_inn1-1	1,1,ama_in01,162,31
+ama_in01,162,34,0	warp	ama_inn1-2	1,1,ama_in01,166,77
+
+//amatsu,85,235,0	warp	ama_castle1-1	1,1,ama_in02,223,45
+ama_in02,226,45,0	warp	ama_castle1-2	1,1,amatsu,88,235
+ama_in02,65,37,0	warp	ama_castle2-1	1,1,ama_in02,195,41
+ama_in02,195,44,0	warp	ama_castle2-2	1,1,ama_in02,65,40
+ama_in02,59,141,0	warp	ama_castle3-1	1,1,ama_in02,56,41
+ama_in02,56,44,0	warp	ama_castle3-2	1,1,ama_in02,59,144
+ama_in02,215,149,0	warp	ama_castle4-1	1,1,ama_in02,59,156
+ama_in02,59,160,0	warp	ama_castle4-2	1,1,ama_in02,215,152
+ama_in02,126,164,0	warp	ama_castle5-1	1,1,ama_in02,219,161
+ama_in02,222,161,0	warp	ama_castle5-2	1,1,ama_in02,129,164
+
+//============================================================ 
+// Old changelog
+//============================================================ 
+//= 1.3 Fixed a warp-back [erKURITA]
+//= 1.4 Added Ninja's Warps. Thanks to RockmanEXE for the info. [erKURITA]
+//= 1.5 Corrected NPC names to fall within proper restrictions. [L0ne_W0lf]
+//= 1.6 Moved Job Quest related warps to proper file. [L0ne_W0lf]
+//============================================================
+
+//===== Hercules Script ======================================
+//= Ayothaya Town Warps Script
+//===== By: ==================================================
+//= Muad_Dib, L0ne_W0lf (1.0)
+//===== Current Version: =====================================
+//= 1.5a
+//===== Description: =========================================
+//= Warp Points for Ayothaya
+//===== Additional Comments: =================================
+//= 1.5 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
+//= 1.5a Cleared up a few misnamed warps. [L0ne_W0lf]
+//============================================================
+
+//ayothaya,130,97,0	warp	ayo_tool1-1	1,1,ayo_in01,43,183
+ayo_in01,46,183,0	warp	ayo_tool1-2	1,1,ayothaya,132,99
+//ayothaya,129,86,0	warp	ayo_tool2-1	1,1,ayo_in01,21,178
+ayo_in01,23,176,0	warp	ayo_tool2-2	1,1,ayothaya,132,86
+//ayothaya,130,75,0	warp	ayo_tool3-1	1,1,ayo_in01,17,156
+ayo_in01,17,153,0	warp	ayo_tool3-2	1,1,ayothaya,132,73
+//ayothaya,165,90,0	warp	ayo_weapon1-1	1,1,ayo_in01,77,174
+ayo_in01,73,174,0	warp	ayo_weapon1-2	1,1,ayothaya,162,90
+//ayothaya,177,90,0	warp	ayo_weapon2-1	1,1,ayo_in01,95,175
+ayo_in01,98,175,0	warp	ayo_weapon2-2	1,1,ayothaya,180,90
+//ayothaya,173,77,0	warp	ayo_weapon3-1	1,1,ayo_in01,85,152
+ayo_in01,85,149,0	warp	ayo_weapon3-2	1,1,ayothaya,173,74
+//ayothaya,229,69,0	warp	ayo_pub1-1	1,1,ayo_in01,137,192
+ayo_in01,137,195,0	warp	ayo_pub1-2	1,1,ayothaya,229,72
+//ayothaya,202,161,0	warp	ayo_inn1-1	1,1,ayo_in01,31,108
+ayo_in01,31,111,0	warp	ayo_inn1-2	1,1,ayothaya,202,164
+//ayothaya,211,150,0	warp	ayo_inn2-1	1,1,ayo_in01,47,94
+ayo_in01,50,94,0	warp	ayo_inn2-2	1,1,ayothaya,214,150
+//ayothaya,202,140,0	warp	ayo_inn3-1	1,1,ayo_in01,31,81
+ayo_in01,31,78,0	warp	ayo_inn3-2	1,1,ayothaya,202,137
+//ayothaya,192,150,0	warp	ayo_inn4-1	1,1,ayo_in01,13,94
+ayo_in01,10,94,0	warp	ayo_inn4-2	1,1,ayothaya,189,150
+ayo_in01,13,107,0	warp	ayo_stairNW1-1	1,1,ayo_in01,132,27
+ayo_in01,135,27,0	warp	ayo_roomNW1-2	1,1,ayo_in01,17,107
+ayo_in01,48,107,0	warp	ayo_stairNE1-1	1,1,ayo_in01,179,27
+ayo_in01,176,27,0	warp	ayo_roomNE2-2	1,1,ayo_in01,45,107
+ayo_in01,13,82,0	warp	ayo_stairSW1-1	1,1,ayo_in01,18,14
+ayo_in01,21,14,0	warp	ayo_roomSW1-2	1,1,ayo_in01,17,82
+ayo_in01,48,82,0	warp	ayo_stairSE1-1	1,1,ayo_in01,63,14
+ayo_in01,60,14,0	warp	ayo_roomSE1-2	1,1,ayo_in01,45,82
+//ayothaya,111,109,0	warp	ayo_house1_1-1	1,1,ayo_in01,180,129
+ayo_in01,177,129,0	warp	ayo_house1_1-2	1,1,ayothaya,111,106
+//ayothaya,62,104,0	warp	ayo_house2_1-1	1,1,ayo_in01,191,183
+ayo_in01,194,183,0	warp	ayo_house2_1-2	1,1,ayothaya,65,104
+//ayothaya,208,283,0	warp	ayo_shrine1-1	1,1,ayo_in02,100,152
+ayo_in02,100,148,0	warp	ayo_shrine1-2	1,1,ayothaya,208,280
+ayothaya,276,176,0	warp	ayo_fild1-1	1,1,ayo_fild01,37,241
+ayo_fild01,32,240,0	warp	ayo_fild1-2	1,1,ayothaya,273,176
+
+//============================================================ 
+// Old changelog
+//============================================================ 
+//= 1.1 Fixed Armory part by massdriller [Thanks to akusarujin]
+//= 1.2 Revised warps, due to official Ayothaya Town NPC [MasterOfMuppets]
+//= 1.3 Fixed swapped Inn Exits, thanks to Sir_Loon [Lupus]
+//= 1.4 Fixed a warp-back. [erKURITA]
+//============================================================
+
+//===== Hercules Script ======================================
+//= Brasilis Town Warps Script
+//===== By: ==================================================
+//= L0ne_W0lf
+//===== Current Version: =====================================
+//= 1.2
+//===== Description: =========================================
+//= [Aegis Conversion]
+//= Warp Points for Brasilis
+//===== Additional Comments: =================================
+//= 1.0 First version.
+//= 1.1 Fixed warps according to official. [Protimus]
+//= 1.1a Added Field warp according to official. [Jguy]
+//= 1.2 Added missing warps & removed duplicated one. [Daegaladh]
+//============================================================
+
+//Museum
+//brasilis,146,162,0	warp	brasilis_bra_in01	1,1,bra_in01,17,137
+bra_in01,17,134,0	warp	bra_in01_brasilis	1,1,brasilis,148,161
+bra_in01,50,145,0	warp	bra_in01_bra_in01#2	1,1,bra_in01,81,143
+bra_in01,79,142,0	warp	bra_in01_bra_in01#3	1,1,bra_in01,47,144
+bra_in01,50,171,0	warp	bra_in01_bra_in01#4	1,1,bra_in01,82,168
+bra_in01,79,169,0	warp	bra_in01_bra_in01#5	1,1,bra_in01,46,170
+bra_in01,138,174,0	warp	bra_in01_bra_in01#6	1,1,bra_in01,12,183
+bra_in01,206,98,0	warp	bra_in01_bra_in01#7	1,1,bra_in01,138,176
+
+//Inn
+//brasilis,274,153,0	warp	brasilis_bra_in01#1	1,1,bra_in01,38,9
+bra_in01,39,7,0	warp	bra_in01_brasilis#1	1,1,brasilis,273,151
+bra_in01,52,27,0	warp	bra_in01_bra_in01#8	1,1,bra_in01,85,26
+bra_in01,83,27,0	warp	bra_in01_bra_in01#9	1,1,bra_in01,50,27
+bra_in01,9,67,0	warp	bra_in01_bra_in01#10	1,1,bra_in01,154,22
+bra_in01,156,23,0	warp	bra_in01_bra_in01#11	1,1,bra_in01,11,65
+bra_in01,52,67,0	warp	bra_in01_bra_in01#12	1,1,bra_in01,87,66
+bra_in01,85,67,0	warp	bra_in01_bra_in01#13	1,1,bra_in01,50,66
+bra_in01,31,29,0	warp	bra_in01_bra_in01#14	1,1,bra_in01,23,70
+bra_in01,25,70,0	warp	bra_in01_bra_in01#15	1,1,bra_in01,32,26
+bra_in01,31,74,0	warp	bra_in01_bra_in01#16	1,1,bra_in01,148,59
+bra_in01,148,57,0	warp	bra_in01_bra_in01#17	1,1,bra_in01,31,72
+
+//===== Hercules Script ======================================
+//= Comodo Warp Script
+//===== By: ==================================================
+//= rAthena Dev Team
+//===== Current Version: =====================================
+//= 1.3
+//===== Description: =========================================
+//= [Aegis Conversion]
+//= Warp Points Comodo city
+//===== Additional Comments: =================================
+//= 1.3 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
+//============================================================
+
+//comodo,92,128,0	warp	cmd_tools1-1	1,1,cmd_in01,85,174
+cmd_in01,90,174,0	warp	cmd_tools1-2	1,1,comodo,97,128
+//comodo,265,74,0	warp	cmd_weapon1-1	1,1,cmd_in01,123,180
+cmd_in01,123,186,0	warp	cmd_weapon1-2	1,1,comodo,265,79
+//comodo,271,271,0	warp	cmd_house1-1	1,1,cmd_in01,113,125
+cmd_in01,109,125,0	warp	cmd_house1-2	1,1,comodo,269,273
+//comodo,192,294,0	warp	cmd_house2-1	1,1,cmd_in01,177,123
+cmd_in01,183,123,0	warp	cmd_house2-2	1,1,comodo,195,294
+//comodo,145,328,0	warp	cmd_house3-1	1,1,cmd_in01,120,71
+cmd_in01,120,67,0	warp	cmd_house3-2	1,1,comodo,145,324
+//comodo,236,298,0	warp	cmd_house4-1	1,1,cmd_in01,179,81
+cmd_in01,183,81,0	warp	cmd_house4-2	1,1,comodo,239,296
+//comodo,130,195,0	warp	cmd_KAFRA1-1	1,1,cmd_in02,143,173
+cmd_in02,139,169,0	warp	cmd_KAFRA1-2	1,1,comodo,127,191
+cmd_in02,208,206,0	warp	cmd_KAFRA2-1	1,1,cmd_in02,97,211
+cmd_in02,98,216,0	warp	cmd_KAFRA12-2	1,1,cmd_in02,207,210
+//comodo,115,291,0	warp	cmd_chief1-1	1,1,cmd_in02,67,132
+cmd_in02,69,129,0	warp	cmd_chief1-2	1,1,comodo,115,288
+//comodo,140,111,0	warp	cmd_casino1-1	1,1,cmd_in02,178,132
+cmd_in02,178,136,0	warp	cmd_casino1-2	1,1,comodo,140,115
+//comodo,153,97,0	warp	cmd_casino2-1	1,1,cmd_in02,212,97
+cmd_in02,216,97,0	warp	cmd_casino2-2	1,1,comodo,157,97
+//comodo,126,98,0	warp	cmd_casino3-1	1,1,cmd_in02,144,97
+cmd_in02,139,97,0	warp	cmd_casino3-2	1,1,comodo,122,98
+//comodo,140,90,0	warp	cmd_casino4-1	1,1,cmd_in02,74,25
+cmd_in02,74,21,0	warp	cmd_casino4-2	1,1,comodo,140,86
+cmd_in02,168,113,0	warp	cmd_casino5-1	1,1,cmd_in02,63,73
+cmd_in02,58,74,0	warp	cmd_casino5-2	1,1,cmd_in02,166,116
+cmd_in02,187,78,0	warp	cmd_casino6-1	1,1,cmd_in02,84,37
+cmd_in02,90,37,0	warp	cmd_casino6-2	1,1,cmd_in02,191,77
+
+//===== Hercules Script ======================================
+//= Dewata Warp Script
+//===== By: ==================================================
+//= Chilly
+//===== Current Version: =====================================
+//= 1.2
+//===== Compatible With: =====================================
+//= Hercules
+//===== Description: =========================================
+//= Warp Points for Dewata
+//===== Additional Comments: =================================
+//= 1.0 First version
+//= 1.1 Disabled warps that clash with quest warps. [Euphy]
+//= 1.2 Updated to match official scripts. [Lemongrass]
+//============================================================
+
+dewata,44,252,0	warp	dewata0001	1,1,dew_fild01,373,212
+dew_fild01,375,212,0	warp	dewata0002	1,1,dewata,46,251
+dew_fild01,57,273,0	warp	dewata0003	1,1,dew_in01,15,33
+dew_in01,16,31,0	warp	dewata0004	1,1,dew_fild01,59,273
+dew_fild01,48,65,0	warp	dewata0005	1,1,dew_dun02,302,30
+dew_dun02,305,30,0	warp	dewata0006	1,1,dew_fild01,50,65
+
+//===== Hercules Script ======================================
+//= El Dicastes Warp Script
+//===== By: ==================================================
+//= Chilly, Muad_Dib
+//===== Current Version: =====================================
+//= 1.3
+//===== Compatible With: =====================================
+//= Hercules
+//===== Description: =========================================
+//= Warp Points for El Dicastes
+//===== Additional Comments: =================================
+//= 1.0 First Version.
+//= 1.1 Added Elevators.
+//= 1.2 Removed a warp. [Joseph] 
+//= 1.3 Updated to match official script. [Joseph]
+//============================================================
+
+// Town Warps
+dicastes01,283,285,0	warp	eldicastes0001	1,1,dic_in01,45,30
+dic_in01,45,28,0	warp	eldicastes0002	1,1,dicastes01,281,284
+dicastes01,163,297,0	warp	eldicastes0003	1,1,dic_in01,371,101
+dic_in01,372,99,0	warp	eldicastes0004	1,1,dicastes01,163,295
+dicastes01,94,259,0	warp	eldicastes0005	1,1,dic_in01,390,53
+dic_in01,390,55,0	warp	eldicastes0006	1,1,dicastes01,95,257
+dicastes01,136,103,0	warp	eldicastes0007	1,1,dic_in01,26,98
+dic_in01,26,96,0	warp	eldicastes0008	1,1,dicastes01,137,106
+dicastes01,255,175,0	warp	eldicastes0009	1,1,dic_in01,344,272
+dic_in01,342,271,0	warp	eldicastes0010	1,1,dicastes01,255,173
+dicastes01,198,353,0	warp	eldicastes0011	1,1,dicastes02,120,80
+dicastes02,120,77,0	warp	eldicastes0012	1,1,dicastes01,197,351
+dicastes02,120,237,0	warp	eldicastes0013	1,1,dic_in01,45,246
+dic_in01,45,244,0	warp	eldicastes0014	1,1,dicastes02,119,235
+dic_in01,299,248,0	warp	eldicastes0015	1,1,dic_in01,262,191
+
+dic_in01,242,182,0	script	#eldicastes0016	844,{
+if (isequipped(2782)) select("Administrative Office");
+else select("¡÷¡ú¡ð");
+warp "dic_in01",138,221;
+end;
+}
+
+// Elevators
+-	script	Elevator#main	-1,{
+set .@n, atoi(strnpcinfo(2));
+set .@eq, (isequipped(2782))?1:0;
+if (.@n <= 4) {
+set .@m$, (.@eq)?"Civil Services:Archive Room:Situation Room:Administrative Office":"¢³¡ð¡Ð:¡ñ¡ñ¡ò:¡ø¡ø¡ð:¡÷¡ú¡ð";
+setarray .@xy, 45,286,36,212,122,282,121,201;
+}
+else if (.@n <= 11) {
+set .@m$, (.@eq)?"Residential Zone 1:Residential Zone 2:Residential Zone 3:Pub Burman Flone":"¡ô¡õ¡ñ ¡þ :¢³¡ü¡Ð ¡ú :¡ï¢³¢¤ ¢² :¢±¡Ð¡ñ";
+setarray .@xy, 42,115,110,108,178,108,260,115;
+}
+else if (.@n <= 13) {
+set .@m$, (.@eq)?"Battle Station:Galten Quarters":"¡ø¡ô¡ï ¡ò :¡ü¡÷¡ó ¡÷ ";
+setarray .@xy, 385,272,385,208;
+}
+set .@m, select(.@m$) - 1;
+warp "dic_in01",.@xy[.@m*2],.@xy[.@m*2+1];
+end;
+}
+dic_in01,46,288,0	duplicate(Elevator#main)	Elevator#1	844
+dic_in01,122,284,0	duplicate(Elevator#main)	Elevator#2	844
+dic_in01,121,203,0	duplicate(Elevator#main)	Elevator#3	844
+dic_in01,35,214,0	duplicate(Elevator#main)	Elevator#4	844
+dic_in01,44,116,0	duplicate(Elevator#main)	Elevator#5	844
+dic_in01,112,108,0	duplicate(Elevator#main)	Elevator#6	844
+dic_in01,180,108,0	duplicate(Elevator#main)	Elevator#7	844
+dic_in01,261,115,0	duplicate(Elevator#main)	Elevator#8	844
+dic_in01,57,48,0	duplicate(Elevator#main)	Elevator#9	844
+dic_in01,137,46,0	duplicate(Elevator#main)	Elevator#10	844
+dic_in01,222,46,0	duplicate(Elevator#main)	Elevator#11	844
+dic_in01,388,272,0	duplicate(Elevator#main)	Elevator#12	844
+dic_in01,389,208,0	duplicate(Elevator#main)	Elevator#13	844
+
+//===== Hercules Script ======================================
+//= Eclage Warp Script
+//===== By: ==================================================
+//= Chilly
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= Hercules
+//===== Description: =========================================
+//= Warp Points for Eclage
+//===== Additional Comments: =================================
+//= 1.0 First Version.
+//============================================================
+
+// Town Warps
+bif_fild02,292,351,0	warp	eclage_field0001	1,1,ecl_fild01,205,74
+ecl_fild01,207,72,0	warp	eclage_field0002	1,1,bif_fild02,294,349
+ecl_fild01,97,320,0	warp	eclage_field0003	1,1,eclage,100,28
+eclage,98,26,0	warp	eclage_field0004	1,1,ecl_fild01,97,317
+//eclage,299,309,0	warp	eclage_field0005	1,1,ecl_in01,47,11
+ecl_in01,47,8,0	warp	eclage_field0006	1,1,eclage,297,307
+ecl_in01,8,67,0	warp	eclage_field0007	1,1,ecl_hub01,38,94
+ecl_hub01,40,95,0	warp	eclage_field0008	1,1,ecl_in01,11,67
+ecl_hub01,22,109,0	warp	eclage_field0009	1,1,ecl_in02,98,7
+ecl_in02,98,4,0	warp	eclage_field0010	1,1,ecl_hub01,23,107
+ecl_in02,81,18,0	warp	eclage_field0011	1,1,ecl_in02,157,65
+ecl_in02,157,68,0	warp	eclage_field0012	1,1,ecl_in02,83,18
+ecl_in01,84,68,0	warp	eclage_field0013	1,1,ecl_hub01,107,107
+ecl_hub01,107,110,0	warp	eclage_field0014	1,1,ecl_in01,81,68
+ecl_hub01,127,95,0	warp	eclage_field0015	1,1,ecl_hub01,18,31
+ecl_hub01,18,34,0	warp	eclage_field0016	1,1,ecl_hub01,124,95
+ecl_hub01,40,14,0	warp	eclage_field0017	1,1,ecl_in03,144,17
+ecl_in03,144,14,0	warp	eclage_field0018	1,1,ecl_hub01,40,11
+
+//===== rAthena Script ======================================= 
+//= Einbech Warps
+//===== By: ================================================== 
+//= Muad Dib (1.0), SSUNNY@YOUNG(1.1)
+//===== Current Version: ===================================== 
+//= 1.1
+//===== Compatible With: ===================================== 
+//= Any rAthena Version
+//===== Description: ========================================= 
+//= Einbech Town warps
+//===== Additional Comments: ================================= 
+//= Made by Muad_Dib from Prometheus, all credit goes to him.
+//= 1.1 Updated Warps, work done by SSUNNY@YOUNG in Korean eA site [Vicious]
+//============================================================
+
+//==========================================================================
+//Einbech - Weapon shop
+//==========================================================================
+//einbech,177,136,0	warp	eib_wp01	1,1,ein_in01,190,35
+ein_in01,190,38,0	warp	eib_wp01a	1,1,einbech,177,133
+
+
+//==========================================================================
+//Einbech - buildings
+//==========================================================================
+//einbech,207,135,0	warp	eib_hu01	1,1,ein_in01,190,99
+ein_in01,187,99,0	warp	eib_hu01a	1,1,einbech,204,135
+//einbech,214,121,0	warp	eib_hu02	1,1,ein_in01,205,86
+ein_in01,205,83,0	warp	eib_hu02a	1,1,einbech,214,118
+
+
+//==========================================================================
+//Einbech - Pub
+//==========================================================================
+//einbech,154,106,0	warp	eib_b01	1,1,ein_in01,285,89
+ein_in01,288,89,0	warp	eib_b01a	1,1,einbech,157,106
+//einbech,145,112,0	warp	eib_b02	1,1,ein_in01,268,104
+ein_in01,265,104,0	warp	eib_b02a	1,1,einbech,141,112
+
+
+//=========================================================================
+//Einbech - Swordman guild
+//=========================================================================
+//einbech,256,109,0	warp	eib_js01	1,1,ein_in01,148,153
+ein_in01,144,153,0	warp	eib_js01a	1,1,einbech,253,109
+
+//===== rAthena Script =======================================
+//= Einbroch Warp Script
+//===== By: ==================================================
+//= Sara-chan (1.3), SSUNNY@YOUNG(1.7), erKURITA (1.8)
+//===== Current Version: =====================================
+//= 1.8
+//===== Compatible With: =====================================
+//= Any Athena Version; RO Episode 8+
+//===== Description: =========================================
+//= Warp Points for Einbroch
+//===== Additional Comments: =================================
+//= 1.4 Moved all airports to Airplane Warps [Lupus]
+//= 1.5 Commented out some warps which are not in the official servers [MasterOfMuppets]
+//= 1.6	Removed some duplicate warps [MasterOfMuppets]
+//= 1.7 Updated Warps, work done by SSUNNY@YOUNG in Korean eA site [Vicious]
+//= 1.8 Added Gunslinger Map portion warps. Credits to RockmanEXE for the info [erKURITA]
+//============================================================
+
+//==========================================================================
+// Einbroch - Factory
+//==========================================================================
+//einbroch,132,79,0	warp	ein_fa01	1,1,ein_in01,17,213
+ein_in01,13,213,0	warp	ein_fa01a	1,1,einbroch,129,79
+ein_in01,81,198,0	warp	ein_fa02	1,1,einbroch,179,70
+//einbroch,179,73,0	warp	ein_fa02a	1,1,ein_in01,81,203
+
+
+//==========================================================================
+//Einbroch - Near Train station
+//==========================================================================
+einbroch,214,263,0	warp	ein_to01	1,1,einbroch,233,315
+einbroch,233,312,0	warp	ein_to01a	1,1,einbroch,214,260
+einbroch,250,263,0	warp	ein_to02	1,1,einbroch,269,315
+einbroch,269,312,0	warp	ein_to02a	1,1,einbroch,250,260
+
+
+//==========================================================================
+//Einbroch - Weapon shop
+//==========================================================================
+//einbroch,216,214,0	warp	ein_wp01	1,1,ein_in01,108,17
+ein_in01,108,13,0	warp	ein_wp01a	1,1,einbroch,216,211
+
+
+//=========================================================================
+//Einbroch - Hotel
+//=========================================================================
+//einbroch,257,199,0	warp	ein_h01	1,1,ein_in01,198,224
+ein_in01,195,224,0	warp	ein_h01a	1,1,einbroch,254,199
+ein_in01,211,216,0	warp	ein_h02	1,1,ein_in01,274,218
+ein_in01,271,218,0	warp	ein_h02a	1,1,ein_in01,208,216
+ein_in01,211,232,0	warp	ein_h03	1,1,ein_in01,274,232
+ein_in01,271,232,0	warp	ein_h03a	1,1,ein_in01,208,232
+ein_in01,274,246,0	warp	ein_h04	1,1,ein_in01,273,276
+ein_in01,273,273,0	warp	ein_h04a	1,1,ein_in01,274,243
+ein_in01,264,246,0	warp	ein_h05	1,1,ein_in01,231,276
+ein_in01,231,273,0	warp	ein_h05a	1,1,ein_in01,264,243
+ein_in01,274,203,0	warp	ein_h06	1,1,ein_in01,274,173
+ein_in01,274,176,0	warp	ein_h06a	1,1,ein_in01,274,206
+ein_in01,264,203,0	warp	ein_h07	1,1,ein_in01,232,173
+ein_in01,232,176,0	warp	ein_h07a	1,1,ein_in01,264,206
+ein_in01,284,224,0	warp	ein_h08	1,1,ein_in01,177,277
+ein_in01,180,277,0	warp	ein_h08a	1,1,ein_in01,280,224
+
+
+//==========================================================================
+//Einbroch - Building behind the hotel
+//==========================================================================
+//einbroch,278,233,0	warp	ein_ho01	1,1,ein_in01,107,95
+ein_in01,103,95,0	warp	ein_ho01a	1,1,einbroch,275,233
+ein_in01,126,88,0	warp	ein_ho02	1,1,ein_in01,100,139
+ein_in01,100,142,0	warp	ein_ho02a	1,1,ein_in01,123,85
+//einbroch,290,222,0	warp	ein_ho03	1,1,ein_in01,121,80
+ein_in01,121,77,0	warp	ein_ho03a	1,1,einbroch,290,219
+
+
+//==========================================================================
+//Einbroch - House of Kapetain
+//==========================================================================
+//einbroch,129,229,0	warp	ein_kf01	1,1,ein_in01,14,147
+ein_in01,11,147,0	warp	ein_kf01a	1,1,einbroch,126,229
+
+
+//=========================================================================
+//Einbroch - Lab
+//=========================================================================
+ein_in01,286,25,0	warp	ein_lab	1,1,einbroch,54,52
+
+
+//=========================================================================
+//Einbroch - Blacksmith guild
+//=========================================================================
+//einbroch,255,107,0	warp	ein_jb01	1,1,ein_in01,14,17
+ein_in01,14,14,0	warp	ein_jb01a	1,1,einbroch,255,110
+ein_in01,39,36,0	warp	ein_jb02	1,1,ein_in01,35,83
+ein_in01,39,85,0	warp	ein_jb02a	1,1,ein_in01,36,36
+
+
+//==========================================================================
+//Einbroch - Field related
+//==========================================================================
+einbroch,157,331,0	warp	ein_fd01	1,1,ein_fild04,184,31
+ein_fild04,184,26,0	warp	ein_fd01a	1,1,einbroch,157,327
+einbroch,150,25,0	warp	ein_fd02	1,1,ein_fild08,164,377
+ein_fild08,164,380,0	warp	ein_fd02a	1,1,einbroch,150,28
+
+
+//===== rAthena Script =======================================
+//= Geffen Warp Script
+//===== By: ==================================================
+//= Athena (1.0)
+//= Nana (1.1)
+//===== Current Version: =====================================
+//= 1.1a
+//===== Compatible With: =====================================
+//= Any Athena Version
+//===== Description: =========================================
+//= Warp Points for Geffen
+//===== Additional Comments: =================================
+//= 1.1a Corrected a broken warp point. (bugreport:497) [Samuray22]
+//============================================================
+
+//Geffen City
+geffen,119,213,0	warp	gef001	3,2,gef_fild04,187,42
+geffen,120,114,0	warp	gef002	3,1,gef_tower,52,177
+geffen,217,119,0	warp	gef003	2,4,gef_fild00,46,199
+geffen,26,119,0	warp	gef004	2,3,gef_fild07,336,187
+//geffen,138,138,0	warp	gef01	1,1,geffen_in,28,110
+//geffen,172,174,0	warp	gef02	2,2,geffen_in,70,52
+//geffen,182,59,0	warp	gef03	2,2,geffen_in,106,177
+//geffen,43,85,0	warp	gef04	2,2,geffen_in,70,138
+//geffen,61,180,0	warp	gef05	3,3,geffen_in,162,97
+//geffen,98,141,0	warp	gef06	2,2,geffen_in,28,160
+geffen_in,28,156,0	warp	gef06-1	3,1,geffen,101,138
+geffen_in,100,67,0	warp	gef07	2,3,geffen_in,84,65
+geffen_in,87,66,0	warp	gef07-1	2,3,geffen_in,103,67
+geffen_in,104,109,0	warp	gef08	2,2,geffen_in,76,107
+geffen_in,79,107,0	warp	gef08-1	2,2,geffen_in,107,109
+geffen_in,113,163,0	warp	gef09	2,2,geffen_in,139,169
+geffen_in,136,169,0	warp	gef09-1	2,2,geffen_in,110,163
+geffen_in,114,37,0	warp	gef10	1,1,geffen_in,114,63
+geffen_in,114,60,0	warp	gef10-1	1,2,geffen_in,114,34
+geffen_in,138,149,0	warp	gef11	2,2,geffen_in,138,165
+geffen_in,138,162,0	warp	gef11-1	2,2,geffen_in,138,146
+geffen_in,26,60,0	warp	gef12	1,2,geffen_in,26,34
+geffen_in,26,37,0	warp	gef12-1	1,1,geffen_in,26,63
+geffen_in,52,65,0	warp	gef13	2,3,geffen_in,38,67
+geffen_in,41,67,0	warp	gef13-1	2,3,geffen_in,55,65
+geffen_in,70,149,0	warp	gef14	3,2,geffen_in,70,161
+geffen_in,70,158,0	warp	gef14-1	3,2,geffen_in,70,146
+geffen_in,70,83,0	warp	gef15	3,2,geffen_in,72,101
+geffen_in,72,98,0	warp	gef15-1	3,2,geffen_in,70,80
+geffen_in,163,94,0	warp	gef05-1	4,2,geffen,65,176
+geffen_in,70,132,0	warp	gef04-1	3,1,geffen,46,88
+geffen_in,106,181,0	warp	gef03-1	2,2,geffen,179,59
+geffen_in,28,106,0	warp	gef01-1	1,3,geffen,136,136
+geffen_in,70,48,0	warp	gef02-1	3,2,geffen,168,170
+
+//===== rAthena Script =======================================
+//= Kunlun Town Warp Script
+//===== By: ==================================================
+//= Nana (1.0)
+//===== Current Version: =====================================
+//= 1.1
+//===== Compatible With: =====================================
+//= Any Athena Version; RO Episode 5+
+//===== Description: =========================================
+//= [Aegis Conversion]
+//= Warp Points for Kunlun
+//===== Additional Comments: =================================
+//= 1.1 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
+//============================================================
+
+//gonryun,221,162,0	warp	gon_house1-1	1,1,gon_in,112,98
+gon_in,109,98,0	warp	gon_house1-2	1,1,gonryun,218,162
+//gonryun,195,93,0	warp	gon_house2-1	1,1,gon_in,95,23
+gon_in,95,26,0	warp	gon_house2=2	1,1,gonryun,195,96
+//gonryun,107,184,0	warp	gon_tea1-1	1,1,gon_in,72,70
+gon_in,72,67,0	warp	gon_tea2-1	1,1,gonryun,107,181
+//gonryun,215,114,0	warp	gon_tavern1-1	1,1,gon_in,152,24
+gon_in,149,24,0	warp	gon_tavern1-2	1,1,gonryun,212,114
+gon_in,184,36,0	warp	gon_inn1-1	1,1,gon_in,189,107
+gon_in,186,107,0	warp	gon_inn1-2	1,1,gon_in,181,36
+gon_in,184,11,0	warp	gon_inn2-1	1,1,gon_in,189,85
+gon_in,186,85,0	warp	gon_inn2-2	1,1,gon_in,181,11
+//gonryun,109,131,0	warp	gon_castle1-1	1,1,gon_in,44,24
+gon_in,47,24,0	warp	gon_castle1-2	1,1,gonryun,112,131
+gon_in,42,35,0	warp	gon_castle2-1	1,1,gon_in,34,97
+gon_in,31,97,0	warp	gon_castle2-2	1,1,gon_in,39,35
+gonryun,161,8,0	warp	gon_fild1-1	1,1,gon_fild01,191,261
+gon_fild01,192,265,0	warp	gon_fild1-2	1,1,gonryun,161,11
+
+
+
+//===== rAthena Script =======================================
+//= Garden City Hugel Warp Script
+//===== By: ==================================================
+//= Sara-chan (1.1)
+//===== Current Version: =====================================
+//= 1.7
+//===== Compatible With: =====================================
+//= Any Athena Version; RO Episode 10+
+//===== Description: =========================================
+//= Warp Points for Hugel
+//===== Additional Comments: =================================
+//= Initial Release
+//= 12/21/05 : Fixed 2 church warps and hunter house warps. [Muad_Dib]
+//= 1.2 fixed hugel10 [Lupus]
+//= 1.3 Rewrote all warps to relate houses, and fixed it to kRO. [Er_Maqui]
+//= 1.3a Replaced all spaces with TABs [Lupus]
+//= 1.4 Fixed an back warp on hu_in01,15,70 (walk to the warp, then warps you back) [erKURITA]
+//= 1.5 Added Bingo warps [erKURITA]
+//= 1.6 Some official warps [Playtester]
+//= 1.7 Updated warps regarding Odin Temple Excavation Quest. [SinSloth]
+//============================================================
+
+//= Hugel City ===============================================
+
+//Entrance
+hu_fild06,200,372,0	warp	hugel01	1,1,hugel,95,37
+hugel,95,33,0	warp	hugel02	1,1,hu_fild06,200,367
+
+//Church
+//hugel,155,114,0	warp	hugel03	1,1,hu_in01,211,177
+hu_in01,211,173,0	warp	hugel04	1,1,hugel,159,114
+hu_in01,162,228,0	warp	hugel05	1,1,hu_in01,199,219
+hu_in01,195,219,0	warp	hugel06	1,1,hu_in01,159,228
+hu_in01,162,168,0	warp	hugel07	1,1,hu_in01,200,192
+hu_in01,195,192,0	warp	hugel08	1,1,hu_in01,158,168
+
+//House
+//hugel,153,153,0	warp	hugel09	1,1,hu_in01,287,231
+hu_in01,287,227,0	warp	hugel10	1,1,hugel,153,149
+hu_in01,263,252,0	warp	hugel11	1,1,hu_in01,360,253
+hu_in01,365,253,0	warp	hugel12	1,1,hu_in01,268,252
+
+//House
+//hugel,92,167,0	warp	hugel13	1,1,hu_in01,246,363
+hu_in01,246,359,0	warp	hugel14	1,1,hugel,92,163
+hu_in01,244,315,0	warp	hugel15	1,1,hu_in01,243,388
+hu_in01,248,388,0	warp	hugel16	1,1,hu_in01,250,315
+hu_in01,229,313,0	warp	hugel17	1,1,hu_in01,164,315
+hu_in01,168,315,0	warp	hugel18	1,1,hu_in01,234,313
+hu_in01,168,307,0	warp	hugel19	1,1,hu_in01,167,376
+hu_in01,168,379,0	warp	hugel20	1,1,hu_in01,168,311
+
+//House (Unofficial)
+//hugel,85,181,0	warp	hugel21	1,1,hu_in01,231,303
+hu_in01,231,301,0	warp	hugel22	1,1,hugel,83,181
+
+//Weapon Shop
+//hugel,70,157,0	warp	hugel23	1,1,hu_in01,110,373
+hu_in01,110,369,0	warp	hugel24	1,1,hugel,73,155
+hu_in01,108,390,0	warp	hugel25	1,1,hu_in01,107,322
+hu_in01,114,322,0	warp	hugel26	1,1,hu_in01,113,389
+
+//House
+//hugel,91,104,0	warp	hugel27	1,1,hu_in01,30,304
+hu_in01,30,299,0	warp	hugel28	1,1,hugel,95,103
+hu_in01,34,318,0	warp	hugel29	1,1,hu_in01,34,251
+hu_in01,34,246,0	warp	hugel30	1,1,hu_in01,34,313
+
+//Inn
+//hugel,104,79,0	warp	hugel31	1,1,hu_in01,235,107
+hu_in01,231,107,0	warp	hugel32	1,1,hugel,101,77
+hu_in01,268,123,0	warp	hugel33	1,1,hu_in01,265,36
+hu_in01,265,42,0	warp	hugel34	1,1,hu_in01,262,123
+
+//Library
+hu_in01,37,90,0	warp	hugel36	1,1,hugel,52,95
+hu_in01,15,70,0	warp	hugel37	1,1,hu_in01,15,25
+hu_in01,15,29,0	warp	hugel38	1,1,hu_in01,15,74
+hu_in01,15,151,0	warp	hugel40	1,1,hu_in01,15,104
+
+//Hunter Guild
+//hugel,206,228,0	warp	hugel41	1,1,hu_in01,381,368
+hu_in01,381,363,0	warp	hugel42	1,1,hugel,209,224
+hu_in01,380,319,0	warp	hugel43	1,1,hu_in01,382,388
+hu_in01,388,388,0	warp	hugel44	1,1,hu_in01,385,319
+
+//Other
+hu_in01,177,90,0	warp	hugel45	1,1,hugel,52,95
+hu_in01,107,90,0	warp	hugel46	1,1,hugel,52,95
+hu_in01,85,108,0	warp	hugel47	1,1,hu_in01,85,155
+hu_in01,85,151,0	warp	hugel48	1,1,hu_in01,85,104
+hu_in01,85,70,0	warp	hugel49	1,1,hu_in01,85,25
+hu_in01,85,29,0	warp	hugel50	1,1,hu_in01,85,74
+
+//Pub
+//hugel,129,66,0	warp	hugel51	1,1,hu_in01,350,107
+hu_in01,345,107,0	warp	hugel52	1,1,hugel,126,64
+hu_in01,381,118,0	warp	hugel53	1,1,hu_in01,379,173
+hu_in01,379,178,0	warp	hugel54	1,1,hu_in01,376,118
+
+//House
+//hugel,153,216,0	warp	hugel55	1,1,hu_in01,305,379
+hu_in01,301,379,0	warp	hugel56	1,1,hugel,147,216
+hu_in01,314,386,0	warp	hugel57	1,1,hu_in01,312,322
+hu_in01,307,322,0	warp	hugel58	1,1,hu_in01,310,386
+
+//House (Unofficial)
+//hugel,80,230,0	warp	hugel59	1,1,hu_in01,24,363
+hu_in01,24,361,0	warp	hugel60	1,1,hugel,82,230
+
+//Bingo
+hugel,55,208,0	warp	hugelwarp1051	1,1,que_bingo,49,9
+que_bingo,49,7,0	warp	hugelwarp1052	1,1,hugel,57,207
+que_bingo,39,34,0	warp	hugelwarp1053	1,1,que_bingo,34,109
+que_bingo,34,105,0	warp	hugelwarp1054	1,1,que_bingo,38,28
+que_bingo,53,34,0	warp	hugelwarp1055	1,1,que_bingo,49,71
+que_bingo,48,66,0	warp	hugelwarp1056	1,1,que_bingo,53,29
+
+//===== Hercules Script ======================================
+//= Izlude Warp Script
+//===== By: ==================================================
+//= Athena (1.0), Nana (1.1)
+//===== Current Version: =====================================
+//= 1.7
+//===== Compatible With: =====================================
+//= Any Athena & Hercules Version
+//===== Description: =========================================
+//= Warp Points for Izlude
+//===== Additional Comments: =================================
+//= 1.3 Added warps to Izlude Airship [Justin84]
+//= 1.4 Minor correction on airport warps
+//= 1.5 Updated to match the new Izlude Map. [Masao]
+//= 1.6 Added new warps [Streusel]
+//= 1.7 Removed indoor warps [Streusel]
+//============================================================
+
+//= Izlude City ==============================================
+//izlude,109,182,0	warp	iz01	3,3,izlude_in,65,87
+//izlude,216,162,0	warp	iz03	3,2,izlude_in,151,127
+izlude,21,98,0	warp	iz001	3,3,prt_fild08,367,212
+//izlude,52,172,0	warp	iz04	2,2,izlude_in,74,161
+izlude,130,257,0	warp	iz09#1	2,2,iz_ac01,99,29
+izlude,125,257,0	warp	iz09#2	2,2,iz_ac01,99,29
+izlude,213,161,0	warp	iz10	2,2,arena_room,100,30
+arena_room,99,24,0	warp	iz_arena	2,2,izlude,209,161
+izlude_in,108,169,0	warp	iz05	2,3,izlude_in,84,169
+izlude_in,148,127,0	warp	iz03-1	2,5,izlude,207,162
+
+izlude_in,43,169,0	warp	w219	2,3,izlude_in,64,169
+izlude_in,65,84,0	warp	iz01-1	5,2,izlude,113,178
+izlude_in,74,158,0	warp	iz04-1	3,2,izlude,52,166
+izlude_in,87,169,0	warp	iz05-1	2,3,izlude_in,111,169
+
+//Izlude Academy
+iz_ac01,100,24,0	warp	iz_ac01	2,2,izlude,127,253
+iz_ac01,122,25,0	warp	iz_ac02	2,2,iz_ac02,104,27
+iz_ac01,78,25,0	warp	iz_ac03	2,2,iz_ac02,104,27
+iz_ac02,113,27,0	warp	iz_ac04	2,2,iz_ac01,122,28
+iz_ac02,94,27,0	warp	iz_ac05	2,2,iz_ac01,78,28
+
+//===== rAthena Script =======================================
+//= Lighthalzen Warp Script
+//===== By: ==================================================
+//= Sara-chan (1.0)
+//===== Current Version: =====================================
+//= 1.9
+//===== Compatible With: =====================================
+//= Any Athena Version; RO Episode 8+
+//===== Description: =========================================
+//= Warp Points for Lighthalzen
+//===== Additional Comments: =================================
+//= 1.9 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
+//============================================================
+
+//lighthalzen,101,248,0	warp	lhz_rekenber1-1	1,1,lhz_in01,111,126
+lhz_in01,111,121,0	warp	lhz_rekenber1-2	1,1,lighthalzen,101,243
+//lighthalzen,106,248,0	warp	lhz_rekenber2-1	1,1,lhz_in01,116,126
+lhz_in01,116,121,0	warp	lhz_rekenber2-2	1,1,lighthalzen,106,243
+lhz_in01,88,215,0	warp	lhz_rekenber3-1	1,1,lhz_in01,106,18
+lhz_in01,106,15,0	warp	lhz_rekenber3-2	1,1,lhz_in01,88,211
+lhz_in01,140,215,0	warp	lhz_rekenber4-1	1,1,lhz_in01,158,18
+lhz_in01,158,15,0	warp	lhz_rekenber4-2	1,1,lhz_in01,140,211
+lhz_in01,149,179,0	warp	lhz_rekenber5-1	1,1,lhz_in01,15,24
+lhz_in01,11,24,0	warp	lhz_rekenber5-2	1,1,lhz_in01,145,178
+lhz_in01,76,254,0	warp	lhz_rekenber6-1	1,1,lhz_in01,100,52
+lhz_in01,98,55,0	warp	lhz_rekenber6-2	1,1,lhz_in01,76,250
+lhz_in01,188,254,0	warp	lhz_rekenber7-1	1,1,lhz_in01,191,52
+lhz_in01,194,55,0	warp	lhz_rekenber7-2	1,1,lhz_in01,188,250
+lhz_in01,231,226,0	warp	lhz_rekenber8-1	1,1,lhz_in01,257,226
+lhz_in01,251,226,0	warp	lhz_rekenber8-2	1,1,lhz_in01,225,226
+lhz_in01,40,224,0	warp	lhz_rekenber9-1	1,1,lhz_in01,19,129
+lhz_in01,15,129,0	warp	lhz_rekenber9-2	1,1,lhz_in01,34,224
+lhz_in01,43,144,0	warp	lhz_rekenber10-1	1,1,lhz_in01,278,161
+lhz_in01,278,157,0	warp	lhz_rekenber10-2	1,1,lhz_in01,43,139
+lhz_in01,58,129,0	warp	lhz_rekenber11-1	1,1,lhz_in01,196,127
+lhz_in01,191,127,0	warp	lhz_rekenber11-2	1,1,lhz_in01,53,129
+//lighthalzen,198,257,0	warp	lhz_bank1-1	1,1,lhz_in02,39,28
+lhz_in02,44,28,0	warp	lhz_rekenberbank1-2	1,1,lighthalzen,203,257
+//lighthalzen,236,276,0	warp	lhz_police1-1	1,1,lhz_in02,133,199
+lhz_in02,129,199,0	warp	lhz_police1-2	1,1,lighthalzen,232,275
+//lighthalzen,238,220,0	warp	lhz_com1-1	1,1,lhz_in02,28,270
+lhz_in02,27,265,0	warp	lhz_com1-2	1,1,lighthalzen,238,217
+lhz_in02,13,284,0	warp	lhz_com2-1	1,1,lhz_in02,89,285
+lhz_in02,95,285,0	warp	lhz_com2-2	1,1,lhz_in02,18,284
+lhz_in02,114,272,0	warp	lhz_com3-1	1,1,lhz_in02,153,282
+lhz_in02,149,282,0	warp	lhz_com3-2	1,1,lhz_in02,109,272
+//lighthalzen,93,110,0	warp	lhz_jewel1-1	1,1,lhz_in02,104,26
+lhz_in02,108,26,0	warp	lhz_jewel1-2	1,1,lighthalzen,96,110
+//lighthalzen,197,36,0	warp	lhz_weapon1-1	1,1,lhz_in02,284,30
+lhz_in02,288,30,0	warp	lhz_weapon1-2	1,1,lighthalzen,194,35
+//lighthalzen,196,46,0	warp	lhz_weapon2-1	1,1,lhz_in02,282,83
+lhz_in02,282,79,0	warp	lhz_weapon2-2	1,1,lighthalzen,194,48
+lhz_in02,265,14,0	warp	lhz_weapon3-1	1,1,lhz_in02,269,82
+lhz_in02,274,82,0	warp	lhz_weapon3-2	1,1,lhz_in02,270,14
+//lighthalzen,159,133,0	warp	lhz_inn1-1	1,1,lhz_in02,232,265
+lhz_in02,232,261,0	warp	lhz_inn1-2	1,1,lighthalzen,158,129
+lhz_in02,210,284,0	warp	lhz_inn2-1	1,1,lhz_in02,241,219
+lhz_in02,236,219,0	warp	lhz_inn2-2	1,1,lhz_in02,206,284
+lhz_in02,250,278,0	warp	lhz_inn3-1	1,1,lhz_in02,265,278
+lhz_in02,261,278,0	warp	lhz_inn3-2	1,1,lhz_in02,246,278
+lhz_in02,254,212,0	warp	lhz_inn4-1	1,1,lhz_in02,273,212
+lhz_in02,269,212,0	warp	lhz_inn4-2	1,1,lhz_in02,250,212
+lhz_in02,238,169,0	warp	lhz_inn5-1	1,1,lhz_in02,238,150
+lhz_in02,238,154,0	warp	lhz_inn5-2	1,1,lhz_in02,238,173
+lhz_in02,231,182,0	warp	lhz_inn6-1	1,1,lhz_in02,212,182
+lhz_in02,216,182,0	warp	lhz_inn6-2	1,1,lhz_in02,235,182
+lhz_in02,231,200,0	warp	lhz_inn7-1	1,1,lhz_in02,212,200
+lhz_in02,216,200,0	warp	lhz_inn7-2	1,1,lhz_in02,235,200
+//lighthalzen,198,163,0	warp	lhz_store1-1	1,1,lhz_in02,21,195
+lhz_in02,21,191,0	warp	lhz_store1-2	1,1,lighthalzen,202,160
+lhz_in02,39,204,0	warp	lhz_store2-1	1,1,lhz_in02,41,136
+lhz_in02,36,136,0	warp	lhz_store2-2	1,1,lhz_in02,34,204
+lhz_in02,13,155,0	warp	lhz_store3-1	1,1,lhz_in02,84,223
+lhz_in02,79,223,0	warp	lhz_store3-2	1,1,lhz_in02,17,155
+lhz_in02,49,154,0	warp	lhz_store4-1	1,1,lhz_in02,98,155
+lhz_in02,103,155,0	warp	lhz_store4-2	1,1,lhz_in02,44,154
+lhz_in02,94,212,0	warp	lhz_store5-1	1,1,lhz_in02,94,144
+lhz_in02,89,144,0	warp	lhz_store5-2	1,1,lhz_in02,89,212
+//lighthalzen,324,301,0	warp	lhz_tool1-1	1,1,lhz_in03,241,100
+lhz_in03,237,100,0	warp	lhz_tool1-2	1,1,lighthalzen,322,296
+lhz_in03,257,83,0	warp	lhz_tool2-1	1,1,lhz_in03,255,14
+lhz_in03,250,14,0	warp	lhz_tool2-2	1,1,lhz_in03,252,83
+//lighthalzen,347,261,0	warp	lhz_house1_1-1	1,1,lhz_in03,14,218
+lhz_in03,10,216,0	warp	lhz_house1_1-2	1,1,lighthalzen,341,261
+//lighthalzen,345,231,0	warp	lhz_pub1-1	1,1,lhz_in03,188,15
+lhz_in03,188,11,0	warp	lhz_pub1-2	1,1,lighthalzen,344,227
+lhz_in03,191,35,0	warp	lhz_pub2-1	1,1,lhz_in03,191,103
+lhz_in03,190,100,0	warp	lhz_pub2-2	1,1,lhz_in03,190,31
+//lighthalzen,50,86,0	warp	lhz_house2_1-1	1,1,lhz_in03,45,31
+lhz_in03,50,31,0	warp	lhz_house2_1-2	1,1,lighthalzen,55,86
+lhz_in03,13,31,0	warp	lhz_house2_2-1	1,1,lhz_in03,15,99
+lhz_in03,20,99,0	warp	lhz_house2_2-2	1,1,lhz_in03,17,31
+//lighthalzen,251,299,0	warp	lhz_house3_1-1	1,1,lhz_in03,97,21
+lhz_in03,93,21,0	warp	lhz_house3_1-2	1,1,lighthalzen,247,299
+lhz_in03,134,14,0	warp	lhz_house3_2-1	1,1,lhz_in03,125,90
+lhz_in03,120,90,0	warp	lhz_house3_2-2	1,1,lhz_in03,130,14
+
+//============================================================ 
+// Old changelog
+//============================================================ 
+//= 1.3 Removed fields and dungeons warps from here [DracoRPG]
+//= 1.3a A small fix for a warp [MasterOfMuppets]
+//= 1.4 Lighthalzen warp, taken from korean eA site [Vicious]
+//= 1.4a Corrected warp for 'lhz013a' [Zephiris]
+//= 1.5 Added a few missing warps, thanks to Kargha [MasterOfMuppets]
+//= 1.6 Added a few more missing warps. [MasterOfMuppets]
+//= 1.7 Yet more missing warps implemented :P [MasterOfMuppets]
+//= 1.8 Added missing warps and moved some related to quests. [SinSloth]
+//============================================================
+
+//===== rAthena Script =======================================
+//= Lou Yang Warp Script
+//===== By: ==================================================
+//= Nana (1.0)
+//===== Current Version: =====================================
+//= 1.5
+//===== Compatible With: =====================================
+//= Any Athena Version 6.0+
+//===== Description: =========================================
+//= [Aegis conversion]
+//= Warp Points for Louyang
+//===== Additional Comments: =================================
+//= 1.5 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
+//============================================================
+
+louyang,218,19,0	warp	lou_fild1-1	1,1,lou_fild01,233,353
+lou_fild01,233,356,0	warp	lou_fild1-2	1,1,louyang,218,22
+//louyang,218,255,0	warp	lou_palace1-1	1,1,lou_in01,101,122
+lou_in01,101,119,0	warp	lou_palace1-2	1,1,louyang,218,252
+lou_in01,153,141,0	warp	lou_palace2-1	1,1,lou_in01,122,141
+lou_in01,125,141,0	warp	lou_palace2-2	1,1,lou_in01,156,141
+//louyang,280,167,0	warp	lou_pub1-1	1,1,lou_in02,58,173
+lou_in02,58,170,0	warp	lou_pub1-2	1,1,louyang,280,164
+lou_in02,35,190,0	warp	lou_pub2-1	1,1,lou_in02,41,138
+lou_in02,44,138,0	warp	lou_pub2-2	1,1,lou_in02,37,190
+lou_in02,80,190,0	warp	lou_pub3-1	1,1,lou_in02,73,140
+lou_in02,71,140,0	warp	lou_pub3-2	1,1,lou_in02,77,190
+//louyang,145,174,0	warp	lou_weapon1-1	1,1,lou_in02,126,168
+lou_in02,126,165,0	warp	lou_weapon1-2	1,1,louyang,145,171
+//louyang,136,97,0	warp	lou_tool1-1	1,1,lou_in02,247,171
+lou_in02,249,173,0	warp	lou_tool1-2	1,1,louyang,136,99
+//louyang,263,93,0	warp	lou_hospital1-1	1,1,lou_in02,245,59
+lou_in02,242,59,0	warp	lou_hospital1-2	1,1,louyang,260,93
+//louyang,309,80,0	warp	lou_office1-1	1,1,lou_in02,189,77
+lou_in02,189,74,0	warp	lou_office1-2	1,1,louyang,309,77
+lou_in02,201,94,0	warp	lou_office2-1	1,1,lou_in02,173,46
+lou_in02,176,46,0	warp	lou_office2-2	1,1,lou_in02,203,94
+//louyang,130,63,0	warp	lou_house11-1	1,1,lou_in02,72,31
+lou_in02,72,28,0	warp	lou_house11-2	1,1,louyang,130,60
+//louyang,317,176,0	warp	lou_house21-1	1,1,lou_in02,121,31
+lou_in02,121,28,0	warp	lou_house21-2	1,1,louyang,317,173
+//louyang,133,245,0	warp	lou_tower1-1	1,1,lou_in01,25,19
+lou_in01,28,19,0	warp	lou_tower1-2	1,1,louyang,136,245
+
+lou_in01,14,18,0	warp	lou_Towerexit	1,1,louyang,90,254
+
+//============================================================ 
+// Old changelog
+//============================================================ 
+//= 1.1 Added 2 escapes from 2 mountains 018,019 [Lupus]
+//= Some players used to stuck there after warps
+//= 1.2 Added a few missing warps [MasterOfMuppets]
+//= 1.3 Fixed a few warp-back [erKURITA]
+//= 1.4 Moved some quest-related warps to proper file. [SinSloth]
+//= 1.4a Corrected some broken warp points. (bugreport:497) [Samuray22]
+//============================================================
+
+//===== rAthena Script =======================================
+//= Lutie Warp Script
+//===== By: ==================================================
+//= Athena (1.0) Nana (1.1)
+//===== Current Version: =====================================
+//= 1.3
+//===== Compatible With: =====================================
+//= Any Athena Version; RO Episode 2+
+//===== Description: =========================================
+//= [Aegis Conversion]
+//= Warp Points for Lutie
+//===== Additional Comments: =================================
+//= 1.2a Re-fixed endless warping loop
+//= 1.3 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
+//============================================================
+
+xmas,149,41,0	warp	x_fild_out	8,1,xmas_fild01,80,248
+xmas,120,131,0	warp	xmas_tool1-1	1,1,xmas_in,43,33
+xmas_in,46,33,0	warp	xmas_tool1-2	1,1,xmas,123,131
+xmas,174,131,0	warp	xmas_gift1-1	1,1,xmas_in,155,32
+xmas_in,153,32,0	warp	xmas_gift1-2	1,1,xmas,172,131
+xmas,119,162,0	warp	xmas_house1-1	1,1,xmas_in,36,91
+xmas_in,38,89,0	warp	xmas_house1-2	1,1,xmas,122,159
+xmas,189,278,0	warp	xmas_house2-1	1,1,xmas_in,168,164
+xmas_in,168,160,0	warp	xmas_house2-2	1,1,xmas,189,275
+xmas,173,160,0	warp	xmas_weapon1-1	1,1,xmas_in,165,95
+xmas_in,163,93,0	warp	xmas_weapon1-2	1,1,xmas,172,158
+xmas,181,169,0	warp	xmas_weapon2-1	1,1,xmas_in,177,107
+xmas_in,179,109,0	warp	xmas_weapon2-2	1,1,xmas,184,168
+xmas,142,239,0	warp	xmas_santa1-1	1,1,xmas_in,94,85
+xmas_in,94,83,0	warp	xmas_santa1-2	1,1,xmas,142,237
+xmas,149,239,0	warp	xmas_santa2-1	1,1,xmas_in,104,85
+xmas_in,104,83,0	warp	xmas_santa2-2	1,1,xmas,149,237
+xmas,142,258,0	warp	xmas_santa3-1	1,1,xmas_in,94,115
+xmas_in,94,117,0	warp	xmas_santa3-2	1,1,xmas,142,260
+xmas,149,258,0	warp	xmas_santa4-1	1,1,xmas_in,104,115
+xmas_in,104,117,0	warp	xmas_santa4-2	1,1,xmas,149,260
+xmas,104,289,0	warp	xmas_church1-1	1,1,xmas_in,30,163
+xmas_in,30,161,0	warp	xmas_church2-2	1,1,xmas,104,286
+
+//===== Hercules Script =======================================
+//= Malangdo Island Warp Script
+//===== By: ==================================================
+//= Chilly
+//===== Current Version: =====================================
+//= 1.1
+//===== Compatible With: =====================================
+//= Hercules
+//===== Description: =========================================
+//= Warp Points for Malangdo Island
+//===== Additional Comments: =================================
+//= 1.0 First version
+//= 1.1 Updated warps. [Euphy]
+//============================================================
+
+// Town Warps
+//malangdo,240,150,0	warp	malangdo0001	1,1,mal_in01,11,17
+mal_in01,9,16,0	warp	malangdo0002	1,1,malangdo,238,149
+mal_in01,20,15,0	warp	malangdo0003	1,1,mal_in01,65,11
+mal_in01,67,12,0	warp	malangdo0004	1,1,mal_in01,20,13
+//malangdo,112,167,0	warp	malangdo0005	1,1,mal_in01,17,163
+mal_in01,18,161,0	warp	malangdo0006	1,1,malangdo,115,166
+mal_in01,18,173,0	warp	malangdo0007	1,1,mal_in01,72,173
+mal_in01,75,174,0	warp	malangdo0008	1,1,mal_in01,18,171
+mal_in01,73,170,0	warp	malangdo0009	1,1,mal_in01,124,172
+mal_in01,124,175,0	warp	malangdo0010	1,1,mal_in01,70,170
+//malangdo,113,151,0	warp	malangdo0011	1,1,mal_in01,28,118
+mal_in01,30,119,0	warp	malangdo0012	1,1,malangdo,115,150
+mal_in01,20,119,0	warp	malangdo0013	1,1,mal_in01,65,117
+mal_in01,67,118,0	warp	malangdo0014	1,1,mal_in01,20,117
+//malangdo,119,137,0	warp	malangdo0015	1,1,mal_in01,36,216
+mal_in01,38,217,0	warp	malangdo0016	1,1,malangdo,121,138
+mal_in01,11,218,0	warp	malangdo0017	1,1,mal_in01,75,220
+mal_in01,75,222,0	warp	malangdo0018	1,1,mal_in01,12,221
+mal_in01,79,219,0	warp	malangdo0019	1,1,mal_in01,140,216
+mal_in01,140,213,0	warp	malangdo0020	1,1,mal_in01,80,216
+//malangdo,135,109,0	warp	malangdo0021	1,1,mal_in01,19,76
+mal_in01,18,78,0	warp	malangdo0022	1,1,malangdo,135,111
+mal_in01,18,67,0	warp	malangdo0023	1,1,mal_in01,65,65
+mal_in01,67,66,0	warp	malangdo0024	1,1,mal_in01,20,67
+//malangdo,135,276,0	warp	malangdo0025	1,1,mal_in01,164,15
+mal_in01,163,13,0	warp	malangdo0026	1,1,malangdo,135,274
+malangdo,73,239,0	warp	malangdo0027	1,1,mal_dun01,33,230
+mal_dun01,30,230,0	warp	malangdo0028	1,1,malangdo,75,236
+
+// Ship Warps
+//malangdo,162,163,0	warp	malangdo_ship0001	1,1,mal_in02,58,61
+mal_in02,60,61,0	warp	malangdo_ship0002	1,1,malangdo,164,163
+mal_in02,51,60,0	warp	malangdo_ship0003	1,1,mal_in02,31,60
+mal_in02,34,60,0	warp	malangdo_ship0004	1,1,mal_in02,53,59
+mal_in02,63,53,0	warp	malangdo_ship0005	1,1,mal_in02,63,33
+mal_in02,63,35,0	warp	malangdo_ship0006	1,1,mal_in02,64,55
+mal_in02,63,66,0	warp	malangdo_ship0007	1,1,mal_in02,63,89
+mal_in02,64,87,0	warp	malangdo_ship0008	1,1,mal_in02,63,64
+mal_in02,101,53,0	warp	malangdo_ship0009	1,1,mal_in02,101,33
+mal_in02,101,35,0	warp	malangdo_ship0010	1,1,mal_in02,102,55
+mal_in02,101,66,0	warp	malangdo_ship0011	1,1,mal_in02,101,89
+mal_in02,102,87,0	warp	malangdo_ship0012	1,1,mal_in02,101,64
+mal_in02,137,53,0	warp	malangdo_ship0013	1,1,mal_in02,139,33
+mal_in02,139,35,0	warp	malangdo_ship0014	1,1,mal_in02,138,55
+mal_in02,137,66,0	warp	malangdo_ship0015	1,1,mal_in02,139,89
+mal_in02,140,87,0	warp	malangdo_ship0016	1,1,mal_in02,137,64
+mal_in02,142,60,0	warp	malangdo_ship0017	1,1,mal_in02,162,61
+mal_in02,159,61,0	warp	malangdo_ship0018	1,1,mal_in02,140,59
+
+//===== Hercules Script ====================================== 
+//= Mayala Port Town Warps
+//===== By: ================================================== 
+//= Chilly
+//===== Current Version: ===================================== 
+//= 1.0a
+//===== Compatible With: ===================================== 
+//= Hercules
+//===== Description: ========================================= 
+//= Warps for Mayala Port Town.
+//===== Additional Comments: ================================= 
+//= 1.0 First Version [Chilly].
+//= 1.0a Updated the file with new / missing warps [Masao].
+//============================================================ 
+
+malaya,178,211,0	script	malaya_inn	45,1,1,{
+end;
+
+OnTouch:
+if (malaya_hi < 10) {
+mes "Door is closed. It seems keeping its eyes on you.";
+close;
+}
+warp "ma_in01",24,80;
+end;
+}
+
+malaya,112,212,0	script	malaya_ws	45,1,1,{
+end;
+
+OnTouch:
+if (malaya_hi < 20) {
+mes "Door is closed. It seems keeping its eyes on you.";
+close;
+}
+warp "ma_in01",83,16;
+end;
+}
+
+malaya,299,167,0	script	malaya_ts	45,1,1,{
+end;
+
+OnTouch:
+if (malaya_hi < 20) {
+mes "Door is closed. It seems keeping its eyes on you.";
+close;
+}
+warp "ma_in01",12,24;
+end;
+}
+
+malaya,261,240,0	script	malaya_shop	45,1,1,{
+end;
+
+OnTouch:
+if (malaya_hi < 20) {
+mes "Door is closed. It seems keeping its eyes on you.";
+close;
+}
+warp "ma_in01",126,20;
+end;
+}
+
+malaya,300,211,0	script	malaya_house01	45,1,1,{
+end;
+
+OnTouch:
+if (malaya_hi < 10) {
+mes "Door is closed. It seems keeping its eyes on you.";
+close;
+}
+warp "ma_in01",36,152;
+end;
+}
+
+// Town Warps
+ma_in01,86,16,0	warp	mal_in_ws	1,1,malaya,115,212
+ma_in01,24,77,0	warp	mal_in_inn	1,1,malaya,178,208
+malaya,370,277,0	warp	malaya_mal_fild01	1,1,ma_fild01,40,272
+ma_fild01,37,272,0	warp	mal_fild01_malaya	1,1,malaya,367,277
+ma_in01,33,152,0	warp	mal_in_house01	1,1,malaya,52,75
+//malaya,309,70,0	warp	malaya_ship_mal_in_ship	1,1,ma_in01,108,92
+ma_in01,105,92,0	warp	mal_in_ship_malaya_ship	1,1,malaya,310,67
+ma_fild01,266,359,0	warp	mafild01_to02	1,1,ma_fild02,248,36
+ma_fild02,248,33,0	warp	mafild02_to01	1,1,ma_fild01,266,356
+ma_fild01,288,52,0	warp	mafild01_tobknw	1,1,ma_scene01,142,78
+ma_scene01,140,80,0	warp	bknw_tofild01	1,1,ma_fild01,288,55
+ma_in01,9,24,0	warp	mal_in_ts	1,1,malaya,296,167
+ma_in01,126,17,0	warp	mal_in_shop_malaya_shop	1,1,malaya,261,237
+ma_fild01,251,190,0	warp	mf_minga_mf_in_minga	1,1,ma_in01,108,160
+ma_in01,105,160,0	warp	mf_in_minga_mf_minga	1,1,ma_fild01,248,190
+
+// Car Warps
+ma_zif01,30,22,0	warp	malaya_car0001	1,1,malaya,241,238
+ma_zif02,30,22,0	warp	malaya_car0002	1,1,malaya,71,43
+ma_zif03,30,22,0	warp	malaya_car0003	1,1,malaya,284,129
+ma_zif04,30,22,0	warp	malaya_car0004	1,1,malaya,134,247
+ma_zif05,30,22,0	warp	malaya_car0005	1,1,malaya,341,150
+ma_zif06,30,22,0	warp	malaya_car0006	1,1,malaya,294,293
+ma_zif07,30,22,0	warp	malaya_car0007	1,1,malaya,239,221
+ma_zif08,30,22,0	warp	malaya_car0008	1,1,malaya,59,246
+ma_zif09,30,22,0	warp	malaya_car0009	1,1,malaya,254,68
+
+//===== rAthena Script =======================================
+//= Manuk warp points.
+//===== By: ==================================================
+//= L0ne_W0lf
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= Any Athena Version; RO Episode 13.2+
+//===== Description: =========================================
+//= [Aegis Conversion]
+//= Warp Points for Manuk
+//===== Additional Comments: =================================
+//= First version.
+//============================================================
+
+//manuk,311,142,0	warp	manuk1-1	1,1,man_in01,277,41
+man_in01,275,41,0	warp	manuk1-2	1,1,manuk,309,142
+//manuk,310,201,0	warp	manuk2-1	1,1,man_in01,358,121
+man_in01,358,119,0	warp	manuk2-2	1,1,manuk,310,199
+//manuk,255,110,0	warp	manuk3-1	1,1,man_in01,7,61
+man_in01,5,61,0	warp	manuk3-2	1,1,manuk,253,110
+man_in01,318,17,0	warp	manuk3-4	1,1,man_in01,388,16
+man_in01,390,16,0	warp	manuk3-5	1,1,man_in01,316,17
+man_in01,328,141,0	warp	manuk3-6	1,1,man_in01,324,220
+man_in01,324,222,0	warp	manuk3-7	1,1,man_in01,328,139
+man_in01,11,19,0	warp	manuk3-8	1,1,man_in01,182,32
+man_in01,182,34,0	warp	manuk3-9	1,1,man_in01,11,21
+//manuk,257,228,0	warp	manuk4-1	1,1,man_in01,130,267
+man_in01,130,265,0	warp	manuk4-2	1,1,manuk,258,226
+//manuk,265,237,0	warp	manuk5-1	1,1,man_in01,180,267
+man_in01,180,265,0	warp	manuk5-2	1,1,manuk,267,235
+//manuk,276,247,0	warp	manuk6-1	1,1,man_in01,230,267
+man_in01,230,265,0	warp	manuk6-2	1,1,manuk,276,245
+//manuk,288,249,0	warp	manuk7-1	1,1,man_in01,280,267
+man_in01,280,265,0	warp	manuk7-2	1,1,manuk,289,247
+//manuk,302,243,0	warp	manuk8-1	1,1,man_in01,330,267
+man_in01,330,265,0	warp	mauk8-2	1,1,manuk,300,241
+//manuk,311,234,0	warp	manuk9-1	1,1,man_in01,380,267
+man_in01,380,265,0	warp	manuk9-2	1,1,manuk,309,232
+//manuk,253,195,0	warp	manuk10-1	1,1,man_in01,24,284
+man_in01,26,284,0	warp	manuk10-2	1,1,manuk,255,195
+//manuk,235,124,0	warp	manuk11-1	1,1,man_in01,70,171
+man_in01,70,169,0	warp	manuk11-2	1,1,manuk,235,122
+//manuk,279,115,0	warp	manuk12-1	1,1,man_in01,123,224
+man_in01,123,226,0	warp	manuk12-2	1,1,manuk,278,117
+man_in01,5,275,0	warp	manuk12-3	1,1,man_in01,7,221
+man_in01,7,219,0	warp	manuk12-4	1,1,man_in01,7,276
+man_in01,22,275,0	warp	manuk12-5	1,1,man_in01,76,279
+man_in01,74,279,0	warp	manuk12-6	1,1,man_in01,20,275
+man_in01,61,190,0	warp	manuk12-7	1,1,man_in01,63,238
+man_in01,61,238,0	warp	manuk12-8	1,1,man_in01,61,188
+man_in01,61,173,0	warp	manuk12-9	1,1,man_in01,20,173
+man_in01,20,175,0	warp	manuk12-10	1,1,man_in01,61,175
+
+//===== rAthena Script =======================================
+//= Another World Warp Script
+//===== By: ==================================================
+//= L0ne_W0lf
+//===== Current Version: =====================================
+//= 1.5
+//===== Compatible With: =====================================
+//= Any Athena Version
+//===== Description: =========================================
+//= [Official Conversion]
+//= Warp Points for Another World
+//= Warp points to and from fild22b and mid_camp are temporary.
+//===== Additional Comments: =================================
+//= 1.0 First Version.
+//= 1.1 Fixed a small bug by brianlew, bugreport:1824 [Brainstorm]
+//= 1.2 Corrected the observatory warp portal, thanks to Ziu. [brianluau]
+//= 1.3 Added warps, and also Updated warp positions. [L0ne_W0lf]
+//= 1.4 Removed the warp from midgard camp to morroc field. [L0ne_W0lf]
+//= 1.5 Remove a warp. [Joseph]
+//============================================================
+
+mid_camp,205,211,0	warp	mid_weapon1-1	1,1,mid_campin,229,123
+mid_campin,232,123,0	warp	mid_weapon1-2	1,1,mid_camp,208,211
+mid_camp,196,204,0	warp	mid_weapon2-1	1,1,mid_campin,220,109
+mid_campin,223,109,0	warp	mid_weapon2-2	1,1,mid_camp,198,205
+mid_camp,214,249,0	warp	mid_meeting1-1	1,1,mid_campin,89,102
+mid_campin,89,99,0	warp	mid_meeting1-2	1,1,mid_camp,215,247
+mid_campin,66,114,0	warp	mid_meeting2-1	1,1,mid_campin,22,80
+mid_campin,25,80,0	warp	mid_meeting2-2	1,1,mid_campin,70,114
+mid_campin,66,120,0	warp	mid_meeting3-1	1,1,mid_campin,22,124
+mid_campin,25,124,0	warp	mid_meeting3-2	1,1,mid_campin,70,120
+mid_campin,68,128,0	warp	mid_meeting4-1	1,1,mid_campin,22,168
+mid_campin,25,168,0	warp	mid_meeting4-2	1,1,mid_campin,71,128
+mid_campin,86,141,0	warp	mid_meeting5-1	1,1,mid_campin,66,181
+mid_campin,65,178,0	warp	mid_meeting5-2	1,1,mid_campin,86,138
+mid_campin,94,141,0	warp	mid_meeting6-1	1,1,mid_campin,117,181
+mid_campin,117,178,0	warp	mid_meeting6-2	1,1,mid_campin,94,138
+mid_campin,111,128,0	warp	mid_meeting7-1	1,1,mid_campin,165,170
+mid_campin,162,170,0	warp	mid_meeting7-2	1,1,mid_campin,108,128
+mid_campin,162,126,0	warp	mid_meeting8-1	1,1,mid_campin,110,120
+mid_campin,113,114,0	warp	mid_meeting9-1	1,1,mid_campin,165,82
+mid_campin,162,82,0	warp	mid_meeting9-2	1,1,mid_campin,110,114
+mid_camp,266,260,0	warp	mid_house1-1	1,1,mid_campin,284,124
+mid_campin,282,124,0	warp	mid_house1-2	1,1,mid_camp,263,260
+mid_camp,163,231,0	warp	mid_house2-1	1,1,mid_campin,376,133
+mid_campin,376,136,0	warp	mid_house2-2	1,1,mid_camp,163,234
+
+
+//===== rAthena Script =======================================
+//= Morroc Warp Script
+//===== By: ==================================================
+//= Athena (1.0)
+//= Nana (1.2)
+//===== Current Version: =====================================
+//= 1.3
+//===== Compatible With: =====================================
+//= Any Athena Version
+//===== Description: =========================================
+//= Warp Points for Morroc and Assassin Guild
+//===== Additional Comments: =================================
+//= 1.3 Updated warps for episode 12.1 [L0ne_W0lf]
+//============================================================
+
+//= Morroc City ==============================================
+morocc,160,17,0	warp	moc001	2,2,moc_fild12,159,378
+//morocc,160,183,0	warp	moc002	2,1,moc_castle,94,181
+morocc,160,297,0	warp	moc003	2,2,moc_fild07,198,25
+morocc,197,66,0	warp	moc01	1,1,morocc_in,83,92
+//morocc,22,294,0	warp	moc02	2,5,moc_ruins,156,42
+morocc,27,294,0	warp	moc02	2,5,moc_ruins,156,42
+morocc,24,164,0	warp	moc004	1,2,moc_fild19,164,107
+morocc,253,56,0	warp	moc03	2,1,morocc_in,134,74
+//morocc,26,297,0	warp	moc02-1	5,2,moc_ruins,156,42
+morocc,274,269,0	warp	moc04	2,2,morocc_in,138,136
+morocc,283,170,0	warp	moc07	2,2,morocc_in,108,176
+//morocc,302,207,0	warp	moc005	2,2,moc_fild10,22,207
+morocc,299,207,0	warp	moc005	2,2,moc_fild20,36,177
+morocc,46,46,0	warp	moc05	2,1,morocc_in,68,72
+morocc,52,259,0	warp	moc06	1,2,morocc_in,180,65
+morocc,85,55,0	warp	moc08	2,2,morocc_in,44,149
+morocc,98,68,0	warp	moc09	1,1,morocc_in,44,175
+morocc_in,105,95,0	warp	moc10-1	1,3,morocc_in,90,95
+morocc_in,106,123,0	warp	moc11-1	1,3,morocc_in,90,123
+morocc_in,108,179,0	warp	moc07-1	2,2,morocc,283,173
+morocc_in,134,77,0	warp	moc03-1	3,1,morocc,251,59
+morocc_in,136,136,0	warp	moc04-1	1,4,morocc,271,269
+morocc_in,144,109,0	warp	moc12-1	3,1,morocc_in,144,125
+morocc_in,144,122,0	warp	moc12	3,1,morocc_in,144,106
+morocc_in,144,151,0	warp	moc13	3,1,morocc_in,144,169
+morocc_in,144,166,0	warp	moc13-1	3,1,morocc_in,144,148
+morocc_in,149,129,0	warp	moc14	1,2,morocc_in,169,129
+morocc_in,166,130,0	warp	moc14-1	1,3,morocc_in,146,130
+morocc_in,171,37,0	warp	moc15-1	4,1,morocc_in,171,52
+morocc_in,171,50,0	warp	moc15	4,1,morocc_in,171,35
+morocc_in,174,109,0	warp	moc22	3,1,morocc_in,174,125
+morocc_in,174,122,0	warp	moc22-1	3,1,morocc_in,174,106
+morocc_in,174,151,0	warp	moc16	3,1,morocc_in,174,169
+morocc_in,174,166,0	warp	moc16-1	3,1,morocc_in,174,148
+morocc_in,183,65,0	warp	moc06-1	2,3,morocc,55,259
+morocc_in,23,161,0	warp	moc17	1,2,morocc_in,37,161
+morocc_in,34,161,0	warp	moc17-1	1,2,morocc_in,20,161
+morocc_in,44,146,0	warp	moc08-1	3,2,morocc,82,52
+morocc_in,44,178,0	warp	moc09-1	2,2,morocc,100,70
+morocc_in,55,123,0	warp	moc18-1	1,3,morocc_in,71,123
+morocc_in,55,95,0	warp	moc19-1	1,3,morocc_in,71,95
+morocc_in,57,161,0	warp	moc20	1,3,morocc_in,73,161
+morocc_in,68,123,0	warp	moc18	1,3,morocc_in,52,123
+morocc_in,68,42,0	warp	moc21-1	2,1,morocc_in,68,65
+morocc_in,68,62,0	warp	moc21	2,1,morocc_in,68,38
+morocc_in,68,75,0	warp	moc05-1	2,1,morocc,49,49
+morocc_in,68,95,0	warp	moc19	1,3,morocc_in,52,95
+morocc_in,70,161,0	warp	moc20-1	1,3,morocc_in,54,161
+morocc_in,83,90,0	warp	moc01-1	4,1,morocc,199,64
+morocc_in,86,101,0	warp	moc23	2,1,morocc_in,86,120
+morocc_in,86,117,0	warp	moc23-1	3,1,morocc_in,86,98
+morocc_in,93,123,0	warp	moc11	1,3,morocc_in,109,123
+morocc_in,93,95,0	warp	moc10	1,3,morocc_in,109,95
+
+//= Morroc Ruins ============================================
+moc_ruins,159,39,0	warp	moc02-2	2,4,morocc,30,290
+//moc_ruins,161,40,0	warp	moc02-2	2,4,morocc,26,293
+//moc_ruins,157,37,0	warp	moc02-3	5,2,morocc,26,293
+moc_ruins,54,161,0	warp	moc006	2,3,moc_pryd01,192,9
+moc_ruins,71,16,0	warp	moc007	8,2,moc_fild19,71,167
+
+//= Morroc Castle ===========================================
+//moc_castle,94,183,0	warp	mocc001	2,1,morocc,160,185
+//moc_castle,107,163,0	warp	mocc01	2,3,moc_castle,124,163
+//moc_castle,120,163,0	warp	mocc01-1	2,3,moc_castle,103,163
+//moc_castle,120,75,0	warp	mocc02	2,3,moc_castle,56,33
+//moc_castle,59,34,0	warp	mocc02-1	2,3,moc_castle,124,75
+//moc_castle,134,101,0	warp	mocc03	1,1,moc_castle,134,128
+//moc_castle,134,124,0	warp	mocc-03	2,2,moc_castle,134,98
+//moc_castle,134,139,0	warp	mocc04	1,1,moc_castle,134,160
+//moc_castle,134,156,0	warp	mocc04-1	2,2,moc_castle,134,136
+//moc_castle,149,163,0	warp	mocc05	2,3,moc_castle,162,163
+//moc_castle,158,163,0	warp	mocc05-1	2,3,moc_castle,145,163
+//moc_castle,16,131,0	warp	mocc06	1,2,moc_castle,16,164
+//moc_castle,16,160,0	warp	mocc06-1	1,2,moc_castle,16,125
+//moc_castle,170,131,0	warp	mocc07	2,2,moc_castle,170,163
+//moc_castle,170,160,0	warp	mocc07-1	1,1,moc_castle,170,128
+//moc_castle,29,163,0	warp	mocc08	2,2,moc_castle,44,163
+//moc_castle,40,163,0	warp	mocc08-1	2,2,moc_castle,25,163
+//moc_castle,51,114,0	warp	mocc09	3,2,moc_castle,54,65
+//moc_castle,54,69,0	warp	mocc09-1	3,2,moc_castle,52,117
+//moc_castle,54,139,0	warp	mocc10	2,2,moc_castle,54,160
+//moc_castle,54,156,0	warp	mocc10-1	2,2,moc_castle,54,134
+//moc_castle,63,89,0	warp	mocc11	2,3,moc_castle,83,89
+//moc_castle,80,89,0	warp	mocc11-1	2,3,moc_castle,60,89
+//moc_castle,69,163,0	warp	mocc12	2,2,moc_castle,86,163
+//moc_castle,82,163,0	warp	mocc12-1	2,2,moc_castle,66,163
+//moc_castle,88,93,0	warp	mocc13	1,1,moc_castle,94,119
+//moc_castle,94,116,0	warp	mocc13-1	1,1,moc_castle,88,90
+//moc_castle,96,90,0	warp	mocc13-2	1,1,moc_castle,94,119
+//moc_castle,92,67,0	warp	mocc14	3,2,moc_castle,92,85
+//moc_castle,92,82,0	warp	mocc14-1	3,2,moc_castle,92,63
+//moc_castle,94,143,0	warp	mocc15	3,2,moc_castle,94,160
+//moc_castle,94,156,0	warp	mocc15-1	3,2,moc_castle,94,140
+
+//===== rAthena Script =======================================
+//= Moscovia City Warp Script
+//===== By: ==================================================
+//= $ephiroth
+//===== Current Version: =====================================
+//= 1.2
+//===== Compatible With: =====================================
+//= Any Athena Version
+//===== Description: =========================================
+//= Warp Points for Moscovia City
+//===== Additional Comments: =================================
+//= 1.0 Initial version [$ephiroth]
+//= 1.1 Fixed "Private House" Warps. [Samuray22]
+//	-Thanks to $ephiroth
+//= 1.2 Updated from jA
+//============================================================
+
+// ---[ Mansion ]--- 
+//moscovia,256,138,0	warp	moskwarp1001	1,1,mosk_in,96,61
+mosk_in,93,61,0	warp	moskwarp1002	1,1,moscovia,255,140
+mosk_in,99,126,0	warp	moskwarp1003	1,1,mosk_in,21,116
+mosk_in,21,113,0	warp	moskwarp1004	1,1,mosk_in,99,123
+// ---[ Weapon House ]--- 
+//moscovia,185,188,0	warp	moskwarp1005	1,1,mosk_in,15,179
+mosk_in,12,179,0	warp	moskwarp1006	1,1,moscovia,186,191
+//moscovia,203,171,0	warp	moskwarp1007	1,1,mosk_in,86,180
+mosk_in,89,180,0	warp	moskwarp1008	1,1,moscovia,204,169
+// ---[ Instrument House / Tool Dealer ]--- 
+//moscovia,223,174,0	warp	moskwarp1009	1,1,mosk_in,14,246
+mosk_in,11,246,0	warp	moskwarp1010	1,1,moscovia,222,176
+// ---[ Inn ]--- 
+//moscovia,229,208,0	warp	moskwarp1011	1,1,mosk_in,142,178
+mosk_in,142,175,0	warp	moskwarp1012	1,1,moscovia,227,207
+mosk_in,150,192,0	warp	moskwarp1013	1,1,mosk_in,204,188
+mosk_in,202,188,0	warp	moskwarp1014	1,1,mosk_in,148,192
+// ---[ Mansion ]--- 
+//moscovia,256,179,0	warp	moskwarp1015	1,1,mosk_in,211,114
+mosk_in,211,111,0	warp	moskwarp1016	1,1,moscovia,253,179
+mosk_in,222,128,0	warp	moskwarp1017	1,1,mosk_in,288,118
+mosk_in,288,116,0	warp	moskwarp1018	1,1,mosk_in,222,126
+// ---[ Private House ]--- 
+//moscovia,205,98,0	warp	moskwarp1021	1,1,mosk_in,214,255
+mosk_in,214,252,0	warp	moskwarp1022	1,1,moscovia,203,96
+mosk_in,220,273,0	warp	moskwarp1023	1,1,mosk_in,152,275
+mosk_in,152,272,0	warp	moskwarp1024	1,1,mosk_in,220,270
+
+//===== rAthena Script =======================================
+//= Nameless Island Warp Script
+//===== By: ==================================================
+//= $ephiroth
+//===== Current Version: =====================================
+//= 1.3
+//===== Compatible With: =====================================
+//= Any Athena Version
+//===== Description: =========================================
+//= Warp Points for Nameless Island
+//===== Additional Comments: =================================
+//= 1.0 Initial version [$ephiroth]
+//= 1.1 Added SinSloth's warper to this file [Playtester]
+//= 1.2 Corrected NPC names to fall within proper restrictions. [L0ne_W0lf]
+//= 1.3 Removed SinSloth's warper from this file [L0ne_W0lf]
+//============================================================
+
+nameless_n,157,184,0	warp	namelesswarp0401	1,1,abbey01,51,12
+nameless_i,252,130,0	warp	namelesswarp1003	1,1,nameless_in,26,128
+nameless_in,23,128,0	warp	namelesswarp1004	1,1,nameless_i,249,130
+nameless_i,79,256,0	warp	namelesswarp1005	1,1,nameless_in,12,172
+nameless_in,12,169,0	warp	namelesswarp1006	1,1,nameless_i,82,256
+nameless_i,78,94,0	warp	namelesswarp1007	1,1,nameless_in,96,180
+nameless_in,96,177,0	warp	namelesswarp1008	1,1,nameless_i,81,96
+
+//===== rAthena Script =======================================
+//= Niflheim Warp Script
+//===== By: ==================================================
+//= PKGINGO (1.0)
+//===== Current Version: =====================================
+//= 1.2
+//===== Compatible With: =====================================
+//= Any Athena Version; RO Episode 6+
+//===== Description: =========================================
+//= Warp Points for Niflheim
+//===== Additional Comments: =================================
+//= Extracted from Vidar -> Athena
+//= V1.1: Added Inn and House warps needed for the Piano
+//= Quest. [Skotlex
+//= 1.2 Corrected NPC names to fall within proper restrictions. [L0ne_W0lf]
+//============================================================
+
+//Niflheim Fields
+nif_fild01,345,323,0	warp	nwarp7	1,1,nif_fild02,23,312
+nif_fild02,21,312,0	warp	nwarp8	1,1,nif_fild01,343,322
+nif_fild02,379,235,0	warp	nwarp9	1,1,niflheim,20,153
+niflheim,18,151,0	warp	nwarp10	1,1,nif_fild02,376,235
+
+//Niflheim Town
+
+//Weapon shop
+//niflheim,220,169,0	warp	nwarp11	1,1,nif_in,14,88
+nif_in,11,88,0	warp	nwarp12	1,1,niflheim,218,170
+
+//Item shop: 134,12
+//niflheim,219,199,0	warp	nwarp13	1,1,nif_in,136,14
+nif_in,134,12,0	warp	nwarp14	1,1,niflheim,218,197
+
+//House
+//niflheim,190,241,0	warp	nwarp19a	1,1,nif_in,81,77
+nif_in,78,74,0	warp	nwarp20a	1,1,niflheim,187,241
+
+//Inn
+//niflheim,189,211,0	warp	nwarp21a	1,1,nif_in,20,14
+nif_in,23,12,0	warp	nwarp22a	1,1,niflheim,189,207
+nif_in,34,34,0	warp	nwarp23	1,1,nif_in,88,31
+nif_in,88,29,0	warp	nwarp24	1,1,nif_in,34,31
+
+//House on the hill
+//niflheim,255,194,0	warp	nwarp15	1,1,nif_in,20,156
+nif_in,18,154,0	warp	nwarp16	1,1,niflheim,254,192
+nif_in,65,168,0	warp	nwarp17	1,1,nif_in,141,174
+nif_in,140,171,0	warp	nwarp18	1,1,nif_in,65,165
+
+//niflheim,165,162,0	warp	nwarp19	1,1,nif_in,156,80
+nif_in,169,82,0	warp	nwarp20	1,1,nif_in,189,105
+nif_in,186,105,0	warp	nwarp21	1,1,nif_in,167,82
+nif_in,154,78,0	warp	nwarp22	1,1,niflheim,167,161
+
+//===== rAthena Script ======================================= 
+//= Payon Warps
+//===== By: ================================================== 
+//= Muad Dib (1.0)
+//= Darkchild (1.1)
+//= Nana (1.3)
+//===== Current Version: ===================================== 
+//= 1.7
+//===== Compatible With: ===================================== 
+//= Any rAthena Mod
+//===== Description: ========================================= 
+//= Payon warps
+//===== Additional Comments: ================================= 
+//= Warps Done By Muad Dib, All Credits To Him
+//= 1.2 Removed Duplicated Warp
+//= 1.3 Separated and reorganized field and dungeons
+//= 1.4 Fixed warp payonwarp031 [Yor]
+//= 1.5 Removed Payonwarp006, it was a duplicate [MasterOfMuppets]
+//= 1.6 Changed trigger area of payon -> pay_fild08 warp. [L0ne_W0lf]
+//= 1.7 Moved Castle Map warps to warps/guild/guildcastles.txt. [Masao]
+//============================================================
+
+// == Official Warps From kRO Screenshots ==
+
+// -- Entrance / Exit --
+payon,122,27,0	warp	payonwarp003	5,3,pay_fild01,333,356
+pay_fild01,333,360,0	warp	payonwarp004	5,3,payon,122,31
+payon,267,89,0	warp	payonwarp005	1,1,pay_fild08,20,74
+payon,228,330,0	warp	payonwarp007	4,2,pay_arche,81,22
+pay_arche,81,18,0	warp	payonwarp008	5,2,payon,228,326
+
+// -- Inn --
+//payon,223,117,0	warp	payonwarp009	2,2,payon_in01,175,11
+payon_in01,172,11,0	warp	payonwarp010	2,2,payon,219,117
+payon_in01,180,43,0	warp	payonwarp011	2,2,payon_in01,181,73
+payon_in01,181,70,0	warp	payonwarp012	2,2,payon_in01,180,40
+payon_in01,193,92,0	warp	payonwarp013	2,2,payon_in01,143,61
+payon_in01,146,61,0	warp	payonwarp014	2,2,payon_in01,193,89
+payon_in01,133,42,0	warp	payonwarp015	2,2,payon_in01,133,18
+payon_in01,133,21,0	warp	payonwarp016	2,2,payon_in01,133,45
+
+// -- Sort of Mill --
+//payon,140,85,0	warp	payonwarp017	2,2,payon_in01,14,51
+payon_in01,17,51,0	warp	payonwarp018	2,2,payon,143,85
+payon_in01,10,59,0	warp	payonwarp019	2,2,payon_in01,10,83
+payon_in01,10,80,0	warp	payonwarp021	2,2,payon_in01,10,56
+payon_in01,10,38,0	warp	payonwarp022	2,2,payon_in01,10,14
+payon_in01,10,17,0	warp	payonwarp023	2,2,payon_in01,10,41
+
+// -- Weaponshop --
+//payon,135,158,0	warp	payonwarp024	2,2,payon_in01,20,129
+payon_in01,23,129,0	warp	payonwarp025	2,2,payon,138,158
+//payon,130,169,0	warp	payonwarp026	2,2,payon_in01,13,136
+payon_in01,13,139,0	warp	payonwarp027	2,2,payon,130,172
+
+// -- House --
+//payon,151,127,0	warp	payonwarp028	2,2,payon_in01,56,53
+payon_in01,56,50,0	warp	payonwarp029	2,2,payon,151,124
+
+// -- Middle Castle --
+//payon,155,248,0	warp	payonwarp030	4,1,payon_in03,98,117
+payon_in03,98,114,0	warp	payonwarp031	5,1,payon,155,245
+payon_in03,90,124,0	warp	payonwarp032	2,2,payon_in03,80,124
+payon_in03,83,124,0	warp	payonwarp033	2,2,payon_in03,93,124
+payon_in03,99,133,0	warp	payonwarp034	2,2,payon_in03,99,151
+payon_in03,99,148,0	warp	payonwarp035	2,2,payon_in03,99,130
+payon_in03,107,124,0	warp	payonwarp036	2,2,payon_in03,117,124
+payon_in03,114,124,0	warp	payonwarp037	2,2,payon_in03,104,124
+
+// -- Weapon Storage Building --
+//payon,189,233,0	warp	payonwarp038	2,2,payon_in03,149,39
+payon_in03,146,39,0	warp	payonwarp039	2,2,payon,186,233
+payon_in03,158,32,0	warp	payonwarp040	2,2,payon_in03,130,14
+payon_in03,130,17,0	warp	payonwarp041	2,2,payon_in03,158,35
+payon_in03,172,32,0	warp	payonwarp042	2,2,payon_in03,160,14
+payon_in03,160,17,0	warp	payonwarp043	2,2,payon_in03,172,35
+payon_in03,186,32,0	warp	payonwarp044	2,2,payon_in03,190,13
+payon_in03,190,17,0	warp	payonwarp045	2,2,payon_in03,186,35
+
+// -- House --
+//payon,256,285,0	warp	payonwarp046	2,2,payon_in01,45,11
+payon_in01,42,11,0	warp	payonwarp047	2,2,payon,253,285
+
+// -- Old Archer Village Warps --
+pay_arche,36,131,0	warp	payonwarp048	2,2,pay_dun00,21,183
+pay_arche,71,156,0	warp	payonwarp049	2,2,payon_in02,82,41
+pay_arche,92,170,0	warp	payonwarp050	2,2,payon_in02,50,7
+pay_arche,145,165,0	warp	payonwarp051	2,2,payon_in02,64,60
+payon_in02,10,25,0	warp	payonwarp052	2,2,payon_in02,72,67
+payon_in02,35,67,0	warp	payonwarp053	2,2,payon_in02,55,67
+payon_in02,50,4,0	warp	payonwarp054	3,1,pay_arche,92,166
+payon_in02,52,67,0	warp	payonwarp055	2,2,payon_in02,32,67
+payon_in02,61,33,0	warp	payonwarp056	2,2,payon_in02,73,33
+payon_in02,64,56,0	warp	payonwarp057	2,2,pay_arche,141,161
+payon_in02,70,33,0	warp	payonwarp058	2,2,payon_in02,58,33
+payon_in02,75,67,0	warp	payonwarp059	2,2,payon_in02,13,25
+payon_in02,82,45,0	warp	payonwarp060	2,2,pay_arche,74,153
+
+
+// == Self Made Warps, No Screen Availble ==
+
+// -- Large West House --
+//payon,127,204,0	warp	payonwarp061	2,2,payon_in03,81,19
+payon_in03,85,19,0	warp	payonwarp062	2,2,payon,131,204
+payon_in03,74,18,0	warp	payonwarp063	2,2,payon_in03,62,18
+payon_in03,67,18,0	warp	payonwarp064	2,2,payon_in03,78,18
+payon_in03,46,18,0	warp	payonwarp065	2,2,payon_in03,35,18
+payon_in03,39,18,0	warp	payonwarp066	2,2,payon_in03,51,18
+payon_in03,28,18,0	warp	payonwarp067	2,2,payon_in03,17,18
+payon_in03,21,18,0	warp	payonwarp068	2,2,payon_in03,32,18
+
+// -- Big Kitchen --
+//payon,155,327,0	warp	payonwarp069	2,2,payon_in03,165,143
+payon_in03,165,140,0	warp	payonwarp070	2,2,payon,155,324
+payon_in03,185,178,0	warp	payonwarp071	2,2,payon_in03,185,149
+payon_in03,185,153,0	warp	payonwarp072	2,2,payon_in03,185,182
+
+// -- Upper Castle --
+//payon,107,327,0	warp	payonwarp073	2,2,payon_in03,19,64
+payon_in03,19,60,0	warp	payonwarp074	2,2,payon,107,323
+payon_in03,19,73,0	warp	payonwarp075	2,2,payon_in03,19,90
+payon_in03,19,86,0	warp	payonwarp076	2,2,payon_in03,19,69
+payon_in03,19,103,0	warp	payonwarp077	2,2,payon_in03,19,122
+payon_in03,19,118,0	warp	payonwarp078	2,2,payon_in03,19,99
+payon_in03,11,131,0	warp	payonwarp079	2,2,payon_in03,11,146
+payon_in03,11,142,0	warp	payonwarp080	2,2,payon_in03,11,127
+payon_in03,27,131,0	warp	payonwarp081	2,2,payon_in03,27,146
+payon_in03,27,142,0	warp	payonwarp082	2,2,payon_in03,27,127
+payon_in03,11,161,0	warp	payonwarp083	2,2,payon_in03,11,176
+payon_in03,11,172,0	warp	payonwarp084	2,2,payon_in03,11,157
+payon_in03,27,161,0	warp	payonwarp085	2,2,payon_in03,27,176
+payon_in03,27,172,0	warp	payonwarp086	2,2,payon_in03,27,157
+
+// -- House --
+payon_in01,86,9,0	warp	payonwarp087	2,2,payon,266,152
+//payon,270,152,0	warp	payonwarp088	2,2,payon_in01,90,9
+payon_in01,107,71,0	warp	payonwarp089	2,2,payon_in01,96,37
+payon_in01,93,37,0	warp	payonwarp090	2,2,payon_in01,104,71
+
+//===== rAthena Script =======================================
+//= Prontera Warp Script
+//===== By: ==================================================
+//= Athena (1.0)
+//= Nana (1.2)
+//===== Current Version: =====================================
+//= 1.5
+//===== Compatible With: =====================================
+//= Any Athena Version
+//===== Description: =========================================
+//= Warp Points for Prontera
+//===== Additional Comments: =================================
+//= 1.3 prt19 warp fix [shadow]
+//= 1.4 Added warps for the sign quest [MasterOfMuppets]
+//= 1.5 Corrected NPC names to fall within proper restrictions. [L0ne_W0lf]
+//============================================================
+
+//= Prontera City ============================================
+//prontera,107,215,0	warp	prt01	2,2,prt_in,240,139
+//prontera,120,267,0	warp	prt02	2,2,prt_in,180,97
+//prontera,133,183,0	warp	prt03	2,2,prt_in,50,105
+//prontera,134,221,0	warp	prt04	1,1,prt_in,131,71
+prontera,156,22,0	warp	prt001	3,2,prt_fild08,170,375
+prontera,156,360,0	warp	prt005	4,2,prt_castle,102,20
+//prontera,177,221,0	warp	prt05	2,2,prt_in,168,128
+//prontera,179,184,0	warp	prt06	2,2,prt_in,60,73
+//prontera,192,267,0	warp	prt07	2,2,prt_in,178,55
+//prontera,204,192,0	warp	prt08	2,2,prt_in,68,134
+//prontera,208,154,0	warp	prt09	2,2,prt_in,172,29
+prontera,22,203,0	warp	prt002	2,3,prt_fild05,367,205
+prontera,237,317,0	warp	prt004	2,2,prt_church,100,60
+prontera,289,203,0	warp	prt003	2,3,prt_fild06,27,193
+//prontera,42,67,0	warp	prt10	2,2,prt_in,44,29
+//prontera,45,346,0	warp	prt11	2,2,prt_in,80,110
+//prontera,73,100,0	warp	prt12	1,1,prt_in,208,176
+//prontera,74,90,0	warp	prt13	2,2,prt_in,248,170
+//prontera,84,89,0	warp	prt14-1	1,1,prt_in,282,176
+//prontera,263,279,0	warp	prt15-2	2,2,prt_in,227,18
+prt_in,135,71,0	warp	prt04-1	1,2,prontera,136,219
+prt_in,168,124,0	warp	prt05-1	2,1,prontera,174,218
+prt_in,172,33,0	warp	prt09-1	2,1,prontera,205,157
+prt_in,181,55,0	warp	prt07-1	1,2,prontera,192,264
+prt_in,183,97,0	warp	prt02-1	1,2,prontera,120,264
+prt_in,208,179,0	warp	prt12-1	3,1,prontera,76,102
+prt_in,217,163,0	warp	prt15	1,3,prt_in,236,163
+prt_in,234,163,0	warp	prt15-1	1,3,prt_in,215,163
+prt_in,240,141,0	warp	prt01-1	3,1,prontera,107,218
+prt_in,248,173,0	warp	prt13-1	3,2,prontera,77,93
+prt_in,254,113,0	warp	prt16	3,2,prt_in,256,134
+prt_in,256,131,0	warp	prt16-1	2,2,prt_in,254,110
+prt_in,263,163,0	warp	prt17	1,3,prt_in,276,163
+prt_in,274,163,0	warp	prt17-1	1,3,prt_in,261,163
+//prt_in,280,68,0	warp	w472	6,6,prontera,147,287
+//prt_in,281,36,0	warp	w473	6,6,prontera,147,287
+//prt_in,282,100,0	warp	w471	6,6,prontera,147,287
+prt_in,282,179,0	warp	prt14	3,1,prontera,87,91
+//prt_in,285,130,0	warp	w470	6,6,prontera,147,287
+prt_in,37,65,0	warp	prt18	1,3,prt_in,51,65
+prt_in,47,29,0	warp	prt10-1	2,1,prontera,46,67
+prt_in,48,65,0	warp	prt18-1	1,3,prt_in,34,65
+prt_in,53,105,0	warp	prt03-1	1,2,prontera,136,186
+prt_in,60,77,0	warp	prt06-1	2,1,prontera,175,188
+prt_in,68,130,0	warp	prt08-1	2,1,prontera,204,188
+prt_in,69,65,0	warp	prt19a	1,3,prt_in,84,65
+prt_in,70,143,0	warp	prt20	2,1,prt_in,70,165
+prt_in,70,162,0	warp	prt20-1	2,1,prt_in,70,140
+prt_in,80,113,0	warp	prt11-1	2,1,prontera,48,343
+prt_in,82,65,0	warp	prt19b	1,3,prt_in,66,65
+prt_in,227,15,0	warp	prt20-2	2,2,prontera,263,275
+
+//= Prontera Church ==========================================
+prt_church,100,56,0	warp	prtch001	7,1,prontera,234,314
+prt_church,109,81,0	warp	prtch01	1,2,prt_church,172,19
+prt_church,168,19,0	warp	prtch01-1	1,2,prt_church,105,81
+prt_church,31,19,0	warp	prtch02	1,2,prt_church,94,81
+prt_church,90,81,0	warp	prtch02-1	1,2,prt_church,27,19
+
+
+
+//= Prontera Castle ===========================================
+prt_castle,102,129,0	warp	prtca01	3,2,prt_castle,102,143
+prt_castle,102,140,0	warp	prtca01-1	3,2,prt_castle,102,126
+prt_castle,102,16,0	warp	prtca001	6,2,prontera,156,356
+prt_castle,102,181,0	warp	prtca002	6,2,prt_gld,159,28
+prt_castle,102,73,0	warp	prtca02	3,2,prt_castle,102,91
+prt_castle,102,88,0	warp	prtca02-1	3,2,prt_castle,102,70
+prt_castle,113,107,0	warp	prtca03	2,3,prt_castle,134,107
+prt_castle,121,29,0	warp	prtca04	1,1,prt_castle,148,29
+prt_castle,130,107,0	warp	prtca03-1	2,3,prt_castle,110,107
+prt_castle,135,153,0	warp	prtca05	1,1,prt_castle,167,145
+prt_castle,144,29,0	warp	prtca04-1	2,2,prt_castle,117,29
+prt_castle,149,113,0	warp	prtca06	1,1,prt_castle,175,113
+prt_castle,164,145,0	warp	prtca05-1	1,1,prt_castle,132,153
+prt_castle,170,138,0	warp	prtca07	3,2,prt_castle,176,118
+prt_castle,172,113,0	warp	prtca06-1	1,1,prt_castle,146,113
+prt_castle,176,121,0	warp	prtca07-1	3,2,prt_castle,170,141
+prt_castle,28,121,0	warp	prtca08	2,2,prt_castle,40,141
+prt_castle,31,113,0	warp	prtca09	1,1,prt_castle,58,113
+prt_castle,40,138,0	warp	prtca08-1	3,2,prt_castle,28,118
+prt_castle,45,145,0	warp	prtca10	1,1,prt_castle,72,153
+prt_castle,54,113,0	warp	prtca09-1	1,1,prt_castle,27,113
+prt_castle,59,29,0	warp	prtca11	2,2,prt_castle,85,29
+prt_castle,68,153,0	warp	prtca10-1	1,1,prt_castle,42,145
+prt_castle,75,107,0	warp	prtca12	2,3,prt_castle,95,107
+prt_castle,82,29,0	warp	prtca11-1	1,1,prt_castle,56,29
+prt_castle,92,107,0	warp	prtca12-1	2,3,prt_castle,72,107
+
+//===== Hercules Script ======================================
+//= Rachel Warp Script
+//===== By: ==================================================
+//= erKURITA & RockmanEXE
+//===== Current Version: =====================================
+//= 1.5
+//===== Compatible With: =====================================
+//= Hercules
+//===== Description: =========================================
+//= Warp Points for Rachel City, shops & other locations
+//===== Additional Comments: =================================
+//= 1.0 Added the official warps and commented out the 
+//= "custom duplicates" for future checkout. Special thanks
+//= to RockmanEXE who provided all the info. [erKURITA]
+//= 1.1 Added warp to Veins Field [Playtester]
+//= 1.2 Fully official rachel warps [Playtester]
+//= 1.2a Added missing warp (Pope's office entryway -> temple) [L0ne_W0lf]
+//= 1.3 Updated Rachel -> Veins Field warp. [L0ne_W0lf]
+//= 1.4 Disabled rachel33, moved to quest_rachel.txt [L0ne_W0lf] 
+//= 1.5 Renewal warp adjustments.
+//============================================================
+
+rachel,150,249,0	warp	rachel01	1,1,ra_temple,120,30
+
+//rachel,81,33,0	warp	rachel02	1,1,ra_in01,237,198
+//rachel,61,33,0	warp	rachel03	1,1,ra_in01,181,198
+//rachel,217,55,0	warp	rachel04	1,1,ra_in01,250,34
+//rachel,179,220,0	warp	rachel05	1,1,ra_in01,295,352
+//rachel,103,240,0	warp	rachel06	1,1,ra_in01,343,193
+//rachel,216,160,0	warp	rachel07	1,1,ra_in01,135,282
+//rachel,42,87,0	warp	rachel08	1,1,ra_in01,171,359
+//rachel,42,109,0	warp	rachel09	1,1,ra_in01,171,388
+//rachel,83,78,0	warp	rachel10	1,1,ra_in01,249,266
+//rachel,115,149,0	warp	rachel11	1,1,ra_in01,386,43
+//rachel,90,189,0	warp	rachel12	1,1,ra_in01,192,148
+//rachel,108,200,0	warp	rachel13	1,1,ra_in01,213,83
+
+ra_in01,188,189,0	warp	rachel14	1,1,ra_in01,263,144
+ra_in01,296,144,0	warp	rachel15	1,1,ra_in01,235,189
+ra_in01,175,189,0	warp	rachel16	1,1,ra_in01,132,189
+ra_in01,244,189,0	warp	rachel17	1,1,ra_in01,291,189
+ra_in01,235,21,0	warp	rachel18	1,1,ra_in01,187,31
+ra_in01,312,374,0	warp	rachel19	1,1,ra_in01,359,374
+ra_in01,291,371,0	warp	rachel20	1,1,ra_in01,225,380
+ra_in01,381,200,0	warp	rachel21	1,1,ra_in01,377,268
+ra_in01,367,255,0	warp	rachel22	1,1,ra_in01,326,296
+ra_in01,319,303,0	warp	rachel23	1,1,ra_in01,381,320
+ra_in01,178,370,0	warp	rachel24	1,1,ra_in01,113,385
+ra_in01,165,369,0	warp	rachel25	1,1,ra_in01,122,334
+ra_in01,241,299,0	warp	rachel26	1,1,ra_in01,193,312
+ra_in01,185,303,0	warp	rachel27	1,1,ra_in01,194,249
+ra_in01,357,61,0	warp	rachel28	1,1,ra_in01,310,62
+ra_in01,297,59,0	warp	rachel29	1,1,ra_in01,339,116
+
+ra_temin,130,93,0	warp	rachel30	1,1,ra_temin,239,258
+ra_temin,206,93,0	warp	rachel31	1,1,ra_temin,312,258
+ra_temin,275,332,0	warp	rachel32	1,1,ra_temin,27,305
+
+//ra_temin,275,226,0	warp	rachel33	1,1,ra_temsky,99,11
+
+ra_temsky,99,118,0	warp	rachel34	1,1,ra_temsky,99,140
+ra_temsky,112,143,0	warp	rachel35	1,1,ra_temsky,141,139
+ra_temsky,87,143,0	warp	rachel36	1,1,ra_temsky,58,139
+
+ra_temple,120,22,0	warp	rachel37	1,1,rachel,150,243
+
+ra_in01,237,202,0	warp	rachel38	1,1,rachel,81,38
+ra_in01,181,202,0	warp	rachel39	1,1,rachel,61,38
+ra_in01,250,38,0	warp	rachel40	1,1,rachel,217,60
+ra_in01,295,348,0	warp	rachel41	1,1,rachel,179,215
+ra_in01,339,193,0	warp	rachel42	1,1,rachel,98,238
+ra_in01,135,286,0	warp	rachel43	1,1,rachel,216,164
+ra_in01,171,355,0	warp	rachel44	1,1,rachel,42,82
+ra_in01,172,392,0	warp	rachel45	1,1,rachel,42,114
+ra_in01,249,262,0	warp	rachel46	1,1,rachel,83,73
+ra_in01,386,39,0	warp	rachel47	1,1,rachel,115,144
+ra_in01,192,152,0	warp	rachel48	1,1,rachel,90,193
+ra_in01,213,79,0	warp	rachel49	1,1,rachel,108,195
+
+ra_in01,259,144,0	warp	rachel50	1,1,ra_in01,184,189
+ra_in01,231,189,0	warp	rachel51	1,1,ra_in01,292,144
+ra_in01,136,189,0	warp	rachel52	1,1,ra_in01,179,189
+ra_in01,287,189,0	warp	rachel53	1,1,ra_in01,240,189
+ra_in01,183,31,0	warp	rachel54	1,1,ra_in01,239,21
+ra_in01,355,374,0	warp	rachel55	1,1,ra_in01,308,374
+ra_in01,221,380,0	warp	rachel56	1,1,ra_in01,287,371
+ra_in01,381,268,0	warp	rachel57	1,1,ra_in01,387,200
+ra_in01,330,296,0	warp	rachel58	1,1,ra_in01,371,255
+ra_in01,381,324,0	warp	rachel59	1,1,ra_in01,319,299
+ra_in01,109,385,0	warp	rachel60	1,1,ra_in01,174,370
+ra_in01,126,334,0	warp	rachel61	1,1,ra_in01,169,369
+ra_in01,197,312,0	warp	rachel62	1,1,ra_in01,245,299
+ra_in01,194,245,0	warp	rachel63	1,1,ra_in01,190,302
+ra_in01,314,62,0	warp	rachel64	1,1,ra_in01,361,61
+ra_in01,339,120,0	warp	rachel65	1,1,ra_in01,297,63
+
+ra_temin,169,18,0	warp	rachel66	1,1,ra_temple,119,175
+
+ra_temin,239,253,0	warp	rachel67	1,1,ra_temin,130,88
+ra_temin,312,253,0	warp	rachel68	1,1,ra_temin,206,88
+ra_temin,27,299,0	warp	rachel69	1,1,ra_temin,275,328
+
+ra_temsky,99,8,0	warp	rachel70	1,1,ra_temin,275,231
+
+ra_temsky,99,135,0	warp	rachel71	1,1,ra_temsky,99,113
+ra_temsky,137,139,0	warp	rachel72	1,1,ra_temsky,109,143
+ra_temsky,62,139,0	warp	rachel73	1,1,ra_temsky,91,143
+
+//rachel,25,125,0	warp	rachel74	1,1,ra_fild11,353,226
+rachel,275,125,0	warp	rachel75	1,1,ra_fild12,40,226
+rachel,130,21,0	warp	rachel76	1,1,ve_fild02,195,377
+
+que_rachel,130,93,0	warp	rachel77	1,1,que_rachel,239,258
+que_rachel,206,93,0	warp	rachel78	1,1,que_rachel,312,258
+que_rachel,275,332,0	warp	rachel79	1,1,que_rachel,27,305
+que_rachel,239,253,0	warp	rachel80	1,1,que_rachel,130,88
+que_rachel,312,253,0	warp	rachel81	1,1,que_rachel,206,88
+que_rachel,27,299,0	warp	rachel82	1,1,que_rachel,275,328
+
+ra_in01,309,70,0	warp	rachel83	1,1,rachel,108,175
+//rachel,105,171,0	warp	rachel84	1,1,ra_in01,309,65
+ra_in01,375,109,0	warp	rachel85	1,1,rachel,116,154
+//rachel,116,158,0	warp	rachel86	1,1,ra_in01,375,114
+
+//Additional Temple warp
+ra_temin,275,243,0	warp	rachel87	1,1,ra_temin,131,131
+
+//===== rAthena Script =======================================
+//= Splendide warp points.
+//===== By: ==================================================
+//= L0ne_W0lf
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= Any Athena Version; RO Episode 13.2+
+//===== Description: =========================================
+//= [Aegis Conversion]
+//= Warp Points for Splendide
+//===== Additional Comments: =================================
+//= First version.
+//============================================================
+
+//splendide,240,317,0	warp	splendide1-1	1,1,spl_in02,224,232
+spl_in02,222,232,0	warp	splendide1-2	1,1,splendide,238,317
+//splendide,230,299,0	warp	splendide2-1	1,1,spl_in02,207,195
+spl_in02,207,193,0	warp	splendide2-2	1,1,splendide,228,299
+//splendide,214,310,0	warp	splendide3-1	1,1,spl_in02,180,223
+spl_in02,180,221,0	warp	splendide3-2	1,1,splendide,214,308
+//splendide,157,316,0	warp	splendide4-1	1,1,spl_in02,108,213
+spl_in02,108,211,0	warp	splendide4-2	1,1,splendide,157,314
+//splendide,119,324,0	warp	splendide5-1	1,1,spl_in02,61,229
+spl_in02,62,227,0	warp	splendide5-2	1,1,splendide,119,322
+//splendide,286,128,0	warp	splendide6-1	1,1,spl_in02,236,63
+spl_in02,234,64,0	warp	splendide6-2	1,1,splendide,284,129
+//splendide,259,112,0	warp	splendide7-1	1,1,spl_in02,189,41
+spl_in02,187,42,0	warp	splendide7-2	1,1,splendide,259,114
+//splendide,286,229,0	warp	splendide8-1	1,1,spl_in02,137,66
+spl_in02,135,66,0	warp	splendide8-2	1,1,splendide,284,228
+//splendide,299,251,0	warp	splendide9-1	1,1,spl_in02,140,93
+spl_in02,139,91,0	warp	splendide9-2	1,1,splendide,297,250
+//splendide,132,68,0	warp	splendide10-1	1,1,spl_in02,45,52
+spl_in02,44,54,0	warp	splendide10-2	1,1,splendide,133,70
+//splendide,197,193,0	warp	splendide11-1	1,1,spl_in01,110,19
+spl_in01,110,17,0	warp	splendide11-2	1,1,splendide,197,191
+spl_in01,124,38,0	warp	splendide11-3	1,1,spl_in01,236,36
+spl_in01,238,36,0	warp	splendide11-4	1,1,spl_in01,126,38
+spl_in01,95,38,0	warp	splendide11-5	1,1,spl_in01,199,36
+spl_in01,197,36,0	warp	splendide11-6	1,1,spl_in01,93,38
+spl_in01,218,22,0	warp	splendide11-7	1,1,spl_in01,310,19
+spl_in01,310,17,0	warp	splendide11-8	1,1,spl_in01,218,20
+//splendide,170,168,0	warp	splendide12-1	1,1,spl_in01,190,301
+spl_in01,190,299,0	warp	splendide12-2	1,1,splendide,170,166
+spl_in01,191,320,0	warp	splendide12-3	1,1,spl_in01,276,334
+spl_in01,276,336,0	warp	splendide12-4	1,1,spl_in01,190,322
+//splendide,156,210,0	warp	splendide13-1	1,1,spl_in01,171,189
+spl_in01,171,187,0	warp	splendide13-2	1,1,splendide,156,208
+//splendide,198,240,0	warp	splendide14-1	1,1,spl_in01,110,301
+spl_in01,110,299,0	warp	splendide14-2	1,1,splendide,198,238
+//splendide,238,212,0	warp	splendide15-1	1,1,spl_in01,30,215
+spl_in01,30,213,0	warp	splendide15-2	1,1,splendide,237,210
+//splendide,228,164,0	warp	splendide16-1	1,1,spl_in01,30,301
+spl_in01,30,299,0	warp	splendide16-2	1,1,splendide,228,162
+
+//===== rAthena Script =======================================
+//= Umbala Warp Script
+//===== By: ==================================================
+//= Darkchild (1.0v A) 
+//= Athena (1.0v B)
+//= 1.1 (Akaru)
+//= Nana (1.2)
+//===== Current Version: =====================================
+//= 1.2 
+//===== Compatible With: =====================================
+//= Any Athena Version; RO Episode 6+
+//===== Description: =========================================
+//= [Aegis COnversion]
+//= Warp Points for Umbala
+//===== Additional Comments: =================================
+//= 1.3 Rescripted to Aegis 10.3 Standards. [L0nE_W0lf]
+//============================================================
+
+//umbala,68,253,0	warp	um_chief1-1	1,1,um_in,38,113
+um_in,38,110,0	warp	um_chief1-2	1,1,umbala,66,250
+//umbala,138,129,0	warp	um_tool1-1	1,1,um_in,99,114
+um_in,99,111,0	warp	um_tool1-2	1,1,umbala,136,127
+//umbala,125,157,0	warp	um_weapon1-1	1,1,um_in,155,114
+um_in,155,111,0	warp	um_weapon1-2	1,1,umbala,126,154
+//umbala,94,186,0	warp	um_houseA1-1	1,1,um_in,141,42
+um_in,141,39,0	warp	um_houseA1-2	1,1,umbala,94,183
+//umbala,100,203,0	warp	um_houseA2-1	1,1,um_in,163,69
+um_in,166,69,0	warp	um_houseA2-2	1,1,umbala,102,205
+//umbala,107,130,0	warp	um_houseB1-1	1,1,um_in,99,66
+um_in,99,63,0	warp	um_houseB1-2	1,1,umbala,108,127
+umbala,220,189,0	script	um_shaman1-1	45,1,1,{
+OnTouch:
+if (event_umbala == 7) {
+warp "um_in",32,71;
+}
+end;
+}
+um_in,29,71,0	warp	um_shaman2-1	1,1,umbala,217,186
+
+//===== rAthena Script =======================================
+//= Veins City Warp Script
+//===== By: ==================================================
+//= $ephiroth
+//===== Current Version: =====================================
+//= 1.4
+//===== Compatible With: =====================================
+//= Any Athena Version
+//===== Description: =========================================
+//= [Aegis COnversion]
+//= Warp Points for Veins
+//===== Additional Comments: =================================
+//= 1.4 Rescripted to Aegis 11.2 Standards. [L0ne_W0lf]
+//= 1.5 Removed duplicated Veins warps [Zephyrus]
+//============================================================
+
+//veins,230,166,0	warp	ve_Tool1-1	1,1,ve_in,251,287
+ve_in,251,283,0	warp	ve_Tool1-2	1,1,veins,230,161
+ve_in,261,315,0	warp	ve_Tool2-1	1,1,ve_in,177,297
+ve_in,177,293,0	warp	ve_Tool2-2	1,1,ve_in,261,311
+//veins,150,179,0	warp	ve_Weapon1-1	1,1,ve_in,349,223
+ve_in,349,219,0	warp	ve_Weapon1-2	1,1,veins,150,175
+ve_in,347,250,0	warp	ve_Weapon2-1	1,1,ve_in,282,223
+ve_in,286,223,0	warp	ve_Weapon2-2	1,1,ve_in,352,250
+//veins,114,278,0	warp	ve_Inn1-1	1,1,ve_in,183,207
+ve_in,183,203,0	warp	ve_Inn1-2	1,1,veins,110,278
+//veins,128,270,0	warp	ve_Inn2-1	1,1,ve_in,201,211
+ve_in,206,211,0	warp	ve_Inn2-2	1,1,veins,128,266
+//veins,130,238,0	warp	ve_Inn3-1	1,1,ve_in,99,219
+ve_in,99,215,0	warp	ve_Inn3-2	1,1,veins,127,235
+ve_in,76,229,0	warp	ve_Inn4-1	1,1,ve_in,75,160
+ve_in,71,160,0	warp	ve_Inn4-2	1,1,ve_in,72,229
+//veins,148,220,0	warp	ve_Bar1-1	1,1,ve_in,252,127
+ve_in,256,127,0	warp	ve_Bar1-2	1,1,veins,150,215
+ve_in,224,115,0	warp	ve_Bar2-1	1,1,ve_in,313,114
+ve_in,309,114,0	warp	ve_Bar2-2	1,1,ve_in,220,115
+//veins,197,260,0	warp	ve_Church1-1	1,1,ve_in,351,321
+ve_in,351,317,0	warp	ve_Church1-2	1,1,veins,197,255
+//veins,88,173,0	warp	ve_House1_1-1	1,1,ve_in,77,295
+ve_in,77,291,0	warp	ve_House1_1-2	1,1,veins,88,168
+ve_in,98,299,0	warp	ve_House1_2-1	1,1,ve_in,124,372
+ve_in,128,372,0	warp	ve_House1_2-2	1,1,ve_in,102,299
+//veins,337,231,0	warp	ve_House2_1-1	1,1,ve_in,194,374
+ve_in,194,369,0	warp	ve_House2_1-2	1,1,veins,331,231
+//veins,267,230,0	warp	ve_factory1-1	1,1,ve_in02,17,19
+ve_in02,13,19,0	warp	ve_factory1-2	1,1,veins,269,225
+veins,143,25,0	warp	veins1-1	1,1,ve_fild07,147,366
+veins,218,361,0	warp	veins2-1	1,1,ve_fild06,148,225
+
+//============================================================ 
+// Old changelog
+//============================================================ 
+//= 1.0 Initial version [$ephiroth]
+//= 1.1 Removed Rachel City warp [Playtester]
+//= 1.2 Updated veins warp based on jA info [$ephiroth]
+//= 1.3 Update some missing warps [$ephiroth]
+//= 1.3a Update some missing warps [$ephiroth]
+//============================================================
+
+//===== Hercules Script ======================================
+//= Yggdrasil Tree Warp Script
+//===== By: ==================================================
+//= PKGINGO (1.0)
+//===== Current Version: =====================================
+//= 1.1
+//===== Compatible With: =====================================
+//= Hercules; RO Episode 6+
+//===== Description: =========================================
+//= Warp Points for Yggdrasil Tree
+//===== Additional Comments: =================================
+//= Extracted from Vidar -> Athena
+//= 1.1 Renewal warp adjustments.
+//============================================================
+
+//Umbala Entrance
+//um_dun02,125,163,0	warp	nwarp1	1,1,yggdrasil01,40,63
+
+// RE Yggdrasil Entrance
+umbala,106,285,1	warp	ygGate_yg1	1,1,yggdrasil01,39,63
+
+//Niflheim Exit
+yggdrasil01,249,262,0	warp	nwarp5	1,1,nif_fild01,315,66
+
+//Yggdrasil Tree
+yggdrasil01,271,51,0	warp	nwarp3	1,1,yggdrasil01,26,196
+yggdrasil01,26,193,0	warp	nwarp4	1,1,yggdrasil01,269,53
+
+//===== rAthena Script =======================================
+//= Yuno Warp Script
+//===== By: ==================================================
+//= Nana (1.0)
+//= Sara-chan (1.1)
+//===== Current Version: =====================================
+//= 1.9
+//===== Compatible With: =====================================
+//= Any Athena Version; RO Episode 5+
+//===== Description: =========================================
+//= Warp Points for Yuno
+//===== Additional Comments: =================================
+//= 1.1 - Added Yuno Airport warps
+//= 1.2 Moved all airports to Airplane Warps [Lupus]
+//= 1.3 Dr.Evil's yuno_05 warps update [Lupus]
+//= 1.4 optimized [Lupus]
+//= 1.5 Added Missing Juno warps [musashiden]
+//= 1.6 Corrected duplicate warps [Musashiden]
+//= 1.7 Yet another missing warp [Musashiden]
+//= 1.8 Added Yuno Government Buildings warps
+//= 1.9 Updated Yuno Government Buildings warps according
+//= to Schwartzvalt Trilogy quest. [SinSloth]
+//============================================================
+
+//= Yuno City ================================================
+yuno,158,15,0	warp	yun-yunfild	1,1,yuno_fild04,231,284
+//yuno,117,135,0	warp	yun01	1,1,yuno_in01,116,37
+yuno_in01,116,40,0	warp	yun02	1,1,yuno,120,138
+//yuno,48,105,0	warp	yun03	1,1,yuno_in01,37,176
+yuno_in01,40,176,0	warp	yun04	1,1,yuno,51,105
+yuno_in01,32,182,0	warp	yun05	1,1,yuno_in01,86,164
+yuno_in01,82,164,0	warp	yun06	1,1,yuno_in01,28,182
+//yuno,48,151,0	warp	yun07	1,1,yuno_in01,30,100
+yuno_in01,34,100,0	warp	yun08	1,1,yuno,51,151
+//yuno,93,180,0	warp	yun09	1,1,yuno_in04,33,127
+yuno_in04,33,130,0	warp	yun10	1,1,yuno,95,184
+//yuno,196,138,0	warp	yun11	1,1,yuno_in01,32,33
+yuno_in01,32,36,0	warp	yun12	1,1,yuno,193,142
+//yuno,264,87,0	warp	yun13	1,1,yuno_in01,168,101
+yuno_in01,168,104,0	warp	yun14	1,1,yuno,264,90
+//yuno,341,203,0	warp	yun15	1,1,yuno_in04,32,58
+yuno_in04,29,58,0	warp	yun16	1,1,yuno,338,203
+yuno_in04,52,58,0	warp	yun17	1,1,yuno_in04,97,58
+yuno_in04,95,58,0	warp	yun18	1,1,yuno_in04,50,58
+yuno_in04,103,64,0	warp	yun19	1,1,yuno_in04,103,95
+yuno_in04,103,93,0	warp	yun20	1,1,yuno_in04,103,62
+yuno_in04,115,64,0	warp	yun21	1,1,yuno_in04,115,95
+yuno_in04,115,93,0	warp	yun22	1,1,yuno_in04,115,62
+yuno_in04,115,51,0	warp	yun23	1,1,yuno_in04,115,20
+yuno_in04,115,22,0	warp	yun24	1,1,yuno_in04,115,53
+yuno_in04,103,51,0	warp	yun25	1,1,yuno_in04,103,20
+yuno_in04,103,22,0	warp	yun26	1,1,yuno_in04,103,53
+yuno_in04,122,57,0	warp	yun27	1,1,yuno_in04,164,110
+yuno_in04,161,110,0	warp	yun28	1,1,yuno_in04,120,57
+//yuno,323,284,0	warp	yun29	1,1,yuno_in03,167,22
+yuno_in03,167,19,0	warp	yun30	1,1,yuno,323,280
+yuno_in03,167,72,0	warp	yun31	1,1,yuno_in03,179,113
+yuno_in03,179,109,0	warp	yun32	1,1,yuno_in03,167,69
+yuno_in03,186,119,0	warp	yun33	1,1,yuno_in03,163,174
+yuno_in03,159,174,0	warp	yun34	1,1,yuno_in03,183,119
+yuno_in03,186,131,0	warp	yun35	1,1,yuno_in03,163,187
+yuno_in03,159,187,0	warp	yun36	1,1,yuno_in03,183,131
+yuno_in03,172,118,0	warp	yun37	1,1,yuno_in03,120,178
+yuno_in03,124,178,0	warp	yun38	1,1,yuno_in03,176,118
+yuno_in03,111,192,0	warp	yun39	1,1,yuno_in03,162,132
+yuno_in03,162,129,0	warp	yun40	1,1,yuno_in03,111,189
+yuno_in03,153,134,0	warp	yun41	1,1,yuno_in03,62,186
+yuno_in03,66,186,0	warp	yun42	1,1,yuno_in03,155,134
+//yuno,278,293,0	warp	yun43	1,1,yuno_in03,25,15
+yuno_in03,25,11,0	warp	yun44	1,1,yuno,278,290
+yuno_in03,32,89,0	warp	yun45	1,1,yuno_in03,25,53
+yuno_in03,25,56,0	warp	yun46	1,1,yuno_in03,32,92
+//yuno,284,366,0	warp	yun47	1,1,yuno_in03,224,23
+yuno_in03,224,19,0	warp	yun48	1,1,yuno,284,363
+yuno_in03,219,50,0	warp	yun49	1,1,yuno_in03,104,118
+yuno_in03,104,115,0	warp	yun50	1,1,yuno_in03,219,47
+yuno_in03,244,52,0	warp	yun51	1,1,yuno_in03,235,94
+yuno_in03,235,91,0	warp	yun52	1,1,yuno_in03,244,49
+yuno_in03,231,61,0	warp	yun53	1,1,yuno_in03,239,144
+yuno_in03,239,141,0	warp	yun54	1,1,yuno_in03,231,57
+yuno_in03,223,167,0	warp	yun55	1,1,yuno_in03,96,54
+yuno_in03,96,58,0	warp	yun56	1,1,yuno_in03,223,170
+//yuno,87,321,0	warp	yun57	1,1,yuno_in02,168,61
+yuno_in02,172,61,0	warp	yun58	1,1,yuno,90,321
+yuno_in01,88,36,0	warp	yun59	1,1,yuno_in01,173,34
+yuno_in01,176,34,0	warp	yun60	1,1,yuno_in01,91,36
+yuno_in02,82,14,0	warp	yun61	1,1,yuno_in05,192,194
+yuno_in05,196,194,0	warp	yun62	1,1,yuno_in02,85,14
+//yuno,245,147,0	warp	yun65	1,1,yuno_in01,101,88
+yuno_in01,101,85,0	warp	yun66	1,1,yuno,245,144
+
+// Yuno In05 (Entering Random Warps) -------------------------------------------
+yuno_in05,153,141,0	script	#yun63	45,1,1,{
+if(rand(2)){
+warp "yuno_in05",192,102;
+} else {
+warp "yuno_in05",145,82;
+}
+end;
+}
+// Yuno In05 (Random Warps - Cross Shaped) -------------------------------------
+yuno_in05,196,102,0	script	#yun64	45,1,1,{
+set @warp0,rand(3);
+if(@warp0==1) goto w2;
+if(@warp0==2) goto w3;
+warp "yuno_in05",169,102; end;
+w2:	warp "yuno_in05",128,82; end;
+w3:	warp "yuno_in05",156,141; end;
+}
+yuno_in05,181,116,0	script	#yun65	45,1,1,{
+set @warp0,rand(3);
+if(@warp0==1) goto w2;
+if(@warp0==2) goto w3;
+warp "yuno_in05",181,94; end;
+w2:	warp "yuno_in05",176,13; end;
+w3:	warp "yuno_in05",136,75; end;
+}
+yuno_in05,165,102,0	script	#yun66	45,1,1,{
+if(rand(2)){
+warp "yuno_in05",192,102;
+} else {
+warp "yuno_in05",145,82;
+}
+end;
+}
+yuno_in05,181,91,0	script	#yun67	45,1,1,{
+if(rand(2)){
+warp "yuno_in05",181,112;
+} else {
+warp "yuno_in05",176,48;
+}
+end;
+}
+// Yuno In05 (Random Warps - T-Shaped) -----------------------------------------
+yuno_in05,148,82,0	script	#yun68	45,1,1,{
+set @warp0,rand(3);
+if(@warp0==1) goto w2;
+if(@warp0==2) goto w3;
+warp "yuno_in05",169,102; end;
+w2:	warp "yuno_in05",128,82; end;
+w3:	warp "yuno_in05",156,141; end;
+}
+yuno_in05,125,82,0	script	#yun69	45,1,1,{
+if(rand(2)){
+warp "yuno_in05",192,102;
+} else {
+warp "yuno_in05",145,82;
+}
+end;
+}
+yuno_in05,136,71,0	script	#yun70	45,1,1,{
+set @warp0,rand(3);
+if(@warp0==1) goto w2;
+if(@warp0==2) goto w3;
+warp "yuno_in05",181,112; end;
+w2:	warp "yuno_in05",16,185; end;
+w3:	warp "yuno_in05",176,48; end;
+}
+// Yuno In05 (Random Warps - Other) --------------------------------------------
+yuno_in05,16,188,0	script	#yun71	45,1,1,{
+set @warp0,rand(3);
+if(@warp0==1) goto w2;
+if(@warp0==2) goto w3;
+warp "yuno_in05",181,94; end;
+w2:	warp "yuno_in05",176,13; end;
+w3:	warp "yuno_in05",136,75; end;
+}
+yuno_in05,176,9,0	script	#yun72	45,1,1,{
+if(rand(2)){
+warp "yuno_in05",181,112;
+} else {
+warp "yuno_in05",176,48;
+}
+end;
+}
+yuno_in05,176,52,0	script	#yun73	45,1,1,{
+set @warp0,rand(3);
+if(@warp0==1) goto w2;
+if(@warp0==2) goto w3;
+warp "yuno_in05",181,94; end;
+w2:	warp "yuno_in05",176,13; end;
+w3:	warp "yuno_in05",136,75; end;
+}
+// Yuno In05 (Destination - Room) ----------------------------------------------
+yuno_in05,40,178,0	script	#yun74	45,1,1,{
+set @warp0,rand(3);
+if(@warp0==1) goto w2;
+if(@warp0==2) goto w3;
+warp "yuno_in05",181,94; end;
+w2:	warp "yuno_in05",176,13; end;
+w3:	warp "yuno_in05",136,75; end;
+}
+yuno_in05,47,186,0	script	#yun75	45,1,1,{
+set @warp0,rand(3);
+if(@warp0==1) goto w2;
+if(@warp0==2) goto w3;
+warp "yuno_in05",181,94; end;
+w2:	warp "yuno_in05",176,13; end;
+w3:	warp "yuno_in05",136,75; end;
+}
+// Yuno In05 (Destination - Escaped Random Warps) ------------------------------
+yuno_in05,31,167,0	warp	yun76	1,1,yuno_in05,50,85
+yuno_in05,50,88,0	warp	yun77	1,1,yuno_in02,85,14
+
+// Yuno Government Buildings ---------------------------------------------------
+yuno_pre,52,22,0	warp	yungvn01	1,1,yuno_pre,37,23
+yuno_pre,87,22,0	warp	yungvn02	1,1,yuno_pre,102,22
+yuno_pre,41,23,0	warp	yungvn03	1,1,yuno_pre,56,22
+yuno_pre,18,35,0	warp	yungvn04	1,1,yuno_pre,18,53
+yuno_pre,98,22,0	warp	yungvn05	1,1,yuno_pre,83,22
+yuno_pre,18,48,0	warp	yungvn06	1,1,yuno_pre,18,31
+yuno_pre,18,77,0	warp	yungvn07	1,1,yuno_pre,18,96
+yuno_pre,113,48,0	warp	yungvn08	1,1,yuno_pre,84,22
+yuno_pre,81,68,0	warp	yungvn09	1,1,yuno_pre,95,68
+yuno_pre,18,92,0	warp	yungvn10	1,1,yuno_pre,18,73
+yuno,157,322,0	warp	yungvn11	1,1,yuno_pre,69,13
+yuno_pre,69,10,0	warp	yungvn12	1,1,yuno,157,317

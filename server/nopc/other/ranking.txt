@@ -1,0 +1,41 @@
+function	script	UpdateRanking	{
+	if(getarg(0, 0) != 0) {
+		set .@ID,getarg(0);
+	} else {
+		return;
+	}
+	if(getarg(1, 0) != 0 && getarg(1, 0) < 4 && getarg(1, 0) > -1) {
+		if(getarg(1) == 1) set @type$,"char";
+		if(getarg(1) == 2) set @type$,"account";
+		if(getarg(1) == 3) set @type$,"guild";
+	} else {
+		return;
+	}
+	if(.@ID == 0) end;
+	if(query_sql("SELECT ID FROM `ranking` WHERE ID LIKE '"+.@ID+"'", .@ID2) == 0) {
+		if(.@type$ == "") {
+			if(query_sql("SELECT char_id FROM `char` WHERE char_id LIKE '"+.@ID+"'", .@ID2) > 0) {
+				query_sql("INSERT INTO `ranking` (`ID`, `type`) VALUES ('"+.@ID+"', 'char')");
+				set @type$,"char";
+			} else if(query_sql("SELECT account_id FROM `login` WHERE account_id LIKE '"+.@ID+"'", .@ID2) > 0) {
+				query_sql("INSERT INTO `ranking` (`ID`, `type`) VALUES ('"+.@ID+"', 'account')");
+				set @type$,"account";
+			} else if(query_sql("SELECT guild_id FROM `guild` WHERE guild_id LIKE '"+.@ID+"'", .@ID2) > 0) {
+				query_sql("INSERT INTO `ranking` (`ID`, `type`) VALUES ('"+.@ID+"', 'guild')");
+				set @type$,"guild";
+			} else {
+				return;
+			}
+		} else if(.@type$ != "") {
+			query_sql("INSERT INTO `ranking` (`ID`, `type`) VALUES ('"+.@ID+"', '"+.@type$+"')");
+		}
+	}
+	if(.@type$ == "char") {
+
+	} else if(.@type$ == "account") {
+
+	} else if(.@type$ == "guild") {
+
+	}
+	return;
+}

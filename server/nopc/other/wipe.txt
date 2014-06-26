@@ -1,0 +1,62 @@
+-	script	MonthlyWipe	-1,{
+
+OnWipeCommand:
+	if(getgmlevel() < 99) end;
+OnNewMonth:
+	announce "Congratulations! You have survived this session. Please Re-Login.",bc_all;
+	set .@q$,"SELECT account_id, name FROM `char` WHERE `online` LIKE '1'";
+	set .@nb,query_sql(.@q$, .@account_id, .@name$);
+	for(.@i = 0; .@i < .@nb; .@i++) {
+		attachrid(.@account_id[.@i]);
+		if(.@i == .@nb-1) {
+			charcommand "@kickall";
+			charcommand "@kick "+.@name$[.@i]+"";
+		} else {
+			charcommand "@kick "+.@name$[.@i]+"";
+		}
+		detachrid;
+	}
+	sleep 1000;
+	set .@nb,query_sql("SELECT account_id FROM `login` WHERE `sex` NOT LIKE 'S'", .@account_id);
+	for(.@i = 0; .@i < .@nb; .@i++) {
+		set .@rows,query_sql("SELECT account_id FROM `account_data` WHERE `account_id` LIKE '"+.@account_id[.@i]+"'", .@acid);
+		if(.@rows < 1) query_sql("INSERT INTO `account_data` (`account_id`) VALUES ('"+.@account_id[.@i]+"')");
+	}
+	query_sql("UPDATE `account_data` SET `base_exp` = '100', `base_drop` = '100', `base_death` = '100'");
+
+	query_sql("TRUNCATE TABLE `auction`");
+	query_sql("TRUNCATE TABLE `cart_inventory`");
+	query_sql("TRUNCATE TABLE `charlog`");
+	query_sql("TRUNCATE TABLE `elemental`");
+	query_sql("TRUNCATE TABLE `global_reg_value`");
+	query_sql("TRUNCATE TABLE `guild_castle`");
+	query_sql("TRUNCATE TABLE `guild_storage`");
+	query_sql("TRUNCATE TABLE `homunculus`");
+	query_sql("TRUNCATE TABLE `hotkey`");
+	query_sql("TRUNCATE TABLE `interlog`");
+	query_sql("TRUNCATE TABLE `interreg`");
+	query_sql("INSERT INTO `interreg` (`varname`, `value`) VALUES ('unique_id', '0')");
+	query_sql("TRUNCATE TABLE `inventory`");
+	query_sql("TRUNCATE TABLE `mail`");
+	query_sql("TRUNCATE TABLE `mapreg`");
+	query_sql("TRUNCATE TABLE `memo`");
+	query_sql("TRUNCATE TABLE `mercenary`");
+	query_sql("TRUNCATE TABLE `mercenary_owner`");
+	query_sql("TRUNCATE TABLE `pet`");
+	query_sql("TRUNCATE TABLE `quest`");
+	query_sql("TRUNCATE TABLE `ragsrvinfo`");
+	query_sql("TRUNCATE TABLE `sc_data`");
+	query_sql("TRUNCATE TABLE `skill`");
+	query_sql("TRUNCATE TABLE `skill_homunculus`");
+	query_sql("TRUNCATE TABLE `sstatus`");
+	query_sql("TRUNCATE TABLE `storage`");
+	query_sql("UPDATE `char` SET `class` = '0', `base_level` = '1', `job_level` = '1', `base_exp` = '0', `job_exp` = '0'");
+	query_sql("UPDATE `char` SET `zeny` = '0', `str` = '1', `agi` = '1', `vit` = '1', `int` = '1', `dex` = '1', `luk` = '1'");
+	query_sql("UPDATE `char` SET `max_hp` = '65', `hp` = '65', `max_sp` = '11', `sp` = '11', `status_point` = '48', `skill_point` = '0'");
+	query_sql("UPDATE `char` SET `option` = '0', `karma` = '0', `manner` = '0', `fame` = '0', `pet_id` = '0', `homun_id` = '0', `elemental_id` = '0'");
+	query_sql("UPDATE `char` SET `weapon` = '0', `shield` = '0', `head_top` = '0', `head_mid` = '0', `head_bottom` = '0', `robe` = '0'");
+	query_sql("UPDATE `char` SET `last_map` = 'izlude', `last_x` = '146', `last_y` = '131', `save_map` = 'izlude', `save_x` = '146', `save_y` = '131'");
+	donpcevent "Houses::OnNewMonth";
+end;
+
+}

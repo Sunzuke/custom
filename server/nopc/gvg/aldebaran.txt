@@ -1,0 +1,8 @@
+//Guild Dungeon Warps
+gld2_ald,172,46,0	warp	dun2gef_to_gld#6	1,1,alde_gld,242,121
+gld2_ald,77,58,0	warp	dun2gef_to_gld#7	1,1,alde_gld,229,185
+gld2_ald,46,122,0	warp	dun2gef_to_gld#8	1,1,alde_gld,242,121
+gld2_ald,104,250,0	warp	dun2gef_to_gld#9	1,1,alde_gld,229,185
+gld2_ald,247,156,0	warp	dun2gef_to_gld#10	1,1,alde_gld,242,121
+gld_dun02_2,20,160,0	warp	gdun02a_aldega#abyss	1,1,alde_gld,229,185
+gld_dun02_2,180,112,0	warp	gdun02b_aldegb#abyss	1,1,alde_gld,242,121

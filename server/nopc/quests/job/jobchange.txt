@@ -1,0 +1,119 @@
+-	script	JobChange	-,{
+	set .@jobid,strnpcinfo(2);
+	if(Sex) {
+		if(.@jobid == 4212) set .@jobid,4211;
+		if(.@jobid == 20) set .@jobid,19;
+		if(.@jobid == 4021) set .@jobid,4020;
+		if(.@jobid == 4075) set .@jobid,4076;
+	} else {
+		if(.@jobid == 4211) set .@jobid,4212;
+		if(.@jobid == 19) set .@jobid,20;
+		if(.@jobid == 4020) set .@jobid,4021;
+		if(.@jobid == 4076) set .@jobid,4075;
+	}
+	if(.@jobid == Class) close;
+	mes "[^0000FF"+strnpcinfo(1)+"^000000]";
+	mes "Hello "+strcharinfo(0)+"";
+	mes "Do you want me to turn you into an";
+	mes ""+jobname(.@jobid)+"?";
+	next;
+	switch(select("Let me think...:Yes")) {
+		case 1:	close;
+		case 2:	break;
+	}
+	if(Class != 0 && Class != 4023) {
+		mes "[^0000FF"+strnpcinfo(1)+"^000000]";
+		mes "I want ^FF00001 Blank Card^000000";
+		mes "in exchange for the Job Change!";
+		if(countitem(6187) < 1) close;
+		next;
+		switch(select("Let me think...:Okay")) {
+			case 1:	close;
+			case 2:	break;
+		}
+		delitem 6187,1;
+	}
+	mes "[^0000FF"+strnpcinfo(1)+"^000000]";
+	mes "I'll change your job now!";
+	if(countitem(1243) > 0) delitem 1243,countitem(1243);
+	if(countitem(2340) > 0) delitem 2340,countitem(2340);
+	if(countitem(2112) > 0) delitem 2112,countitem(2112);
+	if(countitem(2510) > 0) delitem 2510,countitem(2510);
+	if(countitem(2414) > 0) delitem 2414,countitem(2414);
+	if(countitem(2628) > 0) delitem 2628,countitem(2628);
+	if(countitem(2765) > 0) delitem 2765,countitem(2765);
+	close2;
+	specialeffect2 72;
+	sleep2 2700;
+	if(Upper == 2) {
+		jobchange .@jobid,2;
+	} else {
+		jobchange .@jobid;
+	}
+	if(MainQuest < 3) {
+		sleep2 100;
+		if(countitem(2601) < 2) getitem 2601,2;
+		if(getequipid(EQI_ACC_R) == -1) equip 2601;
+		set MainQuest,3;
+	}
+	end;
+}
+
+
+
+
+prt_church,107,98,1	duplicate(JobChange)	Acolyte#4	79
+xmas,95,271,5	duplicate(JobChange)	Priest#8	79
+hu_in01,215,217,5	duplicate(JobChange)	High Priest#4009	60
+ve_in,362,326,6	duplicate(JobChange)	Arch Bishop#4057	60
+payon,157,141,5	duplicate(JobChange)	Taekwon#4046	753
+payon,215,102,5	duplicate(JobChange)	Star Gladiator#4047	828
+morocc_in,174,30,5	duplicate(JobChange)	Soul Linker#4049	827
+ama_in02,170,32,5	duplicate(JobChange)	Ninja#25	730
+lou_in01,105,159,5	duplicate(JobChange)	Kagerou#4211	868
+que_ng,152,167,3	duplicate(JobChange)	Gunslinger#24	901
+izlude_in,74,172,5	duplicate(JobChange)	Swordman#1	119
+prt_in,75,107,5	duplicate(JobChange)	Knight#7	65
+dicastes01,264,141,2	duplicate(JobChange)	Rune Knight#4054	734
+prt_castle,45,169,5	duplicate(JobChange)	Crusader#14	752
+izlude,66,212,5	duplicate(JobChange)	Lord Knight#4008	847
+prt_church,95,127,5	duplicate(JobChange)	Paladin#4015	745
+ve_in,359,346,5	duplicate(JobChange)	Royal Guard#4066	751
+geffen_in,164,124,5	duplicate(JobChange)	Magician#2	123
+gef_tower,111,37,5	duplicate(JobChange)	Wizard#9	68
+gef_tower,102,24,5	duplicate(JobChange)	High Wizard#4010	735
+gef_dun02,189,72,5	duplicate(JobChange)	Warlock#4055	64
+yuno_in03,154,35,5	duplicate(JobChange)	Sage#16	742
+yuno_in03,32,102,5	duplicate(JobChange)	Professor#4017	755
+yuno_in02,38,61,5	duplicate(JobChange)	Sorcerer#4067	743
+pay_arche,144,158,2	duplicate(JobChange)	Archer#3	59
+hu_in01,387,374,5	duplicate(JobChange)	Hunter#11	727
+payon_in02,21, 31,5	duplicate(JobChange)	Sniper#4012	59
+hu_in01,382,382,5	duplicate(JobChange)	Ranger#4056	732
+jawaii,169,133,5	duplicate(JobChange)	Dancer#20	101
+comodo,226,123,5	duplicate(JobChange)	Clown#4020	741
+comodo,193,151,5	duplicate(JobChange)	Minstrel#4068	86
+prt_fild03,368,259,5	duplicate(JobChange)	Monk#15	746
+prt_monk,59,247,5	duplicate(JobChange)	Champion#4016	120
+monk_in,99,58,5	duplicate(JobChange)	Shura#4070	110
+alberta_in,53,43,6	duplicate(JobChange)	Merchant#5	86
+ein_in01,201,27,5	duplicate(JobChange)	Blacksmith#10	63
+ein_in01,24,41,5	duplicate(JobChange)	Whitesmith#4011	726
+ve_in02,74,14,5	duplicate(JobChange)	Mechanic#4058	52
+alde_alche,27,185,5	duplicate(JobChange)	Alchemist#18	744
+alde_alche,175,107,5	duplicate(JobChange)	Creator#4019	749
+alde_alche,79,19,5	duplicate(JobChange)	Genetic#4071	748
+moc_prydb1,42,133,5	duplicate(JobChange)	Thief#6	118
+in_moc_16,16,32,2	duplicate(JobChange)	Assassin#12	730
+in_moc_16,22,91,5	duplicate(JobChange)	Assassin Cross#4013	725
+in_moc_16,17,156,5	duplicate(JobChange)	Guillotine Cross#4059	106
+in_rogue,363,123,5	duplicate(JobChange)	Rogue#17	747
+in_rogue,376,23,5	duplicate(JobChange)	Stalker#4018	899
+in_rogue,384,102,2	duplicate(JobChange)	Shadow Chaser#4072	874
+xmas_in,173,98,2	duplicate(JobChange)	Christmas#26	718
+jawaii,214,205,6	duplicate(JobChange)	Summer#27	724
+nif_in,118,181,4	duplicate(JobChange)	Wedding#22	60
+
+
+
+

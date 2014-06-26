@@ -1,0 +1,12 @@
+-	script	OnInit	-1,{
+end;
+OnInterIfInit:
+	set $event,6187;
+	if($DailyQuest == 0) set $DailyQuest,1;
+end;
+OnInit:
+	bindatcmd "home", "Houses::OnHomeCommand", 0, 2;
+	bindatcmd "wipe", "MonthlyWipe::OnWipeCommand", 99, 99;
+	bindatcmd "code", "ItemCode::OnEnter", 0, 2;
+end;
+}

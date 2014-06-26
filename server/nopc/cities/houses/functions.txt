@@ -1,0 +1,475 @@
+function	script	HouseWarp	{
+	set .@houseid,getarg(0);
+	if(getarg(1, 0) != 0) set .@x2,getarg(1);
+	if(getarg(2, 0) != 0) set .@y2,getarg(2);
+
+	query_sql("SELECT * FROM `houses` WHERE ID LIKE '"+.@houseid+"'", .@ID, .@title$, .@owner, .@owner$,.@owner_type, .@feat, .@price, .@fee, .@admittance, .@warp$, .@x, .@y);
+	if(.@x2 != 0) set .@x,.@x2;
+	if(.@y2 != 0) set .@y,.@y2;
+
+	if(!callfunc("isAllowed", .@admittance, .@owner, getcharid(0))) {
+		dispbottom "You are not allowed to enter!";
+		end;
+	}
+	if(callfunc("getFee", .@owner, getcharid(0)) && .@fee != 0) {
+		if(.@fee > Zeny) {
+			dispbottom ""+.@title$+" has an "+.@fee+" Zeny entrance fee!";
+			end;
+		} else {
+			mes "[^0000FF"+.@owner$+"'s "+.@title$+"^000000]";
+			mes "Entrance Fee:";
+			mes ""+.@fee+" Zeny";
+			switch(select(
+				"Enter",
+				"Leave"
+			)) {
+				case 1:
+					set Zeny,Zeny-.@fee;
+					set .@price,.@price+.@fee;
+					if(.@price > 2000000000) set .@price,2000000000;
+					query_sql("UPDATE  `houses` SET `price` = '"+.@price+"' WHERE `ID` = "+.@ID+"");
+					break;
+				case 2:
+					close;
+			}
+		}		
+	}
+	percentheal 100,100;
+	save .@warp$,.@x,.@y;
+	warp ""+.@warp$+"",.@x,.@y;
+	end;
+}
+//owner_id,attached_id
+function	script	getFee	{
+	set .@fee,1;
+	set .@ownerid,getarg(0);
+	query_sql("SELECT name FROM `char` WHERE char_id LIKE '"+.@ownerid+"'", .@ownerid$);
+	query_sql("SELECT name FROM `char` WHERE char_id LIKE '"+getarg(1)+"'", .@name$);
+
+	set .@nb, query_sql("SELECT * FROM `friends` WHERE char_id LIKE '"+getcharid(0, .@name$)+"' AND friend_id LIKE '"+.@ownerid+"'");
+	if(.@nb == 0) set .@nb, query_sql("SELECT * FROM `friends` WHERE friend_id LIKE '"+getcharid(0, .@name$)+"' AND char_id LIKE '"+.@ownerid+"'");
+	if(.@nb != 0) set .@fee,0;
+	if(getcharid(1, .@name$) == getcharid(1, .@ownerid$) && getcharid(1, .@ownerid$) != 0) set .@fee,0;
+	if(getcharid(2, .@name$) == getcharid(2, .@ownerid$) && getcharid(2, .@ownerid$) != 0) set .@fee,0;
+
+	if(.@fee) {
+		return 1;
+	} else {
+		return 0;
+	}
+}
+
+function	script	HouseBoard	{
+	set .@houseid,getarg(0);
+	query_sql("SELECT * FROM `houses` WHERE ID LIKE '"+.@houseid+"'", .@ID, .@title$, .@owner, .@owner$, .@owner_type, .@feat, .@price, .@fee, .@admittance, .@warp, .@x, .@y);
+	if(.@owner == 0) {
+		mes "[^0000FF"+.@title$+"^000000]";
+		mes "For Sale!";
+		mes "  ";
+		mes "Price: "+.@price+" Zeny";
+		next;
+		switch(select(
+			"Enter",
+			"I buy it!"
+		)) {
+				case 1:
+					callfunc("HouseWarp",.@ID);
+					close;
+				case 2:
+					if(Zeny >= .@price) {
+						set Zeny,Zeny-.@price;
+						query_sql("UPDATE  `houses` SET `price` = '0' WHERE `ID` = "+.@ID+"");
+						query_sql("UPDATE  `houses` SET `owner` = '"+getcharid(0)+"' WHERE `ID` = "+.@ID+"");
+						query_sql("UPDATE  `houses` SET `owner_name` = '"+strcharinfo(0)+"' WHERE `ID` = "+.@ID+"");
+						mes "[^0000FF"+strcharinfo(0)+"'s "+.@title$+"^000000]";
+						mes "Congratulations! You bought "+.@title$+"!";
+						close2;
+						message strcharinfo(0), "@home "+.@title$+" unlocked.";
+						set .@condition$,"WHERE ID LIKE '"+getcharid(0)+"' AND `type` LIKE 'char'";
+						query_sql("UPDATE `ranking` SET `buildings` = `buildings`+1 "+.@condition$+"");
+						end;
+					} else {
+						dispbottom "looks like I don't have enough Zeny...";
+						message strcharinfo(0), ""+.@title$+" purchase failed.";
+						close;
+					}
+		}
+	} else if(.@owner != getcharid(0)) {
+		goto L_NormalView;
+	} else {
+		mes "[^0000FFAdministration^000000]";
+		mes "You are the owner of ^0000FF"+.@title$+"^000000. What do you want to do?";
+		next;
+		switch(select(
+			"Take a look at the Board",
+			"Name Settings",
+			"Admittance Settings",
+			"Feature Settings",
+			"Entrance Fee Setting",
+			"Sell ^0000FF"+.@title$+"^000000"
+		)) {
+			case 1:
+				goto L_NormalView;
+			case 2:
+				switch(select(
+					"Set Owner Name",
+					"Set Location Name"
+				)) {
+				case 1:
+					if(getcharid(2) != 0) {
+						mes "[^0000FFAdministration^000000]";
+						mes "Who officially owns this House?";							
+						mes "  ";
+						mes "Inofficially you will be the owner";
+						switch(select(
+							""+strcharinfo(0)+"",
+							""+getguildname(getcharid(2))+""
+						)) {
+							case 1:
+								set .@owner$,""+strcharinfo(0)+"";
+								set .@owner_type,0;
+								break;
+							case 2:
+								set .@owner$,""+getguildname(getcharid(2))+"";
+								set .@owner_type,1;
+								break;
+						}
+						query_sql("UPDATE  `houses` SET `owner_name` = '"+.@owner$+"' WHERE `ID` = "+.@ID+"");
+						query_sql("UPDATE  `houses` SET `owner_type` = '"+.@owner_type+"' WHERE `ID` = "+.@ID+"");
+						next;
+						goto L_NormalView;
+					} else {
+						mes "[^0000FFAdministration^000000]";
+						mes "You need to be in a guild";
+						mes "To change the Owner Name";
+						close;
+					}
+					end;
+				case 2:
+					mes "[^0000FFAdministration^000000]";
+					mes "Please use 4-15 characters!";
+					mes "  ";
+					mes "^0000FF"+.@owner$+"'s "+.@title$+"^000000";
+					mes "Will be replaced with";
+					mes "^0000FF"+.@owner$+"'s __________^000000";
+					input .@title$;
+					if(.@title$ == "") close;
+					if(getstrlen(.@title$) < 4 || getstrlen(.@title$) > 15) close;
+					query_sql("UPDATE  `houses` SET `title` = '"+.@title$+"' WHERE `ID` = "+.@ID+"");
+					next;
+					goto L_NormalView;
+				}
+				end;
+			case 3:
+				L_Admin:
+					mes "[^0000FFShop Administration^000000]";
+					mes "Who can enter?";
+					mes "  ";
+					callfunc("WhoCan", .@ID);
+					mes "can enter!";
+					set .@admittance,callfunc("SetAdmittance", .@admittance);
+					query_sql("UPDATE  `houses` SET `admittance` = '"+.@admittance+"' WHERE `ID` = "+.@ID+"");
+					goto L_Admin;
+			case 4:
+				L_Feat:
+					mes "[^0000FFShop Administration^000000]";
+					mes "Who can use area features?";
+					mes "  ";
+					callfunc("WhoCan", .@ID, 2);
+					mes "can use area features!";
+					set .@feat,callfunc("SetAdmittance", .@feat);
+					query_sql("UPDATE  `houses` SET `features` = '"+.@feat+"' WHERE `ID` = "+.@ID+"");
+					goto L_Feat;
+				end;
+			case 5:
+				mes "[^0000FFAdministration^000000]";
+				mes "Everyone except your friends, party and guild has to pay the fee.";
+				mes "This setting is uneffected by the admittance setting.";
+				mes "  ";
+				mes "How much does everyone else has to pay to enter?";
+				input .@fee;
+				if(.@fee < 0) set .@fee,0;
+				query_sql("UPDATE  `houses` SET `fee` = '"+.@fee+"' WHERE `ID` = "+.@ID+"");
+				close;
+			case 6:
+				mes "[^0000FFAdministration^000000]";
+				mes "Are you sure you want to sell ^0000FF"+.@title$+"^000000 for";
+				mes ""+.@price+" Zeny?";
+				next;
+				switch(select(
+					"Let me think",
+					"Yes"
+				)) {
+					case 1:
+						break;
+					case 2:
+						query_sql("UPDATE  `houses` SET `owner` = 0 WHERE `ID` = "+.@ID+"");
+						query_sql("UPDATE  `houses` SET `owner_name` = '' WHERE `ID` = "+.@ID+"");
+						query_sql("UPDATE  `houses` SET `owner_type` = '0' WHERE `ID` = "+.@ID+"");
+						query_sql("UPDATE  `houses` SET `features` = '8' WHERE `ID` = "+.@ID+"");
+						query_sql("UPDATE  `houses` SET `price` = '200000' WHERE `ID` = "+.@ID+"");
+						query_sql("UPDATE  `houses` SET `fee` = '0' WHERE `ID` = "+.@ID+"");
+						query_sql("UPDATE  `houses` SET `admittance` = '0' WHERE `ID` = "+.@ID+"");
+						set Zeny,Zeny+.@price;
+						set .@condition$,"WHERE ID LIKE '"+getcharid(0)+"' AND `type` LIKE 'char'";
+						query_sql("UPDATE `ranking` SET `buildings` = `buildings`-1 "+.@condition$+"");
+						mes "[^0000FFFor Sale^000000]";
+						mes "You sold "+.@title$+"!";
+						break;
+				}
+		}
+	close;
+	}
+
+	L_NormalView:
+		mes "[^0000FF"+.@owner$+"'s "+.@title$+"^000000]";
+		callfunc("WhoCan", .@ID);
+		mes "can enter!";
+		if(callfunc("isAllowed", .@admittance, .@owner, getcharid(0))) {
+			if(callfunc("getFee", .@owner, getcharid(0)) && .@fee != 0) {
+				mes "  ";
+				mes "Entrance Fee: "+.@fee+" Zeny";
+			} else {
+				set .@fee,0;
+			}
+			if(Zeny >= .@fee) {
+				next;
+				switch(select(
+					"Enter",
+					"Leave"
+				)) {
+					case 1:
+						callfunc("HouseWarp",.@ID);
+						close;
+					case 2:
+						close;
+				}
+			} else {
+				close;
+			}
+		}
+	close;
+}
+
+function	script	WhoCan	{
+		query_sql("SELECT * FROM `houses` WHERE ID LIKE '"+getarg(0)+"'", .@ID, .@title$, .@owner, .@owner$, .@owner_type, .@feat, .@price, .@fee, .@admittance, .@warp, .@x, .@y);
+		if(.@owner_type == 1) {
+			query_sql("SELECT `name` FROM `char` WHERE `char_id` LIKE '"+.@owner+"'", .@owner_charname$);
+		} else {
+			set .@owner_charname$,.@owner$;
+		}
+		if(getarg(1, 0) == 0) {
+			set .@value,.@admittance;
+		} else {
+			set .@value,.@feat;
+		}
+		if(.@value == 0) mes "Everyone, including you ";
+		if(.@value == 1) mes "Only "+.@owner_charname$+"'s friends";
+		if(.@value == 2) {
+			if(getcharid(1, .@owner_charname$) != 0) {
+				mes "Only "+getpartyname(getcharid(1, .@owner_charname$))+" Party";
+			} else {
+				mes "Only "+.@owner_charname$+"";
+			}
+		}
+		if(.@value == 3) {
+			if(getcharid(1, .@owner_charname$) != 0) {
+				mes "Only "+.@owner$+"'s friends and "+getpartyname(getcharid(1, .@owner_charname$))+" Party";
+			} else {
+				mes "Only "+.@owner$+"'s friends";
+			}
+		}
+		if(.@value == 4) {
+			if(getcharid(2, .@owner_charname$) != 0) {
+				mes "Only "+getguildname(getcharid(2, .@owner_charname$))+" Guild";
+			} else {
+				mes "Only "+.@owner_charname$+"";
+			}
+		}
+		if(.@value == 5) {
+			if(getcharid(2, .@owner_charname$) != 0) {
+				mes "Only "+.@owner_charname$+"'s friends and "+getguildname(getcharid(2, .@owner_charname$))+" Guild";
+			} else {
+				mes "Only "+.@owner$+"'s friends";
+			}
+		}
+		if(.@value == 6) {
+			if(getcharid(2, .@owner_charname$) != 0 && getcharid(1, .@owner_charname$) != 0) {
+				mes "Only "+getpartyname(getcharid(1, .@owner_charname$))+" Party and "+getguildname(getcharid(2, .@owner_charname$))+" Guild";
+			} else if(getcharid(2, .@owner_charname$) != 0 && getcharid(1, .@owner_charname$) == 0) {
+				mes "Only "+getguildname(getcharid(2, .@owner_charname$))+" Guild";
+			} else if(getcharid(2, .@owner_charname$) == 0 && getcharid(1, .@owner_charname$) != 0) {
+				mes "Only "+getpartyname(getcharid(1, .@owner_charname$))+" Party";
+			} else {
+				mes "Only "+.@owner_charname$+"";
+			}
+		}
+		if(.@value == 7) {
+			if(getcharid(2, .@owner_charname$) != 0 && getcharid(1, .@owner_charname$) != 0) {
+				mes "Only "+getpartyname(getcharid(1, .@owner_charname$))+" Party,";
+				mes ""+getguildname(getcharid(2, .@owner_charname$))+" Guild";
+				mes "and "+.@owner_charname$+"'s Friends";
+			} else if(getcharid(2, .@owner_charname$) != 0 && getcharid(1, .@owner_charname$) == 0) {
+				mes "Only "+getguildname(getcharid(2, .@owner_charname$))+" Guild";
+				mes "and "+.@owner_charname$+"'s Friends";
+			} else if(getcharid(2, .@owner_charname$) == 0 && getcharid(1, .@owner_charname$) != 0) {
+				mes "Only "+getpartyname(getcharid(1, .@owner_charname$))+" Party";
+				mes "and "+.@owner_charname$+"'s Friends";
+			} else {
+				mes "Only "+.@owner_charname$+"'s Friends";
+			}
+		}
+		if(.@value == 8) mes "Only "+.@owner_charname$+"";
+		return;
+}
+
+function	script	SetAdmittance	{
+	set .@admittance,getarg(0);
+	if(.@admittance == 0) {
+		set .@everyone$,"^00FF00Everyone^000000";
+		set .@friends$,"^00FF00Friends^000000";
+		set .@party$,"^00FF00Party^000000";
+		set .@guild$,"^00FF00Guild^000000";
+	}
+	if(.@admittance == 1) {
+		set .@everyone$,"^00FF00Everyone^000000";
+		set .@friends$,"^FF0000Friends^000000";
+		set .@party$,"^00FF00Party^000000";
+		set .@guild$,"^00FF00Guild^000000";
+	}
+	if(.@admittance == 2) {
+		set .@everyone$,"^00FF00Everyone^000000";
+		set .@friends$,"^00FF00Friends^000000";
+		set .@party$,"^FF0000Party^000000";
+		set .@guild$,"^00FF00Guild^000000";
+	}
+	if(.@admittance == 3) {
+		set .@everyone$,"^00FF00Everyone^000000";
+		set .@friends$,"^FF0000Friends^000000";
+		set .@party$,"^FF0000Party^000000";
+		set .@guild$,"^00FF00Guild^000000";
+	}
+	if(.@admittance == 4) {
+		set .@everyone$,"^00FF00Everyone^000000";
+		set .@friends$,"^00FF00Friends^000000";
+		set .@party$,"^00FF00Party^000000";
+		set .@guild$,"^FF0000Guild^000000";
+		}
+	if(.@admittance == 5) {
+		set .@everyone$,"^00FF00Everyone^000000";
+		set .@friends$,"^FF0000Friends^000000";
+		set .@party$,"^00FF00Party^000000";
+		set .@guild$,"^FF0000Guild^000000";
+	}
+	if(.@admittance == 6) {
+		set .@everyone$,"^00FF00Everyone^000000";
+		set .@friends$,"^00FF00Friends^000000";
+		set .@party$,"^FF0000Party^000000";
+		set .@guild$,"^FF0000Guild^000000";
+	}
+	if(.@admittance == 7) {
+		set .@everyone$,"^00FF00Everyone^000000";
+		set .@friends$,"^FF0000Friends^000000";
+		set .@party$,"^FF0000Party^000000";
+		set .@guild$,"^FF0000Guild^000000";
+	}
+	if(.@admittance == 8) {
+		set .@everyone$,"^FF0000Everyone^000000";
+		set .@friends$,"^FF0000Friends^000000";
+		set .@party$,"^FF0000Party^000000";
+		set .@guild$,"^FF0000Guild^000000";
+	}
+	next;
+	switch(select(
+		""+.@everyone$+"",
+		""+.@friends$+"",
+		""+.@party$+"",
+		""+.@guild$+""
+	)) {
+		case 1:
+			if(.@everyone$ == "^00FF00Everyone^000000") {
+				set .@admittance,8;
+			} else {
+				set .@admittance,0;
+			}
+			break;
+		case 2:
+			if(.@admittance == 8) {
+				set .@admittance,6;
+			} else if(.@friends$ == "^00FF00Friends^000000") {
+				set .@admittance,.@admittance+1;
+			} else {
+				set .@admittance,.@admittance-1;
+			}
+			break;
+		case 3:
+			if(.@admittance == 8) {
+				set .@admittance,5;
+			} else if(.@party$ == "^00FF00Party^000000") {
+				set .@admittance,.@admittance+2;
+			} else {
+				set .@admittance,.@admittance-2;
+			}
+			break;
+		case 4:
+			if(.@admittance == 8) {
+				set .@admittance,3;
+			} else if(.@guild$ == "^00FF00Guild^000000") {
+				set .@admittance,.@admittance+4;
+			} else {
+				set .@admittance,.@admittance-4;
+			}
+			break;
+	}
+	return .@admittance;
+}
+
+
+
+//admittance,owner_id,attached_id
+function	script	isAllowed	{
+
+	set .@admittance,getarg(0);
+	set .@ownerid,getarg(1);
+	query_sql("SELECT name FROM `char` WHERE char_id LIKE '"+.@ownerid+"'", .@ownerid$);
+	query_sql("SELECT name FROM `char` WHERE char_id LIKE '"+getarg(2)+"'", .@name$);
+
+	set .@warp,0;
+	if(.@admittance == 0) set .@warp,1;
+	if(.@admittance == 1) {
+		set .@nb, query_sql("SELECT * FROM `friends` WHERE char_id LIKE '"+getcharid(0, .@name$)+"' AND friend_id LIKE '"+.@ownerid+"'");
+		if(.@nb == 0) set .@nb, query_sql("SELECT * FROM `friends` WHERE friend_id LIKE '"+getcharid(0, .@name$)+"' AND char_id LIKE '"+.@ownerid+"'");
+		if(.@nb != 0) set .@warp,1;
+	}
+	if(.@admittance == 2 && getcharid(1, .@name$) == getcharid(1, .@ownerid$) && getcharid(1, .@ownerid$) != 0) set .@warp,1;
+	if(.@admittance == 3 && getcharid(1, .@name$) == getcharid(1, .@ownerid$) && getcharid(1, .@ownerid$) != 0) set .@warp,1;
+	if(.@admittance == 3 && .@warp == 0) {
+		set .@nb, query_sql("SELECT * FROM `friends` WHERE char_id LIKE '"+getcharid(0, .@name$)+"' AND friend_id LIKE '"+.@ownerid+"'");
+		if(.@nb == 0) set .@nb, query_sql("SELECT * FROM `friends` WHERE friend_id LIKE '"+getcharid(0, .@name$)+"' AND char_id LIKE '"+.@ownerid+"'");
+		if(.@nb != 0) set .@warp,1;
+	}
+	if(.@admittance == 4 && getcharid(2, .@name$) == getcharid(2, .@ownerid$) && getcharid(2, .@ownerid$) != 0) set .@warp,1;
+	if(.@admittance == 5 && getcharid(2, .@name$) == getcharid(2, .@ownerid$) && getcharid(2, .@ownerid$) != 0) set .@warp,1;
+	if(.@admittance == 5 && .@warp == 0) {
+		set .@nb, query_sql("SELECT * FROM `friends` WHERE char_id LIKE '"+getcharid(0, .@name$)+"' AND friend_id LIKE '"+.@ownerid+"'");
+		if(.@nb == 0) set .@nb, query_sql("SELECT * FROM `friends` WHERE friend_id LIKE '"+getcharid(0, .@name$)+"' AND char_id LIKE '"+.@ownerid+"'");
+		if(.@nb != 0) set .@warp,1;
+	}
+	if(.@admittance == 6 && getcharid(2, .@name$) == getcharid(2, .@ownerid$) && getcharid(2, .@ownerid$) != 0) set .@warp,1;
+	if(.@admittance == 6 && getcharid(1, .@name$) == getcharid(1, .@ownerid$) && getcharid(1, .@ownerid$) != 0) set .@warp,1;
+	if(.@admittance == 7 && getcharid(1, .@name$) == getcharid(1, .@ownerid$) && getcharid(1, .@ownerid$) != 0) set .@warp,1;
+	if(.@admittance == 7 && getcharid(2, .@name$) == getcharid(2, .@ownerid$) && getcharid(2, .@ownerid$) != 0) set .@warp,1;
+	if(.@admittance == 7 && .@warp == 0) {
+		set .@nb, query_sql("SELECT * FROM `friends` WHERE char_id LIKE '"+getcharid(0, .@name$)+"' AND friend_id LIKE '"+.@ownerid+"'");
+		if(.@nb == 0) set .@nb, query_sql("SELECT * FROM `friends` WHERE friend_id LIKE '"+getcharid(0, .@name$)+"' AND char_id LIKE '"+.@ownerid+"'");
+		if(.@nb != 0) set .@warp,1;
+	}
+	if(.@admittance == 8) set .@warp,0;
+	if(.@ownerid == getcharid(0, .@name$)) set .@warp,1;
+
+	if(.@warp) {
+		return 1;
+	} else {
+		return 0;
+	}
+}

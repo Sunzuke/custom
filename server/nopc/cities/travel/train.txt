@@ -1,0 +1,8 @@
+//==========================================================================================================
+einbroch,262,298,0	warp	einbrochtraineinbech	2,2,einbech,44,212
+einbroch,246,298,0	warp	einbrochtrainlighthalzen	2,2,lighthalzen,265,200
+lighthalzen,269,200,0	warp	lighthalzentraineinbroch	2,2,einbroch,246,302
+einbech,44,219,0	warp	einbrechtraineinbroch	2,2,einbroch,262,302
+
+//einbroch,232,298,0	warp	einbrochtrainlighthalzen	2,2,lighthalzen,265,200
+//einbroch,276,298,0	warp	einbrochtrainlighthalzen	2,2,lighthalzen,265,200

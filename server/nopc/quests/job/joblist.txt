@@ -1,0 +1,59 @@
+Super Novice		23	Level			Knife
+Taekwon			4046	Payon			Knuckle
+Star Gladiator		4047				Knuckle
+Soul Linker		4049				Book
+Ninja			25	Amatsu			Dagger / Kunai / Shuriken
+Kagerou			4211	Louyang			1-Sword
+Oboro			4212	Louyang			1-Sword
+Gunslinger		24	Einbroch		Revolver / Rifle / Gatling Gun / Shotgun / Grenade Luncher
+Swordman		1	Izlude			1-Sword
+Knight			7	Prontera		1-Sword
+Lord Knight		4008	Izlude			2-Sword
+Rune Knight		4060	dicastes01		2-Sword
+Crusader		14				Spear
+Paladin			4015				2-Spear
+Royal Guard		4073				2-Spear
+Magician		2	Geffen			Rod
+Wizard			9	Geffen			Rod
+High Wizard		4010	Geffen			Staff
+Warlock			4061	Geffen			2-Staff
+Sage			16	Yuno			Rod
+Professor		4017	Yuno			Staff
+Sorcerer		4074	Yuno			2-Staff
+Archer			3	Payon			Bow
+Hunter			11	Hugel			Bow
+Sniper			4012				Bow
+Ranger			4062				Bow
+Bard			19	Comodo			Guitar
+Dancer			20	Comodo			Whip
+Clown			4020	Jawaii			Guitar
+Gypsy			4021	Jawaii			Whip
+Minstrel		4075				Guitar
+Wanderer		4076				Whip
+Acolyte			4	Prontera		Mace
+Priest			8	Lutie			Mace
+High Priest		4009	Hugel			Mace
+Arch Bishop		4063	Veins			Mace
+Monk			15	prt_monk		Knuckle
+Champion		4016				Knuckle
+Shura			4077				Knuckle
+Merchant		5				Cart
+Blacksmith		10				Cart
+Whitesmith		4011				Cart
+Mechanic		4064				Mecha / Flamethrower
+Alchemist		18				Axe
+Creator			4019				2-Axe
+Genetic			4078				2-Axe
+Thief			6				Dagger
+Assassin		12				Dagger
+Assassin Cross		4013				Katar
+Guillotine Cross	4065				Katar
+Rogue			17				Bow
+Stalker			4018				Bow
+Shadow Chaser		4079				Dagger
+
+
+
+
+
+

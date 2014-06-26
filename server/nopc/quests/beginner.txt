@@ -1,0 +1,160 @@
+izlude,160,125,5	script	Dad	63,{
+	if(MainQuest == 1) {
+		if(class == 4023) goto L_JobChoice;
+		mes "[^0000FFDad^000000]";
+		mes "I heard from Mum that you want to go on an adventure.";
+		if(Sex) {
+			mes "Mhh.. my son is getting so old.";
+		} else {
+			mes "Aww.. my little girl is getting old.";
+		}
+		mes "I remember the good old days when you were a baby.";
+		next;
+		switch(select(
+			"Me too, Dad",
+			"I wish I could go back there"
+		)) {
+			case 1:
+			L_JobChoice:
+				mes "[^0000FFDad^000000]";
+				mes "So what's your next step?";
+				next;
+				switch(select(
+					"Tell me about the world!",
+					"I'm gonna adventure the world!"
+				)) {
+					case 1:
+						mes "[^0000FFDad^000000]";
+						mes "Oh, okay!";
+						mes "First of all there are many different job classes!";
+						next;
+						mes "[^0000FFDad^000000]";
+						mes "A few job classes are:";
+						mes " - Swordman";
+						mes " - Magician";
+						mes " - Archer";
+						mes " - Acolyte";
+						mes " - Merchant";
+						mes " - Thief";
+						next;
+						mes "[^0000FFDad^000000]";
+						mes "In Izlude, your hometown, you can become a swordman";
+						mes "Take a look at the map. I marked you the point";
+						viewpoint 1,49,170,1,0xFF0000;
+						next;
+						viewpoint 2,49,170,1,0xFF0000;
+						mes "[^0000FFDad^000000]";
+						mes "If you want to become a Teakwon, Archer or Gunslinger";
+						mes "Go to Payon. The closest cities are Alberta and Izlude";
+						mes "You can walk there from here";
+						mes "Exit the city on the marked point and run south east!";
+						viewpoint 1,26,98,1,0xFF0000;
+						next;
+						viewpoint 2,49,170,1,0xFF0000;
+						mes "[^0000FFDad^000000]";
+						mes "If you want to become a Merchant or a Ninja";
+						mes "use the ship to get to Alberta";
+						mes "Exit the city on the marked point!";
+						viewpoint 1,199,210,1,0xFF0000;
+						next;
+						mes "[^0000FFDad^000000]";
+						mes "If you want to become a Gunslinger";
+						mes "use the Air Ship to get to Einbroch";
+						mes "You can walk there from here";
+						mes "Exit the city on the marked point!";
+						viewpoint 1,189,73,1,0xFF0000;
+						next;
+						mes "[^0000FFDad^000000]";
+						mes "If you want to become a Thief or a Mage";
+						mes "you have to walk from here to Morocc or Geffen";
+						mes "This is a hard quest";
+						mes "Exit the city on the marked point!";
+						viewpoint 1,26,98,1,0xFF0000;
+						next;
+						viewpoint 2,0,0,1,0xFF0000;
+						mes "[^0000FFDad^000000]";
+						mes "There are many more job classes";
+						mes "Just try to find a teacher!";
+						break;
+					case 2:
+						break;
+				}
+				next;
+				switch(select(
+					"Ask your Dad for help",
+					"Ask your Dad for equipment"
+				)) {
+					case 1:
+						mes "[^0000FFDad^000000]";
+						mes "Take the mercenarys help and have a good journey!";
+						mercenary_create 6017,60000*60;
+						break;
+					case 2:
+						mes "[^0000FFDad^000000]";
+						mes "Take these and have a good journey!";
+						getitem 2340,1;//Novice_Breast
+						getitem 2112,1;//Novice_Guard
+						getitem 1243,1;//Novice_Knife
+						getitem 2510,1;//Novice_Hood
+						getitem 2414,1;//Novice_Boots
+						if(class != 4023) getitem 2628,2;//Novice_Armlet
+						break;
+				}
+				set MainQuest,2;
+				close2;
+				getitem 602,1;
+				pcblockmove getcharid(3),0;
+				warp "izlude",25,98;
+				end;
+			case 2:
+				mes "[^0000FFDad^000000]";
+				mes "You look confused..?";
+				close2;
+				jobchange 4023;
+				mes "[^0000FFDad^000000]";
+				mes "BahaHAHh.. They say watch out what you wish for!";
+				next;
+				mes "[^0000FFDad^000000]";
+				mes "BahaHAHh.. You look like this";
+				getitem 2765,1;//Novice_Figure
+				next;
+				mes "[^0000FFDad^000000]";
+				mes "I'm sorry. Take them both as a gift.";
+				getitem 2765,1;//Novice_Figure
+				next;
+				goto L_JobChoice;
+		}
+	} else {
+		mes "[^0000FFDad^000000]";
+		if(MainQuest == 2 && Class != 0 && Class != 4023) set MainQuest,3;
+		if(MainQuest == 2) {
+			mes "Go search for someone who teaches you a job class.";
+			mes "Kafra will bring you to Aldebaran and the Ship will bring you to alberta!";
+		} else if(MainQuest == 3) {
+			mes "This Card Collector boy told me he wants something from you";
+			mes "You should ask him what's up.";
+			viewpoint 0,155,200,1,0xFF0000;
+		} else if(MainQuest == 4) {
+			if(BaseLevel < 500) {
+				mes "When you reach level 500 player will start to attack you to get your zeny whenever they can.";
+				mes "The Cool Event Guy can inform you about good leveling places if you want to keep leveling!";
+				viewpoint 0,109,140,1,0xFF0000;
+			} else {
+				mes "You've become alot stronger, kid.";
+				set MainQuest,5;
+			}
+		} else {
+			if(Sex) {
+				mes "Hey son! How's your adventure?";
+			} else {
+				mes "Hey little girl! Are you alright?";
+			}
+			mes "Have a rest at my place!";
+		}
+	}
+	percentheal 100,100;
+	close;
+}
+
+
+

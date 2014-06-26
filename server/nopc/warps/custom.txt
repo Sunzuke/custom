@@ -1,0 +1,145 @@
+//==========================================================================================================
+//Kiel Quest
+yuno_fild08,149,190,0	warp	kiel0000	1,1,kh_school,71,155
+yuno_fild08,71,170,0	warp	kiel0001	1,1,kh_dun01,3,230
+yuno_fild02,75,218,0	warp	kiel0002	1,1,kh_vila,188,18
+kh_vila,191,14,0	warp	kiel0003	1,1,kh_vila,17,177
+kh_dun01,234,48,0	warp	kiel0004	1,1,kh_school,119,144
+kh_school,119,149,0	warp	kiel0005	1,1,kh_school,120,180
+kh_school,122,186,0	warp	kiel0006	1,1,kh_dun01,22,216
+kh_dun01,166,223,0	warp	kiel0007	1,1,kh_dun01,170,227
+kh_dun01,180,220,0	warp	kiel0008	1,1,kh_dun01,178,138
+kh_dun01,44,203,0	warp	kiel0009	1,1,kh_dun02,41,198
+kh_mansion,78,55,0	warp	kiel0010	1,1,kh_mansion,21,14
+lighthalzen,193,205,0	warp	kiel0011	1,1,kh_mansion,30,75
+kh_mansion,25,79,0	warp	kiel0012	1,1,kh_mansion,83,50
+kh_mansion,29,27,0	warp	kiel0013	1,1,kh_kiehl01,10,31
+yuno,273,141,0	warp	kiel0014	1,1,kh_rossi,20,92
+kh_kiehl01,43,33,0	warp	kiel0015	1,1,kh_kiehl01,55,33
+kh_kiehl01,174,40,0	warp	kiel0016	1,1,kh_kiehl01,173,52
+kh_kiehl01,78,108,0	warp	kiel0017	1,1,kh_kiehl01,68,108
+kh_kiehl01,42,177,0	warp	kiel0018	1,1,kh_kiehl01,49,177
+kh_kiehl01,166,187,0	warp	kiel0019	1,1,kh_kiehl02,50,7
+kh_kiehl02,50,59,0	warp	kiel0020	1,1,lighthalzen,192,200
+
+//FROM QUESTS
+manuk,321,182,0	warp	scarabahole0000	1,1,dic_dun01,33,212
+dic_dun01,28,212,0	warp	manukscara0000	1,1,manuk,315,182
+dic_dun01,287,107,0	warp	dic_dun0002	1,1,dic_dun02,101,142
+dic_dun01,292,107,0	warp	dic_dun0003	1,1,dic_dun03,101,142
+dic_in01,138,225,0	warp	dic_in0001	1,1,dic_in01,241,177
+dic_in01,242,180,0	warp	dic_in0002	1,1,dic_in01,138,221
+dic_in01,263,193,0	warp	dic_in0003	1,1,dic_in01,299,251
+//dicastes01,117,262,0	warp	warp0004	1,1,dic_in01,165,101
+mid_campin,113,120,0	warp	warp0005	1,1,mid_campin,165,126
+moc_para01,30,11,0	warp	warp0006	1,1,moc_fild20,342,198
+moc_prydb1,103,54,0	warp	warp0007	1,1,moc_prydn1,93,96
+moc_prydn1,94,98,0	warp	warp0008	1,1,moc_prydb1,100,57
+//mora,120,79,0	warp	warp0009	1,1,mora,31,132
+malangdo,190,167,0	warp	warp0010	1,1,izlude,198,210
+lhz_dun03,239,77,0	warp	warp0011	1,1,que_lhz,244,52
+lhz_dun03,239,77,0	warp	warp0012	1,1,lhz_dun04,244,52
+lhz_dun04,245,61,0	warp	#warplhz4lhz3	1,1,lhz_dun03,240,74
+que_lhz,245,61,0	warp	warp0013	1,1,lhz_dun03,240,74
+que_lhz,207,75,0	warp	warp0014	1,1,que_lhz,96,136
+que_lhz,94,119,0	warp	warp0015	1,1,que_lhz,148,215
+que_lhz,147,248,0	warp	warp0016	1,1,lhz_dun04,148,269
+lhz_in01,43,219,0	warp	warp0017	1,1,lhz_dun01,149,286
+dewata,234,65,0	warp	warp0018	1,1,dew_dun01,289,160
+dew_dun01,292,164,0	warp	warp0019	1,1,dewata,232,55
+bra_in01,144,187,0	warp	warp0020	1,1,bra_in01,206,102
+bra_in01,12,185,0	warp	warp0021	1,1,bra_in01,138,176
+bra_in01,206,188,1	script	Open Manhole#todunbra	844,{
+	warp "bra_dun01",87,47;
+	end;
+}
+bra_dun01,87,43,1	script	Pipe#bra	844,{
+	warp "bra_in01",206,185;
+	end;
+}
+//==========================================================================================================
+umbala,144,166,0	warp	comodo2umbala	1,1,comodo,234,84
+comodo,231,77, 0	warp	umbala2comodo	1,1,umbala,144,160
+//==========================================================================================================
+hugel,209,110,0	warp	hugel2odin	1,1,odin_tem01,93,146
+odin_tem01,88,146,0	warp	odin2hugel	1,1,hugel,204,109
+//==========================================================================================================
+izlu2dun,108,82,0	warp	izlu2dun#1	1,1,iz_dun00,168,167
+iz_dun00,168,172,0	warp	iz_dun#1	1,1,izlu2dun,108,86
+iz_dun00,39,41,0	warp	iz_dun#2	1,1,iz_dun01,41,37
+iz_dun00,352,342,0	warp	iz_dun#3	1,1,iz_dun01,253,252
+iz_dun01,253,258,0	warp	iz_dun1#1	1,1,iz_dun00,352,337
+iz_dun01,41,32,0	warp	iz_dun1#2	1,1,iz_dun00,39,46
+iz_dun01,118,170,0	warp	iz_dun1#3	1,1,iz_dun02,236,204
+iz_dun02,236,198,0	warp	iz_dun2#1	1,1,iz_dun01,118,165
+iz_dun02,339,331,0	warp	iz_dun2#2	1,1,iz_dun03,32,63
+iz_dun03,29,63,0	warp	iz_dun3#1	1,1,iz_dun02,339,328
+iz_dun03,264,245,0	warp	iz_dun3#2	1,1,iz_dun04,26,27
+iz_dun04,26,24,0	warp	iz_dun4#1	1,1,iz_dun03,261,245
+//==========================================================================================================
+moc_fild12,18,303,0	warp	moc#cmd1	1,1,cmd_fild08,354,328
+in_moc_16,19,36,0	warp	moc#asgui1	1,1,in_moc_16,20,90
+in_moc_16,20,94,0	warp	moc#asgui2	1,1,in_moc_16,19,31
+in_moc_16,20,74,0	warp	moc#asgui3	1,1,in_moc_16,20,162
+in_moc_16,20,168,0	warp	moc#asgui4	1,1,in_moc_16,20,78
+moc_pryd01,194,10,0	warp	mocpy#moc	1,1,moc_ruins,61,162
+moc_pryd01,9,194,0	warp	mocpy1#mocpy2	1,1,moc_pryd02,10,189
+moc_pryd02,10,195,0	warp	mocpy2#mocpy1	1,1,moc_pryd01,9,188
+moc_pryd02,100,100,0	warp	mocpy2#mocpy3	1,1,moc_pryd03,100,91
+moc_pryd03,100,97,0	warp	mocpy3#mocpy2	1,1,moc_pryd02,100,96
+moc_pryd03,11,15,0	warp	mocpy3#1mocpy4	1,1,moc_pryd04,11,20
+moc_pryd03,15,188,0	warp	mocpy3#2mocpy4	1,1,moc_pryd04,20,188
+moc_pryd03,185,11,0	warp	mocpy3#3mocpy4	1,1,moc_pryd04,181,11
+moc_pryd03,188,185,0	warp	mocpy3#4mocpy4	1,1,moc_pryd04,188,181
+moc_pryd04,11,14,0	warp	mocpy4#1mocpy3	1,1,moc_pryd03,11,20
+moc_pryd04,15,188,0	warp	mocpy4#2mocpy3	1,1,moc_pryd03,20,188
+moc_pryd04,185,11,0	warp	mocpy4#3mocpy3	1,1,moc_pryd03,181,11
+moc_pryd04,188,185,0	warp	mocpy4#4mocpy3	1,1,moc_pryd03,188,181
+moc_pryd05,224,9,0	warp	mocpy5#mocpy6	2,2,moc_pryd06,192,10
+moc_pryd05,224,9,0	warp	mocpy5#2mocpy6	2,2,moc_pryd06,192,10
+moc_pryd06,198,10,0	warp	mocpy6#mocpy5	2,2,moc_pryd05,220,9
+moc_pryd05,94,98,0	warp	mocpy5#pryb1	1,1,moc_prydb1,100,57
+moc_prydb1,100,55,0	warp	pryb1#mocpy5	1,1,moc_pryd05,94,96
+moc_prydb1,100,77,0	warp	prydb1#1	1,1,moc_prydb1,100,107
+moc_prydb1,100,104,0	warp	prydb1#2	1,1,moc_prydb1,100,74
+moc_prydb1,88,115,0	warp	prydb1#3	1,1,moc_prydb1,56,115
+moc_prydb1,59,115,0	warp	prydb1#4	1,1,moc_prydb1,90,115
+moc_prydb1,110,116,0	warp	prydb1#5	1,1,moc_prydb1,145,116
+moc_prydb1,143,116,0	warp	prydb1#6	1,1,moc_prydb1,105,116
+moc_prydb1,100,191,0	warp	prydb1#7mocpy1	1,1,moc_pryd01,90,105
+moc_pryd01,90,110,0	warp	prydb1#8mocpy1	1,1,moc_prydb1,100,188
+//==========================================================================================================
+moc_fild20,375,215,0	warp	moc#newworld	1,1,moc_fild21,29,195
+moc_fild20,21,297,0	warp	moc#mocfild	1,1,moc_fild07,372,200
+moc_fild21,189,246,0	warp	moc#newworld2	1,1,moc_fild22b,196,225
+moc_fild22b,221,201,0	warp	moc#newworld3	1,1,mid_camp,210,289
+moc_fild22b,197,221,0	warp	moc#newworld4	1,1,moc_fild21,189,250
+mid_camp,210,293,0	warp	moc#newworld5	1,1,moc_fild22b,227,199
+//==========================================================================================================
+cmd_fild03,382,165,0	warp	cmd3#cmd5	1,1,cmd_fild05,26,161
+cmd_fild05,21,163,0	warp	cmd5#cmd3	1,1,cmd_fild03,377,165
+cmd_fild05,148,18,0	warp	cmd5#cmd6	1,1,cmd_fild06,150,374
+cmd_fild06,147,381,0	warp	cmd6#cmd5	1,1,cmd_fild05,148,23
+//==========================================================================================================
+mid_camp,344,178,0	warp	camp#man_fild	1,1,man_fild01,36,235
+mid_camp,11,142,0	warp	camp#1spl_fild	1,1,spl_fild02,379,143
+mid_camp,8,216,0	warp	camp#2spl_fild	1,1,spl_fild02,380,217
+dic_fild01,150,281,0	warp	dicfild#dic	1,1,dicastes01,199,39
+//==========================================================================================================
+moscovia,136,49,0	warp	mosc#fild	1,1,mosk_fild02,204,59
+mosk_fild02,204,54,0	warp	fild#mosc	1,1,moscovia,139,52
+//==========================================================================================================
+nif_fild01,315,62,0	warp	nif#ygg	1,1,yggdrasil01,246,259
+//==========================================================================================================
+yggdrasil01,36,63,0	warp	ygg#um	1,1,um_dun02,126,142
+um_dun02,126,153,0	warp	um#ygg	1,1,yggdrasil01,42,63
+//==========================================================================================================
+ve_fild07,128,129,0	warp	ve#nln	1,1,nameless_n,250,234
+nameless_n,254,232,0	warp	nln#nli	1,1,nameless_i,253,215
+nameless_i,259,218,0	warp	nli#izl	1,1,ve_fild07,125,132
+
+
+
+
+
+

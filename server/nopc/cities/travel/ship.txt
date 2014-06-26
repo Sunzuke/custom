@@ -1,0 +1,88 @@
+//==========================================================================================================
+jawaii,215,120,0	warp	jawaii2malangdo	2,2,malangdo,218,85
+//Comodo - Izlude Dungeon
+comodo,205,69,0	warp	comodo#izlu2dun	1,3,izlu2dun,107,30
+izlu2dun,104,26,0	warp	izlu2comodo	1,1,comodo,203,76
+//Izlude - Alberta Dungeon
+izlude,204,210,0	warp	Izlude#alberta	1,3,alberta,241,90
+alberta,247,87,0	warp	Alberta#Izlude	1,3,alb2trea,58,66
+alb2trea,55,33,0	warp	Alb#Izlude	2,2,izlude,198,210
+//Alberta - Comodo Field
+alberta,170,219,0	warp	alberta2cmdfild	1,1,cmd_fild07,303,80
+cmd_fild07,309,81,0	warp	field2alberta	2,2,alberta,193,201
+//==========================================================================================================
+amatsu,197,78,0	warp	Amatsu#Alberta	3,1,alberta,193,147
+gon_fild01,258,75,1	duplicate(Amatsu#Alberta)	GOnryun#Alberta	4,2
+lou_fild01,188,99,1	duplicate(Amatsu#Alberta)	Louyang#Alberta	2,2
+ayothaya,167,50,1	duplicate(Amatsu#Alberta)	Ayothaya#Alberta	2,2
+moscovia,169,49,1	duplicate(Amatsu#Alberta)	Moscovia#Alberta	2,2
+brasilis,314,52,1	duplicate(Amatsu#Alberta)	Brasilis#Alberta	2,2
+dewata,232,52,1	duplicate(Amatsu#Alberta)	Dewata#Alberta	2,2
+malaya,285,72,1	duplicate(Amatsu#Alberta)	Malaya#Alberta	2,2
+//==========================================================================================================
+alberta,197,150,3	script	Global Project	100,{
+	mes "[^0000FFGlobal Project^000000]";
+	mes "Hello, "+strcharinfo(0)+".";
+	mes "Do you want to set sail with me?";
+	switch(select(
+		"Amatsu",
+		"Gonryun",
+		"Louyang",
+		"Ayothaya",
+		"Moscovia",
+		"Brasilis",
+		"Dewata",
+		"Port Malaya",
+		"Jawaii"
+	)) {
+		case 1:
+			set .@map$,"amatsu";
+			set .@x,198;
+			set .@y,84;
+			break;
+		case 2:
+			set .@map$,"gon_fild01";
+			set .@x,258;
+			set .@y,87;
+			break;
+		case 3:
+			set .@map$,"lou_fild01";
+			set .@x,192;
+			set .@y,105;
+			break;
+		case 4:
+			set .@map$,"ayothaya";
+			set .@x,150;
+			set .@y,64;
+			break;
+		case 5:
+			set .@map$,"moscovia";
+			set .@x,164;
+			set .@y,55;
+			break;
+		case 6:
+			set .@map$,"brasilis";
+			set .@x,314;
+			set .@y,58;
+			break;
+		case 7:
+			set .@map$,"dewata";
+			set .@x,232;
+			set .@y,55;
+			break;
+		case 8:
+			set .@map$,"malaya";
+			set .@x,270;
+			set .@y,55;
+			break;
+		case 9:
+			set .@map$,"jawaii";
+			set .@x,241;
+			set .@y,115;
+			break;
+	}
+	specialeffect2 6;
+	warp .@map$,.@x,.@y;
+	end;
+}
+//==========================================================================================================

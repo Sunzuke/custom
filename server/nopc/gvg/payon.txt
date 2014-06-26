@@ -1,0 +1,7 @@
+//Guild Dungeon Warps
+gld2_pay,33,105,0	warp	dun2pay_to_gld	1,1,pay_gld,53,141
+gld2_pay,119,21,0	warp	dun2pay_to_gld#2	1,1,pay_gld,53,141
+gld2_pay,205,105,0	warp	dun2pay_to_gld#3	1,1,pay_gld,53,141
+gld2_pay,175,215,0	warp	dun2pay_to_gld#4	1,1,pay_gld,53,141
+gld2_pay,61,215,0	warp	dun2pay_to_gld#5	1,1,pay_gld,53,141
+gld_dun01_2,119,14,0	warp	gdun01_payg#abyss	1,1,pay_gld,53,141

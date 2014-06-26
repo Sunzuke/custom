@@ -1,0 +1,11 @@
+userid: s123x12
+passwd: p132x21
+server_name: Final-StrikeRO
+wisp_server_name: FSRO
+login_ip: host-z.no-ip.org
+login_port: 26900
+char_ip: host-z.no-ip.org
+char_port: 27121
+start_point: izlude,146,131
+start_items: 
+start_zeny: 0

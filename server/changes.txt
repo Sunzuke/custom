@@ -1,0 +1,3 @@
+skill.c
+	damage = dmg.damage + dmg.damage2;
+	if(damage > 9999) damage = 9999;

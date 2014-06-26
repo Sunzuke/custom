@@ -1,0 +1,164 @@
+-	script	Experience	-1,{
+
+OnPCLoadMapEvent:
+	if (getmapxy(@mapname$,@mapx,@mapy,0) == 0) {
+		if(getmapflag(@mapname$, mf_town)) {
+			percentheal 100,100;
+			save @mapname$,@mapx,@mapy;
+		}
+	}
+end;
+
+OnPcLogoutEvent:
+	callfunc("UpdateRanking",getcharid(0),1);
+end;
+
+OnNPCKillEvent:
+	set @nb, query_sql("SELECT LV, MEXP, DropCardid FROM `mob_db` WHERE ID LIKE '"+killedrid+"'", @lv, @mvp, @card);
+	heal 50+@lv,50+@lv;
+	if(@mvp == 0) {
+		set .@condition$,"WHERE ID LIKE '"+getcharid(0)+"' AND `type` LIKE 'char'";
+		query_sql("UPDATE `ranking` SET `monster` = `monster`+1 "+.@condition$+"");
+		set zeny,zeny+10;
+		if(getcharid(1) == 0) set zeny,zeny+30;
+		if(getcharid(2) == 0) set zeny,zeny+10;
+		if(getcharid(1) != 0) {
+			set .@map$,strcharinfo(3);
+			set .@lv,@lv;
+			set .@player,getcharid(3);
+			getpartymember getcharid(1),2;
+			for(.@i = 0; .@i < $@partymembercount; .@i++) {
+				if(attachrid($@partymemberaid[.@i]) == 1) {
+					if(#AllowPartyLeech) {
+						if(.@lv < 100 && JobLevel > 10 && BaseLevel > 10) {
+							if(.@lv >= BaseLevel) set BaseLevel,BaseLevel+1;
+							if(.@lv >= JobLevel) set JobLevel,JobLevel+1;
+						} else {
+							if(BaseLevel < 999) set BaseLevel,BaseLevel+1;
+							if(JobLevel < 1250) set JobLevel,JobLevel+1;
+						}
+					}
+					detachrid;
+				}
+			}
+			attachrid(.@player);
+		}
+		if(@lv < 100 && JobLevel > 10 && BaseLevel > 10) {
+			if(BaseLevel < 999) {
+				if(@lv >= BaseLevel) {
+					set BaseLevel,BaseLevel+1;
+				} else {
+					set BaseExp,BaseExp+((BaseExp+NextBaseExp)/(100-@lv));
+				}
+			}
+			if(JobLevel < 1250) {
+				if(@lv >= JobLevel) {
+					set JobLevel,JobLevel+1;
+				} else {
+					set JobExp,JobExp+((JobExp+NextJobExp)/100)+10;
+				}
+			}
+		} else {
+			if(BaseLevel < 999) set BaseLevel,BaseLevel+1;
+			if(JobLevel < 1250) set JobLevel,JobLevel+1;
+		}
+	} else {
+		set .@condition$,"WHERE ID LIKE '"+getcharid(0)+"' AND `type` LIKE 'char'";
+		query_sql("UPDATE `ranking` SET `mvps` = `mvps`+1 "+.@condition$+"");
+		set @zeny,@mvp/50;
+		if(@zeny > 150) {
+			set zeny,zeny+@zeny;
+		} else {
+			set zeny,zeny+150;
+		}
+		set BaseLevel,BaseLevel+3;
+		set JobExp,JobExp+((JobExp+NextJobExp)/100)+10;
+	}
+
+	if(@card != 0) {
+		if(getiteminfo(@card, 2) == 6) {
+			if(@mvp == 0) {
+				if(rand(0,1)) getitem @card,1;
+			} else {
+				if(getmapusers(strcharinfo(3)) == 1 && rand(0,100) < 5) getitem @card,1;
+				if(getmapusers(strcharinfo(3)) == 2 && rand(0,100) < 10) getitem @card,1;
+				if(getmapusers(strcharinfo(3)) == 3 && rand(0,100) < 20) getitem @card,1;
+				if(getmapusers(strcharinfo(3)) == 4 && rand(0,100) < 40) getitem @card,1;
+				if(getmapusers(strcharinfo(3)) == 5 && rand(0,100) < 80) getitem @card,1;
+				if(getmapusers(strcharinfo(3)) > 5) getitem @card,1;
+			}
+		}
+	}
+
+	if(Class == 0 && BaseLevel >= 99) {
+		specialeffect2 72;
+		sleep2 2700;
+		jobchange 23;
+		set MainQuest,3;
+		getitem 2601,2;
+	}
+	if(Class == 4023 && BaseLevel >= 99) {
+		specialeffect2 72;
+		sleep2 2700;
+		jobchange 4045;
+		set MainQuest,3;
+		getitem 2601,2;
+	}
+
+end;
+
+OnPcKillEvent:
+	set .@blvl,BaseLevel;
+	set .@acc,getcharid(3);
+	set .@name$,strcharinfo(0);
+
+	attachrid(killedrid);
+	set .@condition$,"WHERE ID LIKE '"+getcharid(0)+"' AND `type` LIKE 'char'";
+	set .@q$,"UPDATE `ranking` SET `deaths` = `deaths`+1, `currentstreak` = '0' "+.@condition$+"";
+	if(strcharinfo(3) != "sec_pri") {
+		query_sql(.@q$);
+	}
+	set .@zeny,Zeny;
+	set Zeny,0;
+	if(Manner < 0) {
+		set .@warp,1;
+		set .@time,Manner*(-1);
+		set .@gmlvl,getgmlevel();
+	} else {
+		set .@warp,0;
+		set .@time,0;
+		set .@gmlvl,getgmlevel();
+	}
+	set .@blvl2,BaseLevel;
+	if(.@blvl2 >= .@blvl && Manner > -1 && getgmlevel() < 1) set Manner,-1;
+	message strcharinfo(0), "You died to "+.@name$+".";
+	set .@name$,strcharinfo(0);
+
+	attachrid(.@acc);
+	set Zeny,Zeny+.@zeny;
+	if(.@blvl2 <= .@blvl) {
+		if(getmapflag(strcharinfo(3), mf_town)) {
+			set Manner,Manner-5;
+		} else {
+			set Manner,Manner-2;
+		}
+		set .@condition$,"WHERE ID LIKE '"+getcharid(0)+"' AND `type` LIKE 'char'";
+		set .@q$,"UPDATE `ranking` SET `kills` = `kills`+1, `currentstreak` = `currentstreak`+1 "+.@condition$+"";
+		if(strcharinfo(3) != "sec_pri") {
+			query_sql(.@q$);
+		}
+		sleep2 100;
+		set .@q$,"SELECT `killingstreak`,`currentstreak` FROM `ranking` "+.@condition$+"";
+		query_sql(.@q$, .@killingstreak, .@currentstreak);
+		if(.@killingstreak < .@currentstreak) {
+			query_sql("UPDATE `ranking` SET `killingstreak` = '"+.@currentstreak+"' "+.@condition$+"");
+		}
+		if(.@currentstreak > 3) dispbottom "Killing Streak of "+.@currentstreak+" Kills!";
+	} else if(.@warp) {
+		if(getgmlevel() >= .@gmlvl) atcommand "@jailfor "+.@time+"mn "+rid2name(killedrid)+"";
+	}
+	message strcharinfo(0), "You killed "+.@name$+".";
+
+end;
+
+}

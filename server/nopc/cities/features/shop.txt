@@ -1,0 +1,99 @@
+//The Shops
+izlude_in,72,110,5	shop	Dagger Dealer	404,1213:-1,1241:-1,13023:-1,1228:-1,13001:-1
+izlude_in,57,110,5	shop	Knuckle Dealer	405,1807:-1,1814:-1,1809:-1,1822:-1,1827:-1
+ve_in,382,241,5	shop	Two-handed Sword	111,1157:-1,1169:-1,1186:-1,1166:-1,1163:-1
+ve_in,374,234,5	shop	One-handed Sword	111,1102:-1,13405:-1,1107:-1,1140:-1,1137:-1
+ve_in,378,257,5	shop	Two-handed Spear	111,1451:-1,1454:-1,1471:-1,1476:-1,1486:-1
+ve_in,369,257,5	shop	One-handed Spear	111,1404:-1,1407:-1,1427:-1,1433:-1,1436:-1
+ve_in,367,242,5	shop	Bow	111,1704:-1,1707:-1,1729:-1,1736:-1,1744:-1,1750:-1
+-	shop	Bow2	111,1704:-1,1707:-1,1729:-1,1736:-1,1744:-1
+alberta_in,179,14,1	shop	One-handed Axe Dealer	91,1301:-1,1305:-1,1306:-1,1307:-1,1318:-1
+alberta_in,189,21,3	shop	Two-handed Axe Dealer	90,1360:-1,1351:-1,1363:-1,1367:-1,1396:-1
+ama_in01,90,28,5	shop	Shuriken Dealer	765,13305:-1,13300:-1,13307:-1,13308:-1,13309:-1,13250:-1;
+cmd_in01,130,165,5	shop	Instrument Dealer	74,1907:-1,1901:-1,1905:-1,1919:-1,1925:-1
+cmd_in01,116,165,8	shop	Whip Dealer	75,1960:-1,1970:-1,1980:-1,1982:-1,1985:-1
+ein_in01,108,27,5	shop	Gun Dealer	853,13110:-1,13175:-1,13172:-1,13178:-1,13179:-1,13200:-1,13203:-1
+mosk_in,30,179,3	shop	Mace Dealer	410,1504:-1,1525:-1,1539:-1,1547:-1,1549:-1
+prt_in,173,132,3	shop	Book Dealer	412,1550:-1,1551:-1,1565:-1,1573:-1,1578:-1
+yuno_in01,105,35,3	shop	Staff Dealer	55,1607:-1,1629:-1,1615:-1,1661:-1,1642:-1
+lhz_in02,286,96,3	shop	Two-handed Staff Dealer	64,2006:-1,2016:-1,1472:-1,2000:-1,2017:-1
+izlude_in,69,127,5	shop	Katar Dealer	106,1252:-1,1261:-1,1268:-1,1285:-1,1291:-1
+
+spl_in01,110,326,5	shop	Weapon Dealer#expensive	443,13001:-1,1137:-1,1163:-1,1436:-1,1486:-1,1318:-1,1396:-1,1549:-1,1642:-1,2017:-1,1744:-1,1827:-1,1925:-1,1985:-1,1578:-1,1291:-1,13309:-1,13179:-1
+um_in,160,124,3	shop	Weapon Dealer#cheap	786,1213:-1,1102:-1,1157:-1,1404:-1,1451:-1,1301:-1,1360:-1,1504:-1,1607:-1,2006:-1,1704:-1,1807:-1,1907:-1,1960:-1,1550:-1,1252:-1,13305:-1,13110:-1
+lhz_in02,279,35,3	shop	Cannon Balls	111,18000:-1
+payon_in01,8,120,4	shop	Ammotion Dealer	54,1750:-1,1771:-1,13200:-1,13203:-1,13250:-1,13257:-1,18000:-1
+
+que_ng,183,85,3	duplicate(Ammotion Dealer)	Ammotion Dealer#2	901
+ama_in01,95,22,3	duplicate(Dagger Dealer)	Dagger#2	111
+ama_in01,103,28,3	duplicate(One-handed Spear)	One-handed Spear#3	111
+ama_in01,89,16,3	duplicate(One-handed Spear)	One-handed Spear#4	111
+ama_in01,103,18,3	duplicate(Two-handed Spear)	Two-handed Spear#4	111
+ama_in01,99,16,3	duplicate(Two-handed Spear)	Two-handed Spear#5	111
+ve_in,366,248,5	duplicate(Bow)	Bow#2	111
+ve_in,350,245,5	duplicate(One-handed Sword)	One-handed Sword#2	111
+ve_in,346,245,5	duplicate(One-handed Sword)	One-handed Sword#3	111
+ve_in,336,239,5	duplicate(One-handed Sword)	One-handed Sword#4	111
+ve_in,357,239,5	duplicate(One-handed Sword)	One-handed Sword#51	111
+ve_in,349,257,5	duplicate(One-handed Spear)	One-handed Spear#1	111
+ve_in,350,257,5	duplicate(One-handed Spear)	One-handed Spear#2	111
+ein_in01,118,29,5	duplicate(One-handed Sword)	One-handed Sword#5	111
+ein_in01,96,29,5	duplicate(One-handed Sword)	One-handed Sword#6	111
+lou_in02,125,174,5	duplicate(One-handed Axe Dealer)	One-handed Axe#7	111
+lou_in02,127,174,5	duplicate(Two-handed Axe Dealer)	Two-handed Axe#8	111
+lou_in02,132,171,5	duplicate(Two-handed Spear)	Two-handed Spear#9	111
+lou_in02,118,171,5	duplicate(Two-handed Spear)	Two-handed Spear#12	111
+lou_in02,120,177,5	duplicate(One-handed Spear)	One-handed Spear#10	111
+lou_in02,131,177,5	duplicate(One-handed Spear)	One-handed Spear#11	111
+lou_in02,103,176,5	duplicate(One-handed Sword)	One-handed Sword#13	111
+lou_in02,144,173,5	duplicate(Two-handed Spear)	Two-handed Spear#14	111
+lou_in02,144,174,5	duplicate(Two-handed Spear)	Two-handed Spear#15	111
+lou_in02,110,176,5	duplicate(Two-handed Sword)	Two-handed Sword#12	111
+lou_in02,148,171,5	duplicate(Two-handed Sword)	Two-handed Sword#16	111
+lou_in02,148,176,5	duplicate(Two-handed Sword)	Two-handed Sword#17	111
+lou_in02,149,173,5	duplicate(Two-handed Sword)	Two-handed Sword#18	111
+lou_in02,149,174,5	duplicate(Two-handed Sword)	Two-handed Sword#19	111
+lou_in02,126,171,5	duplicate(Dagger Dealer)	Dagger#20	111
+mosk_in,24,175,5	duplicate(Two-handed Sword)	Two-handed Sword#21	111
+mosk_in,23,184,5	duplicate(One-handed Sword)	One-handed Sword#22	111
+mosk_in,83,185,5	duplicate(One-handed Spear)	One-handed Spear#23	111
+prt_in,174,140,5	duplicate(One-handed Spear)	One-handed Spear#24	111
+um_in,148,121,5	duplicate(One-handed Axe Dealer)	One-handed Axe#25	111
+um_in,148,124,5	duplicate(One-handed Spear)	One-handed Spear#26	111
+yuno_in01,103,25,5	duplicate(Two-handed Sword)	Two-handed Sword#27	111
+yuno_in01,96,23,5	duplicate(One-handed Sword)	One-handed Sword#28	111
+yuno_in01,96,26,5	duplicate(One-handed Sword)	One-handed Sword#29	111
+yuno_in01,103,16,5	duplicate(One-handed Axe Dealer)	One-handed Axe#30	111
+yuno_in01,107,16,5	duplicate(Two-handed Axe Dealer)	Two-handed Axe#31	111
+yuno_in01,110,16,5	duplicate(One-handed Axe Dealer)	One-handed Axe#32	111
+yuno_in01,102,35,3	duplicate(Book Dealer)	Book Dealer#33	102
+lhz_in02,264,37,3	duplicate(Two-handed Sword)	Two-handed Sword#34	111
+lhz_in02,284,37,3	duplicate(Two-handed Sword)	Two-handed Sword#35	111
+lhz_in02,278,26,3	duplicate(One-handed Sword)	One-handed Sword#36	111
+lhz_in02,270,26,3	duplicate(One-handed Sword)	One-handed Sword#37	111
+lhz_in02,280,95,3	duplicate(One-handed Sword)	One-handed Sword#38	111
+lhz_in02,267,95,3	duplicate(One-handed Sword)	One-handed Sword#39	111
+lhz_in02,274,36,3	duplicate(Staff Dealer)	Staff Dealer#40	64
+lhz_in02,271,96,3	duplicate(Dagger Dealer)	Dagger#41	111
+lhz_in02,276,96,3	duplicate(Two-handed Axe Dealer)	Two-handed Axe#42	111
+payon_in01,15,120,3	duplicate(Bow)	Bow Dealer#43	70
+payon_in01,8,127,3	duplicate(One-handed Spear)	One-handed Spear#44	111
+payon_in01,14,127,3	duplicate(One-handed Spear)	One-handed Spear#45	111
+payon_in01,8,135,3	duplicate(Two-handed Spear)	Two-handed Spear#45	111
+ra_in01,171,382,3	duplicate(One-handed Sword)	One-handed Sword#46	111
+ra_in01,165,380,3	duplicate(One-handed Spear)	One-handed Spear#47	111
+ra_in01,165,384,3	duplicate(One-handed Spear)	One-handed Spear#48	111
+ra_in01,177,389,3	duplicate(Staff Dealer)	Staff Dealer#49	58
+ra_in01,177,364,3	duplicate(One-handed Spear)	One-handed Spear#50	111
+ra_in01,173,373,3	duplicate(Bow2)	Bow#51	111
+ra_in01,168,361,3	duplicate(Bow)	Bow#52	111
+izlude_in,61,127,3	duplicate(Weapon Dealer#expensive)	Weapon Dealer#53	700
+izlude_in,59,127,5	duplicate(Weapon Dealer#cheap)	Weapon Dealer#54	869
+yuno_in04,34,67,3	duplicate(Book Dealer)	Book Dealer#55	412
+prt_in,175,50,3	duplicate(Book Dealer)	Book Dealer#56	57
+prt_in,179,92,3	duplicate(Book Dealer)	Book Dealer#57	57
+yuno_in04,20,123,4	duplicate(Book Dealer)	Book Dealer#58	57
+yuno_in01,173,99,4	duplicate(Book Dealer)	Book Dealer#59	71
+morocc_in,51,166,4	duplicate(Katar Dealer)	Katar Dealer#60	106
+
+

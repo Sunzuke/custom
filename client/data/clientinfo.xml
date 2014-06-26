@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<clientinfo>
+	<servicetype>korea</servicetype>
+	<servertype>primary</servertype>
+	<connection>
+		<display>Final-StrikeRO</display> 
+		<balloon></balloon>    
+		<desc></desc>     
+		<address>host-z.no-ip.org</address>     
+		<port>26900</port>     
+		<version>36</version>     
+		<langtype>0</langtype>     
+		<registrationweb></registrationweb>     
+		<aid>
+        		<admin></admin>
+			<yellow></yellow>
+		</aid>
+	</connection>
+</clientinfo>

@@ -1,0 +1,501 @@
+-	script	QuestOfTheDay	-1,{
+
+OnDay0101:
+OnDay0201:
+OnDay0301:
+OnDay0401:
+OnDay0501:
+OnDay0601:
+OnDay0701:
+OnDay0801:
+OnDay0901:
+OnDay1001:
+OnDay1101:
+OnDay1201:
+	set $DailyQuest,1;
+	donpcevent "MonthlyWipe::OnNewMonth";
+	end;
+
+
+OnDay0102:
+OnDay0202:
+OnDay0302:
+OnDay0402:
+OnDay0502:
+OnDay0602:
+OnDay0702:
+OnDay0802:
+OnDay0902:
+OnDay1002:
+OnDay1102:
+OnDay1202:
+	set $DailyQuest,2;
+	end;
+
+
+OnDay0103:
+OnDay0203:
+OnDay0303:
+OnDay0403:
+OnDay0503:
+OnDay0603:
+OnDay0703:
+OnDay0803:
+OnDay0903:
+OnDay1003:
+OnDay1103:
+OnDay1203:
+	set $DailyQuest,3;
+	end;
+
+
+OnDay0104:
+OnDay0204:
+OnDay0304:
+OnDay0404:
+OnDay0504:
+OnDay0604:
+OnDay0704:
+OnDay0804:
+OnDay0904:
+OnDay1004:
+OnDay1104:
+OnDay1204:
+	set $DailyQuest,4;
+	end;
+
+
+OnDay0105:
+OnDay0205:
+OnDay0305:
+OnDay0405:
+OnDay0505:
+OnDay0605:
+OnDay0705:
+OnDay0805:
+OnDay0905:
+OnDay1005:
+OnDay1105:
+OnDay1205:
+	set $DailyQuest,5;
+	end;
+
+
+OnDay0106:
+OnDay0206:
+OnDay0306:
+OnDay0406:
+OnDay0506:
+OnDay0606:
+OnDay0706:
+OnDay0806:
+OnDay0906:
+OnDay1006:
+OnDay1106:
+OnDay1206:
+	set $DailyQuest,6;
+	end;
+
+
+OnDay0107:
+OnDay0207:
+OnDay0307:
+OnDay0407:
+OnDay0507:
+OnDay0607:
+OnDay0707:
+OnDay0807:
+OnDay0907:
+OnDay1007:
+OnDay1107:
+OnDay1207:
+	set $DailyQuest,7;
+	end;
+
+
+OnDay0108:
+OnDay0208:
+OnDay0308:
+OnDay0408:
+OnDay0508:
+OnDay0608:
+OnDay0708:
+OnDay0808:
+OnDay0908:
+OnDay1008:
+OnDay1108:
+OnDay1208:
+	set $DailyQuest,8;
+	end;
+
+
+OnDay0109:
+OnDay0209:
+OnDay0309:
+OnDay0409:
+OnDay0509:
+OnDay0609:
+OnDay0709:
+OnDay0809:
+OnDay0909:
+OnDay1009:
+OnDay1109:
+OnDay1209:
+	set $DailyQuest,9;
+	end;
+
+
+OnDay0110:
+OnDay0210:
+OnDay0310:
+OnDay0410:
+OnDay0510:
+OnDay0610:
+OnDay0710:
+OnDay0810:
+OnDay0910:
+OnDay1010:
+OnDay1110:
+OnDay1210:
+	set $DailyQuest,10;
+	end;
+
+
+OnDay0111:
+OnDay0211:
+OnDay0311:
+OnDay0411:
+OnDay0511:
+OnDay0611:
+OnDay0711:
+OnDay0811:
+OnDay0911:
+OnDay1011:
+OnDay1111:
+OnDay1211:
+	set $DailyQuest,11;
+	end;
+
+
+OnDay0112:
+OnDay0212:
+OnDay0312:
+OnDay0412:
+OnDay0512:
+OnDay0612:
+OnDay0712:
+OnDay0812:
+OnDay0912:
+OnDay1012:
+OnDay1112:
+OnDay1212:
+	set $DailyQuest,12;
+	end;
+
+
+OnDay0113:
+OnDay0213:
+OnDay0313:
+OnDay0413:
+OnDay0513:
+OnDay0613:
+OnDay0713:
+OnDay0813:
+OnDay0913:
+OnDay1013:
+OnDay1113:
+OnDay1213:
+	set $DailyQuest,13;
+	end;
+
+
+OnDay0114:
+OnDay0214:
+OnDay0314:
+OnDay0414:
+OnDay0514:
+OnDay0614:
+OnDay0714:
+OnDay0814:
+OnDay0914:
+OnDay1014:
+OnDay1114:
+OnDay1214:
+	set $DailyQuest,14;
+	end;
+
+
+OnDay0115:
+OnDay0215:
+OnDay0315:
+OnDay0415:
+OnDay0515:
+OnDay0615:
+OnDay0715:
+OnDay0815:
+OnDay0915:
+OnDay1015:
+OnDay1115:
+OnDay1215:
+	set $DailyQuest,15;
+	end;
+
+
+OnDay0116:
+OnDay0216:
+OnDay0316:
+OnDay0416:
+OnDay0516:
+OnDay0616:
+OnDay0716:
+OnDay0816:
+OnDay0916:
+OnDay1016:
+OnDay1116:
+OnDay1216:
+	set $DailyQuest,16;
+	end;
+
+
+OnDay0117:
+OnDay0217:
+OnDay0317:
+OnDay0417:
+OnDay0517:
+OnDay0617:
+OnDay0717:
+OnDay0817:
+OnDay0917:
+OnDay1017:
+OnDay1117:
+OnDay1217:
+	set $DailyQuest,17;
+	end;
+
+
+OnDay0118:
+OnDay0218:
+OnDay0318:
+OnDay0418:
+OnDay0518:
+OnDay0618:
+OnDay0718:
+OnDay0818:
+OnDay0918:
+OnDay1018:
+OnDay1118:
+OnDay1218:
+	set $DailyQuest,18;
+	end;
+
+
+OnDay0119:
+OnDay0219:
+OnDay0319:
+OnDay0419:
+OnDay0519:
+OnDay0619:
+OnDay0719:
+OnDay0819:
+OnDay0919:
+OnDay1019:
+OnDay1119:
+OnDay1219:
+	set $DailyQuest,19;
+	end;
+
+
+OnDay0120:
+OnDay0220:
+OnDay0320:
+OnDay0420:
+OnDay0520:
+OnDay0620:
+OnDay0720:
+OnDay0820:
+OnDay0920:
+OnDay1020:
+OnDay1120:
+OnDay1220:
+	set $DailyQuest,20;
+	end;
+
+
+OnDay0121:
+OnDay0221:
+OnDay0321:
+OnDay0421:
+OnDay0521:
+OnDay0621:
+OnDay0721:
+OnDay0821:
+OnDay0921:
+OnDay1021:
+OnDay1121:
+OnDay1221:
+	set $DailyQuest,21;
+	end;
+
+
+OnDay0122:
+OnDay0222:
+OnDay0322:
+OnDay0422:
+OnDay0522:
+OnDay0622:
+OnDay0722:
+OnDay0822:
+OnDay0922:
+OnDay1022:
+OnDay1122:
+OnDay1222:
+	set $DailyQuest,22;
+	end;
+
+
+OnDay0123:
+OnDay0223:
+OnDay0323:
+OnDay0423:
+OnDay0523:
+OnDay0623:
+OnDay0723:
+OnDay0823:
+OnDay0923:
+OnDay1023:
+OnDay1123:
+OnDay1223:
+	set $DailyQuest,23;
+	end;
+
+
+OnDay0124:
+OnDay0224:
+OnDay0324:
+OnDay0424:
+OnDay0524:
+OnDay0624:
+OnDay0724:
+OnDay0824:
+OnDay0924:
+OnDay1024:
+OnDay1124:
+OnDay1224:
+	set $DailyQuest,24;
+	end;
+
+
+OnDay0125:
+OnDay0225:
+OnDay0325:
+OnDay0425:
+OnDay0525:
+OnDay0625:
+OnDay0725:
+OnDay0825:
+OnDay0925:
+OnDay1025:
+OnDay1125:
+OnDay1225:
+	set $DailyQuest,25;
+	end;
+
+
+OnDay0126:
+OnDay0226:
+OnDay0326:
+OnDay0426:
+OnDay0526:
+OnDay0626:
+OnDay0726:
+OnDay0826:
+OnDay0926:
+OnDay1026:
+OnDay1126:
+OnDay1226:
+	set $DailyQuest,26;
+	end;
+
+
+OnDay0127:
+OnDay0227:
+OnDay0327:
+OnDay0427:
+OnDay0527:
+OnDay0627:
+OnDay0727:
+OnDay0827:
+OnDay0927:
+OnDay1027:
+OnDay1127:
+OnDay1227:
+	set $DailyQuest,27;
+	end;
+
+
+OnDay0128:
+OnDay0228:
+OnDay0328:
+OnDay0428:
+OnDay0528:
+OnDay0628:
+OnDay0728:
+OnDay0828:
+OnDay0928:
+OnDay1028:
+OnDay1128:
+OnDay1228:
+	set $DailyQuest,28;
+	end;
+
+
+OnDay0129:
+OnDay0229:
+OnDay0329:
+OnDay0429:
+OnDay0529:
+OnDay0629:
+OnDay0729:
+OnDay0829:
+OnDay0929:
+OnDay1029:
+OnDay1129:
+OnDay1229:
+	set $DailyQuest,29;
+	end;
+
+
+OnDay0130:
+OnDay0230:
+OnDay0330:
+OnDay0430:
+OnDay0530:
+OnDay0630:
+OnDay0730:
+OnDay0830:
+OnDay0930:
+OnDay1030:
+OnDay1130:
+OnDay1230:
+	set $DailyQuest,30;
+	end;
+
+
+OnDay0131:
+OnDay0231:
+OnDay0331:
+OnDay0431:
+OnDay0531:
+OnDay0631:
+OnDay0731:
+OnDay0831:
+OnDay0931:
+OnDay1031:
+OnDay1131:
+OnDay1231:
+	set $DailyQuest,31;
+	end;
+
+
+
+}

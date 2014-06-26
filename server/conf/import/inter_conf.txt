@@ -1,0 +1,34 @@
+// For IPs, ideally under linux, you want to use localhost instead of 127.0.0.1 
+// Under windows, you want to use 127.0.0.1.  If you see a message like
+// "Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)"
+// and you have localhost, switch it to 127.0.0.1
+
+sql.db_hostname: 127.0.0.1
+sql.db_port: 3306
+sql.db_username: 
+sql.db_password: 
+sql.db_database: ragnarok
+sql.codepage:
+
+// MySQL Character SQL server
+char_server_ip: 127.0.0.1
+char_server_port: 3306
+char_server_id: 
+char_server_pw: 
+char_server_db: ragnarok
+
+// MySQL Map SQL Server
+map_server_ip: 127.0.0.1
+map_server_port: 3306
+map_server_id: 
+map_server_pw: 
+map_server_db: ragnarok
+
+// MySQL Log SQL Database
+log_db_ip: 127.0.0.1
+log_db_port: 3306
+log_db_id: 
+log_db_pw: 
+log_db_db: ragnarok_log
+log_codepage:
+log_login_db: loginlog

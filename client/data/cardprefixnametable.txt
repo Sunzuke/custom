@@ -1,0 +1,714 @@
+
+4001#Poring#
+4002#Fabre#
+4003#Pupa#
+4004#Drops#
+4005#Poring #
+4006#Lunatic#
+4007#Pecopeco Egg#
+4008#Picky#
+4009#Chonchon#
+4010#Wilow#
+4011#Picky #
+4012#Thief Bug Egg#
+4013#Andre Egg#
+4014#Roda Frog#
+4015#Condor#
+4016#Thief Bug#
+4017#Savage Babe#
+4018#Andre Larva#
+4019#Hornet#
+4020#Farmiliar#
+4021#Rocker#
+4022#Spore#
+4023#Desert Wolf Babe#
+4024#Plankton#
+4025#Skeleton#
+4026#Thief Bug Female#
+4027#Kukre#
+4028#Tarou#
+4029#Wolf#
+4030#Mandragora#
+4031#Pecopeco#
+4032#Ambernite#
+4033#Poporing#
+4034#Worm Tail#
+4035#Hydra#
+4036#Muka#
+4037#Snake#
+4038#Zombie#
+4039#Stainer#
+4040#Creamy#
+4041#Coco#
+4042#Steel Chonchon#
+4043#Andre#
+4044#Smokie#
+4045#Horn#
+4046#Martin#
+4047#Ghostring#
+4048#Poison Spore#
+4049#Vadon#
+4050#Thief Bug Male#
+4051#Yoyo#
+4052#Elder Wilow#
+4053#Vitata#
+4054#Angeling#
+4055#Marina#
+4056#Dustiness#
+4057#Metaller#
+4058#Thara Frog#
+4059#Soldier Andre#
+4060#Goblin#
+4061#Cornutus#
+4062#Anacondaq#
+4063#Caramel#
+4064#Zerom#
+4065#Kaho#
+4066#Orc Warrior#
+4067#Megalodon#
+4068#Scorpion#
+4069#Drainliar#
+4070#Eggyra#
+4071#Orc Zombie#
+4072#Golem#
+4073#Pirate Skel#
+4074#BigFoot#
+4075#Argos#
+4076#Magnolia#
+4077#Phen#
+4078#Savage#
+4079#Mantis#
+4080#Flora#
+4081#Hode#
+4082#Desert Wolf#
+4083#Rafflesia#
+4084#Marine Sphere#
+4085#Orc Skeleton#
+4086#Soldier Skeleton#
+4087#Giearth#
+4088#Frilldora#
+4089#Sword Fish#
+4090#Munak#
+4091#Kobold#
+4092#Skel Worker#
+4093#Obeaune#
+4094#Archer Skeleton#
+4095#Marse#
+4096#Zenorc#
+4097#Matyr#
+4098#Dokebi#
+4099#Pasana#
+4100#Sohee#
+4101#Sand Man#
+4102#Whisper#
+4103#Horong#
+4104#Requiem#
+4105#Marc#
+4106#Mummy#
+4107#Verit#
+4108#Myst#
+4109#Jakk#
+4110#Ghoul#
+4111#Strouf#
+4112#Marduk#
+4113#Marionette#
+4114#Argiope#
+4115#Hunter Fly#
+4116#Isis#
+4117#Side Winder#
+4118#Petit#
+4119#Bathory#
+4120#Petit #
+4121#Phreeoni#
+4122#Deviruchi#
+4123#Eddga#
+4124#Medusa#
+4125#Deviace#
+4126#Minorous#
+4127#Nightmare#
+4128#Golden Bug#
+4129#Baphomet #
+4130#Scorpion King#
+4131#Moonlight Flower#
+4132#Mistress#
+4133#Daydric#
+4134#Dracula#
+4135#Orc Load#
+4136#Khalitzburg#
+4137#Drake#
+4138#Anubis#
+4139#Joker#
+4140#Knight Of Abyss#
+4141#Evil Druid#
+4142#Doppelganger#
+4143#Orc Hero#
+4144#Osiris#
+4145#Berzebub#
+4146#Maya#
+4147#Baphomet#
+4148#Pharaoh#
+4149#Gargoyle#
+4150#Goat#
+4151#Gajomart#
+4152#Galapago#
+4153#Crab#
+4154#Rice Cake Boy#
+4155#Goblin Leader#
+4156#Steam Goblin#
+4157#Goblin Archer#
+4158#Flying Deleter#
+4159#Nine Tail#
+4160#Antique Firelock#
+4161#Grand Peco#
+4162#Grizzly#
+4163#Gryphon#
+4164#Gullinbursti#
+4165#Gig#
+4166#Nightmare Terror#
+4167#Neraid#
+4168#Dark Lord#
+4169#Dark Illusion#
+4170#Dark Frame#
+4171#Dark Priest#
+4172#The Paper#
+4173#Demon Pungus#
+4174#Deviling#
+4175#Poison Toad#
+4176#Dullahan#
+4177#Dryad#
+4178#Dragon Tail#
+4179#Dragon Fly#
+4180#Driller#
+4181#Disguise#
+4182#Diabolic#
+4183#Vagabond Wolf#
+4184#Lava Golem#
+4185#Rideword#
+4186#Raggler#
+4187#Raydric Archer#
+4188#Leib Olmai#
+4189#Wraith Dead#
+4190#Wraith#
+4191#Loli Ruri#
+4192#Rotar Zairo#
+4193#Lude#
+4194#Rybio#
+4195#Leaf Cat#
+4196#Marin#
+4197#Mastering#
+4198#Maya Puple#
+4199#Merman#
+4200#Megalith#
+4201#Majoruros#
+4202#Civil Servant#
+4203#Mutant Dragon#
+4204#Mini Demon#
+4205#Mimic#
+4206#Mystcase#
+4207#Mysteltainn#
+4208#Miyabi Ningyo#
+4209#Violy#
+4210#Wander Man#
+4211#Vocal#
+4212#Bon Gun#
+4213#Brilight#
+4214#Bloody Murderer#
+4215#Blazzer#
+4216#Sasquatch#
+4217#Live Peach Tree#
+4218#Succubus#
+4219#Sageworm#
+4220#Solider#
+4221#Skeleton General#
+4222#Skel Prisoner#
+4223#Stalactic Golem#
+4224#Stem Worm#
+4225#Stone Shooter#
+4226#Sting#
+4227#Spring Rabbit#
+4228#Sleeper#
+4229#C Tower Manager#
+4230#Shinobi#
+4231#Increase Soil#
+4232#Wild Ginseng#
+4233#Baby Leopard#
+4234#Anolian#
+4235#Cookie XMAS#
+4236#Amon Ra#
+4237#Owl Duke#
+4238#Owl Baron#
+4239#Iron Fist#
+4240#Arclouse#
+4241#Archangeling#
+4242#Apocalips#
+4243#Antonio#
+4244#Alarm#
+4245#Am Mut#
+4246#Assulter#
+4247#Aster#
+4248#Ancient Mummy#
+4249#Ancient Worm#
+4250#Executioner#
+4251#Elder#
+4252#Alligator#
+4253#Alice#
+4254#Tirfing#
+4255#Orc Lady#
+4256#Orc Archer#
+4257#Wild Rose#
+4258#Wicked Nymph#
+4259#Wooden Golem#
+4260#Wootan Shooter#
+4261#Wootan Fighter#
+4262#Evil Cloud Hermit#
+4263#Incant Samurai#
+4264#Wind Ghost#
+4265#Li Me Mang Ryang#
+4266#Eclipse#
+4267#Explosion#
+4268#Injustice#
+4269#Incubus#
+4270#Giant Spider#
+4271#Giant Honet#
+4272#Dancing Dragon#
+4273#Shellfish#
+4274#Zombie Master#
+4275#Zombie Prisoner#
+4276#Lord Of Death#
+4277#Zherlthsh#
+4278#Gibbet#
+4279#Deleter#
+4280#Geographer#
+4281#Zipper Bear#
+4282#Tengu#
+4283#Greatest General#
+4284#Chepet#
+4285#Choco#
+4286#Karakasa#
+4287#Kapha#
+4288#Carat#
+4289#Caterpillar#
+4290#Cat O Nine Tail#
+4291#Kobold Leader#
+4292#Kobold Archer#
+4293#Cookie#
+4294#Quve#
+4295#Kraben#
+4296#Cramp#
+4297#Cruiser#
+4298#Cremy Fear#
+4299#Clock#
+4300#Chimera#
+4301#Killer Mantis#
+4302#Tao Gunka#
+4303#Whisper Boss#
+4304#Tamruan#
+4305#Turtle General#
+4306#Toad#
+4307#Kind Of Beetle#
+4308#Tri Joint#
+4309#Parasite#
+4310#Panzer Goblin#
+4311#Permeter#
+4312#Fur Seal#
+4313#Punk#
+4314#Penomena#
+4315#Pest#
+4316#Fake Angel#
+4317#Mobster#
+4318#Knight Windstorm#
+4319#Freezer#
+4320#Bloody Knight#
+4321#Hylozoist#
+4322#High Orc#
+4323#Garm Baby#
+4324#Garm#
+4325#Harpy#
+4326#See Otter#
+4327#Blood Butterfly#
+4328#Hyegun#
+4329#Phendark#
+4330#Dark Snake Lord#
+4331#Heater#
+4332#Waste Stove#
+4333#Venomous#
+4334#Noxious#
+4335#Pitman#
+4336#Ungoliant#
+4337#Porcellio#
+4338#Obsidian#
+4339#Mineral#
+4340#Teddy Bear#
+4341#Metaling#
+4342#Rsx 0806#
+4343#Mole#
+4344#Anopheles#
+4345#Hill Wind#
+4346#Ygnizem#
+4347#Armaia#
+4348#Whikebain#
+4349#Erend#
+4350#Rawrel#
+4351#Kavac#
+4352#B Ygnizem#
+4353#Removal#
+4354#Gemini#
+4355#Gremlin#
+4356#Beholder#
+4357#B Seyren#
+4358#Seyren#
+4359#B Eremes#
+4360#Eremes#
+4361#B Harword#
+4362#Harword#
+4363#B Magaleta#
+4364#Magaleta#
+4365#B Katrinn#
+4366#Katrinn#
+4367#B Shecil#
+4368#Shecil#
+4369#Venatu#
+4370#Dimik#
+4371#Archdam#
+4372#Bacsojin#
+4373#Chung E#
+4374#Apocalips H#
+4375#Orc Baby#
+4376#Lady Tanee#
+4377#Green Iguana#
+4378#Acidus#
+4379#Acidus #
+4380#Ferus#
+4381#Ferus #
+4382#Novus #
+4383#Novus#
+4384#Hydro#
+4385#Dragon Egg#
+4386#Detale#
+4387#Ancient Mimic#
+4388#Deathword#
+4389#Plasma#
+4390#Breeze#
+4391#Retribution#
+4392#Observation#
+4393#Shelter#
+4394#Solace#
+4395#Tha Maero#
+4396#Tha Odium#
+4397#Tha Despero#
+4398#Tha Dolor#
+4399#Thanatos#
+4400#Aliza#
+4401#Alicel#
+4402#Aliot#
+4403#Kiel#
+4404#Skogul#
+4405#Frus#
+4406#Skeggiold#
+4407#Randgris#
+4408#Gloom Under Night#
+4409#Agav#
+4410#Echio#
+4411#Vanberk#
+4412#Isilla#
+4413#Hodremlin#
+4414#Seeker#
+4415#Snowier#
+4416#Siroma#
+4417#Ice Titan#
+4418#Gazeti#
+4419#Ktullanux#
+4420#Muscipular#
+4421#Drosera#
+4422#Roween#
+4423#Galion#
+4424#Stapo#
+4425#Atroce#
+4426#Byorgue#
+4427#Sword Guardian#
+4428#Bow Guardian#
+4429#Salamander#
+4430#Ifrit#
+4431#Kasa#
+4432#Magmaring#
+4433#Imp#
+4434#Knocker#
+4435#Zombie Slaughter#
+4436#Ragged Zombie#
+4437#Hell Poodle#
+4438#Banshee#
+4439#Flame Skull#
+4440#Necromancer#
+4441#Fallen Bishop#
+4442#Tatacho#
+4443#Aqua Elemental#
+4444#Draco#
+4445#Luciola Vespa#
+4447#Centipede#
+4448#Cornus#
+4449#Dark Shadow#
+4450#Banshee Master#
+4451#Ant Buyanne#
+4452#Centipede Larva#
+4453#Hilsrion#
+4454#Light Up1#
+4455#Light Up2#
+4456#Nidhogg Shadow#
+4457#Nahtzigger#
+4458#Duneirre#
+4459#Lata#
+4460#Ringco#
+4461#Pillar#
+4462#Hardrock Mommos#
+4463#Tendrilion#
+4464#Aunoe#
+4465#Panat#
+4466#Beholder Master#
+4467#Heavy Metaling#
+4468#Pinguicula Dark#
+4469#Naga#
+4470#Nepenthes#
+4471#Egg Of Draco#
+4472#Bradium Goram#
+4473#Ancient Tree#
+4474#Jakudam#
+4475#Cobalt Mineral#
+4476#Pinguicula#
+4477#Hell Apocalips#
+4478#Light Up3#
+4479#Light Up4#
+4480#Sealed Kiel#
+4481#Sealed Ktullanux#
+4482#Sealed B Ygnizem#
+4483#Sealed Dracula#
+4484#Sealed Mistress#
+4485#Sealed Gloom#
+4486#Sealed Berz#
+4487#Sealed Ifrit#
+4488#Sealed D Lord#
+4489#Sealed Pharaoh#
+4490#Sealed M Flower#
+4491#Sealed B Shecil#
+4492#Sealed Orc Hero#
+4493#Sealed Tao#
+4494#Sealed TurtleG#
+4495#Sealed Amon Ra#
+4496#Sealed Drake#
+4497#Sealed Knight WS#
+4498#Sealed Lady Tanee#
+4499#Sealed Samurai#
+4500#Sealed Orc Load#
+4501#Sealed B Magaleta#
+4502#Sealed B Harword#
+4503#Sealed Apocalips H#
+4504#Sealed Eddga#
+4505#Scaraba#
+4506#Dolomedes#
+4507#Q Scaraba#
+4508#Gold Scaraba#
+4509#Gold Q Scaraba#
+4510#Miming#
+4511#Little Fatum#
+4512#Parus#
+4513#Angra Mantis#
+4514#Pom Spider#
+4515#Alnoldi#
+4516#Comodo#
+4517#Cendrawasih#
+4518#Banaspaty#
+4519#Butoijo#
+4520#Leak#
+4521#Sedora#
+4522#Sropho#
+4523#Pot Dofle#
+4524#King Dramoh#
+4525#Kraken#
+4526#Odd Coelacanth#
+4527#Black Coelacanth#
+4528#Mutant Coelacanth#
+4529#Cruel Coelacanth#
+4530#Siorava#
+4531#Red Eruma#
+4532#Wild Rider#
+4533#Mini Octopus#
+4534#Giant Octopus#
+4535#Sealed Rand#
+4536#Sealed Atroce#
+4537#Sealed Phreeoni#
+4538#Sealed Bacsojin#
+4539#Sealed F Bishop#
+4540#SLD Lord Of Death#
+4541#SLD B Katrinn#
+4542#SLD Detale#
+4543#SLD Garm#
+4544#SLD Dark Snake#
+4545#Novice Poring#
+4549#Upd Maya Puple#
+4550#Upd Bow Guardian#
+4552#Manny#
+4553#Sid#
+4554#Diego#
+4555#Scrat#
+4700#Strength1#
+4701#Strength2#
+4702#Strength3#
+4703#Strength4#
+4704#Strength5#
+4705#Strength6#
+4706#Strength7#
+4707#Strength8#
+4708#Strength9#
+4709#Strength10#
+4710#Inteligence1#
+4711#Inteligence2#
+4712#Inteligence3#
+4713#Inteligence4#
+4714#Inteligence5#
+4715#Inteligence6#
+4716#Inteligence7#
+4717#Inteligence8#
+4718#Inteligence9#
+4719#Inteligence10#
+4720#Dexterity1#
+4721#Dexterity2#
+4722#Dexterity3#
+4723#Dexterity4#
+4724#Dexterity5#
+4725#Dexterity6#
+4726#Dexterity7#
+4727#Dexterity8#
+4728#Dexterity9#
+4729#Dexterity10#
+4730#Agility1#
+4731#Agility2#
+4732#Agility3#
+4733#Agility4#
+4734#Agility5#
+4735#Agility6#
+4736#Agility7#
+4737#Agility8#
+4738#Agility9#
+4739#Agility10#
+4740#Vitality1#
+4741#Vitality2#
+4742#Vitality3#
+4743#Vitality4#
+4744#Vitality5#
+4745#Vitality6#
+4746#Vitality7#
+4747#Vitality8#
+4748#Vitality9#
+4749#Vitality10#
+4750#Luck1#
+4751#Luck2#
+4752#Luck3#
+4753#Luck4#
+4754#Luck5#
+4755#Luck6#
+4756#Luck7#
+4757#Luck8#
+4758#Luck9#
+4759#Luck10#
+4760#Matk1#
+4761#Matk2#
+4762#Evasion6#
+4763#Evasion12#
+4764#Critical5#
+4765#Critical7#
+4766#Atk2#
+4767#Atk3#
+4768#Str1 J#
+4769#Str2 J#
+4770#Str3 J#
+4771#Int1 J#
+4772#Int2 J#
+4773#Int3 J#
+4774#Vit1 J#
+4775#Vit2 J#
+4776#Vit3 J#
+4777#Agi1 J#
+4778#Agi2 J#
+4779#Agi3 J#
+4780#Dex1 J#
+4781#Dex2 J#
+4782#Dex3 J#
+4783#Luk1 J#
+4784#Luk2 J#
+4785#Luk3 J#
+4786#Mdef2#
+4787#Mdef4#
+4788#Mdef6#
+4789#Mdef8#
+4790#Mdef10#
+4791#Def3#
+4792#Def6#
+4793#Def9#
+4794#Def12#
+4795#HP100#
+4796#HP200#
+4797#HP300#
+4798#HP400#
+4799#HP500#
+4800#SP50#
+4801#SP100#
+4802#SP150#
+4803#Highness Heal 3sec#
+4804#Coluceo Heal30#
+4805#Heal Amount2#
+4806#Matk3#
+4807#Atk Speed1#
+4808#Fighting Spirit4#
+4809#Fighting Spirit3#
+4810#Fighting Spirit2#
+4811#Fighting Spirit1#
+4812#Spell4#
+4813#Spell3#
+4814#Spell2#
+4815#Spell1#
+4816#Sharp3#
+4817#Sharp2#
+4818#Sharp1#
+4819#Atk1#
+4820#Fighting Spirit5#
+4821#Fighting Spirit6#
+4822#Fighting Spirit7#
+4823#Fighting Spirit8#
+4824#Fighting Spirit9#
+4825#Fighting Spirit10#
+4826#Spell5#
+4827#Spell6#
+4828#Spell7#
+4829#Spell8#
+4830#Spell9#
+4831#Spell10#
+4832#Expert Archer1#
+4833#Expert Archer2#
+4834#Expert Archer3#
+4835#Expert Archer4#
+4836#Expert Archer5#
+4837#Expert Archer6#
+4838#Expert Archer7#
+4839#Expert Archer8#
+4840#Expert Archer9#
+4841#Expert Archer10#
+4842#Atk Speed2#
+4843#Sharp4#
+4844#Sharp5#
+4845#Sea Energy#
+4846#2011Valentin Angel#
+4847#2011Valentin Devil#
+4848#Immuned1#
+4849#Cranial1#
+4850#Heal Amount3#
+4851#Heal Amount4#
+4852#Heal Amount5#
+4853#S Str#
+4854#S Agi#
+4859#Evasion1#
+4860#Evasion3#
+4861#MHP1#
+4862#MHP2#
+4867#MHP3#
+4868#MHP4#
+4870#SP25#
+4871#SP75#

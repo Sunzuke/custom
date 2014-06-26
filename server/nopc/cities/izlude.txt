@@ -1,0 +1,82 @@
+izlude,129,153,5	shop	Tool Dealer	69,20000:-1,20001:-1,501:-1,11502:-1,506:-1,602:-1,611:-1
+izlude,152,176,5	shop	Hair Dyes	122,5021:-1,5022:-1,5023:-1,5024:-1,5025:-1,5026:-1,5027:-1,5028:-1,5029:-1,5030:-1,5031:-1,5032:-1,5033:-1,5034:-1,5035:-1,5036:-1,5037:-1,5038:-1,5039:-1,5040:-1
+izlude,150,145,5	shop	Hair Styles	125,5001:-1,5002:-1,5003:-1,5004:-1,5005:-1,5006:-1,5007:-1,5008:-1,5009:-1,5010:-1,5011:-1,5012:-1,5013:-1,5014:-1,5015:-1,5016:-1,5017:-1,5018:-1,5019:-1,5020:-1
+izlude,101,173,5	shop	Equipment Dealer	813,2601:-1,2124:-1,2405:-1,2573:-1,2541:-1,2344:-1,2346:-1,2348:-1,2350:-1,2235:-1,2234:-1,2228:-1,2201:-1,2210:-1,2211:-1,2236:-1,2265:-1,2287:-1
+
+
+//Arena
+arena_room,52,42,7	script	PvP Warper#izlude1	751,{
+	mes "[^0000FFPvP Warper^000000]";
+	mes ""+getmapusers("pvp_y_1-2")+" Player fight in my Izlude Illusion. Do you want to enter the fight?";
+	switch(select(
+		"Yes",
+		"No"
+	)) {
+		case 1:
+			close2;
+			warp "pvp_y_1-2",0,0;
+			end;
+		case 2:
+			close;
+	}
+}
+arena_room,38,88,7	script	PvP Warper#izlude2	751,{
+	mes "[^0000FFPvP Warper^000000]";
+	mes ""+getmapusers("pvp_y_2-2")+" Player fight in my Izlude Illusion. Do you want to enter the fight?";
+	switch(select(
+		"Yes",
+		"No"
+	)) {
+		case 1:
+			close2;
+			warp "pvp_y_2-2",0,0;
+			end;
+		case 2:
+			close;
+	}
+}
+arena_room,64,138,5	script	PvP Warper#izlude3	751,{
+	mes "[^0000FFPvP Warper^000000]";
+	mes ""+getmapusers("pvp_y_3-2")+" Player fight in my Izlude Illusion. Do you want to enter the fight?";
+	switch(select(
+		"Yes",
+		"No"
+	)) {
+		case 1:
+			close2;
+			warp "pvp_y_3-2",0,0;
+			end;
+		case 2:
+			close;
+	}
+}
+arena_room,162,88,3	script	PvP Warper#izlude4	751,{
+	mes "[^0000FFPvP Warper^000000]";
+	mes ""+getmapusers("pvp_y_4-2")+" Player fight in my Izlude Illusion. Do you want to enter the fight?";
+	switch(select(
+		"Yes",
+		"No"
+	)) {
+		case 1:
+			close2;
+			warp "pvp_y_4-2",0,0;
+			end;
+		case 2:
+			close;
+	}
+}
+arena_room,147,42,2	script	PvP Warper#izlude5	751,{
+	mes "[^0000FFPvP Warper^000000]";
+	mes ""+getmapusers("pvp_y_5-2")+" Player fight in my Izlude Illusion. Do you want to enter the fight?";
+	switch(select(
+		"Yes",
+		"No"
+	)) {
+		case 1:
+			close2;
+			warp "pvp_y_5-2",0,0;
+			end;
+		case 2:
+			close;
+	}
+}

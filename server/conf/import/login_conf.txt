@@ -1,0 +1,7 @@
+login_port: 26900
+account.engine: auto
+account.sql.db_hostname: 127.0.0.1
+account.sql.db_port: 3306
+account.sql.db_username: fsro111
+account.sql.db_password: 2uabumba
+account.sql.db_database: ragnarok

@@ -1,0 +1,43 @@
+//Warps
+//map,x,y,0	script	<>	45,1,1,{
+//	OnTouch:
+//	end;
+//}
+
+
+-	script	GvGHeart	-1,{
+OnClock2359:
+	//End Pronteras Kriemhild
+	if($DailyQuest == 11) {}
+	//End Pronteras Swanhild
+	if($DailyQuest == 12) {}
+	//End Pronteras Skoegul
+	if($DailyQuest == 13) {}
+	//End Pronteras Gondul
+	if($DailyQuest == 14) {}
+	//End Pronteras Fadhgridh
+	if($DailyQuest == 15) {}
+	//End Payons Myung-Jung
+	if($DailyQuest == 16) {}
+	//End Payons Chun-Dan
+	if($DailyQuest == 17) {}
+	//End Payons Bool-Young
+	if($DailyQuest == 18) {}
+	//End Payons Hong-Roo
+	if($DailyQuest == 19) {}
+	//End Payons Jukk-Rim-Hyun Hill
+	if($DailyQuest == 20) {}
+	//End Aldebarans Neuchwanstein
+	if($DailyQuest == 21) {}
+	//End Aldebarans Hohenschwangau
+	if($DailyQuest == 22) {}
+	//End Aldebarans Nuernberg
+	if($DailyQuest == 23) {}
+	//End Aldebarans Nuernberg
+	if($DailyQuest == 24) {}
+	//End Aldebarans Wuerzburg
+	if($DailyQuest == 25) {}
+	//End Aldebarans Rothenburg
+	if($DailyQuest == 26) {}
+	end;
+}

@@ -1,0 +1,162 @@
+//==========================================================================================================
+-	shop	Card Collector Shop	-,501:2000000000
+izlude,155,200,3	script	Weapon Card Remover	51,{
+if(!.cardcollector) set .cardcollector,0;
+mes "[^0000FFCard Collector^000000]";
+mes "Hello "+strcharinfo(0)+"!";
+mes "What's up?";
+mes "  ";
+mes "Can you bring me a card?";
+if(MainQuest < 4) {
+	set .@answere$,"Nothing much...";
+} else {
+	set .@answere$,"Get the Cards out of my weapon, please.";
+}
+if(MainQuest == 4) {
+	set .@quest$,"Where can I get Weapons?";
+} else {
+	set .@quest$,"Shall I bring you Cards?";
+}
+next;
+	switch(select(
+		""+.@answere$+"",
+		""+.@quest$+""
+	)) {
+		case 1:
+			if(MainQuest < 4) {
+				mes "[^0000FFCard Collector^000000]";
+				mes "Oh.. Okay";
+				close;
+			}
+			if(getequipid(EQI_HAND_R) == -1) {
+				mes "[^0000FFCard Collector^000000]";
+				mes "Give me your weapon...";
+				mes "Oh wait.. you don't have one.";
+				close;
+			}
+			if(getequipcardcnt(EQI_HAND_R) == 0) {
+				mes "[^0000FFCard Collector^000000]";
+				mes "This weapon does not have any Cards in it.";
+				close;
+			}
+			if(countitem(getequipid(EQI_HAND_R)) > 1) {
+				mes "[^0000FFCard Collector^000000]";
+				mes "You have too many weapons, man. I'm confused.";
+				close;
+			}
+			set @item,getequipid(EQI_HAND_R);
+			set @card1,getequipcardid(EQI_HAND_R, 0);
+			set @card2,getequipcardid(EQI_HAND_R, 1);
+			set @card3,getequipcardid(EQI_HAND_R, 2);
+			set @card4,getequipcardid(EQI_HAND_R, 3);
+			if(@card4 > 0) {
+				mes "[^0000FFCard Collector^000000]";
+				mes "Okay but it will cost you";
+				mes "1x "+getitemname(@card4)+"";
+				next;
+			}
+			mes "[^0000FFCard Collector^000000]";
+			mes "Are you sure you want to trade your weapon for";
+			mes " - "+getitemname(@item)+"";
+			if(@card1 > 0) mes " - "+getitemname(@card1)+"";
+			if(@card2 > 0) mes " - "+getitemname(@card2)+"";
+			if(@card3 > 0) mes " - "+getitemname(@card3)+"";
+			//if(@card4 > 0) mes " - "+getitemname(@card4)+"";
+			switch(select(
+				"Yes",
+				"No"
+			)) {
+				case 1: break;
+				case 2: close;
+			}
+			delitem @item,1;
+			getitem @item,1;
+			if(@card1 > 0) getitem @card1,1;
+			if(@card2 > 0) getitem @card2,1;
+			if(@card3 > 0) getitem @card3,1;
+			//if(@card4 > 0) getitem @card4,1;
+			close;
+		case 2:
+			if(MainQuest == 4) {
+				mes "[^0000FFCard Collector^000000]";
+				mes "There are several shops all over the world.";
+				mes "There is a Shop in Izlude right here!";
+				viewpoint 0,111,180,1,0xFF0000;
+				close;
+			}
+			set @nb, query_sql("SELECT mob_id FROM `mob_cardrareness` WHERE card LIKE '1' AND `mob_rareness` NOT LIKE '0' ORDER BY mob_rareness DESC LIMIT "+.cardcollector+",50", @mob_id);
+			if(@nb) {
+				set @ii,0;
+				for(@i = 0; @i < @nb; @i++) {
+					set @nbb, query_sql("SELECT DropCardid FROM `mob_db` WHERE ID LIKE '"+@mob_id[@i]+"'", @DropCardid);
+					if(@nbb != 0 && @ii <= 7) {
+						if(getiteminfo(@DropCardid,2) == 6) {
+							if(@ii == 0) {
+								npcshopitem "Card Collector Shop",@DropCardid,50;
+							} else {
+								npcshopadditem "Card Collector Shop",@DropCardid,50;
+							}
+							set @ii,@ii+1;
+						}
+					}
+				}
+				mes "[^0000FFCard Collector^000000]";
+				mes "You'd be best if you could bring me one of these cards!";
+				mes "I give you 20.000 Zeny for one card!";
+				npcshopattach "Card Collector Shop";
+				callshop "Card Collector Shop",1;
+				end;
+			} else {
+				mes "[^0000FFCard Collector^000000]";
+				mes "I don't collect cards anymore!";
+				if(MainQuest == 3) set MainQuest,4;
+				close;
+			}
+	}
+	OnBuyItem:
+		mes "[^0000FFCard Collector^000000]";
+		mes "are you sure you want to give me";
+		set @i,0;
+		while(@bought_nameid[@i]) {
+			if(countitem(@bought_nameid[@i])) {
+				mes " - ^006c0a"+getitemname(@bought_nameid[@i])+"^000000";
+			} else {
+				mes " - ^FF0000"+getitemname(@bought_nameid[@i])+"^000000";
+			}
+			set @i,@i+1;
+		}
+		next;
+		switch(select(
+			"Later",
+			"I give you the cards I have!"
+		)) {
+			case 1:
+				mes "[^0000FFCard Collector^000000]";
+				mes "I'll be waiting, mate!";
+				close;
+			case 2:
+				mes "[^0000FFCard Collector^000000]";
+				set @i,0;
+				set @ii,0;
+				while(@bought_nameid[@i]) {
+					if(countitem(@bought_nameid[@i])) {
+						delitem @bought_nameid[@i],1;
+						set Zeny,Zeny+20000;
+						set @ii,@ii+1;
+						if(MainQuest == 3) set MainQuest,4;
+					}
+					set @i,@i+1;
+				}
+				if(@ii == 1) {
+					mes "Thanks for the card, buddy!";
+					set .cardcollector,.cardcollector+@ii;
+				} else if(@ii > 1) {
+					mes "Thanks for the cards, pal!";
+					set .cardcollector,.cardcollector+@ii;
+				} else {
+					mes "Tell me when you find some cards, adventurer!";
+				}
+				close;
+		}
+	end;		
+}

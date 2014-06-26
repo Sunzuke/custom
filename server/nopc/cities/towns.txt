@@ -1,0 +1,77 @@
+Izlude (Rune-Midgarts Kingdom)
+	Ship
+		Alberta (Rune-Midgarts Kingdom)
+			Global Project
+				Ship -> Amatsu
+					Ship -> Alberta
+				Ship -> Kunlun (Gonryun)
+					Ship -> Alberta
+				Ship -> Louyang
+					Ship -> Alberta
+				Ship -> Ayothaya
+					Ship -> Alberta
+				Ship -> Moscovia
+					Ship -> Alberta
+				Ship -> Brasilis
+					Ship -> Alberta
+				Ship -> Dewata
+					Ship -> Alberta
+				Ship -> Port Malaya
+					Instances
+						Bakonawa Extermination
+						Bangungot's Instance
+						Buwaya's Cave
+					Ship -> Alberta
+				Ship -> Jawaii
+					Ship -> Malangdo
+						Ship -> Izlude
+			Rune-Midgarts Kingdom
+				Ship -> Comodo
+					Kafra -> Aldebaran
+					Surfboard -> Umbala
+						Walk -> Yggdrasil
+							Instance
+								Nidhoggur's Nest (nyd_dun02)
+							Walk -> Nifflheim
+						Surfboard -> Comodo
+				Ship -> Izlude
+			Instances
+				Ship -> Misty Island (e_tower)
+					Endless Tower
+	Airship
+		Republic of Schwartzvald
+			Airship -> Lighthalzen
+				Airship -> Izlude (Rune-Midgarts Kingdom)
+			Airship -> Hugel
+				Airship -> Izlude (Rune-Midgarts Kingdom)
+			Airship -> Juno
+				Airship -> Izlude (Rune-Midgarts Kingdom)
+			Airship -> Einbroch
+				Airship -> Izlude (Rune-Midgarts Kingdom)
+				Walk -> Einbrech
+			Arunafeltz States
+				Airship -> Rachel
+					Airship -> Izlude (Rune-Midgarts Kingdom)
+				Airship -> Veins
+					Walk -> Nameless Island
+					Airship -> Izlude (Rune-Midgarts Kingdom)
+	Kafra
+		Al De Baran (Rune-Midgarts Kingdom)
+			Kafra -> Comodo
+			Kafra -> Prontera
+				Instance
+					Sealed Shrine Quest (prt_monk/monk_test)
+			Kafra -> Geffen
+				Instance
+					Orc Memory Dungeon (gef_fild10)
+			Kafra -> Payon
+				Walk -> Archer Village
+			Kafra -> Morroc
+				Walk -> Rune Midgard Allied Forces Post (New World)
+					Walk -> Splendide
+						Walk -> Bifrost Bridge
+							Instance -> Hazy Forest
+								Walk -> Eclage
+					Walk -> Manuk
+						Walk -> El Dicastes
+							Walk -> Lutie

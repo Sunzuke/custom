@@ -1,0 +1,64 @@
+y_airport,128,45,0	script	Air Ship#yuno1	45,3,3,{
+OnTouch:
+	mes "[^0000FFCaptain^000000]";
+	mes "Do you want to come with us to Hugel?";
+	switch(select(
+		"Pass.",
+		"Sure!"
+	)) {
+		case 1:
+			close;
+		case 2:
+			close2;
+			warp "hugel",178,155;
+			end;
+	}
+}
+y_airport,137,45,0	script	Air Ship#yuno2	45,3,3,{
+OnTouch:
+	mes "[^0000FFCaptain^000000]";
+	mes "Do you want to come with us to Einbroch?";
+	switch(select(
+		"Pass.",
+		"Sure!"
+	)) {
+		case 1:
+			close;
+		case 2:
+			close2;
+			warp "airport",137,41;
+			end;
+	}
+}
+y_airport,147,45,0	script	Air Ship#yuno3	45,3,3,{
+OnTouch:
+	mes "[^0000FFCaptain^000000]";
+	mes "Do you want to come with us to Rachel?";
+	switch(select(
+		"Pass.",
+		"Sure!"
+	)) {
+		case 1:
+			close;
+		case 2:
+			close2;
+			warp "ra_fild12",295,197;
+			end;
+	}
+}
+y_airport,157,45,0	script	Air Ship#yuno4	45,3,3,{
+OnTouch:
+	mes "[^0000FFCaptain^000000]";
+	mes "Do you want to come with us to Lighthalzen?";
+	switch(select(
+		"Pass.",
+		"Sure!"
+	)) {
+		case 1:
+			close;
+		case 2:
+			close2;
+			warp "lhz_airport",138,39;
+			end;
+	}
+}

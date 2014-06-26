@@ -1,0 +1,1077 @@
+// <Skill id>,<Cast>,<Delay (optional)>
+//
+// Cast:  0 - everything affects the skill's cast time
+//        1 - skill's cast time is not affected by dex
+//        2 - skill's cast time is not affected by statuses (Suffragium, etc)
+//        4 - skill's cast time is not affected by item bonuses (equip, cards)
+//
+// Delay: 0 - everything affects the skill's delay
+//        1 - skill's delay is not affected by dex
+//        2 - skill's delay is not affected by Magic Strings / Bragi
+//        4 - skill's delay is not affected by item bonuses (equip, cards)
+//
+// Note: Values are bit fields, add them up to combine their effects.
+// Note: Delay setting '1' only makes sense when delay_dependon_dex is enabled.
+// Example: 46,1,1 = Double Strafe's cast time and delay is not affected by dex.
+
+1,0,7	 	 //Basic Skill
+2,0,7	 	 //Sword Mastery
+3,0,7	 	 //Two-Handed Sword Mastery
+4,0,7	 	 //Increase HP Recovery
+5,0,7	 	 //Bash
+6,0,7	 	 //Provoke
+7,0,7	 	 //Magnum Break
+8,0,7	 	 //Endure
+9,0,7	 	 //Increase SP Recovery
+10,0,7	 	 //Sight
+11,0,7	 	 //Napalm Beat
+12,0,7	 	 //Safety Wall
+13,0,7	 	 //Soul Strike
+14,0,7	 	 //Cold Bolt
+15,0,7	 	 //Frost Diver
+16,0,7	 	 //Stone Curse
+17,0,7	 	 //Fire Ball
+18,0,7	 	 //Fire Wall
+19,0,7	 	 //Fire Bolt
+20,0,7	 	 //Lightning Bolt
+21,0,7	 	 //Thunderstorm
+22,0,7	 	 //Divine Protection
+23,0,7	 	 //Demon Bane
+24,0,7	 	 //Ruwach
+25,0,7	 	 //Pneuma
+26,0,7	 	 //Teleport
+27,0,7	 	 //Warp Portal
+28,0,7	 	 //Heal
+29,0,7	 	 //Increase AGI
+30,0,7	 	 //Decrease AGI
+31,0,7	 	 //Aqua Benedicta
+32,0,7	 	 //Signum Crucis
+33,0,7	 	 //Angelus
+34,0,7	 	 //Blessing
+35,0,7	 	 //Cure
+36,0,7	 	 //Enlarge Weight Limit
+37,0,7	 	 //Discount
+38,0,7	 	 //Overcharge
+39,0,7	 	 //Pushcart
+40,0,7	 	 //Item Appraisal
+41,0,7	 	 //Vending
+42,0,7	 	 //Mammonite
+43,0,7	 	 //Owl's Eye
+44,0,7	 	 //Vulture's Eye
+45,0,7	 	 //Improve Concentration
+46,0,7	 	 //Double Strafe
+47,0,7	 	 //Arrow Shower
+48,0,7	 	 //Double Attack
+49,0,7	 	 //Improve Dodge
+50,0,7	 	 //Steal
+51,0,7	 	 //Hiding
+52,0,7	 	 //Envenom
+53,0,7	 	 //Detoxify
+54,0,7	 	 //Resurrection
+55,0,7	 	 //Spear Mastery
+56,0,7	 	 //Pierce
+57,0,7	 	 //Brandish Spear
+58,0,7	 	 //Spear Stab
+59,0,7	 	 //Spear Boomerang
+60,0,7	 	 //Twohand Quicken
+61,0,7	 	 //Counter Attack
+62,0,7	 	 //Bowling Bash
+63,0,7	 	 //Peco Peco Riding
+64,0,7	 	 //Cavalier Mastery
+65,0,7	 	 //Mace Mastery
+66,0,7	 	 //Impositio Manus
+67,0,7	 	 //Suffragium
+68,0,7	 	 //Aspersio
+69,0,7	 	 //B.S. Sacramenti
+70,0,7	 	 //Sanctuary
+71,0,7	 	 //Slow Poison
+72,0,7	 	 //Status Recovery
+73,0,7	 	 //Kyrie Eleison
+74,0,7	 	 //Magnificat
+75,0,7	 	 //Gloria
+76,0,7	 	 //Lex Divina
+77,0,7	 	 //Turn Undead
+78,0,7	 	 //Lex Aeterna
+79,0,7	 	 //Magnus Exorcismus
+80,0,7	 	 //Fire Pillar
+81,0,7	 	 //Sightrasher
+83,0,7	 	 //Meteor Storm
+84,0,7	 	 //Jupitel Thunder
+85,0,7	 	 //Lord of Vermilion
+86,0,7	 	 //Water Ball
+87,0,7	 	 //Ice Wall
+88,0,7	 	 //Frost Nova
+89,0,7	 	 //Storm Gust
+90,0,7	 	 //Earth Spike
+91,0,7	 	 //Heaven's Drive
+92,0,7	 	 //Quagmire
+93,0,7	 	 //Sense
+94,0,7	 	 //Iron Tempering
+95,0,7	 	 //Steel Tempering
+96,0,7	 	 //Enchanted Stone Craft
+97,0,7	 	 //Oridecon Research
+98,0,7	 	 //Smith Dagger
+99,0,7	 	 //Smith Sword
+100,0,7	 	 //Smith Two-handed Sword
+101,0,7	 	 //Smith Axe
+102,0,7	 	 //Smith Mace
+103,0,7	 	 //Smith Knucklebrace
+104,0,7	 	 //Smith Spear
+105,0,7	 	 //Hilt Binding
+106,0,7	 	 //Ore Discovery
+107,0,7	 	 //Weaponry Research
+108,0,7	 	 //Weapon Repair
+109,0,7	 	 //Skin Tempering
+110,0,7	 	 //Hammer Fall
+111,0,7	 	 //Adrenaline Rush
+112,0,7	 	 //Weapon Perfection
+113,0,7	 	 //Power-Thrust
+114,0,7	 	 //Maximize Power
+115,0,7	 	 //Skid Trap
+116,0,7	 	 //Land Mine
+117,0,7	 	 //Ankle Snare
+118,0,7	 	 //Shockwave Trap
+119,0,7	 	 //Sandman
+120,0,7	 	 //Flasher
+121,0,7	 	 //Freezing Trap
+122,0,7	 	 //Blast Mine
+123,0,7	 	 //Claymore Trap
+124,0,7	 	 //Remove Trap
+125,0,7	 	 //Talkie Box
+126,0,7	 	 //Beast Bane
+127,0,7	 	 //Falconry Mastery
+128,0,7	 	 //Steel Crow
+129,0,7	 	 //Blitz Beat
+130,0,7	 	 //Detect
+131,0,7	 	 //Spring Trap
+132,0,7	 	 //Righthand Mastery
+133,0,7	 	 //Lefthand Mastery
+134,0,7	 	 //Katar Mastery
+135,0,7	 	 //Cloaking
+136,0,7	 	 //Sonic Blow
+137,0,7	 	 //Grimtooth
+138,0,7	 	 //Enchant Poison
+139,0,7	 	 //Poison React
+140,0,7	 	 //Venom Dust
+141,0,7	 	 //Venom Splasher
+142,0,7	 	 //First Aid
+143,0,7	 	 //Play Dead
+144,0,7	 	 //Moving HP-Recovery
+145,0,7	 	 //Fatal Blow
+146,0,7	 	 //Auto Berserk
+147,0,7	 	 //Arrow Crafting
+148,0,7	 	 //Arrow Repel
+149,0,7	 	 //Sand Attack
+150,0,7	 	 //Back Slide
+151,0,7	 	 //Find Stone
+152,0,7	 	 //Stone Fling
+153,0,7	 	 //Cart Revolution
+154,0,7	 	 //Change Cart
+155,0,7	 	 //Crazy Uproar
+157,0,7	 	 //Energy Coat
+158,0,7	 	 //Piercing Attack
+159,0,7	 	 //Spirit Destruction
+160,0,7	 	 //Stand off attack
+161,0,7	 	 //Attribute Change
+162,0,7	 	 //Water Attribute Change
+163,0,7	 	 //Earth Attribute Change
+164,0,7	 	 //Fire Attribute Change
+165,0,7	 	 //Wind Attribute Change
+166,0,7	 	 //Poison Attribute Change
+167,0,7	 	 //Holy Attribute Change
+168,0,7	 	 //Shadow Attribute Change
+169,0,7	 	 //Ghost Attribute Change
+170,0,7	 	 //Defense disregard attack
+171,0,7	 	 //Multi-stage Attack
+172,0,7	 	 //Guided Attack
+173,0,7	 	 //Suicide bombing
+174,0,7	 	 //Splash attack
+175,0,7	 	 //Suicide
+176,0,7	 	 //Poison Attack
+177,0,7	 	 //Blind Attack
+178,0,7	 	 //Silence Attack
+179,0,7	 	 //Stun Attack
+180,0,7	 	 //Petrify Attack
+181,0,7	 	 //Curse Attack
+182,0,7	 	 //Sleep attack
+183,0,7	 	 //Random Attack
+184,0,7	 	 //Water Attribute Attack
+185,0,7	 	 //Earth Attribute Attack
+186,0,7	 	 //Fire Attribute Attack
+187,0,7	 	 //Wind Attribute Attack
+188,0,7	 	 //Poison Attribute Attack
+189,0,7	 	 //Holy Attribute Attack
+190,0,7	 	 //Shadow Attribute Attack
+191,0,7	 	 //Ghost Attribute Attack
+192,0,7	 	 //Demon Shock Attack
+193,0,7	 	 //Metamorphosis
+194,0,7	 	 //Provocation
+195,0,7	 	 //Smoking
+196,0,7	 	 //Follower Summons
+197,0,7	 	 //Emotion
+198,0,7	 	 //Transformation
+199,0,7	 	 //Sucking Blood
+200,0,7	 	 //Energy Drain
+201,0,7	 	 //Keeping
+202,0,7	 	 //Dark Breath
+203,0,7	 	 //Dark Blessing
+204,0,7	 	 //Barrier
+205,0,7	 	 //Defender
+206,0,7	 	 //Lick
+207,0,7	 	 //Hallucination
+208,0,7	 	 //Rebirth
+209,0,7	 	 //Monster Summons
+210,0,7	 	 //Gank
+211,0,7	 	 //Mug
+212,0,7	 	 //Back Stab
+213,0,7	 	 //Stalk
+214,0,7	 	 //Sightless Mind
+215,0,7	 	 //Divest Weapon
+216,0,7	 	 //Divest Shield
+217,0,7	 	 //Divest Armor
+218,0,7	 	 //Divest Helm
+219,0,7	 	 //Snatch
+220,0,7	 	 //Scribble
+221,0,7	 	 //Piece
+222,0,7	 	 //Remover
+223,0,7	 	 //Slyness
+224,0,7	 	 //Haggle
+225,0,7	 	 //Intimidate
+226,0,7	 	 //Axe Mastery
+227,0,7	 	 //Potion Research
+228,0,7	 	 //Prepare Potion
+229,0,7	 	 //Bomb
+230,0,7	 	 //Acid Terror
+231,0,7	 	 //Aid Potion
+232,0,7	 	 //Summon Flora
+233,0,7	 	 //Summon Marine Sphere
+234,0,7	 	 //Alchemical Weapon
+235,0,7	 	 //Synthesized Shield
+236,0,7	 	 //Synthetic Armor
+237,0,7	 	 //Biochemical Helm
+238,0,7	 	 //Bioethics
+243,0,7	 	 //Call Homunculus
+244,0,7	 	 //Vaporize
+247,0,7	 	 //Homunculus Resurrection
+248,0,7	 	 //Faith
+249,0,7	 	 //Guard
+250,0,7	 	 //Smite
+251,0,7	 	 //Shield Boomerang
+252,0,7	 	 //Shield Reflect
+253,0,7	 	 //Holy Cross
+254,0,7	 	 //Grand Cross
+255,0,7	 	 //Sacrifice
+256,0,7	 	 //Resistant Souls
+257,0,7	 	 //Defending Aura
+258,0,7	 	 //Spear Quicken
+259,0,7	 	 //Iron Fists
+260,0,7	 	 //Spiritual Cadence
+261,0,7	 	 //Summon Spirit Sphere
+262,0,7	 	 //Absorb Spirit Sphere
+264,0,7	 	 //Snap
+265,0,7	 	 //Dodge
+266,0,7	 	 //Occult Impaction
+268,0,7	 	 //Mental Strength
+269,0,7	 	 //Root
+272,0,7	 	 //Raging Quadruple Blow
+273,0,7	 	 //Raging Thrust
+274,0,7	 	 //Study
+275,0,7	 	 //Cast Cancel
+276,0,7	 	 //Magic Rod
+277,0,7	 	 //Spell Breaker
+278,0,7	 	 //Free Cast
+279,0,7	 	 //Hindsight
+280,0,7	 	 //Endow Blaze
+281,0,7	 	 //Endow Tsunami
+282,0,7	 	 //Endow Tornado
+283,0,7	 	 //Endow Quake
+284,0,7	 	 //Dragonology
+285,0,7	 	 //Volcano
+286,0,7	 	 //Deluge
+287,0,7	 	 //Whirlwind
+288,0,7	 	 //Magnetic Earth
+289,0,7	 	 //Dispell
+290,0,7	 	 //Hocus-pocus
+291,0,7	 	 //Monocell
+292,0,7	 	 //Class Change
+293,0,7	 	 //Monster Chant
+294,0,7	 	 //Grampus Morph
+295,0,7	 	 //Grim Reaper
+296,0,7	 	 //Gold Digger
+297,0,7	 	 //Beastly Hypnosis
+298,0,7	 	 //Questioning
+299,0,7	 	 //Gravity
+300,0,7	 	 //Leveling
+301,0,7	 	 //Suicide
+302,0,7	 	 //Rejuvenation
+303,0,7	 	 //Coma
+304,0,7	 	 //Amp
+305,0,7	 	 //Encore
+306,0,7	 	 //Lullaby
+307,0,7	 	 //Mental Sensing
+308,0,7	 	 //Down Tempo
+309,0,7	 	 //Battle Theme
+310,0,7	 	 //Harmonic Lick
+311,0,7	 	 //Classical Pluck
+312,0,7	 	 //Power Chord
+313,0,7	 	 //Acoustic Rhythm
+315,0,7	 	 //Music Lessons
+316,0,7	 	 //Melody Strike
+317,0,7	 	 //Unchained Serenade
+318,0,7	 	 //Unbarring Octave
+319,0,7	 	 //Perfect Tablature
+320,0,7	 	 //Impressive Riff
+321,0,7	 	 //Magic Strings
+322,0,7	 	 //Song of Lutie
+323,0,7	 	 //Dance Lessons
+324,0,7	 	 //Slinging Arrow
+325,0,7	 	 //Hip Shaker
+326,0,7	 	 //Dazzler
+327,0,7	 	 //Focus Ballet
+328,0,7	 	 //Slow Grace
+329,0,7	 	 //Lady Luck
+330,0,7	 	 //Gypsy's Kiss
+331,0,7	 	 //Random Move
+332,0,7	 	 //Speed UP
+333,0,7	 	 //Revenge
+334,0,7	 	 //I Will Protect You
+335,0,7	 	 //I Look up to You
+336,0,7	 	 //I miss You
+337,0,7	 	 //Throw Tomahawk
+338,0,7	 	 //Cross of Darkness
+339,0,7	 	 //Grand cross of Darkness
+340,0,7	 	 //Soul Strike of Darkness
+341,0,7	 	 //Darkness Jupitel
+342,0,7	 	 //Stop
+343,0,7	 	 //Break weapon
+344,0,7	 	 //Break armor
+345,0,7	 	 //Break helm
+346,0,7	 	 //Break shield
+347,0,7	 	 //Undead Element Attack
+348,0,7	 	 //Undead Attribute Change
+349,0,7	 	 //Power Up
+350,0,7	 	 //Agility UP
+351,0,7	 	 //Siege Mode
+352,0,7	 	 //Recall Slaves
+353,0,7	 	 //Invisible
+354,0,7	 	 //Run
+355,0,7	 	 //Aura Blade
+356,0,7	 	 //Parrying
+357,0,7	 	 //Concentration
+358,0,7	 	 //Relax
+359,0,7	 	 //Frenzy
+361,0,7	 	 //Assumptio
+362,0,7	 	 //Basilica
+363,0,7	 	 //Meditatio
+364,0,7	 	 //Soul Drain
+365,0,7	 	 //Stave Crasher
+366,0,7	 	 //Mystical Amplification
+367,0,7	 	 //Gloria Domini
+368,0,7	 	 // Martyr's Reckoning
+369,0,7	 	 //Battle Chant
+370,0,7	 	 //Raging Palm Strike
+371,0,7	 	 //Glacier Fist
+372,0,7	 	 //Chain Crush Combo
+373,0,7	 	 //Indulge
+374,0,7	 	 //Soul Exhale
+375,0,7	 	 //Soul Siphon
+376,0,7	 	 //Advanced Katar Mastery
+378,0,7	 	 //Enchant Deadly Poison
+379,0,7	 	 //Soul Destroyer
+380,0,7	 	 //Falcon Eyes
+381,0,7	 	 //Falcon Assault
+382,0,7	 	 //Focused Arrow Strike
+383,0,7	 	 //Wind Walker
+384,0,7	 	 //Shattering Strike
+387,0,7	 	 //Cart Boost
+389,0,7	 	 //Stealth
+390,0,7	 	 //Counter Instinct
+392,0,7	 	 //Alchemy
+393,0,7	 	 //Potion Synthesis
+394,0,7	 	 //Vulcan Arrow
+395,0,7	 	 //Sheltering Bliss
+396,0,7	 	 //Marionette Control
+397,0,7	 	 //Spiral Pierce
+398,0,7	 	 //Traumatic Blow
+399,0,7	 	 //Vital Strike
+400,0,7	 	 //Napalm Vulcan
+402,0,7	 	 //Mind Breaker
+403,0,7	 	 //Foresight
+404,0,7	 	 //Blinding Mist
+405,0,7	 	 //Fiber Lock
+406,0,7	 	 //Meteor Assault
+407,0,7	 	 //Create Deadly Poison
+408,0,7	 	 //Baby
+409,0,7	 	 //Call Parent
+410,0,7	 	 //Call Baby
+411,0,7	 	 //Running
+412,0,7	 	 //Tornado Stance
+413,0,7	 	 //Tornado Kick
+414,0,7	 	 //Heel Drop Stance
+415,0,7	 	 //Heel Drop
+416,0,7	 	 //Roundhouse Stance
+417,0,7	 	 //Roundhouse Kick
+418,0,7	 	 //Counter Kick Stance
+419,0,7	 	 //Counter Kick
+420,0,7	 	 //Tumbling
+421,0,7	 	 //Flying Kick
+422,0,7	 	 //Peaceful Break
+423,0,7	 	 //Happy Break
+424,0,7	 	 //Kihop
+425,0,7	 	 //Mild Wind
+426,0,7	 	 //Taekwon Jump
+427,0,7	 	 //Feeling the Sun Moon and Stars
+428,0,7	 	 //Warmth of the Sun
+429,0,7	 	 //Warmth of the Moon
+430,0,7	 	 //Warmth of the Stars
+431,0,7	 	 //Comfort of the Sun
+432,0,7	 	 //Comfort of the Moon
+433,0,7	 	 //Comfort of the Stars
+434,0,7	 	 //Hatred of the Sun Moon and Stars
+435,0,7	 	 //Anger of the Sun
+436,0,7	 	 //Anger of the Moon
+437,0,7	 	 //Anger of the Stars
+438,0,7	 	 //Blessing of the Sun
+439,0,7	 	 //Blessing of the Moon
+440,0,7	 	 //Blessing of the Stars
+441,0,7	 	 //Demon of the Sun Moon and Stars
+442,0,7	 	 //Friend of the Sun Moon and Stars
+443,0,7	 	 //Knowledge of the Sun Moon and Stars
+444,0,7	 	 //Union of the Sun Moon and Stars
+445,0,7	 	 //Spirit of the Alchemist
+446,0,7	 	 //Aid Berserk Potion
+447,0,7	 	 //Spirit of the Monk
+448,0,7	 	 //Spirit of the Star Gladiator
+449,0,7	 	 //Spirit of the Sage
+450,0,7	 	 //Spirit of the Crusader
+451,0,7	 	 //Spirit of the Supernovice
+452,0,7	 	 //Spirit of the Knight
+453,0,7	 	 //Spirit of the Wizard
+454,0,7	 	 //Spirit of the Priest
+455,0,7	 	 //Spirit of the Artist
+456,0,7	 	 //Spirit of the Rogue
+457,0,7	 	 //Spirit of the Assasin
+458,0,7	 	 //Spirit of the Blacksmith
+459,0,7	 	 //Advanced Adrenaline Rush
+460,0,7	 	 //Spirit of the Hunter
+461,0,7	 	 //Spirit of the Soul Linker
+462,0,7	 	 //Kaizel
+463,0,7	 	 //Kaahi
+464,0,7	 	 //Kaupe
+465,0,7	 	 //Kaite
+466,0,7	 	 //Kaina
+467,0,7	 	 //Estin
+468,0,7	 	 //Estun
+469,0,7	 	 //Esma
+470,0,7	 	 //Eswoo
+471,0,7	 	 //Eske
+472,0,7	 	 //Eska
+473,0,7	 	 //Provoke Self
+474,0,7	 	 //Emotion ON
+475,0,7	 	 //Preserve
+476,0,7	 	 //Divest All
+477,0,7	 	 //Upgrade Weapon
+478,0,7	 	 //Aid Condensed Potion
+479,0,7	 	 //Full Protection
+480,0,7	 	 //Shield Chain
+481,0,7	 	 //Mana Recharge
+482,0,7	 	 //Double Casting
+483,0,7	 	 //Ganbantein
+484,0,7	 	 //Gravitation Field
+485,0,7	 	 //Cart Termination
+486,0,7	 	 //Maximum Power Thrust
+487,0,7	 	 //Longing for Freedom
+488,0,7	 	 //Wand of Hermode
+489,0,7	 	 //Tarot Card of Fate
+490,0,7	 	 //Acid Demonstration
+491,0,7	 	 //Plant Cultivation
+492,0,7	 	 //Weapon Enchantment
+493,0,7	 	 //Taekwon Mission
+494,0,7	 	 //Spirit of Rebirth
+495,0,7	 	 //Onehand Quicken
+496,0,7	 	 //Twilight Alchemy 1
+497,0,7	 	 //Twilight Alchemy 2
+498,0,7	 	 //Twilight Alchemy 3
+499,0,7	 	 //Beast Strafing
+500,0,7	 	 //Flip the Coin
+501,0,7	 	 //Fling
+502,0,7	 	 //Triple Action
+503,0,7	 	 //Bulls Eye
+504,0,7	 	 //Madness Canceller
+505,0,7	 	 //AdJustment
+506,0,7	 	 //Increasing Accuracy
+507,0,7	 	 //Magical Bullet
+508,0,7	 	 //Cracker
+509,0,7	 	 //Single Action
+510,0,7	 	 //Snake Eye
+511,0,7	 	 //Chain Action
+512,0,7	 	 //Tracking
+513,0,7	 	 //Disarm
+514,0,7	 	 //Piercing Shot
+515,0,7	 	 //Rapid Shower
+516,0,7	 	 //Desperado
+517,0,7	 	 //Gatling Fever
+518,0,7	 	 //Dust
+519,0,7	 	 //Full Buster
+520,0,7	 	 //Spread Attack
+521,0,7	 	 //Ground Drift
+522,0,7	 	 //Shuriken Training
+523,0,7	 	 //Throw Shuriken
+524,0,7	 	 //Throw Kunai
+525,0,7	 	 //Throw Huuma Shuriken
+526,0,7	 	 //Throw Zeny
+527,0,7	 	 //Improvised Defense
+528,0,7	 	 //Vanishing Slash
+529,0,7	 	 //Shadow Leap
+530,0,7	 	 //Shadow Slash
+531,0,7	 	 //Cicada Skin Sheeding
+532,0,7	 	 //Mirror Image
+533,0,7	 	 //Spirit of the Blade
+534,0,7	 	 //Crimson Fire Petal
+535,0,7	 	 //Crimson Fire Formation
+536,0,7	 	 //Raging Fire Dragon
+537,0,7	 	 //Spear of Ice
+538,0,7	 	 //Hidden Water
+539,0,7	 	 //Ice Meteor
+540,0,7	 	 //Wind Blade
+541,0,7	 	 //Lightning Strike of Destruction
+542,0,7	 	 //Kamaitachi
+543,0,7	 	 //Soul
+544,0,7	 	 //Final Strike
+653,0,7	 	 //Earthquake
+654,0,7	 	 //Fire Breath
+655,0,7	 	 //Ice Breath
+656,0,7	 	 //Thunder Breath
+657,0,7	 	 //Acid Breath
+658,0,7	 	 //Darkness Breath
+659,0,7	 	 //Dragon Fear
+660,0,7	 	 //Bleeding
+661,0,7	 	 //Pulse Strike
+662,0,7	 	 //Hell's Judgement
+663,0,7	 	 //Wide Silence
+664,0,7	 	 //Wide Freeze
+665,0,7	 	 //Wide Bleeding
+666,0,7	 	 //Wide Petrify
+667,0,7	 	 //Wide Confusion
+668,0,7	 	 //Wide Sleep
+669,0,7	 	 //Wide Sight
+670,0,7	 	 //Evil Land
+671,0,7	 	 //Magic Mirror
+672,0,7	 	 //Slow Cast
+673,0,7	 	 //Critical Wounds
+674,0,7	 	 //Expulsion
+675,0,7	 	 //Stone Skin
+676,0,7	 	 //Anti Magic
+677,0,7	 	 //Wide Curse
+678,0,7	 	 //Wide Stun
+679,0,7	 	 //Vampire Gift
+680,0,7	 	 //Wide Soul Drain
+681,0,7	 	 //Increase Weight Limit R
+682,0,7	 	 //Talk
+683,0,7	 	 //Hell Power
+684,0,7	 	 //Hell Dignity
+685,0,7	 	 //Invincible
+686,0,7	 	 //Invincible off
+687,0,7	 	 //Full Heal
+688,0,7	 	 //GM Sandman
+689,0,7	 	 //Party Blessing
+690,0,7	 	 //Party Increase AGI
+691,0,7	 	 //Party Assumptio
+692,0,7	 	 //Cat Cry
+693,0,7	 	 //Party Flee
+694,0,7	 	 //Angel's Protection
+695,0,7	 	 //Summer Night Dream
+697,0,7	 	 //Reverse Orcish
+698,0,7	 	 //Christmas Carol
+1001,0,7	 //Charge Attack
+1002,0,7	 //Shrink
+1003,0,7	 //Sonic Acceleration
+1004,0,7	 //Throw Venom Knife
+1005,0,7	 //Close Confine
+1006,0,7	 //Sight Blaster
+1007,0,7	 //Create Elemental Converter
+1008,0,7	 //Elemental Change Water
+1009,0,7	 //Phantasmic Arrow
+1010,0,7	 //Pang Voice
+1011,0,7	 //Wink of Charm
+1012,0,7	 //Unfair Trick
+1013,0,7	 //Greed
+1014,0,7	 //Redemptio
+1015,0,7	 //Ki Translation
+1016,0,7	 //Ki Explosion
+1017,0,7	 //Elemental Change Earth
+1018,0,7	 //Elemental Change Fire
+1019,0,7	 //Elemental Change Wind
+2001,0,7	 //Enchant Blade
+2002,0,7	 //Sonic Wave
+2003,0,7	 //Death Bound
+2004,0,7	 //Hundred Spear
+2005,0,7	 //Wind Cutter
+2006,0,7	 //Ignition Break
+2007,0,7	 //Dragon Training
+2008,0,7	 //Dragon Breath
+2009,0,7	 //Dragon Howling
+2010,0,7	 //Rune Mastery
+2011,0,7	 //Millenium Shield
+2012,0,7	 //Crush Strike
+2013,0,7	 //Refresh
+2014,0,7	 //Giant Growth
+2015,0,7	 //Stone Hard Skin
+2016,0,7	 //Vitality Activation
+2017,0,7	 //Storm Blast
+2019,0,7	 //Abundance
+2020,0,7	 //Phantom Thrust
+2021,0,7	 //Venom Impress
+2022,0,7	 //Cross Impact
+2023,0,7	 //Dark Illusion
+2024,0,7	 //Research New Poison
+2025,0,7	 //Create New Poison
+2026,0,7	 //Antidote
+2027,0,7	 //Poisoning Weapon
+2028,0,7	 //Weapon Blocking
+2029,0,7	 //Counter Slash
+2031,0,7	 //Venom Pressure
+2032,0,7	 //Poison Smoke
+2033,0,7	 //Cloaking Exceed
+2034,0,7	 //Phantom Menace
+2035,0,7	 //Hallucination Walk
+2036,0,7	 //Rolling Cutter
+2037,0,7	 //Cross Ripper Slasher
+2038,0,7	 //Judex
+2039,0,7	 //Ancilla
+2040,0,7	 //Adoramus
+2041,0,7	 //Crementia
+2042,0,7	 //Canto Candidus
+2043,0,7	 //Coluceo Heal
+2044,0,7	 //Epiclesis
+2045,0,7	 //Praefatio
+2046,0,7	 //Oratio
+2047,0,7	 //Lauda Agnus
+2048,0,7	 //Lauda Ramus
+2049,0,7	 //Eucharistica
+2050,0,7	 //Renovatio
+2055,0,7	 //Duple Light Melee
+2056,0,7	 //Duple Light Magic
+2201,0,7	 //White Imprison
+2202,0,7	 //Soul Expansion
+2203,0,7	 //Frosty Misty
+2204,0,7	 //Jack Frost
+2205,0,7	 //Marsh of Abyss
+2206,0,7	 //Recognized Spell
+2207,0,7	 //Sienna Execrate
+2208,0,7	 //Radius
+2209,0,7	 //Stasis
+2210,0,7	 //Drain Life
+2211,0,7	 //Crimson Rock
+2212,0,7	 //Hell Inferno
+2213,0,7	 //Comet
+2214,0,7	 //Chain Lightning 
+2215,0,7	 //Chain Lightning Attack
+2216,0,7	 //Earth Strain
+2217,0,7	 //Tetra Vortex
+2218,0,7	 //Tetra Vortex Fire
+2219,0,7	 //Tetra Vortex Water
+2220,0,7	 //Tetra Vortex Wind
+2221,0,7	 //Tetra Vortex Earth
+2222,0,7	 //Summon Fire Ball
+2223,0,7	 //Summon Lightning Ball
+2224,0,7	 //Summon Water Ball
+2225,0,7	 //Summon Attack Fire 
+2226,0,7	 //Summon Attack Wind
+2227,0,7	 //Summon Attack Water
+2228,0,7	 //Summon Attack Earth
+2229,0,7	 //Summon Stone
+2230,0,7	 //Release
+2231,0,7	 //Reading Spellbook
+2232,0,7	 //Freeze Spell
+2233,0,7	 //Arrow Storm
+2234,0,7	 //Fear Breeze
+2235,0,7	 //Ranger Main
+2236,0,7	 //Aimed Bolt
+2237,0,7	 //Detonator
+2238,0,7	 //Electric Shocker
+2239,0,7	 //Cluster Bomb
+2240,0,7	 //Warg Mastery
+2241,0,7	 //Warg Rider
+2242,0,7	 //Warg Dash
+2243,0,7	 //Warg Strike
+2244,0,7	 //Warg Bite
+2245,0,7	 //Tooth of Warg
+2246,0,7	 //Sensitive Keen
+2247,0,7	 //Camouflage
+2248,0,7	 //Research Trap
+2249,0,7	 //Magenta Trap
+2250,0,7	 //Cobalt Trap
+2251,0,7	 //Maize Trap
+2252,0,7	 //Verdure Trap
+2253,0,7	 //Firing Trap
+2254,0,7	 //Icebound Trap
+2255,0,7	 //Mado License
+2256,0,7	 //Boost Knuckle
+2257,0,7	 //Pile Bunker
+2258,0,7	 //Vulcan Arm
+2259,0,7	 //Flame Launcher
+2260,0,7	 //Cold Slower
+2261,0,7	 //Arm Cannon
+2262,0,7	 //Acceleration
+2263,0,7	 //Hovering
+2264,0,7	 //Front-Side Slide
+2265,0,7	 //Back-Side Slide
+2267,0,7	 //Self Destruction
+2268,0,7	 //Shape Shift
+2269,0,7	 //Emergency Cool
+2270,0,7	 //Infrared Scan
+2271,0,7	 //Analyze
+2272,0,7	 //Magnetic Field
+2273,0,7	 //Neutral Barrier
+2274,0,7	 //Stealth Field
+2275,0,7	 //Repair
+2276,0,7	 //Axe Training
+2277,0,7	 //Research Fire/Earth
+2278,0,7	 //Axe Boomerang
+2279,0,7	 //Power Swing
+2281,0,7	 //FAW - Silver Sniper
+2283,0,7	 //FAW Removal
+2284,0,7	 //Fatal Menace
+2285,0,7	 //Reproduce
+2286,0,7	 //Auto Shadow Spell
+2287,0,7	 //Shadow Form
+2288,0,7	 //Triangle Shot
+2289,0,7	 //Body Painting
+2290,0,7	 //Invisibility
+2291,0,7	 //Deadly Infect
+2292,0,7	 //Masquerade - Enervation
+2293,0,7	 //Masquerade - Gloomy
+2294,0,7	 //Masquerade - Ignorance
+2295,0,7	 //Masquerade - Laziness
+2296,0,7	 //Masquerade - Unlucky
+2297,0,7	 //Masquerade - Weakness
+2299,0,7	 //Man Hole
+2300,0,7	 //Dimension Door
+2301,0,7	 //Chaos Panic
+2302,0,7	 //Maelstrom
+2303,0,7	 //Bloody Lust
+2304,0,7	 //Feint Bomb
+2307,0,7	 //Cannon Spear
+2308,0,7	 //Banishing Point
+2309,0,7	 //Trample
+2310,0,7	 //Shield Press
+2311,0,7	 //Reflect Damage
+2312,0,7	 //Pinpoint Attack
+2313,0,7	 //Force of Vanguard
+2314,0,7	 //Rage Burst
+2315,0,7	 //Shield Spell
+2316,0,7	 //Exceed Break
+2318,0,7	 //Prestige
+2320,0,7	 //Moon Slasher
+2321,0,7	 //Ray of Genesis
+2322,0,7	 //Piety
+2323,0,7	 //Earth Drive
+2324,0,7	 //Hesperus Lit
+2325,0,7	 //Inspiration
+2331,0,7	 //Hell Gate
+2332,0,7	 //Rampage Blaster
+2335,0,7	 //Lightning Walk
+2336,0,7	 //Knuckle Arrow
+2337,0,7	 //Windmill
+2338,0,7	 //Raising Dragon
+2339,0,7	 //Gentle Touch
+2340,0,7	 //Assimilate Power
+2341,0,7	 //Power Velocity
+2344,0,7	 //Gentle Touch - Quiet
+2346,0,7	 //Gentle Touch - Energy Gain
+2347,0,7	 //Gentle Touch - Change
+2348,0,7	 //Gentle Touch - Revitalize
+2350,0,7	 //Swing Dance
+2351,0,7	 //Symphony of Lovers
+2352,0,7	 //Moonlit Serenade
+2381,0,7	 //Windmill Rush Attack
+2382,0,7	 //Echo Song
+2383,0,7	 //Harmonize
+2412,0,7	 //Lesson
+2413,0,7	 //Metallic Sound
+2414,0,7	 //Reverberation
+2415,0,7	 //Reverberation Melee
+2416,0,7	 //Reverberation Magic
+2417,0,7	 //Dominion Impulse
+2418,0,7	 //Severe Rainstorm
+2420,0,7	 //Voice of Siren
+2421,0,7	 //Valley of Death
+2422,0,7	 //Deep Sleep Lullaby
+2423,0,7	 //Circle of Nature's Sound
+2424,0,7	 //Improvised Song
+2425,0,7	 //Gloomy Day
+2426,0,7	 //Great Echo
+2427,0,7	 //Song of Mana
+2428,0,7	 //Dance With A Warg
+2430,0,7	 //Saturday Night Fever
+2431,0,7	 //Lerad's Dew
+2432,0,7	 //Melody of Sink
+2433,0,7	 //Warcry of Beyond
+2434,0,7	 //Unlimited Humming Voice
+2444,0,7	 //Electric Walk
+2445,0,7	 //Spell Fist
+2446,0,7	 //Earth Grave
+2447,0,7	 //Diamond Dust
+2448,0,7	 //Poison Buster
+2449,0,7	 //Psychic Wave
+2450,0,7	 //Cloud Kill
+2452,0,7	 //Warmer
+2453,0,7	 //Vacuum Extreme
+2454,0,7	 //Varetyr Spear
+2455,0,7	 //Arrullo
+2456,0,7	 //Spirit Control
+2457,0,7	 //Summon Fire Spirit Agni
+2458,0,7	 //Summon Water Spirit Aqua
+2459,0,7	 //Summon Wind Spirit Ventus
+2460,0,7	 //Summon Earth Spirit Tera
+2461,0,7	 //Elemental Action
+2462,0,7	 //Four Spirit Analysis
+2463,0,7	 //Spirit Sympathy
+2464,0,7	 //Spirit Recovery
+2467,0,7	 //Wind Insignia
+2468,0,7	 //Earth Insignia
+2474,0,7	 //Sword Training
+2475,0,7	 //Cart Remodeling
+2476,0,7	 //Cart Tornado
+2477,0,7	 //Cart Cannon
+2478,0,7	 //Cart Boost
+2479,0,7	 //Thorn Trap
+2482,0,7	 //Wall of Thorns
+2483,0,7	 //Crazy Weed
+2484,0,7	 //Crazy Weed Attack
+2485,0,7	 //Demonic Fire
+2487,0,7	 //Fire Expansion Smoke Powder
+2488,0,7	 //Fire Expansion Tear Gas
+2489,0,7	 //Fire Expansion Acid
+2490,0,7	 //Hell's Plant
+2491,0,7	 //Hell's Plant Attack
+2492,0,7	 //Howling of Mandragora
+2493,0,7	 //Sling Item
+2494,0,7	 //Change Material
+2495,0,7	 //Mix Cooking
+2496,0,7	 //Create Bomb
+2497,0,7	 //Special Pharmacy
+2498,0,7	 //Sling Item Attack
+2515,0,7	 //Secrament
+2516,0,7	 //Severe Rainstorm Melee
+2517,0,7	 //Howling of Lion
+2518,0,7	 //Ride In Lightening
+2534,0,7	 //Return To Eldicastes
+2535,0,7	 //Open Buying Store
+2536,0,7	 //Guardian's Recall
+2537,0,7	 //Odin's Power
+2552,0,7	 //Rich's Coin
+2553,0,7	 //Mass Spiral
+2554,0,7	 //Banishing Buster
+2555,0,7	 //Bind Trap
+2556,0,7	 //Flicker
+2557,0,7	 //Shatter Storm
+2558,0,7	 //Eternal Chain
+2559,0,7	 //Quick Draw Shot
+2560,0,7	 //Crimson Marker
+2561,0,7	 //Fire Dance
+2562,0,7	 //Howling Mine
+2563,0,7	 //Platinum Alter
+2564,0,7	 //Fallen Angel
+2565,0,7	 //Round Trip
+2566,0,7	 //Dragon Tail
+2567,0,7	 //Fire Rain
+2568,0,7	 //Heat Barrel
+2569,0,7	 //Anti-Material Blast
+2570,0,7	 //Slug Shot
+2571,0,7	 //Hammer of God
+2572,0,7	 //Round Trip Plus Attack
+3001,0,7	 //Yamikumo
+3002,0,7	 //Right Hand Mastery
+3003,0,7	 //Left Hand Mastery
+3004,0,7	 //Cross Strike
+3005,0,7	 //Soul Sever
+3006,0,7	 //Bakuretsu Kunai
+3007,0,7	 //Happo Kunai
+3008,0,7	 //Mucha Nage
+3009,0,7	 //Huuma Shuriken Ranka 
+3010,0,7	 //Makibishi
+3011,0,7	 //Meikyo Shisui
+3012,0,7	 //Zanzou
+3013,0,7	 //Kyougaku
+3014,0,7	 //Jyusatsu
+3015,0,7	 //Kahu Enten
+3016,0,7	 //Hyouhu Hubuki
+3017,0,7	 //Kazehu Seiran
+3018,0,7	 //Dohu Koukai	
+3019,0,7	 //Technique Kaihou
+3020,0,7	 //Zenkai
+3021,0,7	 //Genwaku
+3022,0,7	 //Izayoi
+3023,0,7	 //Kagehumi
+3024,0,7	 //Kyomu
+3025,0,7	 //Kagemusha
+3026,0,7	 //Zangetsu
+3027,0,7	 //Oboro Gensou
+3028,0,7	 //Hazy Moonlight Illusion Transition Attack
+3029,0,7	 //Akaitsuki
+3031,0,7	 //Snow Flip
+3032,0,7	 //Peony Mamy
+3033,0,7	 //Sadagui
+3034,0,7	 //Sequoia Dust
+3035,0,7	 //Return To Eclage
+5001,0,7	 //Dark Claw
+5002,0,7	 //Unlimited
+5003,0,7	 //Illusion Doping
+5004,0,7	 //Dragon Breath - Water
+5005,0,7	 //Lux Anima
+5006,0,7	 //Magma Eruption
+5007,0,7	 //Frigg's Song
+5008,0,7	 //Elemental Shield
+5009,0,7	 //Flash Combo
+5010,0,7	 //Emergency Escape
+5011,0,7	 //Offertorium
+5012,0,7	 //Intense Telekinesis
+5013,0,7	 //King's Grace
+5014,0,7	 //Full Throttle
+5015,0,7	 //Flash Combo Attack Step 1
+5016,0,7	 //Flash Combo Attack Step 2
+5017,0,7	 //Flash Combo Attack Step 3
+5018,0,7	 //Flash Combo Attack Step 4
+8001,0,7	 //Healing Touch
+8002,0,7	 //Avoid
+8003,0,7	 //Brain Surgery
+8004,0,7	 //Change
+8005,0,7	 //Castling
+8006,0,7	 //Defense
+8007,0,7	 //Adamantium Skin
+8008,0,7	 //Bloodlust
+8009,0,7	 //Moonlight
+8010,0,7	 //Fleeting Move
+8011,0,7	 //Speed
+8012,0,7	 //S.B.R.44
+8013,0,7	 //Caprice
+8014,0,7	 //Benediction of Chaos
+8015,0,7	 //Instruct
+8016,0,7	 //Bio Explosion
+8018,0,7	 //Summon Legion
+8019,0,7	 //Needle of Paralyze
+8020,0,7	 //Poison Mist
+8021,0,7	 //Pain Killer
+8022,0,7	 //Light of Regene
+8023,0,7	 //Overed Boost
+8024,0,7	 //Eraser Cutter
+8025,0,7	 //Xeno Slasher
+8026,0,7	 //Silent Breeze
+8027,0,7	 //Style Change
+8028,0,7	 //Sonic Claw
+8029,0,7	 //Silver Bain Rush
+8030,0,7	 //Midnight Frenzy
+8031,0,7	 //Steel Horn
+8032,0,7	 //Golden Heel
+8033,0,7	 //Stone Wall
+8034,0,7	 //Holy Pole
+8035,0,7	 //Attack Mode
+8036,0,7	 //Tinder Breaker
+8037,0,7	 //Continual Break Combo
+8038,0,7	 //Eternal Quick Combo
+8039,0,7	 //Magma Flow
+8040,0,7	 //Granitic Armor
+8041,0,7	 //Lava Slide
+8042,0,7	 //Pyroclastic
+8043,0,7	 //Volcanic Ash
+8201,0,7	 //Bash
+8202,0,7	 //Magnum_Break
+8203,0,7	 //Bowling_Bash
+8204,0,7	 //Parry
+8205,0,7	 //Shield_Reflect
+8206,0,7	 //Frenzy
+8207,0,7	 //Double_Strafe
+8208,0,7	 //Arrow_Shower
+8209,0,7	 //Skid_Trap
+8210,0,7	 //Land_Mine
+8211,0,7	 //Sandman
+8212,0,7	 //Freezing_Trap
+8213,0,7	 //Remove_Trap
+8214,0,7	 //Arrow_Repel
+8215,0,7	 //Focused_Arrow_Strike
+8216,0,7	 //Pierce
+8217,0,7	 //Brandish_Spear
+8218,0,7	 //Spiral_Pierce
+8219,0,7	 //Defending_Aura
+8220,0,7	 //Guard
+8221,0,7	 //Sacrifice
+8222,0,7	 //Magnificat
+8223,0,7	 //Two-Hand_Quicken
+8224,0,7	 //Sight
+8225,0,7	 //Crash
+8226,0,7	 //Regain
+8227,0,7	 //Tender
+8228,0,7	 //Benediction
+8229,0,7	 //Recuperate
+8230,0,7	 //Mental_Cure
+8231,0,7	 //Compress
+8232,0,7	 //Provoke
+8233,0,7	 //Berserk
+8234,0,7	 //Decrease_AGI
+8235,0,7	 //Scapegoat
+8236,0,7	 //Lex_Divina
+8237,0,7	 //Sense
+8238,0,7	 //Kyrie Eleison
+8239,0,7	 //Blessing
+8240,0,7	 //Increase Agility
+8401,0,7	 //Circle of Fire
+8402,0,7	 //Fire Cloak
+8403,0,7	 //Fire Mantle
+8404,0,7	 //Water Screen
+8405,0,7	 //Water Drop
+8406,0,7	 //Water Barrier
+8407,0,7	 //Wind Step
+8408,0,7	 //Wind Curtain
+8409,0,7	 //Zephyr
+8410,0,7	 //Solid Skin
+8411,0,7	 //Stone Shield
+8412,0,7	 //Power of Gaia
+8413,0,7	 //Pyrotechnic
+8414,0,7	 //Heater
+8415,0,7	 //Tropic
+8416,0,7	 //Aqua Play
+8417,0,7	 //Cooler
+8418,0,7	 //Cool Air
+8419,0,7	 //Gust
+8420,0,7	 //Blast
+8421,0,7	 //Wild Storm
+8422,0,7	 //Petrology
+8423,0,7	 //Cursed Soil
+8424,0,7	 //Upheaval
+8425,0,7	 //Fire Arrow
+8426,0,7	 //Fire Bomb
+8427,0,7	 //Fire Bomb Attack
+8428,0,7	 //Fire Wave
+8429,0,7	 //Fire Wave Attack
+8430,0,7	 //Ice Needle
+8431,0,7	 //Water Screw
+8432,0,7	 //Water Screw Attack
+8433,0,7	 //Tidal Weapon
+8434,0,7	 //Wind Slasher
+8435,0,7	 //Hurricane Rage
+8436,0,7	 //Hurricane Rage Attack
+8437,0,7	 //Typhoon Missile
+8438,0,7	 //Typhoon Missile Attack
+8439,0,7	 //Stone Hammer
+8440,0,7	 //Rock Launcher
+8441,0,7	 //Rock Launcher Attack
+8442,0,7	 //Stone Rain
+10000,0,7	 //Official Guild Approval
+10001,0,7	 //Kafra Contract
+10002,0,7	 //Guardian Research
+10003,0,7	 //Strengthen Guardians
+10004,0,7	 //Guild Extension
+10005,0,7	 //Guild's Glory
+10006,0,7	 //Great Leadership
+10007,0,7	 //Glorious Wounds
+10008,0,7	 //Cold Heart
+10009,0,7	 //Sharp Gaze
+10010,0,7	 //Battle Orders
+10011,0,7	 //Regeneration
+10012,0,7	 //Restoration
+10013,0,7	 //Urgent Call
+10014,0,7	 //Permanent Development
+270,0,7		 //Fury
+401,0,7		 //Zen

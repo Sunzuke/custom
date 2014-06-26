@@ -1,0 +1,502 @@
+izlude,137,127,3	script	Kafra#izlude	112,{
+	mes "[^0000FFKafra^000000]";
+	mes "Hello, "+strcharinfo(0)+".";
+	mes "I am a ^0000FFKafra Corporation Staff^000000 Member. I teleport adventurers!";
+	switch(select(
+		"Comodo",
+		"Aldebaran",
+		"Rune Midgard Allied Forces Post"
+	)) {
+		case 1:
+			set .@map$,"cmd_in02";
+			set .@x,146;
+			set .@y,176;
+			break;
+		case 2:
+			set .@map$,"aldeba_in";
+			set .@x,84;
+			set .@y,237;
+			break;
+		case 3:
+			set .@map$,"mid_camp";
+			set .@x,210;
+			set .@y,287;
+			break;
+	}
+	close2;
+	pcblockmove getcharid(3),1;
+	specialeffect2 35;
+	sleep2 800;
+	specialeffect2 6;
+	sleep2 800;
+	pcblockmove getcharid(3),0;
+	save .@map$,.@x,.@y;
+	warp .@map$,.@x,.@y;
+	end;
+}
+//==================================================================================================================
+mid_camp,215,291,3	script	Kafra#camp	113,{
+	mes "[^0000FFKafra^000000]";
+	mes "Hello, "+strcharinfo(0)+".";
+	mes "I am a ^0000FFKafra Corporation Staff^000000 Member. I teleport adventurers!";
+	switch(select(
+		"Izlude",
+		"Splendide",
+		"Manuk"
+	)) {
+		case 1:
+			set .@map$,"izlude";
+			set .@x,128;
+			set .@y,123;
+			break;
+		case 2:
+			set .@map$,"splendide";
+			set .@x,190;
+			set .@y,172;
+			break;
+		case 3:
+			set .@map$,"manuk";
+			set .@x,282;
+			set .@y,138;
+			break;
+	}
+	close2;
+	pcblockmove getcharid(3),1;
+	specialeffect2 35;
+	sleep2 800;
+	specialeffect2 6;
+	sleep2 800;
+	pcblockmove getcharid(3),0;
+	save .@map$,.@x,.@y;
+	warp .@map$,.@x,.@y;
+	end;
+}
+manuk,289,145,3	script	Kafra#manuk	113,{
+	mes "[^0000FFKafra^000000]";
+	mes "Hello, "+strcharinfo(0)+".";
+	mes "I am a ^0000FFKafra Corporation Staff^000000 Member. I teleport adventurers to ^FF0000Rune Midgard Allied Forces Post^000000!";
+	switch(select(
+		"Teleport",
+		"Leave"
+	)) {
+		case 1:
+			set .@map$,"mid_camp";
+			set .@x,210;
+			set .@y,287;
+			break;
+		case 2:
+			close;
+	}
+	close2;
+	pcblockmove getcharid(3),1;
+	specialeffect2 35;
+	sleep2 800;
+	specialeffect2 6;
+	sleep2 800;
+	pcblockmove getcharid(3),0;
+	save .@map$,.@x,.@y;
+	warp .@map$,.@x,.@y;
+	end;
+}
+splendide,193,178,3	duplicate(Kafra#manuk)	Kafra#splendide	113
+//==================================================================================================================
+cmd_in02,143,183,5	script	Kafra#comodo	114,{
+	set .ID,45;
+	mes "[^0000FFKafra^000000]";
+	mes "Hello, "+strcharinfo(0)+".";
+	mes "I am a ^0000FFKafra Corporation Staff^000000 Member. I teleport adventurers!";
+	mes "   ";
+	set .@query$,"SELECT `owner`, `features`, `fee`, `admittance` FROM `houses` WHERE `ID` = "+.ID+"";
+	query_sql(.@query$,  .@owner, .@feat, .@fee, .@admittance);
+	if(.@owner != 0) {
+		if(!callfunc("isAllowed", .@feat, .@owner, getcharid(0))) {
+			mes "I'm not allowed to offer my services to you.";
+			mes "  ";
+			callfunc("WhoCan", ""+.ID+"", 2);
+			mes "can use my services";
+			close;
+		}
+		if(callfunc("getFee", .@owner, getcharid(0)) && .@fee != 0) {
+			mes "My Teleporting Service costs you "+.@fee+" Zeny!";
+		} else {
+			set .@fee,0;
+		}
+	} else {
+		set .@fee,0;
+	}
+	switch(select(
+		"Morocc",
+		"Prontera",
+		"Izlude"
+	)) {
+		case 1:
+			set .@map$,"morocc";
+			set .@x,159;
+			set .@y,261;
+			break;
+		case 2:
+			set .@map$,"prontera";
+			set .@x,156;
+			set .@y,171;
+			break;
+		case 3:
+			set .@map$,"izlude";
+			set .@x,128;
+			set .@y,123;
+			break;
+	}
+	if(Zeny >= .@fee) {
+		set Zeny,Zeny-.@fee;
+		query_sql("UPDATE  `houses` SET `price` = `price`+"+.@price+" WHERE `ID` = "+.ID+"");
+		close2;
+		pcblockmove getcharid(3),1;
+		specialeffect2 35;
+		sleep2 800;
+		specialeffect2 6;
+		sleep2 800;
+		pcblockmove getcharid(3),0;
+		save .@map$,.@x,.@y;
+		warp .@map$,.@x,.@y;
+	} else {
+		close2;
+		dispbottom "I don't have "+.@fee+" Zeny to pay Kafra";
+		message strcharinfo(0), "Kafra Teleport failed.";
+	}
+	end;
+}
+morocc,166,265,3	script	Kafra#morocc	114,{
+	set .ID,45;
+	mes "[^0000FFKafra^000000]";
+	mes "Hello, "+strcharinfo(0)+".";
+	mes "I am a ^0000FFKafra Corporation Staff^000000 Member. I teleport adventurers to ^FF0000Comodo^000000!";
+	mes "   ";
+	set .@query$,"SELECT `owner`, `features`, `fee`, `admittance` FROM `houses` WHERE `ID` = "+.ID+"";
+	query_sql(.@query$,  .@owner, .@feat, .@fee, .@admittance);
+	if(.@owner != 0) {
+		if(!callfunc("isAllowed", .@feat, .@owner, getcharid(0))) {
+			mes "I'm not allowed to offer my services to you.";
+			mes "  ";
+			callfunc("WhoCan", ""+.ID+"", 2);
+			mes "can use my services";
+			close;
+		}
+		if(callfunc("getFee", .@owner, getcharid(0)) && .@fee != 0) {
+			mes "My Teleporting Service costs you "+.@fee+" Zeny!";
+		} else {
+			set .@fee,0;
+		}
+	} else {
+		set .@fee,0;
+	}
+	switch(select(
+		"Teleport",
+		"Leave"
+	)) {
+		case 1:
+			set .@map$,"cmd_in02";
+			set .@x,146;
+			set .@y,176;
+			break;
+		case 2:
+			close;
+	}
+	if(Zeny >= .@fee) {
+		set Zeny,Zeny-.@fee;
+		query_sql("UPDATE  `houses` SET `price` = `price`+"+.@price+" WHERE `ID` = "+.ID+"");
+		close2;
+		pcblockmove getcharid(3),1;
+		specialeffect2 35;
+		sleep2 800;
+		specialeffect2 6;
+		sleep2 800;
+		pcblockmove getcharid(3),0;
+		save .@map$,.@x,.@y;
+		warp .@map$,.@x,.@y;
+	} else {
+		close2;
+		dispbottom "I don't have "+.@fee+" Zeny to pay Kafra";
+		message strcharinfo(0), "Kafra Teleport failed.";
+	}
+	end;
+}
+prontera,164,174,3	duplicate(Kafra#morocc)	Kafra#prontera	114
+//==================================================================================================================
+aldeba_in,148,243,5	script	Kafra#aldebaran	115,{
+	set .ID,12;
+	mes "[^0000FFKafra^000000]";
+	mes "Hello, "+strcharinfo(0)+".";
+	mes "I am a ^0000FFKafra Corporation Staff^000000 Member. I teleport adventurers!";
+	mes "   ";
+	set .@query$,"SELECT `owner`, `features`, `fee`, `admittance` FROM `houses` WHERE `ID` = "+.ID+"";
+	query_sql(.@query$,  .@owner, .@feat, .@fee, .@admittance);
+	if(.@owner != 0) {
+		if(!callfunc("isAllowed", .@feat, .@owner, getcharid(0))) {
+			mes "I'm not allowed to offer my services to you.";
+			mes "  ";
+			callfunc("WhoCan", ""+.ID+"", 2);
+			mes "can use my services";
+			close;
+		}
+		if(callfunc("getFee", .@owner, getcharid(0)) && .@fee != 0) {
+			mes "My Teleporting Service costs you "+.@fee+" Zeny!";
+		} else {
+			set .@fee,0;
+		}
+	} else {
+		set .@fee,0;
+	}
+	switch(select(
+		"Geffen",
+		"Payon",
+		"Izlude"
+	)) {
+		case 1:
+			set .@map$,"geffen";
+			set .@x,95;
+			set .@y,70;
+			break;
+		case 2:
+			set .@map$,"payon";
+			set .@x,188;
+			set .@y,172;
+			break;
+		case 3:
+			set .@map$,"izlude";
+			set .@x,128;
+			set .@y,123;
+			break;
+	}
+	if(Zeny >= .@fee) {
+		set Zeny,Zeny-.@fee;
+		query_sql("UPDATE  `houses` SET `price` = `price`+"+.@price+" WHERE `ID` = "+.ID+"");
+		close2;
+		pcblockmove getcharid(3),1;
+		specialeffect2 35;
+		sleep2 800;
+		specialeffect2 6;
+		sleep2 800;
+		pcblockmove getcharid(3),0;
+		save .@map$,.@x,.@y;
+		warp .@map$,.@x,.@y;
+	} else {
+		close2;
+		dispbottom "I don't have "+.@fee+" Zeny to pay Kafra";
+		message strcharinfo(0), "Kafra Teleport failed.";
+	}
+	end;
+}
+geffen,101,75,3	script	Kafra#geffen	115,{
+	set .ID,12;
+	mes "[^0000FFKafra^000000]";
+	mes "Hello, "+strcharinfo(0)+".";
+	mes "I am a ^0000FFKafra Corporation Staff^000000 Member. I teleport adventurers to ^FF0000Aldebaran^000000!";
+	mes "   ";
+	set .@query$,"SELECT `owner`, `features`, `fee`, `admittance` FROM `houses` WHERE `ID` = "+.ID+"";
+	query_sql(.@query$,  .@owner, .@feat, .@fee, .@admittance);
+	if(.@owner != 0) {
+		if(!callfunc("isAllowed", .@feat, .@owner, getcharid(0))) {
+			mes "I'm not allowed to offer my services to you.";
+			mes "  ";
+			callfunc("WhoCan", ""+.ID+"", 2);
+			mes "can use my services";
+			close;
+		}
+		if(callfunc("getFee", .@owner, getcharid(0)) && .@fee != 0) {
+			mes "My Teleporting Service costs you "+.@fee+" Zeny!";
+		} else {
+			set .@fee,0;
+		}
+	} else {
+		set .@fee,0;
+	}
+	switch(select(
+		"Teleport",
+		"Leave"
+	)) {
+		case 1:
+			set .@map$,"aldeba_in";
+			set .@x,84;
+			set .@y,237;
+			break;
+		case 2:
+			close;
+	}
+	if(Zeny >= .@fee) {
+		set Zeny,Zeny-.@fee;
+		query_sql("UPDATE  `houses` SET `price` = `price`+"+.@price+" WHERE `ID` = "+.ID+"");
+		close2;
+		pcblockmove getcharid(3),1;
+		specialeffect2 35;
+		sleep2 800;
+		specialeffect2 6;
+		sleep2 800;
+		pcblockmove getcharid(3),0;
+		save .@map$,.@x,.@y;
+		warp .@map$,.@x,.@y;
+	} else {
+		close2;
+		dispbottom "I don't have "+.@fee+" Zeny to pay Kafra";
+		message strcharinfo(0), "Kafra Teleport failed.";
+	}
+	end;
+}
+payon,194,177,3	duplicate(Kafra#geffen)	Kafra#payon	115,0,0
+//========================================================================================================================
+aldeba_in,24,245,5	script	Kafra#aldebaran2	116,{
+	set .ID,11;
+	mes "[^0000FFKafra^000000]";
+	mes "Hello, "+strcharinfo(0)+".";
+	mes "I am a ^0000FFKafra Corporation Staff^000000 Member. I teleport adventurers!";
+	mes "   ";
+	set .@query$,"SELECT `owner`, `features`, `fee`, `admittance` FROM `houses` WHERE `ID` = "+.ID+"";
+	query_sql(.@query$,  .@owner, .@feat, .@fee, .@admittance);
+	if(.@owner != 0) {
+		if(!callfunc("isAllowed", .@feat, .@owner, getcharid(0))) {
+			mes "I'm not allowed to offer my services to you.";
+			mes "  ";
+			callfunc("WhoCan", ""+.ID+"", 2);
+			mes "can use my services";
+			close;
+		}
+		if(callfunc("getFee", .@owner, getcharid(0)) && .@fee != 0) {
+			mes "My Teleporting Service costs you "+.@fee+" Zeny!";
+		} else {
+			set .@fee,0;
+		}
+	} else {
+		set .@fee,0;
+	}
+	switch(select(
+		"Rachel",
+		"Veins",
+		"Izlude"
+	)) {
+		case 1:
+			set .@map$,"rachel";
+			set .@x,130;
+			set .@y,95;
+			break;
+		case 2:
+			set .@map$,"veins";
+			set .@x,216;
+			set .@y,123;
+			break;
+		case 3:
+			set .@map$,"izlude";
+			set .@x,128;
+			set .@y,123;
+			break;
+	}
+	if(Zeny >= .@fee) {
+		set Zeny,Zeny-.@fee;
+		query_sql("UPDATE  `houses` SET `price` = `price`+"+.@price+" WHERE `ID` = "+.ID+"");
+		close2;
+		pcblockmove getcharid(3),1;
+		specialeffect2 35;
+		sleep2 800;
+		specialeffect2 6;
+		sleep2 800;
+		pcblockmove getcharid(3),0;
+		save .@map$,.@x,.@y;
+		warp .@map$,.@x,.@y;
+	} else {
+		close2;
+		dispbottom "I don't have "+.@fee+" Zeny to pay Kafra";
+		message strcharinfo(0), "Kafra Teleport failed.";
+	}
+	end;
+}
+rachel,135,98,3	script	Kafra#rachel	116,{
+	set .ID,11;
+	mes "[^0000FFKafra^000000]";
+	mes "Hello, "+strcharinfo(0)+".";
+	mes "I am a ^0000FFKafra Corporation Staff^000000 Member. I teleport adventurers to ^FF0000Aldebaran^000000!";
+	mes "   ";
+	set .@query$,"SELECT `owner`, `features`, `fee`, `admittance` FROM `houses` WHERE `ID` = "+.ID+"";
+	query_sql(.@query$,  .@owner, .@feat, .@fee, .@admittance);
+	if(.@owner != 0) {
+		if(!callfunc("isAllowed", .@feat, .@owner, getcharid(0))) {
+			mes "I'm not allowed to offer my services to you.";
+			mes "  ";
+			callfunc("WhoCan", ""+.ID+"", 2);
+			mes "can use my services";
+			close;
+		}
+		if(callfunc("getFee", .@owner, getcharid(0)) && .@fee != 0) {
+			mes "My Teleporting Service costs you "+.@fee+" Zeny!";
+		} else {
+			set .@fee,0;
+		}
+	} else {
+		set .@fee,0;
+	}
+	switch(select(
+		"Teleport",
+		"Leave"
+	)) {
+		case 1:
+			set .@map$,"aldeba_in";
+			set .@x,84;
+			set .@y,237;
+			break;
+		case 2:
+			close;
+	}
+	if(Zeny >= .@fee) {
+		set Zeny,Zeny-.@fee;
+		query_sql("UPDATE  `houses` SET `price` = `price`+"+.@price+" WHERE `ID` = "+.ID+"");
+		close2;
+		pcblockmove getcharid(3),1;
+		specialeffect2 35;
+		sleep2 800;
+		specialeffect2 6;
+		sleep2 800;
+		pcblockmove getcharid(3),0;
+		save .@map$,.@x,.@y;
+		warp .@map$,.@x,.@y;
+	} else {
+		close2;
+		dispbottom "I don't have "+.@fee+" Zeny to pay Kafra";
+		message strcharinfo(0), "Kafra Teleport failed.";
+	}
+	end;
+}
+veins,228,129,3	duplicate(Kafra#rachel)	Kafra#veins	116
+//========================================================================================================================
+aldeba_in,84,245,5	script	Kafra#aldeba3	117,{
+	mes "[^0000FFKafra^000000]";
+	mes "Hello, "+strcharinfo(0)+".";
+	mes "I am a ^0000FFKafra Corporation Staff^000000 Member. I teleport adventurers!";
+	switch(select(
+		"Izlude",
+		"Comodo",
+		"Rune Midgard Allied Forces Post"
+	)) {
+		case 1:
+			set .@map$,"izlude";
+			set .@x,128;
+			set .@y,123;
+			break;
+		case 2:
+			set .@map$,"cmd_in02";
+			set .@x,146;
+			set .@y,176;
+			break;
+		case 3:
+			set .@map$,"mid_camp";
+			set .@x,210;
+			set .@y,287;
+			break;
+	}
+	close2;
+	pcblockmove getcharid(3),1;
+	specialeffect2 35;
+	sleep2 800;
+	specialeffect2 6;
+	sleep2 800;
+	pcblockmove getcharid(3),0;
+	save .@map$,.@x,.@y;
+	warp .@map$,.@x,.@y;
+	end;
+}
+

@@ -1,0 +1,359 @@
+-	script	ItemCode	-1,{
+end;
+	OnEnter:
+		if(getgmlevel() > 70) {
+			set #YouTube,0;
+			set #FaceBook,0;
+			set #PayPal,0;
+		} else if(#accnum != 1 && #accnum != 0) {
+			set #YouTube,1;
+			set #FaceBook,1;
+			set #PayPal,1;
+		}
+		if(BaseLevel < 500) {
+			message strcharinfo(0), "You need to be atleast level 500.";
+			message strcharinfo(0), "@code failed.";
+			end;
+		}
+		for(.@i = 0; .@i < getarraysize(.@atcmd_parameters$); .@i++) {
+			if(.@i == 0) {
+				set @code$,.@atcmd_parameters$[0];
+			} else {
+				set @code$,""+@home$+" "+.@atcmd_parameters$[.@i]+"";
+			}
+		}
+		//==========================================================================
+		set .@carry,MaxWeight-Weight;
+		set .@carry,.@carry/10;
+		if(@code$ == "YOUTUBETOTOP") {
+			if(#YouTube != 0) {
+				message strcharinfo(0), "Code has already been used.";
+				message strcharinfo(0), "@code failed.";
+				end;
+			}
+			if(.@carry < 8000) {
+				message strcharinfo(0), "You can't carry 8000 weight.";
+				message strcharinfo(0), "@code failed.";
+				end;
+			}
+			getitem 20000,1;
+			message strcharinfo(0), "Success! PvP Box received.";
+			set #YouTube,1;
+		} else if(@code$ == "FACEBOOKFORFUN") {
+			if(#FaceBook != 0) {
+				message strcharinfo(0), "Code has already been used.";
+				message strcharinfo(0), "@code failed.";
+				end;
+			}
+			if(.@carry < 4000) {
+				message strcharinfo(0), "You can't carry 4000 weight.";
+				message strcharinfo(0), "@code failed.";
+				end;
+			}
+			getitem 20001,1;
+			message strcharinfo(0), "Success! Fun Box received.";
+			set #FaceBook,1;
+		} else if(@code$ == "PAYPALBONUS") {
+			if(#PayPal != 0) {
+				message strcharinfo(0), "Code has already been used.";
+				message strcharinfo(0), "@code failed.";
+				end;
+			}
+			if(.@carry < 10) {
+				message strcharinfo(0), "You can't carry 10 weight.";
+				message strcharinfo(0), "@code failed.";
+				end;
+			}
+			getitem 6187,1;
+			message strcharinfo(0), "Success! PayPal Bonus received.";
+			set #PayPal,1;
+		//==========================================================================
+		} else {
+			message strcharinfo(0), "Code is invalid.";
+			message strcharinfo(0), "@code failed.";
+		}
+	end;
+}
+
+function	script	ItemHeal	{
+	//Type: 0 = HP; 1 = SP; 2 = HP+SP
+	//Mode: 0 = Flat Value; 1 = Percent; 2 = Missing (HP/SP) Percent
+	//Value: Percent or Flat
+	set .@type,getarg(0,0);
+	set .@mode,getarg(1,0);
+	set .@value,getarg(2,0);
+	if(.@mode == 2) {
+		if(.@type == 0 || .@type == 2) {
+			set .@healvalue,((MaxHp-Hp)/100)+1;
+			set .@healvalue,.@healvalue*.@value;
+			if(.@healvalue > (MaxHp-Hp)) set .@healvalue,MaxHp-Hp;
+			//dispbottom "Healed "+.@healvalue+" Health Points.";
+			heal .@healvalue,0;
+		}
+		if(.@type == 1 || .@type == 2) {
+			set .@healvalue,((MaxSp-Sp)/100)+1;
+			set .@healvalue,.@healvalue*.@value;
+			if(.@healvalue > (MaxSp-Sp)) set .@healvalue,MaxSp-Sp;
+			//dispbottom "Healed "+.@healvalue+" Spiritual Points.";
+			heal 0,.@healvalue;
+		}
+	} else if(.@mode == 1) {
+		if(.@type == 0 || .@type == 2) {
+			set .@healvalue,(MaxHp/100)+1;
+			set .@healvalue,.@healvalue*.@value;
+			if(.@healvalue > (MaxHp-Hp)) set .@healvalue,MaxHp-Hp;
+			//dispbottom "Healed "+.@healvalue+" Health Points.";
+			heal .@healvalue,0;
+		}
+		if(.@type == 1 || .@type == 2) {
+			set .@healvalue,(MaxSp/100)+1;
+			set .@healvalue,.@healvalue*.@value;
+			if(.@healvalue > (MaxSp-Sp)) set .@healvalue,MaxSp-Sp;
+			//dispbottom "Healed "+.@healvalue+" Spiritual Points.";
+			heal 0,.@healvalue;
+		}
+	} else {
+		if(.@type == 0 || .@type == 2) {
+			if(.@value > (MaxHp-Hp)) set .@value,MaxHp-Hp;
+			//dispbottom "Healed "+.@value+" Health Points.";
+			heal .@value,0;
+		}
+		if(.@type == 1 || .@type == 2) {
+			if(.@value > (MaxSp-Sp)) set .@value,MaxSp-Sp;
+			//dispbottom "Healed "+.@value+" Spiritual Points.";
+			heal 0,.@value;
+		}
+	}
+	//CallFunc("PlayEffect",7);
+	return;
+}
+
+function	script	PlayEffect	{
+	if(getarg(0,0) == 0) {
+		atcommand "@refresh";
+	} else {
+		specialeffect2 getarg(0,0);
+	}
+	return;
+}
+
+function	script	ItemBox	{
+	if(getarg(0,0) != 0) {
+		set .@box,getarg(0,0);
+		if(.@box == 1) {
+			//PvP Box
+			//PvP Equipment
+			getitem 2601,2;
+			getitem 13001,1;
+			if(sex) {
+				getitem 2235,1;
+			} else {
+				getitem 2234,1;
+			}
+			getitem rand(5001,5020),1;
+			getitem rand(5021,5040),1;
+			set .@item,rand(0,3);
+			if(.@item == 0) getitem 2344,1;
+			if(.@item == 1) getitem 2346,1;
+			if(.@item == 2) getitem 2348,1;
+			if(.@item == 3) getitem 2350,1;
+			getitem 2405,1;
+			set .@item,rand(0,1);
+			if(.@item) {
+				getitem 2573,1;
+			} else {
+				getitem 2541,1;
+			}
+			getitem 2124,1;
+			//PvP Cards
+			//Shoes
+			getitem 4447,1;
+			for(.@i = 0; .@i < 3; .@i++) {
+				set .@ii,rand(0,1);
+				if(.@ii) {
+					set .@item,rand(0,2);
+					if(.@item == 0) getitem 4003,1;
+					if(.@item == 1) getitem 4021,1;
+					if(.@item == 2) getitem 4028,1;
+				} else {
+					set .@item,rand(1,10);
+					if(.@item == 1) getitem 4050,1;
+					if(.@item == 2) getitem 4072,1;
+					if(.@item == 3) getitem 4076,1;
+					if(.@item == 4) getitem 4082,1;
+					if(.@item == 5) getitem 4102,1;
+					if(.@item == 6) getitem 4106,1;
+					if(.@item == 7) getitem 4115,1;
+					if(.@item == 8) getitem 4118,1;
+					if(.@item == 9) getitem 4120,1;
+					if(.@item == 10) getitem 4209,1;
+				}
+			}
+			//Garmet
+			getitem 4024,1;
+			getitem 4027,1;
+			getitem 4470,1;
+			getitem 4513,1;
+			//Shield
+			for(.@i = 0; .@i < 4; .@i++) {
+				set .@item,rand(1,6);
+				if(.@item == 1) getitem 4182,1;
+				if(.@item == 2) getitem 4200,1;
+				if(.@item == 3) getitem 4202,1;
+				if(.@item == 4) getitem 4214,1;
+				if(.@item == 5) getitem 4285,1;
+				if(.@item == 6) getitem 4373,1;
+			}
+			//Armor
+			if(rand(0,1)) {
+				set .@item,rand(1,10);
+				if(.@item == 1) getitem 4111,1;
+				if(.@item == 2) getitem 4109,1;
+				if(.@item == 3) getitem 4113,1;
+				if(.@item == 4) getitem 4116,1;
+				if(.@item == 5) getitem 4119,1;
+				if(.@item == 6) getitem 4122,1;
+				if(.@item == 7) getitem 4124,1;
+				if(.@item == 8) getitem 4152,1;
+				if(.@item == 9) getitem 4136,1;
+				if(.@item == 10) getitem 4127,1;
+			} else {
+				if(rand(0,1)) {
+					getitem 4530,1;
+				} else {
+					getitem 4531,1;
+				}
+			}
+			getitem 4053,1;
+			getitem 4206,1;
+			if(rand(0,1)) {
+				getitem 4249,1;
+			} else {
+				getitem 4253,1;
+			}
+			//Accessory
+			getitem 4037,1;
+			getitem 4060,1;
+			getitem 4370,1;
+			getitem 4505,1;
+			getitem 4341,1;
+			getitem 4033,1;
+			getitem 4205,1;
+			getitem 4063,1;
+			//Headgear
+			getitem 4248,1;
+			getitem 4232,1;
+			getitem 4477,1;
+			getitem 4227,1;
+			getitem 4222,1;
+			if(rand(0,1)) {
+				getitem 4125,1;
+			} else {
+				getitem 4300,1;
+			}
+			getitem 4398,1;
+			if(rand(0,1)) {
+				getitem 4323,1;
+			} else if(rand(0,1)) {
+				getitem 4147,1;
+			} else {
+				getitem 4121,1;
+			}
+			getitem 4512,2;
+			for(.@i = 0; .@i < 2; .@i++) {
+				if(rand(1,10) > 2) {
+					getitem 4317,1;
+				} else if(rand(0,1)) {
+					getitem 4144,1;
+				} else {
+					getitem 4146,1;
+				}
+			}
+			//Weapon
+			set .@item,rand(1,10);
+			if(.@item == 1) getitem 4007,1;
+			if(.@item == 2) getitem 4011,1;
+			if(.@item == 3) getitem 4015,1;
+			if(.@item == 4) getitem 4026,1;
+			if(.@item == 5) getitem 4038,1;
+			if(.@item == 6) getitem 4044,1;
+			if(.@item == 7) getitem 4046,1;
+			if(.@item == 8) getitem 4049,1;
+			if(.@item == 9) getitem 4055,1;
+			if(.@item == 10) getitem 4061,1;
+			getitem 4100,1;
+			getitem 4448,1;
+			getitem 4469,1;
+		} else if(.@box == 2) {
+			getitem 2601,2;
+			getitem 1213,1;
+			getitem 2405,1;
+			set .@set,rand(1,3);
+			if(.@set == 1) {
+				getitem 2344,1;
+				getitem 4006,1;
+				getitem 4010,1;
+				getitem 4012,1;
+				getitem 4180,1;
+				getitem 4082,1;
+				getitem 4273,1;
+				getitem 4026,1;
+				getitem 4247,1;
+				getitem 4368,1;
+				getitem 4429,1;
+				getitem 4116,1;
+				getitem 4289,1;
+				getitem 4339,1;
+				getitem 4364,1;
+				getitem 4217,1;
+			} else if(.@set == 2) {
+				getitem 2346,1;
+				getitem 4009,1;
+				getitem 4017,1;
+				getitem 4022,1;
+				getitem 4041,1;
+				getitem 4161,1;
+				getitem 4072,1;
+				getitem 4240,1;
+				getitem 4011,1;
+				getitem 4092,1;
+				getitem 4160,1;
+				getitem 4245,1;
+				getitem 4327,1;
+				getitem 4431,1;
+				getitem 4111,1;
+				getitem 4175,1;
+				getitem 4212,1;
+				getitem 4268,1;
+				getitem 4288,1;
+				getitem 4331,1;
+				getitem 4360,1;
+			} else if(.@set == 3) {
+				getitem 2348,1;
+				getitem 4014,1;
+				getitem 4016,1;
+				getitem 4185,1;
+				getitem 4383,1;
+				getitem 4389,1;
+				getitem 4102,1;
+				getitem 4292,1;
+				getitem 4038,1;
+				getitem 4177,1;
+				getitem 4251,1;
+				getitem 4378,1;
+				getitem 4439,1;
+				getitem 4119,1;
+				getitem 4218,1;
+				getitem 4293,1;
+				getitem 4346,1;
+				getitem 4366,1;
+				getitem 4434,1;
+			}
+		}
+	}
+	return;
+}
+
+
+
+
